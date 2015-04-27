@@ -6,18 +6,8 @@
     <description>Recent content on My Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2015 01:07:53 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2015 00:49:45 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>About Me</title>
-      <link>http://ann.chiramattel.com/quote/about/</link>
-      <pubDate>Mon, 27 Apr 2015 01:07:53 -0700</pubDate>
-      
-      <guid>http://ann.chiramattel.com/quote/about/</guid>
-      <description>&lt;p&gt;A pagmatic programmer who loves solving real world problems.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>First Post from Hugo</title>
