@@ -25,7 +25,7 @@
 &lt;li&gt;Static site generator - no need of databases, runtimes, VMs etc.&lt;/li&gt;
 &lt;li&gt;Very easy to publish content&lt;/li&gt;
 &lt;li&gt;No dependency issues; literally runs out of the box&lt;/li&gt;
-&lt;li&gt;Highly customizable&lt;/li&gt;
+&lt;li&gt;Highly customizable UI&lt;/li&gt;
 &lt;li&gt;A good opportunity to learn #golang&lt;/li&gt;
 &lt;/ul&gt;
 
