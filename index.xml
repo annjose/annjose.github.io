@@ -6,8 +6,29 @@
     <description>Recent content on My Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2015 00:49:45 -0700</lastBuildDate>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 20 Mar 2016 20:59:39 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>one</title>
+      <link>http://ann.chiramattel.com/posts/one/</link>
+      <pubDate>Sun, 20 Mar 2016 20:59:39 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/posts/one/</guid>
+      <description>&lt;p&gt;new post&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://ann.chiramattel.com/about/</link>
+      <pubDate>Sun, 20 Mar 2016 20:54:56 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/about/</guid>
+      <description>&lt;p&gt;My about page.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>First Post from Hugo</title>
@@ -26,7 +47,7 @@
 &lt;li&gt;Very easy to publish content&lt;/li&gt;
 &lt;li&gt;No dependency issues; literally runs out of the box&lt;/li&gt;
 &lt;li&gt;Highly customizable UI&lt;/li&gt;
-&lt;li&gt;A good opportunity to learn #golang&lt;/li&gt;
+&lt;li&gt;A good opportunity to learn Go #golang&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;So far, I am just loving Hugo. Next step is to explore it further and customize it to my heart&amp;rsquo;s content.&lt;/p&gt;
