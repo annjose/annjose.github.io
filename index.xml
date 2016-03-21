@@ -7,35 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 20 Mar 2016 20:59:39 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Mar 2016 20:54:56 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>one</title>
-      <link>http://ann.chiramattel.com/posts/one/</link>
-      <pubDate>Sun, 20 Mar 2016 20:59:39 -0700</pubDate>
-      
-      <guid>http://ann.chiramattel.com/posts/one/</guid>
-      <description>&lt;p&gt;new post&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>about</title>
+      <title>About Me</title>
       <link>http://ann.chiramattel.com/about/</link>
       <pubDate>Sun, 20 Mar 2016 20:54:56 -0700</pubDate>
       
       <guid>http://ann.chiramattel.com/about/</guid>
-      <description>&lt;p&gt;My about page.&lt;/p&gt;
+      <description>&lt;p&gt;Seasoned Engineer with 16 years of experience in developing software solutions on iOS and Microsoft platforms (mobile, web and desktop). Most recent work is in building the TurboTax iOS app for iPhone and iPad, which was rebuilt from scratch and released to market in Dec 2014. I have also worked as full stack web developer on Node/HTML/CSS/JavaScript.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>First Post from Hugo</title>
-      <link>http://ann.chiramattel.com/posts/hello/</link>
+      <link>http://ann.chiramattel.com/post/hello/</link>
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/posts/hello/</guid>
+      <guid>http://ann.chiramattel.com/post/hello/</guid>
       <description>&lt;p&gt;This is my first blog post created by &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, the fast, simple and powerful blogging engine. The best part is that I could stand up my blog with Hugo in less than 4 hours.&lt;/p&gt;
 
 &lt;p&gt;I have set this up such that I publish the content to &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub pages&lt;/a&gt;, so the publish workflow is as simple as writing some Markdown and a git push. &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog/&#34;&gt;This is a good tutorial&lt;/a&gt; on how to do this.&lt;/p&gt;
