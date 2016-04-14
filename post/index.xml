@@ -7,8 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 27 Apr 2015 00:49:45 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 08 Apr 2016 20:47:54 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Conversation As Interface</title>
+      <link>http://ann.chiramattel.com/post/conversation-as-interface/</link>
+      <pubDate>Fri, 08 Apr 2016 20:47:54 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/conversation-as-interface/</guid>
+      <description>&lt;p&gt;The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. &lt;strong&gt;Conversation As Interface&lt;/strong&gt;. It is a more natural form of communication, especially for question-answer / interview experiences.&lt;/p&gt;
+
+&lt;p&gt;Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook &lt;a href=&#34;http://techcrunch.com/2016/01/05/facebook-messenger-bots/&#34;&gt;has been doing experiments&lt;/a&gt; in their Messenger app allowing a few developers like Uber, Assist etc. to create chat bots. They are &lt;a href=&#34;http://techcrunch.com/2016/04/07/facebook-chatbots/&#34;&gt;expected to announce&lt;/a&gt; opening up the SDK to all in next week’s F8 conference. Microsoft &lt;a href=&#34;http://techcrunch.com/2016/03/30/microsoft-is-bringing-bots-to-skype-and-everywhere-else/&#34;&gt;released a Bot Framework&lt;/a&gt; in Build last week and this supports multiple channels – Slack, SMS, Skype etc. Similarly, &lt;a href=&#34;http://techcrunch.com/2016/03/24/line-builds-out-its-chat-app-for-businesses-as-facebook-messenger-threat-looms-large/&#34;&gt;Line&lt;/a&gt; announced its SDK.&lt;/p&gt;
+
+&lt;p&gt;Chat bots could be a new way to reach customers even when the app is not installed. And if they support deep linking, then developers can deliver a smooth transition into sepcific flows in the app. This is a great opportunity to be where our users are. It will be interesting to see how this idea pans out.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ann.chiramattel.com/img/bot-framework.png&#34; alt=&#34;Bot Framework&#34; title=&#34;Bots&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>First Post from Hugo</title>
