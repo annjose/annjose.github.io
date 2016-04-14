@@ -7,8 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 08 Apr 2016 20:47:54 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 15 Apr 2016 21:22:02 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ReactNative in Visual Studio Code</title>
+      <link>http://ann.chiramattel.com/post/react-native-visual-studio-code/</link>
+      <pubDate>Fri, 15 Apr 2016 21:22:02 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/react-native-visual-studio-code/</guid>
+      <description>&lt;p&gt;I have been thoroughly enjoying &lt;a href=&#34;https://facebook.github.io/react-native/&#34;&gt;ReactNative&lt;/a&gt; has been enjoyable except for the lack of a comprehensive debugging environment. I had tried multiple solutions like &lt;a href=&#34;http://nuclide.io/&#34;&gt;Nuclide&lt;/a&gt; (which I found it to be very slow), WebStorm with JSX plugins (which is not a debugging environment). So I had to go back and forth between Xcode, Android Studio and Chrome Dev Tools. This was frustrating, but there is hope&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.reactnative.com/react-native-tools-extension-for-visual-studio-code/&#34;&gt;ReactJS conference in February&lt;/a&gt; announced the release of ReactNative extension for &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VisualStudio Code&lt;/a&gt;, the lightweight editor by Microsoft. The name &amp;lsquo;Visual Studio&amp;rsquo; may sound heavy, but this is a completely new editor built from ground-up based on Electron. It is very flexible, configurable, super fast and Open Source too! The &lt;a href=&#34;https://github.com/Microsoft/vscode-react-native&#34;&gt;ReactNative extension for VS Code&lt;/a&gt; supports intellisense, ability to run react-native commands and most importantly, full-fledged debugging experience - yeah yeah breakpoints, callstack and stuff :-)&lt;/p&gt;
+
+&lt;p&gt;I tried to code the &lt;a href=&#34;https://www.raywenderlich.com/126063/react-native-tutorial&#34;&gt;Ray Wenderlich ReactNative tutorial&lt;/a&gt; using this extension and it was absolutely brilliant. The UI is very clean, clutter-free with subtle yet vivid colors. As soon as I opened the starter project, it recognized that it is a ReactNative project and got it ready to go. Then I could simply put a breakpoint and hit the Debug Run button and Viola, the app started and the breakpoint was hit. Now I am debugging my code all in one single place!&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://ann.chiramattel.com/img/ReactNativeInVSCode.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;ReactNative extension in VS Code&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Conversation As Interface</title>
