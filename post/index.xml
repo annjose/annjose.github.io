@@ -12,25 +12,26 @@
     
     <item>
       <title>First Post from Hugo</title>
-      <link>http://ann.chiramattel.com/post/hello/</link>
+      <link>http://ann.chiramattel.com/post/first-post-from-hugo/</link>
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/hello/</guid>
-      <description>&lt;p&gt;This is my first blog post created by &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, the fast, simple and powerful blogging engine. The best part is that I could stand up my blog with Hugo in less than 4 hours.&lt;/p&gt;
+      <guid>http://ann.chiramattel.com/post/first-post-from-hugo/</guid>
+      <description>&lt;p&gt;This is my first blog post created by &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.&lt;/p&gt;
 
 &lt;p&gt;I have set this up such that I publish the content to &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub pages&lt;/a&gt;, so the publish workflow is as simple as writing some Markdown and a git push. &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog/&#34;&gt;This is a good tutorial&lt;/a&gt; on how to do this.&lt;/p&gt;
 
 &lt;p&gt;Here is what I love about Hugo:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Static site generator - no need of databases, runtimes, VMs etc.&lt;/li&gt;
-&lt;li&gt;Very easy to publish content&lt;/li&gt;
+&lt;li&gt;Static content generation, which means blazing fast rendering, no need to manage databases, VMs etc.&lt;/li&gt;
+&lt;li&gt;Very easy to publish content - create content in markdown and simple git push&lt;/li&gt;
 &lt;li&gt;No dependency issues; literally runs out of the box&lt;/li&gt;
 &lt;li&gt;Highly customizable UI&lt;/li&gt;
-&lt;li&gt;A good opportunity to learn Go #golang&lt;/li&gt;
+&lt;li&gt;A good opportunity to learn &lt;a href=&#34;https://golang.org/&#34;&gt;Go language&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;So far, I am just loving Hugo. Next step is to explore it further and customize it to my heart&amp;rsquo;s content.&lt;/p&gt;
+&lt;p&gt;So far, I am just loving Hugo. Next step is to explore it further and customize it to my heart&amp;rsquo;s content.
+    &lt;img src=&#34;http://ann.chiramattel.com/img/hugo.png&#34; alt=&#34;Hugo&#34; title=&#34;Hugo&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
