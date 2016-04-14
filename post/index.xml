@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 15 Apr 2016 21:22:02 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 13 Apr 2016 21:22:02 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ReactNative in Visual Studio Code</title>
       <link>http://ann.chiramattel.com/post/react-native-visual-studio-code/</link>
-      <pubDate>Fri, 15 Apr 2016 21:22:02 -0700</pubDate>
+      <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
       
       <guid>http://ann.chiramattel.com/post/react-native-visual-studio-code/</guid>
       <description>&lt;p&gt;I have been thoroughly enjoying &lt;a href=&#34;https://facebook.github.io/react-native/&#34;&gt;ReactNative&lt;/a&gt; has been enjoyable except for the lack of a comprehensive debugging environment. I had tried multiple solutions like &lt;a href=&#34;http://nuclide.io/&#34;&gt;Nuclide&lt;/a&gt; (which I found it to be very slow), WebStorm with JSX plugins (which is not a debugging environment). So I had to go back and forth between Xcode, Android Studio and Chrome Dev Tools. This was frustrating, but there is hope&amp;hellip;&lt;/p&gt;
