@@ -7,8 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 13 Apr 2016 21:22:02 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 08 Sep 2016 20:05:54 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Machine Learning - a new journey</title>
+      <link>http://ann.chiramattel.com/post/machine-learning-coursera/</link>
+      <pubDate>Thu, 08 Sep 2016 20:05:54 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/machine-learning-coursera/</guid>
+      <description>&lt;p&gt;Few weeks ago, I started the &lt;a href=&#34;https://www.coursera.org/learn/machine-learning&#34;&gt;Machine Learning course on Coursera&lt;/a&gt; by Andrew Ng of Stanford University. It has been going great so far, sometimes eit is hard, but I am excited to learn this completely new topic from scratch. It is also fun brushing up on the Math lessons of Linear Algebra, derivatives etc.&lt;/p&gt;
+
+&lt;p&gt;The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college). At the end of each module, there is a quiz and programming assignments, which are interesting.&lt;/p&gt;
+
+&lt;p&gt;In addition to the content, I love the way this course is making me think hard and concentrate for long periods of time to understand the concepts and basics. This experience is very different from learning a new programming language or framework where there is a set pattern of how you learn.&lt;/p&gt;
+
+&lt;p&gt;In fact, I had started the course early this year, but couldn&amp;rsquo;t keep up with the schedule due to work load. But this time, I am forcing myself to stick with it because I want to learn the subject as soon as I can. I am convinced that Machine Learning is the future of technology and I have to master it sooner than later. After all, as Douglas Rushkoff reminds us, I want to &lt;a href=&#34;https://www.amazon.com/Program-Be-Programmed-Commands-Digital/dp/159376426X&#34;&gt;Program, not Be Programmed&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ReactNative in Visual Studio Code</title>
@@ -60,9 +76,9 @@
       <pubDate>Sun, 20 Mar 2016 20:54:56 -0700</pubDate>
       
       <guid>http://ann.chiramattel.com/about/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Ann Catherine Jose&lt;/strong&gt; is the Principal Software Engineer in TurboTax Mobile team at Intuit. She was a key contributor in building TurboTax iOS app from the ground up in 2014, working with an awesome team. Prior to Intuit, she worked with Philips, SAP and Tata Infotech. She earned her Masters degree in Mathematics from Indian Institute of Technology Chennai in 2000, specializing in predicate logic.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Ann Catherine Jose&lt;/strong&gt; is a Principal Software Engineer in TurboTax Mobile team at Intuit. She has been a key contributor in rebuilding TurboTax iOS app from scratch in 2014, working with an awesome team. Prior to Intuit, she worked with Philips, SAP and Tata Infotech. She earned her Masters degree in Mathematics from Indian Institute of Technology Chennai in 2000, specializing in predicate logic.&lt;/p&gt;
 
-&lt;p&gt;Her passion is to learn and experiment with new technology and use that to solve real world problems. She loves writing code, building solutions, attending hackathons and meetups.&lt;/p&gt;
+&lt;p&gt;Her passion is to learn and experiment with new technology and use it to solve real world problems. She loves coding, reading, attending hackathons and meetups.&lt;/p&gt;
 
 &lt;p&gt;She believes that building the &lt;strong&gt;product right&lt;/strong&gt; is as important as building the &lt;strong&gt;right product&lt;/strong&gt;.&lt;/p&gt;
 
