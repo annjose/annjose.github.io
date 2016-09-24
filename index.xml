@@ -7,8 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 09 Aug 2016 20:05:54 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 24 Sep 2016 07:49:00 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Display Mathematical Expressions in Blog</title>
+      <link>http://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
+      <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
+      <description>&lt;p&gt;As part of my Machine Learning course, I wanted to share some of my learnings / notes in this blog so that someone will find it useful and I could also refer to it later. But I was not sure how to display the mathemtical expressions used in calculating cost function, gradient descent etc. in my blog. I have used the &lt;a href=&#34;https://support.office.com/en-us/article/Insert-a-mathematical-equation-in-OneNote-2016-for-Mac-08969f84-ed02-4baf-8a77-7ab3c1e26afe&#34;&gt;OneNote Equation tool&lt;/a&gt; before, but didn&amp;rsquo;t know how to do it on the Web for my blog. So I explored the options and here is what I found.&lt;/p&gt;
+
+&lt;p&gt;First of all, I had to find a good JavaScript library that can display mathematical expressions described in a LaTeX-style syntax in the HTML (or Markdown) source of a web page. It turns out that the best such library is &lt;a href=&#34;http://www.mathjax.org/&#34;&gt;MathJax&lt;/a&gt;. It produces high quality typesetting that scales to full resolution which renders beautifully on the web page. More importantly, it uses web-based fonts, so the person who views the HTML page does not have to install any plugins to view those equations. MathJax is very easy to use, you just include a script tag in the HTML to load the JavaScript from a CDN, configure your preferences and start writing mathematical expressions in your content. Here are the detailed steps on &lt;a href=&#34;http://docs.mathjax.org/en/latest/start.html&#34;&gt;how to get started with MathJax&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then my question was how do I use it with my blog engine &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. With a quick Googling, I found this good article &lt;a href=&#34;https://gohugo.io/tutorials/mathjax/&#34;&gt;MathJax Support&lt;/a&gt; on Hugo site itself. Lovely! (and it looks like writing mathematical expressions is a very popular requirement). The instructions are easy to follow and I could set it up in a few minutes. One thing I realized is that in order to show inline style mathematics, MathJax uses the syntax of a single backslash followed by parentheses. But in Hugo, I have to use double backslash followed by parentheses. If you are using any other blog engine like Tumblr, TypePad, Weebly etc., &lt;a href=&#34;http://checkmyworking.com/2012/01/how-to-get-beautifully-typeset-maths-on-your-blog&#34;&gt;check out this article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So now, my blog is ready to display mathemtical expressions. Here is a sample expression of quadratic equation that shows both inline and display expressions:&lt;/p&gt;
+
+&lt;p&gt;When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are as follows:
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Machine Learning - A New Journey</title>
