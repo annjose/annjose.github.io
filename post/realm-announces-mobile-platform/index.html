@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.15" />
 
-  <title>Posts &middot; Reflections</title>
+  <title>Realm Mobile Platform &middot; Reflections</title>
 
   
   
@@ -173,38 +173,87 @@
 
 
 <div class="header">
-  <h1>Posts</h1>
+  <h1>Realm Mobile Platform</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  
-  <h2>2016</h2>
-  <ul>
-  
-    <li><time>27 Sep 2016, 08:22</time> - <a href="http://ann.chiramattel.com/post/realm-announces-mobile-platform/">Realm Mobile Platform</a></li>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Sep 2016, 08:22</time>
+  </div>
 
   
-    <li><time>24 Sep 2016, 07:49</time> - <a href="http://ann.chiramattel.com/post/display-math-expressions-in-hugo/">How to Display Mathematical Expressions in Blog</a></li>
 
   
-    <li><time>09 Aug 2016, 20:05</time> - <a href="http://ann.chiramattel.com/post/machine-learning-coursera/">Machine Learning - A New Journey</a></li>
 
   
-    <li><time>13 Apr 2016, 21:22</time> - <a href="http://ann.chiramattel.com/post/react-native-visual-studio-code/">ReactNative in Visual Studio Code</a></li>
+
+</div>
+
+  <p><a href="https://realm.io">Realm</a> is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast <a href="https://realm.io/products/realm-mobile-database/">Mobile database</a> software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#.
+That is why I am happy to see that today they announced <a href="https://realm.io/news/introducing-realm-mobile-platform/">Realm Mobile Platform</a> that combines Realm client side database with server-side technology (Object Server as they call it). This platform provides the base infrastructure for mobile apps to support offline sync, that enables end users to interact with the app even when there is no network connection.</p>
+
+<p>According to the article, this a highly performant solution because of the following reasons:</p>
+
+<ul>
+<li>Object Server does not use any ORM, just plain objects</li>
+<li>data objects on the device are always kept in sync with server</li>
+<li>during sync, only the changes in the objects are transmitted</li>
+</ul>
+
+<p>In my understanding, the direct equivalent of the Realm Mobile Platform is the <a href="https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-offline-data-sync/">Offline Sync capability of Azure Mobile Apps</a>. Both platforms follow the same model and have very comparable features. That is is a good thing, because as developers, we have multiple options to choose from.</p>
+
+<p>The client-server offline sync is an interesting area that we have been exploring for an app that we are working on. It turns out that Realm Mobile Platform and Azure Mobile Apps are two good choices. If you know of more options, please let me know in the comments below.</p>
+
+
+<figure >
+    
+        <img src="http://ann.chiramattel.com/img/RealmAzure.png" />
+    
+    
+</figure>
+
+
 
   
-    <li><time>08 Apr 2016, 20:47</time> - <a href="http://ann.chiramattel.com/post/conversation-as-interface/">Conversation As Interface</a></li>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1 pure-u-md-1-2">
+    
+    <nav class="prev">
+      <a href="http://ann.chiramattel.com/post/display-math-expressions-in-hugo/"><i class="fa fa-arrow-circle-left fa-fw fa-lg"></i>How to Display Mathematical Expressions in Blog</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1 pure-u-md-1-2">
+    
+  </div>
+</div>
+
+
 
   
-  </ul>
-  
-  <h2>2015</h2>
-  <ul>
-  
-    <li><time>27 Apr 2015, 00:49</time> - <a href="http://ann.chiramattel.com/post/first-post-from-hugo/">First Post from Hugo</a></li>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
 
-  
-  </ul>
-  
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>

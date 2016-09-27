@@ -7,8 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 24 Sep 2016 07:49:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 27 Sep 2016 08:22:02 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Realm Mobile Platform</title>
+      <link>http://ann.chiramattel.com/post/realm-announces-mobile-platform/</link>
+      <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/realm-announces-mobile-platform/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://realm.io&#34;&gt;Realm&lt;/a&gt; is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast &lt;a href=&#34;https://realm.io/products/realm-mobile-database/&#34;&gt;Mobile database&lt;/a&gt; software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#.
+That is why I am happy to see that today they announced &lt;a href=&#34;https://realm.io/news/introducing-realm-mobile-platform/&#34;&gt;Realm Mobile Platform&lt;/a&gt; that combines Realm client side database with server-side technology (Object Server as they call it). This platform provides the base infrastructure for mobile apps to support offline sync, that enables end users to interact with the app even when there is no network connection.&lt;/p&gt;
+
+&lt;p&gt;According to the article, this a highly performant solution because of the following reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Object Server does not use any ORM, just plain objects&lt;/li&gt;
+&lt;li&gt;data objects on the device are always kept in sync with server&lt;/li&gt;
+&lt;li&gt;during sync, only the changes in the objects are transmitted&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In my understanding, the direct equivalent of the Realm Mobile Platform is the &lt;a href=&#34;https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-offline-data-sync/&#34;&gt;Offline Sync capability of Azure Mobile Apps&lt;/a&gt;. Both platforms follow the same model and have very comparable features. That is is a good thing, because as developers, we have multiple options to choose from.&lt;/p&gt;
+
+&lt;p&gt;The client-server offline sync is an interesting area that we have been exploring for an app that we are working on. It turns out that Realm Mobile Platform and Azure Mobile Apps are two good choices. If you know of more options, please let me know in the comments below.&lt;/p&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://ann.chiramattel.com/img/RealmAzure.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
     
     <item>
       <title>How to Display Mathematical Expressions in Blog</title>
