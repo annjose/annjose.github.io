@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.15" />
 
-  <title>Posts &middot; Reflections</title>
+  <title>TDD in Xcode Playground &middot; Reflections</title>
 
   
   
@@ -173,46 +173,112 @@
 
 
 <div class="header">
-  <h1>Posts</h1>
+  <h1>TDD in Xcode Playground</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  
-  <h2>2017</h2>
-  <ul>
-  
-    <li><time>02 Apr 2017, 02:02</time> - <a href="http://ann.chiramattel.com/post/xcode-playgrounds-tdd/">TDD in Xcode Playground</a></li>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Apr 2017, 02:02</time>
+  </div>
 
   
-  </ul>
-  
-  <h2>2016</h2>
-  <ul>
-  
-    <li><time>27 Sep 2016, 08:22</time> - <a href="http://ann.chiramattel.com/post/realm-announces-mobile-platform/">Realm Mobile Platform</a></li>
 
   
-    <li><time>24 Sep 2016, 07:49</time> - <a href="http://ann.chiramattel.com/post/display-math-expressions-in-hugo/">How to Display Mathematical Expressions in Blog</a></li>
 
   
-    <li><time>09 Aug 2016, 20:05</time> - <a href="http://ann.chiramattel.com/post/machine-learning-coursera/">Machine Learning - A New Journey</a></li>
+
+</div>
+
+  <p>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground. This was really cumbersome and error-prone.</p>
+
+<p>That is why I was really excited when I learned about a simple trick that enables us to write unit tests in Xcode playground itself. As you know, the best thing to do after you get excited about a concenpt is to share with other people. So here I am :-)</p>
+
+<p>Essentially, the simple trick is as follows - you create a regular test class that derives from XCTestCase and run it using Xcode&rsquo;s default test suite <code>defaultTestSuite()</code>. This is the test suite that contains the test cases for all the tests in the class (<a href="https://developer.apple.com/reference/xctest/xctestcase/1496289-defaulttestsuite">https://developer.apple.com/reference/xctest/xctestcase/1496289-defaulttestsuite</a>). So all you need to do is write a test class and invoke <code>defaultTestSuite().run()</code> on the test class.</p>
+
+<p>Here is an example:</p>
+
+<pre><code>import Foundation
+import XCTest
+
+var str = &quot;Hello, playground&quot;
+
+struct TodoItem {
+    let title: String
+    let toBeCompletedBy: Date?
+    
+    init(title: String) {
+        self.title = title
+        self.toBeCompletedBy = nil
+    }
+}
+
+class TodoTests: XCTestCase {
+    
+    func testTodo() {
+        let todo = TodoItem(title: &quot;finish laundry&quot;)
+        XCTAssertNotNil(todo)
+        XCTAssertEqual(todo.title, &quot;finish laundry&quot;)
+    }
+    
+}
+
+TodoTests.defaultTestSuite().run()
+</code></pre>
+
+<p>This will execute all the tests in the test class and display the results in the familiar Xcode test format as folllows:</p>
+
+<pre><code>Test Suite 'TodoTests' started at 2017-04-02 01:36:16.888
+Test Case '-[__lldb_expr_49.TodoTests testTodo]' started.
+Test Case '-[__lldb_expr_49.TodoTests testTodo]' passed (0.004 seconds).
+Test Suite 'TodoTests' passed at 2017-04-02 01:36:16.894.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
+</code></pre>
+
+<p>The beauty of this approach is that these tests are run everytime you make any change in the class-under-test, thanks to Xcode playground&rsquo;s auto-refresh capability.</p>
+
+<p>Initially, I read about this from the <a href="http://initwithstyle.net/2015/11/tdd-in-swift-playground">initWithStyle blog</a> where the author implemented a PlaygroundTestObserver and TestRunner and connected it to the Playground&rsquo;s <code>XCTestObservationCenter</code>. But then recently I read another <a href="https://m.pardel.net/tdd-in-xcode-playgrounds-544a95db11e2">blog post</a> which proposed a much simple solution that was described above. Here is a simple gist that demonstrates that code - <a href="https://gist.github.com/annjose/1baa75b0796d0d2fef1a10ab74d5bd65">annjose/XcodePlaygroundUnitTests.swift</a></p>
+
 
   
-    <li><time>13 Apr 2016, 21:22</time> - <a href="http://ann.chiramattel.com/post/react-native-visual-studio-code/">ReactNative in Visual Studio Code</a></li>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1 pure-u-md-1-2">
+    
+    <nav class="prev">
+      <a href="http://ann.chiramattel.com/post/realm-announces-mobile-platform/"><i class="fa fa-arrow-circle-left fa-fw fa-lg"></i>Realm Mobile Platform</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1 pure-u-md-1-2">
+    
+  </div>
+</div>
+
+
 
   
-    <li><time>08 Apr 2016, 20:47</time> - <a href="http://ann.chiramattel.com/post/conversation-as-interface/">Conversation As Interface</a></li>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
 
-  
-  </ul>
-  
-  <h2>2015</h2>
-  <ul>
-  
-    <li><time>27 Apr 2015, 00:49</time> - <a href="http://ann.chiramattel.com/post/first-post-from-hugo/">First Post from Hugo</a></li>
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
 
-  
-  </ul>
-  
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>
