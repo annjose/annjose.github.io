@@ -7,8 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 27 Sep 2016 08:22:02 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 02 Apr 2017 02:02:31 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TDD in Xcode Playground</title>
+      <link>http://ann.chiramattel.com/post/xcode-playgrounds-tdd/</link>
+      <pubDate>Sun, 02 Apr 2017 02:02:31 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/xcode-playgrounds-tdd/</guid>
+      <description>&lt;p&gt;I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground. This was really cumbersome and error-prone and I was hoping that there would be a better solution for this.&lt;/p&gt;
+
+&lt;p&gt;No wonder why I was really excited when I learned about a simple trick that enables us to write unit tests in Xcode playground itself. Yes! We can do TDD in Xcode Playgrounds! Let&amp;rsquo;s see how to do it.&lt;/p&gt;
+
+&lt;p&gt;Essentially, the trick is as follows - you create a regular test class that derives from XCTestCase and run it using Xcode&amp;rsquo;s default test suite &lt;code&gt;defaultTestSuite()&lt;/code&gt;. This is the test suite that contains the test cases for all the tests in the class (&lt;a href=&#34;https://developer.apple.com/reference/xctest/xctestcase/1496289-defaulttestsuite&#34;&gt;https://developer.apple.com/reference/xctest/xctestcase/1496289-defaulttestsuite&lt;/a&gt;). So all you need to do is write a test class and invoke &lt;code&gt;defaultTestSuite().run()&lt;/code&gt; on the test class.&lt;/p&gt;
+
+&lt;p&gt;Here is an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import Foundation
+import XCTest
+
+var str = &amp;quot;Hello, playground&amp;quot;
+
+struct TodoItem {
+    let title: String
+    let toBeCompletedBy: Date?
+    
+    init(title: String) {
+        self.title = title
+        self.toBeCompletedBy = nil
+    }
+}
+
+class TodoTests: XCTestCase {
+    
+    func testTodo() {
+        let todo = TodoItem(title: &amp;quot;finish laundry&amp;quot;)
+        XCTAssertNotNil(todo)
+        XCTAssertEqual(todo.title, &amp;quot;finish laundry&amp;quot;)
+    }
+    
+}
+
+TodoTests.defaultTestSuite().run()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will execute all the tests in the test class and display the results in the familiar Xcode test format as folllows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Test Suite &#39;TodoTests&#39; started at 2017-04-02 01:36:16.888
+Test Case &#39;-[__lldb_expr_49.TodoTests testTodo]&#39; started.
+Test Case &#39;-[__lldb_expr_49.TodoTests testTodo]&#39; passed (0.004 seconds).
+Test Suite &#39;TodoTests&#39; passed at 2017-04-02 01:36:16.894.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can write your code snippets and tests side-by-side and verify the results using the tests. The ultimate beauty of this approach is that these tests are run automatically whenever you make changes in the class-under-test, thanks to Xcode playground&amp;rsquo;s auto-refresh capability.&lt;/p&gt;
+
+&lt;p&gt;So where did I learn this from? Initially, I read about this concept from the &lt;a href=&#34;http://initwithstyle.net/2015/11/tdd-in-swift-playground&#34;&gt;blog initWithStyle&lt;/a&gt; where the author implemented a slightly complex solution that creates &lt;code&gt;PlaygroundTestObserver&lt;/code&gt;, &lt;code&gt;TestRunner&lt;/code&gt; and connected it to the Playground&amp;rsquo;s &lt;code&gt;XCTestObservationCenter&lt;/code&gt;. But recently I read another &lt;a href=&#34;https://m.pardel.net/tdd-in-xcode-playgrounds-544a95db11e2&#34;&gt;blog post&lt;/a&gt; which proposed a much simple solution as described above.&lt;/p&gt;
+
+&lt;p&gt;If you would like to try it out for yourself, here is a simple gist that demonstrates the code - &lt;a href=&#34;https://gist.github.com/annjose/1baa75b0796d0d2fef1a10ab74d5bd65&#34;&gt;annjose/XcodePlaygroundUnitTests.swift&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Realm Mobile Platform</title>
