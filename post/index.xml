@@ -7,8 +7,134 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 02 Apr 2017 02:02:31 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 23 May 2017 03:37:57 -0700</lastBuildDate>
     <atom:link href="http://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GoogleIO 2017</title>
+      <link>http://ann.chiramattel.com/post/GoogleIO-2017/</link>
+      <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/GoogleIO-2017/</guid>
+      <description>
+
+&lt;p&gt;I had the wonderful opportunity to attend Google I/O last week and absolutely loved it. I learned a lot of things during the three days. Btw, it was tiring too with the continuous sessions and the sunny Sun.&lt;/p&gt;
+
+&lt;p&gt;This post is an attempt to share the main highlights and the announcements that I found interesting. If you attended the event or watched the sessions online, let me know if there were more things that you found interesting.&lt;/p&gt;
+
+&lt;h2 id=&#34;main-theme-mobile-first-to-ai-first:4f0df917c6f251772f83853b7516344c&#34;&gt;Main theme: Mobile First to AI First&lt;/h2&gt;
+
+&lt;p&gt;Google announced the major shift to AI First, which was quite evident in all the announcements across all products. Every product announced &amp;lsquo;smart&amp;rsquo; capabilities that harness the power of machine learning algorithms that learn on their own and improve over time.
+* Google&amp;rsquo;s image recognition success rate has surpassed that of humans
+* Voice is becoming an important part of many Google products
+* Android running on 2B monthly active devices&lt;/p&gt;
+
+&lt;h2 id=&#34;google-lens:4f0df917c6f251772f83853b7516344c&#34;&gt;Google Lens&lt;/h2&gt;
+
+&lt;p&gt;Google Lens is a new set of advanced image recognition capabilities with AI. It understands an image and display relevant content (eg: if you point it to a flower, it can name the flower; point to a restaurant photo and it shows the location, directions, ratings of the restaurant). It is integrated into Google Photos and Google Assistant&lt;/p&gt;
+
+&lt;h2 id=&#34;google-assistant:4f0df917c6f251772f83853b7516344c&#34;&gt;Google Assistant&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Available on iOS (can be downloaded as an app)&lt;/li&gt;
+&lt;li&gt;Google Lens is integrated into it&lt;/li&gt;
+&lt;li&gt;supports visual translation (point camera to Japanese word and it would translate and take actions)&lt;/li&gt;
+&lt;li&gt;answers questions with context and based on previous questions&lt;/li&gt;
+&lt;li&gt;SDK available for developers to build &amp;lsquo;actions&amp;rsquo; and integrate their services to Google Assistant&lt;/li&gt;
+&lt;li&gt;Out-of-the box support for integration with &lt;a href=&#34;http://api.ai&#34;&gt;http://api.ai&lt;/a&gt; for NLP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/actions/&#34;&gt;https://developers.google.com/actions/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;google-home:4f0df917c6f251772f83853b7516344c&#34;&gt;Google Home&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Proactive assistant (provides info proactively based on the context)&lt;/li&gt;
+&lt;li&gt;Hands-free calling to all US/Canada numbers&lt;/li&gt;
+&lt;li&gt;support multiple users&lt;/li&gt;
+&lt;li&gt;Stream visual responses that directs the responses to the right display (Tv / phone)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;android-o:4f0df917c6f251772f83853b7516344c&#34;&gt;Android O&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android O is in Beta now. The main features include..&lt;/li&gt;
+&lt;li&gt;Significant performance improvement in the OS as well as the applications through concurrent compact GC and code locality. All apps run faster and smoother without any modifications.&lt;/li&gt;
+&lt;li&gt;Improved notification panel, notification dots, app-specific notification channels&lt;/li&gt;
+&lt;li&gt;picture-in-picture (multi-window mode mostly usable for video playback)&lt;/li&gt;
+&lt;li&gt;Downloadable Fonts - on-demand download of fonts instead of bundling with APK&lt;/li&gt;
+&lt;li&gt;Autofill framework - Apps can provide hints about the input types, mark important fields etc.&lt;/li&gt;
+&lt;li&gt;New WebView APIs to enhance security and stability&lt;/li&gt;
+&lt;li&gt;New capabilities to reduce APK size – some are out-of-the-box; some needs modifications in the app. 7-minute workout app that participated in the pilot found a reduction of almost 48%.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.android.com/preview/index.html&#34;&gt;https://developer.android.com/preview/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.android.com/preview/features/autofill.html&#34;&gt;https://developer.android.com/preview/features/autofill.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;kotlin-support:4f0df917c6f251772f83853b7516344c&#34;&gt;Kotlin Support&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Android will support Kotlin as first-class language.&lt;/li&gt;
+&lt;li&gt;new language (6 years old) widely popular in Java community. Mature and production ready.&lt;/li&gt;
+&lt;li&gt;expressive, concise, extensible, powerful, supports modern paradigms like immutability, higher order functions&lt;/li&gt;
+&lt;li&gt;open source, 100% interoperable with Java, works side by side with existing Java code, easy migration path&lt;/li&gt;
+&lt;li&gt;Good tooling support for migration and refactoring built into Android Studio
+&lt;a href=&#34;https://developer.android.com/kotlin/index.html&#34;&gt;https://developer.android.com/kotlin/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;android-instant-apps:4f0df917c6f251772f83853b7516344c&#34;&gt;Android Instant Apps&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;These are lightweight native apps that run on the phone without installation and are accessible through a deep link URL. When the user taps on a link, they are taken directly to a specific view / activity. Smooth transition without any install friction. Google Authentication and Android Pay work seamlessly in these apps.&lt;/li&gt;
+&lt;li&gt;This is a powerful concept that brings the web application&amp;rsquo;s power of Reach to mobile native apps. A great way to acquire new users and build better engagement.&lt;/li&gt;
+&lt;li&gt;Developers can upgrade their existing Android app to instant app by modularizing the app into smaller modules. No need to maintain two code bases.&lt;/li&gt;
+&lt;li&gt;Short video - Introducing Android Instant Apps - Google I/O 2016&lt;/li&gt;
+&lt;li&gt;Details at &lt;a href=&#34;https://developer.android.com/topic/instant-apps/index.html&#34;&gt;https://developer.android.com/topic/instant-apps/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;google-photos:4f0df917c6f251772f83853b7516344c&#34;&gt;Google Photos&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;search photos using words that indicate the context of the photo&lt;/li&gt;
+&lt;li&gt;Suggested sharing - suggests whom to send the photo to&lt;/li&gt;
+&lt;li&gt;Shared libraries, printed photo books&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;android-go:4f0df917c6f251772f83853b7516344c&#34;&gt;Android Go&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;version of Android that is optimized for entry-level devices with limited data connections&lt;/li&gt;
+&lt;li&gt;Google&amp;rsquo;s new strategy to reach the next billion devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;cloud-tpu:4f0df917c6f251772f83853b7516344c&#34;&gt;Cloud TPU&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;new chip designed for machine learning available on Google Cloud platform&lt;/li&gt;
+&lt;li&gt;very powerful compute capability that can train and run heavy machine learning models&lt;/li&gt;
+&lt;li&gt;poised to attract all AI research to be done on the Google Cloud Computing Platform&lt;/li&gt;
+&lt;li&gt;integrated with TensorFlow, Google&amp;rsquo;s machine learning library
+&lt;a href=&#34;https://cloud.google.com/tpu/&#34;&gt;https://cloud.google.com/tpu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;other:4f0df917c6f251772f83853b7516344c&#34;&gt;Other&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TensorFlow available for mobile (Android and iOS SDKa available) &lt;a href=&#34;https://www.tensorflow.org/mobile/&#34;&gt;https://www.tensorflow.org/mobile/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Standalone VR headset&lt;/li&gt;
+&lt;li&gt;Android Architecture Components - a set of libraries that follows best practices of lifecycle management, data persistence &lt;a href=&#34;https://developer.android.com/topic/libraries/architecture/index.html&#34;&gt;https://developer.android.com/topic/libraries/architecture/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Room – Android’s new object mapping library for SQLite &lt;a href=&#34;https://developer.android.com/topic/libraries/architecture/room.html&#34;&gt;https://developer.android.com/topic/libraries/architecture/room.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;more-fun-stuff:4f0df917c6f251772f83853b7516344c&#34;&gt;More Fun Stuff&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;QBSE was featured in one of the sessions as the industry leading mileage tracking app &lt;a href=&#34;https://twitter.com/annjose/status/865693733475368960&#34;&gt;https://twitter.com/annjose/status/865693733475368960&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Photos presenter took photo with cut-outs of his children and selfie with the audience to demo how Google Photos the shared libraries and the auto-sync works for specific people&lt;/li&gt;
+&lt;li&gt;High school student from Chicago built a machine learning app using TensorFlow that detects breast cancer faster and better accuracy&lt;/li&gt;
+&lt;li&gt;SlowMo guys did a live YouTube video stream to demo SuperChat (see the mark 1:07:07 in keynote video Google I/O Keynote (Google I/O &amp;lsquo;17) )&lt;/li&gt;
+&lt;li&gt;Codelabs - &lt;a href=&#34;https://codelabs.developers.google.com/io2017&#34;&gt;https://codelabs.developers.google.com/io2017&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>TDD in Xcode Playground</title>
