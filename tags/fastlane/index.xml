@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fastlane on Reflections</title>
+    <link>http://ann.chiramattel.com/tags/fastlane/</link>
+    <description>Recent content in Fastlane on Reflections</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 24 Dec 2017 12:02:23 -0800</lastBuildDate>
+    
+	<atom:link href="http://ann.chiramattel.com/tags/fastlane/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fastlane</title>
+      <link>http://ann.chiramattel.com/post/fastlane/</link>
+      <pubDate>Sun, 24 Dec 2017 12:02:23 -0800</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/fastlane/</guid>
+      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
+The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
+    </item>
+    
+  </channel>
+</rss>

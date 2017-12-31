@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 23 May 2017 03:37:57 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 28 Dec 2017 13:35:28 -0800</lastBuildDate>
     
 	<atom:link href="http://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn GraphQL By Example</title>
+      <link>http://ann.chiramattel.com/post/graphql-intro/</link>
+      <pubDate>Thu, 28 Dec 2017 13:35:28 -0800</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/graphql-intro/</guid>
+      <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
+    </item>
+    
+    <item>
+      <title>Fastlane</title>
+      <link>http://ann.chiramattel.com/post/fastlane/</link>
+      <pubDate>Sun, 24 Dec 2017 12:02:23 -0800</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/fastlane/</guid>
+      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
+The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
+    </item>
     
     <item>
       <title>GoogleIO 2017</title>
@@ -75,7 +94,7 @@ The course starts with the basics, including a primer on Linear Algebra (it is o
       
       <guid>http://ann.chiramattel.com/post/conversation-as-interface/</guid>
       <description>The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. Conversation As Interface. It is a more natural form of communication, especially for question-answer / interview experiences.
-Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been doing experiments in their Messenger app allowing a few developers like Uber, Assist etc.</description>
+Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running many experiments in their Messenger app allowing a few developers like Uber, Assist etc.</description>
     </item>
     
     <item>
