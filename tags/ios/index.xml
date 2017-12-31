@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 24 Dec 2017 12:02:23 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Dec 2017 12:02:23 -0800</lastBuildDate>
     
 	<atom:link href="http://ann.chiramattel.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Fastlane</title>
       <link>http://ann.chiramattel.com/post/fastlane/</link>
-      <pubDate>Sun, 24 Dec 2017 12:02:23 -0800</pubDate>
+      <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
       
       <guid>http://ann.chiramattel.com/post/fastlane/</guid>
       <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
