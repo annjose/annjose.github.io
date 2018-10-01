@@ -2,116 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Reflections</title>
-    <link>http://ann.chiramattel.com/post/</link>
+    <link>https://ann.chiramattel.com/post/</link>
     <description>Recent content in Posts on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Sun, 30 Sep 2018 21:17:46 -0700</lastBuildDate>
     
-	<atom:link href="http://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GraceHopper 2018 Highlights</title>
-      <link>http://ann.chiramattel.com/post/ghc-2018-hightlights/</link>
+      <link>https://ann.chiramattel.com/post/ghc-2018-hightlights/</link>
       <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/ghc-2018-hightlights/</guid>
+      <guid>https://ann.chiramattel.com/post/ghc-2018-hightlights/</guid>
       <description>I am at the Houston IAH airport waiting to board the flight to go home after 3 days of inspiration, motivation, technology, friendship and pure awesomeness. Yes, I was at Grace Hopper Celebration 2018 (aka GHC 2018), the world&amp;rsquo;s biggest gathering of women technologists. This year, GHC has 20,000 attendees representing 90 countries. It was such an inspiring experience for me that I thought I should share my experiences and learnings with you my friends.</description>
     </item>
     
     <item>
       <title>Learn GraphQL By Example</title>
-      <link>http://ann.chiramattel.com/post/graphql-intro/</link>
+      <link>https://ann.chiramattel.com/post/graphql-intro/</link>
       <pubDate>Thu, 28 Dec 2017 13:35:28 -0800</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/graphql-intro/</guid>
+      <guid>https://ann.chiramattel.com/post/graphql-intro/</guid>
       <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
     </item>
     
     <item>
       <title>Fastlane</title>
-      <link>http://ann.chiramattel.com/post/fastlane/</link>
+      <link>https://ann.chiramattel.com/post/fastlane/</link>
       <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/fastlane/</guid>
+      <guid>https://ann.chiramattel.com/post/fastlane/</guid>
       <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
 The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
     </item>
     
     <item>
       <title>GoogleIO 2017</title>
-      <link>http://ann.chiramattel.com/post/GoogleIO-2017/</link>
+      <link>https://ann.chiramattel.com/post/GoogleIO-2017/</link>
       <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/GoogleIO-2017/</guid>
+      <guid>https://ann.chiramattel.com/post/GoogleIO-2017/</guid>
       <description>I had the wonderful opportunity to attend Google I/O last week and absolutely loved it. I learned a lot of things during the three days. Btw, it was tiring too with the continuous sessions and the sunny Sun.
 This post is an attempt to share the main highlights and the announcements that I found interesting. If you attended the event or watched the sessions online, let me know if there were more things that you found interesting.</description>
     </item>
     
     <item>
       <title>TDD in Xcode Playground</title>
-      <link>http://ann.chiramattel.com/post/xcode-playgrounds-tdd/</link>
+      <link>https://ann.chiramattel.com/post/xcode-playgrounds-tdd/</link>
       <pubDate>Sun, 02 Apr 2017 02:02:31 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/xcode-playgrounds-tdd/</guid>
+      <guid>https://ann.chiramattel.com/post/xcode-playgrounds-tdd/</guid>
       <description>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground.</description>
     </item>
     
     <item>
       <title>Realm Mobile Platform</title>
-      <link>http://ann.chiramattel.com/post/realm-announces-mobile-platform/</link>
+      <link>https://ann.chiramattel.com/post/realm-announces-mobile-platform/</link>
       <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/realm-announces-mobile-platform/</guid>
+      <guid>https://ann.chiramattel.com/post/realm-announces-mobile-platform/</guid>
       <description>Realm is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast Mobile database software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. That is why I am happy to see that today they announced Realm Mobile Platform that combines Realm client side database with server-side technology (Object Server as they call it).</description>
     </item>
     
     <item>
       <title>How to Display Mathematical Expressions in Blog</title>
-      <link>http://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
+      <link>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
+      <guid>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
       <description>As part of my Machine Learning course, I wanted to share some of my learnings / notes in this blog so that someone will find it useful and I could also refer to it later. But I was not sure how to display the mathemtical expressions used in calculating cost function, gradient descent etc. in my blog. I have used the OneNote Equation tool before, but didn&amp;rsquo;t know how to do it on the Web for my blog.</description>
     </item>
     
     <item>
       <title>Machine Learning - A New Journey</title>
-      <link>http://ann.chiramattel.com/post/machine-learning-coursera/</link>
+      <link>https://ann.chiramattel.com/post/machine-learning-coursera/</link>
       <pubDate>Tue, 09 Aug 2016 20:05:54 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/machine-learning-coursera/</guid>
+      <guid>https://ann.chiramattel.com/post/machine-learning-coursera/</guid>
       <description>Few weeks ago, I started the Machine Learning course on Coursera by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.
 The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college).</description>
     </item>
     
     <item>
       <title>ReactNative in Visual Studio Code</title>
-      <link>http://ann.chiramattel.com/post/react-native-visual-studio-code/</link>
+      <link>https://ann.chiramattel.com/post/react-native-visual-studio-code/</link>
       <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/react-native-visual-studio-code/</guid>
+      <guid>https://ann.chiramattel.com/post/react-native-visual-studio-code/</guid>
       <description>I have been thoroughly enjoying working on ReactNative projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like Nuclide (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&amp;hellip;</description>
     </item>
     
     <item>
       <title>Conversation As Interface</title>
-      <link>http://ann.chiramattel.com/post/conversation-as-interface/</link>
+      <link>https://ann.chiramattel.com/post/conversation-as-interface/</link>
       <pubDate>Fri, 08 Apr 2016 20:47:54 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/conversation-as-interface/</guid>
+      <guid>https://ann.chiramattel.com/post/conversation-as-interface/</guid>
       <description>The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. Conversation As Interface. It is a more natural form of communication, especially for question-answer / interview experiences.
 Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running many experiments in their Messenger app allowing a few developers like Uber, Assist etc.</description>
     </item>
     
     <item>
       <title>First Post from Hugo</title>
-      <link>http://ann.chiramattel.com/post/first-post-from-hugo/</link>
+      <link>https://ann.chiramattel.com/post/first-post-from-hugo/</link>
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
       
-      <guid>http://ann.chiramattel.com/post/first-post-from-hugo/</guid>
+      <guid>https://ann.chiramattel.com/post/first-post-from-hugo/</guid>
       <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.
 I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
     </item>
