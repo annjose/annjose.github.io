@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://ann.chiramattel.com/post/ghc-2018-hightlights/</loc>
+    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ann.chiramattel.com/post/graphql-intro/</loc>
     <lastmod>2017-12-28T13:35:28-08:00</lastmod>
   </url>
@@ -64,8 +69,20 @@
   </url>
   
   <url>
+    <loc>http://ann.chiramattel.com/tags/ghc-2018/</loc>
+    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://ann.chiramattel.com/tags/graphql/</loc>
     <lastmod>2017-12-28T13:35:28-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ann.chiramattel.com/tags/highlights/</loc>
+    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,13 +94,13 @@
   
   <url>
     <loc>http://ann.chiramattel.com/post/</loc>
-    <lastmod>2017-12-28T13:35:28-08:00</lastmod>
+    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://ann.chiramattel.com/</loc>
-    <lastmod>2017-12-28T13:35:28-08:00</lastmod>
+    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
     <priority>0</priority>
   </url>
   

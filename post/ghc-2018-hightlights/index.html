@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learnings and Experience of Grace Hopper Celebration 2018">
+  <meta name="generator" content="Hugo 0.30.2" />
+
+  <title>GHC 2018 Hightlights &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://ann.chiramattel.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://ann.chiramattel.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://ann.chiramattel.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://ann.chiramattel.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ann.chiramattel.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ann.chiramattel.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://ann.chiramattel.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>GHC 2018 Hightlights</h1>
+  <h2>Learnings and Experience of Grace Hopper Celebration 2018</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Sep 2018, 21:17</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://ann.chiramattel.com/tags/ghc-2018">ghc-2018</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://ann.chiramattel.com/tags/highlights">highlights</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+
+<figure >
+    
+        <img src="https://ghc.anitab.org/wp-content/themes/ghc-gracehopper/library/images/footer-ghc.png" alt="Grace Hopper Celebration 2018" />
+    
+    
+</figure>
+
+
+<p>I am at the Houston IAH airport waiting to board the flight San Jose to go home after 3 days of inspiration, motivation, technology, friendship and pure awesomeness. Yes, I was at <a href="https://ghc.anitab.org/">Grace Hopper Conference 2018</a>, the world&rsquo;s largest gathering of women technologists. I am writing this blog just to share my experiences and learnings from the event. Hope you enjoy reading it and get some inspiration. If you also attended GHC this year, I would love to know what your experience was. Leave a comment below or even better, write a blog and send me the link!</p>
+
+<h2 id="day-1-let-s-get-started">Day 1 - Let&rsquo;s Get Started</h2>
+
+<p>The first day was kicked off by Brenda Wilkerson, President and CEO, <a href="https://anitab.org/">AnitaB.org</a>. She announced the theme of this year&rsquo;s GHC as &ldquo;We are Here&rdquo;. Whether you are the little girl writing code in grade school, or the woman, whether you majored in Engineering, or stumbled in technology from any other stream, seasoned savvy technologist, a brilliant boot camper, this is your Home. We are Here For You. She announced that this year GHC has 20,000 attendees representing 90 countries.</p>
+
+
+<figure >
+    
+        <img src="http://ann.chiramattel.com/img/ghc-2018-kickoff.jpg" alt="Brenda Wilkerson, President and CEO of AnitaB.org" width="800" />
+    
+    
+</figure>
+
+
+<p>The first keynote was given by <a href="https://ghc.anitab.org/2018-speakers-honorees/2018-speakers/padmasree-warrior/">Padmasree Warrior</a>, CEO of NIO US. She emphasized the need to build a career by embracing the opportunities proactively. The key lessons that she shared with the audience were:</p>
+
+<ul>
+<li>Open doors and go through them; don&rsquo;t wait until they close on you. There is no perfect door. Be intellectually curious and intellectually humble.</li>
+<li>Eyes on the stars, feet on the ground. Be decisive but listen to opinion / feedback from people around you.</li>
+<li>Work and learn across boundaries. Learn more than your primary discipline.</li>
+</ul>
+
+<p>The second keynote was from <a href="https://ghc.anitab.org/2018-speakers-honorees/2018-speakers/jessica-o-matthews/">Jessica .O. Matthews</a>, the CEO /co-founder of Unchartered Power. She described her life journey, starting from an engineering class assignment that resulted in a power generating soccer ball, to founding of Unchartered Power, to make the core technology feasible as an energy harvesting system that can be used in many more products. The two key takeaways from her talk were: &ldquo;Just because it&rsquo;s not your plan doesn&rsquo;t mean it&rsquo;s not your destiny&rdquo; and &ldquo;If I tried to be anything but who I am, I wouldn&rsquo;t be here&rdquo;.</p>
+
+<p>Another exciting thing that happened that day was that this year&rsquo;s Technical Leadership Abie Award was awarded to Rebecca Parsons, the CTO of ThoughtWorks, a company that I always admire for being the pioneers in software engineering practices and the annual <a href="https://www.thoughtworks.com/radar">Technology Radar</a> that gives insights into technology trends.</p>
+
+<p>I also enjoyed two sessions during the day. One was a session on cybersecurity &ldquo;Think Like a Hacker. Defend Like a Pro&rdquo; where we played a game as an employee of a hypothetical company &ldquo;HackExchange&rdquo;, we have to hack into the hypothetical bank named &ldquo;Bank of Azgard&rdquo; and withdraw money from the account. The game had multiple stages, each of which presents you some information and a strategy to choose in order to infiltrate the bank&rsquo;s network. Based on which strategy you pick, you get to the next stage and are presented with other strategies to go deeper into the system. After completing all 5 stages, you get the result of how successful your strategy was. This was a fun and informative way to learn the concepts, far better than going through slide deck.</p>
+
+<p>The other session the I thoroughly enjoyed was &ldquo;Hands-on Exploratory Data Analysis&rdquo; in which  two senior Data Scientists from Apple explained how to analyze huge amounts of data to answer important questions and draw insights - the process is known as Exploratory Data Analysis (shortened as EDA). Using dataset from <a href="https://www.moma.org">Museum of Modern Art (MOMA)</a>, they walked through each stage of the process starting from forming the hypotheses, data wrangling, profiling, identifying outliers, identifying relationships between variables and finally exploring the data across dimensions. It was interesting to know that this is not a linear process, instead it is like a tree where you start with one question, execute the first step, and then find more questions, branch off another small EDA on that and so on. Another key learning from this session was that EDA helps uncover things that seem to be a bias could be due to a genuine reason - for example, in 1970&rsquo;s the number of acquired art from male artists was very high, you would think that the Director at that time was more biased to men, but the actual reason is that in 1968, around 4900 artworks from a single artist, a French photographer, were donated to the museum. This is a great example of the principle &ldquo;Correlation is not the same as Causality&rdquo;.</p>
+
+<p>The first day ended with a wonderful dinner with my Intuit people at a steakhouse. It was a gathering of all 120 attendees from Intuit. It was like a high school reunion for me as I met many of my friends/colleagues from Consumer Group which I was part of, until January. We took lots and lots of photos, thanked the organizers who made all this happen, had lot of fun. Finally we went back to our hotels fully exhausted, but also excited about the next day.</p>
+
+<h2 id="day-2-bring-it-on">Day 2 - Bring It On</h2>
+
+<p>I started the day with a lot of excitement to attend the <a href="https://ghc.anitab.org/2018-attend/schedule-overview/open-source-day/">Open Source Day at GHC</a> as a mentor to help the participants contribute to one of the open source projects that were shortlisted. Honestly, I was a little nervous about mentoring because the project that I was assigned to was on Android platform, which I am not as comfortable as iOS and I have only a very few open source contributions. But my motivation to sign up as a mentor was to help people get over the hump of submitting their first PR, giving them the confidence that it is not very difficult and motivate them to contribute to more projects. But I went there prepared with the development environment set up and a good understanding of the code.</p>
+
+
+<figure >
+    
+        <img src="https://ghc.anitab.org/wp-content/uploads/sites/2/2018/08/systers-logo-700x127.png" />
+    
+    
+</figure>
+
+
+<p>There were around 100 participants and around 10 mentors at the event. The projects that were shortlisted were FixMe project by Mozilla, Oppia education platform, the mentorship Android app by Systers group and using RedHat&rsquo;s OpenShift Container platform. Participants could choose which project that they want to work on and were assigned mentors to help them.
+My project was the <a href="https://github.com/systers/mentorship-android">Systers mentorship app</a> which was developed by an amazing student Isabel Costa, as part of Google Summer of Code. Our objective for the day was to tackle the bugs or implement the enhancements specified as gitub issues. After a brief introduction, we divided our groups into smaller teams. All of my team members were new to Android, so I helped everyone set up their dev environment got the app running on the emulator. Then we rolled up our sleeves and got to work!
+At the end of 4 hours of hacking, we were able to <a href="https://github.com/systers/mentorship-android/pulls">submit 4 PRs</a> and did a demo of the work to the other teams. The most exciting thing was that for all the participants, this was their first pull request ever. This was the case for almost every team who presented at the podium. You should see how proud they were of their accomplishment. Today&rsquo;s experience could be a new trajectory in their career. For me personally, this was a great experience of satisfaction and helping others. It helped me get over the anxiety of mentoring at a live hackathon and do something that I haven&rsquo;t done yet.</p>
+
+
+<figure >
+    
+        <img src="http://ann.chiramattel.com/img/ghc-opensource-day-team.jpg" width="600" />
+    
+    
+    <figcaption>
+        <h4>My Mentorship App Team</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>The other exciting thing for the day was the booth duty at the Intuit booth at GHC. Oh my god! The Intuit booth was amazing, it was built on the theme of the Intuit giant and captured everyone&rsquo;s attention as they walked by. A lot of people came to our booth to submit their resumes, ask questions about a myriad of things starting from the work culture, tech stack, learning opportunities etc. The good thing was that I didn&rsquo;t have to prepare for this at all, because Intuit is such a great company that I had to just speak my mind and give my honest opinion, and that excited everyone who visited our booth.</p>
+
+<p>At the end of the day, I went for the Intuit recruiting event which was yet another arena for non-Intuit folks to meet Intuit folks and understand the work experience, culture etc. in a more focused group than in the booth. It gave them a forum to ask questions that are more tailored for their situations like early-career, mid-career, architecture or data science. I had a lot of 1:1 conversations with people who were eager to know how to get to the next level in their career, find a mentor or sponsor who can give them a 360 degree view and how to maintain the work life balance. What I learned was that many people are overwhelmed by the fast pace of technological advancements and they don&rsquo;t have anyone to give guidance on what to do. My advice to them was to learn the fundamentals, spend a small amount of time everyday learning something so that it adds up to have the compound effect. The other common question was how to claim genuine credit for the work that they do without bragging about - and I told them to write down everything, share it with their team and ask for feedback - be it a simple idea or a design proposal, or a solution to a customer problem. It gives everyone a fair ground to collaborate and contribute.</p>
+
+<p>By the end of the day, when I reached the hotel, I was fully exhausted, but couldn&rsquo;t resist the invitation from my dear colleague Carly Wood, the Product Manger in my team, to just chat for a while. We sat there for two hours and had a great time going through our product strategy, life experiences. We concluded that we both have more in common than we knew earlier.</p>
+
+<h2 id="day-3-time-to-wind-down">Day 3 - Time to Wind Down</h2>
+
+<p>This was the last day of the conference, when it is time to wind down, reflect about the last two days and say. One of the highlights for this day was the excellent talk by Prof. Anita Hill recounting her experience speaking the truth and combating sexual harassment at the workplace. They key takeaway was that more women are organizing. As she rightly said &ldquo;We move cones&rdquo;.</p>
+
+<p>The day ended with the Closing Keynote with Nora Denzel as the MC. Nora was so funny and entertaining as usual. It is amazing how she is so comfortable on stage, and at the same time serious about introducing the speakers and winners so well. She was the VP of Engineering at Intuit six years ago. I was awe-struck then and so was today.</p>
+
+<p>At the Closing Keynote, they announced the results of the <a href="https://ghc.anitab.org/2018-anitab-org-pitcher/">PitcHER contest</a> where women entrepreneurs can pitch their idea and win a prize for top three and Audience favorite. The winners were young entrepreneurs who took the leap of faith to start a business on their own and became successful. The key takeaways from the panel discussion with the winners - &ldquo;You have to play the game to change the game&rdquo;, &ldquo;As a founder, you are lifting the weight that many can&rsquo;t; so own that and be proud of it&rdquo;, &ldquo;You are doing the things because nobody else well. If you don&rsquo;t do it, then who?&rdquo;. &ldquo;Invest in networking proactively rather than waiting for the need to come, so that when you need it, you have the people around you that can help&rdquo;. It was so inspiring to see those bold young women.</p>
+
+<p>The Keynote session ended with a great talk by Megan Smith, the third CTO of US. Computer Science for all people, all topics . Megan put forth a lot of interesting - for example, that Ida Wells used data to fight lynching and investigate journalism, that two-thirds of code-breakers at Bletchley Park were women, that Ada Lovelace, the world&rsquo;s first computer programmer said in 1844 that &ldquo;I hope to bequeath to the future generations calculus of the nervous system&rdquo;. Megan remarked &ldquo;that looks like AI to me&rdquo;. It was yet another inspiring talk. In fact, after the talk, I was interested in knowing more about Ada Lovelace and found this good article <a href="http://blog.stephenwolfram.com/2015/12/untangling-the-tale-of-ada-lovelace/">Untangling the tale of Ada Lovelace</a>.</p>
+
+<h2 id="so-what-s-next">So What&rsquo;s Next?</h2>
+
+
+<figure >
+    
+        <img src="https://ghc.anitab.org/wp-content/uploads/sites/2/2018/09/IMG_0316.jpg" alt="GHC - Our Time Gallery" width="600" />
+    
+    
+</figure>
+
+
+<p>This year&rsquo;s GHC was a truly inspirational experience. Personally, I consider myself a very independent woman, but even then I was motivated by the diverse community of people who are willing to support each other and help others build their career. My biggest takeaway was that we are not alone, there is a sea of people that understand you, are willing to support you and also need your help.</p>
+
+<p>I have been thinking about what is the one thing I can do differently after attending GHC and found it - it is to encourage people to contribute to open source. In spite of being a great place to learn and equal opportunity to contribute, many people are afraid to step in to this world, they are afraid to submit the first pull request. I want to help them get over that fear and doubt. I am determined to help everyone in my team, especially the quite people so that they have a voice, give them the confidence to speak up and contribute back to the community. That is my mission from now until next GHC.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://ann.chiramattel.com/post/graphql-intro/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://ann.chiramattel.com/post/graphql-intro/">Learn GraphQL By Example</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://ann.chiramattel.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75357261-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

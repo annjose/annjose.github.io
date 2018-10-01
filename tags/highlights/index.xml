@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Highlights on Reflections</title>
+    <link>http://ann.chiramattel.com/tags/highlights/</link>
+    <description>Recent content in Highlights on Reflections</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 30 Sep 2018 21:17:46 -0700</lastBuildDate>
+    
+	<atom:link href="http://ann.chiramattel.com/tags/highlights/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GHC 2018 Hightlights</title>
+      <link>http://ann.chiramattel.com/post/ghc-2018-hightlights/</link>
+      <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
+      
+      <guid>http://ann.chiramattel.com/post/ghc-2018-hightlights/</guid>
+      <description>I am at the Houston IAH airport waiting to board the flight San Jose to go home after 3 days of inspiration, motivation, technology, friendship and pure awesomeness. Yes, I was at Grace Hopper Conference 2018, the world&amp;rsquo;s largest gathering of women technologists. I am writing this blog just to share my experiences and learnings from the event. Hope you enjoy reading it and get some inspiration. If you also attended GHC this year, I would love to know what your experience was.</description>
+    </item>
+    
+  </channel>
+</rss>
