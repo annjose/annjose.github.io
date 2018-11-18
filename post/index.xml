@@ -23,6 +23,16 @@ What and Why of Mocking Even though we are convinced about the benefits of testi
     </item>
     
     <item>
+      <title>Swift 4.2 - What&#39;s New</title>
+      <link>https://ann.chiramattel.com/post/swift42-whats-new/</link>
+      <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/swift42-whats-new/</guid>
+      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at Swift4_2-WhatsNew.playground.
+Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  let randomInt = Int.</description>
+    </item>
+    
+    <item>
       <title>GraceHopper 2018 Highlights</title>
       <link>https://ann.chiramattel.com/post/ghc-2018-hightlights/</link>
       <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>

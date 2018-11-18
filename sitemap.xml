@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://ann.chiramattel.com/post/swift42-whats-new/</loc>
+    <lastmod>2018-10-12T20:09:12-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ann.chiramattel.com/post/ghc-2018-hightlights/</loc>
     <lastmod>2018-09-30T21:17:46-07:00</lastmod>
   </url>
@@ -106,6 +111,12 @@
   <url>
     <loc>https://ann.chiramattel.com/</loc>
     <lastmod>2018-11-17T19:00:52-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ann.chiramattel.com/tags/swift/</loc>
+    <lastmod>2018-10-12T20:09:12-08:00</lastmod>
     <priority>0</priority>
   </url>
   
