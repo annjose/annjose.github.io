@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 30 Sep 2018 21:17:46 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 17 Nov 2018 19:00:52 -0800</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How To Mock Network Requests in iOS</title>
+      <link>https://ann.chiramattel.com/post/mocking-network-requests-ios/</link>
+      <pubDate>Sat, 17 Nov 2018 19:00:52 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/mocking-network-requests-ios/</guid>
+      <description>One of the challenges of mobile application development is to ensure that the application is resilient to various error responses from the services that are consumed by the application. Mobile devices are more susceptible to network connectivity issues, timeout etc. So we need to take extra care to make sure that we test all error scenarios and handle them in a meaningful manner.
+What and Why of Mocking Even though we are convinced about the benefits of testing server errors, these services are running in Production serving real customer requests.</description>
+    </item>
     
     <item>
       <title>GraceHopper 2018 Highlights</title>

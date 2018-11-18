@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ann.chiramattel.com/post/mocking-network-requests-ios/</loc>
+    <lastmod>2018-11-17T19:00:52-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ann.chiramattel.com/post/ghc-2018-hightlights/</loc>
     <lastmod>2018-09-30T21:17:46-07:00</lastmod>
   </url>
@@ -88,19 +93,19 @@
   
   <url>
     <loc>https://ann.chiramattel.com/tags/ios/</loc>
-    <lastmod>2017-12-23T12:02:23-08:00</lastmod>
+    <lastmod>2018-11-17T19:00:52-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ann.chiramattel.com/post/</loc>
-    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
+    <lastmod>2018-11-17T19:00:52-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ann.chiramattel.com/</loc>
-    <lastmod>2018-09-30T21:17:46-07:00</lastmod>
+    <lastmod>2018-11-17T19:00:52-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,6 +117,12 @@
   
   <url>
     <loc>https://ann.chiramattel.com/topics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ann.chiramattel.com/tags/unit-testing/</loc>
+    <lastmod>2018-11-17T19:00:52-08:00</lastmod>
     <priority>0</priority>
   </url>
   

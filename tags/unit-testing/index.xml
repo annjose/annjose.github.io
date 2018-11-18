@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ios on Reflections</title>
-    <link>https://ann.chiramattel.com/tags/ios/</link>
-    <description>Recent content in Ios on Reflections</description>
+    <title>Unit Testing on Reflections</title>
+    <link>https://ann.chiramattel.com/tags/unit-testing/</link>
+    <description>Recent content in Unit Testing on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Sat, 17 Nov 2018 19:00:52 -0800</lastBuildDate>
     
-	<atom:link href="https://ann.chiramattel.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ann.chiramattel.com/tags/unit-testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://ann.chiramattel.com/post/mocking-network-requests-ios/</guid>
       <description>One of the challenges of mobile application development is to ensure that the application is resilient to various error responses from the services that are consumed by the application. Mobile devices are more susceptible to network connectivity issues, timeout etc. So we need to take extra care to make sure that we test all error scenarios and handle them in a meaningful manner.
 What and Why of Mocking Even though we are convinced about the benefits of testing server errors, these services are running in Production serving real customer requests.</description>
-    </item>
-    
-    <item>
-      <title>Fastlane</title>
-      <link>https://ann.chiramattel.com/post/fastlane/</link>
-      <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
-      
-      <guid>https://ann.chiramattel.com/post/fastlane/</guid>
-      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
-The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
     </item>
     
   </channel>
