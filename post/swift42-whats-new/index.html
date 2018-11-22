@@ -252,7 +252,7 @@
 <li>It also provides the APIs <code>shuffle</code> and <code>shuffled</code> to shuffle a sequence</li>
 </ul>
 
-<pre><code class="language-swift">let randomInt = Int.random(in: 0..&lt;10)
+<pre><code>let randomInt = Int.random(in: 0..&lt;10)
 let randomElement = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;].randomElement()
 </code></pre>
 
@@ -262,7 +262,7 @@ let randomElement = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;
 
 <p>In order to use this feature, you have annotate your type with <code>@dynamicMemberLookup</code> and implement the method <code>subscript(dynamicMember:)</code></p>
 
-<pre><code class="language-swift">@dynamicMemberLookup
+<pre><code>@dynamicMemberLookup
 class Person {
     let name: String, let age: Int, let details: [String: String]
     
@@ -285,7 +285,7 @@ p.info
 
 <p>If you want to customize the cases that is returned by <code>allCases</code>, you can implement the <code>CaseIterator</code> yourself.</p>
 
-<pre><code class="language-swift">for (index, season) in Season.allCases.enumerated() {
+<pre><code>for (index, season) in Season.allCases.enumerated() {
     print (&quot;[\(index)]: \(season.rawValue.capitalized)&quot;)
 }
 </code></pre>
@@ -294,7 +294,7 @@ p.info
 
 <p>Swift 4.2 made some neat enhancements to the Sequence APIs, for example, <code>last(where:)</code>, <code>lastIndex(of:)</code>, <code>lastIndes(where:)</code>. They also added a new method <code>allSatisfy(:)</code> that checks whether all elements in a sequence satisfy a specific condition.</p>
 
-<pre><code class="language-swift">let numbers = [11, 14, 91, 12, 43]
+<pre><code>let numbers = [11, 14, 91, 12, 43]
 numbers.last(where: { $0 % 2 == 0 })    
 numbers.lastIndex(where: { $0 % 2 == 0 })
 
@@ -306,7 +306,7 @@ numbers.lastIndex(where: { $0 % 2 == 0 })
 
 <p>Swift 4.2 provides default implementation for conditional conformance to <code>Equatable</code>, <code>Hashable</code> and <code>Codable</code> in extensions. In Swift 4.1, you had to manually implement these protocols even though the conforming protocol provided the implementations.</p>
 
-<pre><code class="language-swift">// Swift 4.1 - you have to implement the Equatable for conditional conformance 
+<pre><code>// Swift 4.1 - you have to implement the Equatable for conditional conformance 
 extension Screencast: Equatable where Tutorial: Equatable {
     /*static func ==(lhs: Screencast, rhs: Screencast) -&gt; Bool {
        return lhs.author == rhs.author &amp;&amp; lhs.tutorial == rhs.tutorial
@@ -326,20 +326,20 @@ extension Screencast: Equatable where Tutorial: Codable { }
 <ul>
 <li><p>Swift 4.2 provides universal hash functions which enables us to implement custom hash functions for a class much easier, more correct and performant. The <code>Hashable</code> protocol defines a new method <code>hash(into:)</code> which repalces <code>hasValue</code> of Swift 4.1</p>
 
-<pre><code class="language-swift">func hash(into hasher: inout Hasher) {
+<pre><code>func hash(into hasher: inout Hasher) {
     hasher.combine(url)
 }
 </code></pre></li>
 
 <li><p>Convenience method to remove elements of a collection that satisfy a condition</p>
 
-<pre><code class="language-swift">var nums = [1, 2, 3, 4]
+<pre><code>var nums = [1, 2, 3, 4]
 nums.removeAll { $0 % 2 == 0}   // {1, 3}
 </code></pre></li>
 
 <li><p>And finally, Yes! Swift 4.2 adds <code>toggle</code> to <code>Bool</code></p>
 
-<pre><code class="language-swift">var flipMe = true
+<pre><code>var flipMe = true
 flipMe.toggle()
 </code></pre></li>
 </ul>
