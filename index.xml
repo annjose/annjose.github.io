@@ -6,7 +6,7 @@
     <description>Recent content on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
     <lastBuildDate>Mon, 29 Jun 2020 22:32:55 -0700</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/index.xml" rel="self" type="application/rss+xml" />
@@ -22,9 +22,9 @@
     </item>
     
     <item>
-      <title>What Do I Really Want</title>
+      <title>What do I really want</title>
       <link>https://ann.chiramattel.com/post/what-do-i-really-want/</link>
-      <pubDate>Mon, 29 Jun 2020 11:26:39 -0700</pubDate>
+      <pubDate>Sun, 28 Jun 2020 11:26:39 -0700</pubDate>
       
       <guid>https://ann.chiramattel.com/post/what-do-i-really-want/</guid>
       <description>The other day I watched a TED video where the presenter urged the audience to ask the question What do you really want? That got me thinking what do I really want. It is an interesting question to ask myself, since I have tried different roles and responsibilites - broad and deep - in the last couple of years.
@@ -32,13 +32,31 @@ So I was pleasantly surprised when I found the book Data Structures and Algorith
     </item>
     
     <item>
-      <title>How To Mock Network Requests in iOS</title>
+      <title>Ann Catherine Jose</title>
+      <link>https://ann.chiramattel.com/about/</link>
+      <pubDate>Thu, 20 Feb 2020 10:54:56 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/about/</guid>
+      <description>I am a Software Tinkerer and Engineering Leader at Intuit. As the Director of Engineering, I lead the Mobile Engineering team in the Small Business and Self Employed group; we build the QuickBooks suite of mobile apps that serve our small business and self employed customers. Prior to this role, I worked as Principal Software Engineer in the TurboTax mobile team, and worked at other companies including Philips and SAP. I did Masters in Mathematics from Indian Institute of Technology Chennai, specializing in predicate logic.</description>
+    </item>
+    
+    <item>
+      <title>How To mock network requests in iOS</title>
       <link>https://ann.chiramattel.com/post/mocking-network-requests-ios/</link>
-      <pubDate>Sat, 17 Nov 2018 19:00:52 -0800</pubDate>
+      <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       
       <guid>https://ann.chiramattel.com/post/mocking-network-requests-ios/</guid>
       <description>One of the challenges of mobile application development is to ensure that the application is resilient to various error responses from the services that are consumed by the application. Mobile devices are more susceptible to network connectivity issues, timeout etc. So we need to take extra care to make sure that we test all error scenarios and handle them in a meaningful manner.
 What and Why of Mocking Even though we are convinced about the benefits of testing server errors, these services are running in Production serving real customer requests.</description>
+    </item>
+    
+    <item>
+      <title>Learn GraphQL By Example</title>
+      <link>https://ann.chiramattel.com/post/graphql-intro/</link>
+      <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/graphql-intro/</guid>
+      <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
     </item>
     
     <item>
@@ -61,15 +79,6 @@ Random Number Generation  Swift 4.2 added random number generator API to standar
     </item>
     
     <item>
-      <title>Learn GraphQL By Example</title>
-      <link>https://ann.chiramattel.com/post/graphql-intro/</link>
-      <pubDate>Thu, 28 Dec 2017 13:35:28 -0800</pubDate>
-      
-      <guid>https://ann.chiramattel.com/post/graphql-intro/</guid>
-      <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
-    </item>
-    
-    <item>
       <title>Fastlane</title>
       <link>https://ann.chiramattel.com/post/fastlane/</link>
       <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
@@ -80,7 +89,7 @@ The Toolchain fastlane comes out-of-the-box with a set of very good tools (bette
     </item>
     
     <item>
-      <title>GoogleIO 2017</title>
+      <title>Google IO 2017</title>
       <link>https://ann.chiramattel.com/post/GoogleIO-2017/</link>
       <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
       
@@ -108,7 +117,7 @@ This post is an attempt to share the main highlights and the announcements that 
     </item>
     
     <item>
-      <title>How to Display Mathematical Expressions in Blog</title>
+      <title>How to display Mathematical Expressions in blog</title>
       <link>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       
@@ -117,7 +126,7 @@ This post is an attempt to share the main highlights and the announcements that 
     </item>
     
     <item>
-      <title>Machine Learning - A New Journey</title>
+      <title>Machine Learning - A new journey</title>
       <link>https://ann.chiramattel.com/post/machine-learning-coursera/</link>
       <pubDate>Tue, 09 Aug 2016 20:05:54 -0700</pubDate>
       
@@ -136,7 +145,7 @@ The course starts with the basics, including a primer on Linear Algebra (it is o
     </item>
     
     <item>
-      <title>Conversation As Interface</title>
+      <title>Conversation as Interface</title>
       <link>https://ann.chiramattel.com/post/conversation-as-interface/</link>
       <pubDate>Fri, 08 Apr 2016 20:47:54 -0700</pubDate>
       
@@ -146,17 +155,7 @@ Now there is an emerging trend of companies opening their chat bot API to third 
     </item>
     
     <item>
-      <title>Ann Catherine Jose</title>
-      <link>https://ann.chiramattel.com/about/</link>
-      <pubDate>Sun, 20 Mar 2016 20:54:56 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/about/</guid>
-      <description>Ann Catherine Jose is a Principal Software Engineer in TurboTax Mobile team at Intuit. She has been a key contributor in rebuilding TurboTax iOS app from scratch in 2014, working with an awesome team. Prior to Intuit, she worked with Philips, SAP and Tata Infotech. She earned her Masters degree in Mathematics from Indian Institute of Technology Chennai in 2000, specializing in predicate logic.
-Her passion is to learn and experiment with new technology and use it to solve real world problems.</description>
-    </item>
-    
-    <item>
-      <title>First Post from Hugo</title>
+      <title>First post from Hugo</title>
       <link>https://ann.chiramattel.com/post/first-post-from-hugo/</link>
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
       

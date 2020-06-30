@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Reflections</title>
+    <link>https://ann.chiramattel.com/topics/machine-learning/</link>
+    <description>Recent content in Machine Learning on Reflections</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 24 Sep 2016 07:49:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://ann.chiramattel.com/topics/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to display Mathematical Expressions in blog</title>
+      <link>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
+      <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
+      <description>As part of my Machine Learning course, I wanted to share some of my learnings / notes in this blog so that someone will find it useful and I could also refer to it later. But I was not sure how to display the mathemtical expressions used in calculating cost function, gradient descent etc. in my blog. I have used the OneNote Equation tool before, but didn&amp;rsquo;t know how to do it on the Web for my blog.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning - A new journey</title>
+      <link>https://ann.chiramattel.com/post/machine-learning-coursera/</link>
+      <pubDate>Tue, 09 Aug 2016 20:05:54 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/machine-learning-coursera/</guid>
+      <description>Few weeks ago, I started the Machine Learning course on Coursera by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.
+The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college).</description>
+    </item>
+    
+  </channel>
+</rss>

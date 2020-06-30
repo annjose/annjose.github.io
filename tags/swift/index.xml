@@ -6,7 +6,7 @@
     <description>Recent content in Swift on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
     <lastBuildDate>Fri, 12 Oct 2018 20:09:12 -0800</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,15 @@
       <guid>https://ann.chiramattel.com/post/swift42-whats-new/</guid>
       <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at Swift4_2-WhatsNew.playground.
 Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  let randomInt = Int.</description>
+    </item>
+    
+    <item>
+      <title>TDD in Xcode Playground</title>
+      <link>https://ann.chiramattel.com/post/xcode-playgrounds-tdd/</link>
+      <pubDate>Sun, 02 Apr 2017 02:02:31 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/xcode-playgrounds-tdd/</guid>
+      <description>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground.</description>
     </item>
     
   </channel>
