@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>how-to on Reflections</title>
-    <link>https://ann.chiramattel.com/tags/how-to/</link>
-    <description>Recent content in how-to on Reflections</description>
+    <title>hugo on Reflections</title>
+    <link>https://ann.chiramattel.com/topics/hugo/</link>
+    <description>Recent content in hugo on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
     <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
     
-	<atom:link href="https://ann.chiramattel.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ann.chiramattel.com/topics/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,31 +22,22 @@
     </item>
     
     <item>
-      <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
-      <link>https://ann.chiramattel.com/post/vscode-macos-cpp/</link>
-      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/post/vscode-macos-cpp/</guid>
-      <description>After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book Data Structures and Algorithms in C++ by Adam Drozdek.</description>
-    </item>
-    
-    <item>
-      <title>Fastlane</title>
-      <link>https://ann.chiramattel.com/post/fastlane/</link>
-      <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
-      
-      <guid>https://ann.chiramattel.com/post/fastlane/</guid>
-      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
-The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
-    </item>
-    
-    <item>
       <title>Display mathematical expressions in blog</title>
       <link>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       
       <guid>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
       <description>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using OneNote Equation tool earlier, but I wanted to do the same in my blog posts.</description>
+    </item>
+    
+    <item>
+      <title>First post from Hugo</title>
+      <link>https://ann.chiramattel.com/post/first-post-from-hugo/</link>
+      <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/first-post-from-hugo/</guid>
+      <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.
+I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
     </item>
     
   </channel>

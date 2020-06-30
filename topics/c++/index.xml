@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C&#43;&#43; on Reflections</title>
+    <title>c&#43;&#43; on Reflections</title>
     <link>https://ann.chiramattel.com/topics/c&#43;&#43;/</link>
-    <description>Recent content in C&#43;&#43; on Reflections</description>
+    <description>Recent content in c&#43;&#43; on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Tinkering with VS Code, Mac and C&#43;&#43;</title>
+      <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://ann.chiramattel.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       

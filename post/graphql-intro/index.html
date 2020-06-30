@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="An introduction to GraphQL with examples and comparison to REST">
-  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <title>Learn GraphQL By Example &middot; Reflections</title>
 
@@ -33,16 +33,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet" type="text/css">
 
   
   
 
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
@@ -263,94 +258,143 @@
 
 </div>
 
-  
-
-<p>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</p>
-
-<p>In this post, we will learn what GraphQL is, the key concepts and how does it compare with the classic REST model - all with a lot of examples. All the content here is mainly based on what I learned from <a href="http://graphql.org/learn/">GraphQL official docs</a> and the excellent <a href="https://developer.github.com/v4/">GitHub GraphQL V4 API documentation</a>.</p>
-
+  <p>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</p>
+<p>In this post, we will learn what GraphQL is, the key concepts and how does it compare with the classic REST model - all with a lot of examples. All the content here is mainly based on what I learned from <a href="http://graphql.org/learn/" target="_blank" rel="noopener">GraphQL official docs</a> and the excellent <a href="https://developer.github.com/v4/" target="_blank" rel="noopener">GitHub GraphQL V4 API documentation</a>.</p>
 <h2 id="what-is-graphql">What is GraphQL?</h2>
-
-<p><a href="http://graphql.org/">GraphQL</a> is an API query language and a runtime for fulfilling those queries using a type system that you define for your data. It was built by Facebook in 2012 as part of the effort to rebuild their native mobile applications and was open-sourced in 2015.</p>
-
+<p><a href="http://graphql.org/" target="_blank" rel="noopener">GraphQL</a> is an API query language and a runtime for fulfilling those queries using a type system that you define for your data. It was built by Facebook in 2012 as part of the effort to rebuild their native mobile applications and was open-sourced in 2015.</p>
 <p>GraphQL creates a uniform API for your entire application that gives the clients the power to ask for exactly what they need, nothing more and nothing less. GraphQL queries can access multiple resources in a single request. GraphQL isn&rsquo;t tied to any specific database or storage engine and is instead backed by your existing code and data. That means you can create GraphQL services by leveraging your existing code / data and using GraphQL engines avaiable in many languages  (Java/PHP/C# etc.).</p>
-
 <p>In essence, GraphQL has three main parts - Specification, Query Language and Runtime</p>
-
 <ul>
 <li><strong>Specification</strong> determines the validity of the schema on the API server</li>
 <li><strong>Language</strong> defines the queries (for read), mutations (for write), subscriptions, fragments</li>
 <li><strong>Runtime</strong> provides validation, introspection, execution, type system of the schema</li>
 </ul>
-
 <h2 id="an-example">An Example</h2>
-
 <p>As an example, if you want to create a GraphQL service that provides a list of users in your database and some basic information about the user, you can define a <strong>User</strong> type as follows:</p>
-
-<pre><code>type Query {
-  users: [User]
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#50fa7b">Query</span> {
+  users: [<span style="color:#50fa7b">User</span>]
 }
 
-type User {
-  id: Int
-  name: String
+<span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#50fa7b">User</span> {
+  id: <span style="color:#50fa7b">Int</span>
+  name: <span style="color:#50fa7b">String</span>
 }
-</code></pre>
-
-<p>and then define the functions corresponding to each fields on the type</p>
-
-<pre><code class="language-JavaScript">function Query_users(request) {
-  return mydb.users;
+</code></pre></td></tr></table>
+</div>
+</div><p>and then define the functions corresponding to each fields on the type</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#8be9fd;font-style:italic">function</span> Query_users(request) {
+  <span style="color:#ff79c6">return</span> mydb.users;
 }
-function User_name(user) {
-  return user.getName();
+<span style="color:#8be9fd;font-style:italic">function</span> User_name(user) {
+  <span style="color:#ff79c6">return</span> user.getName();
 }
-</code></pre>
-
-<p>Then you run the service on a secure URL endpoint and send GraphQL queries to that service. The service validated the request, makes sure that it refers to well defined types only and then executes the query by invoking the provided functions and returns the result.</p>
-
+</code></pre></td></tr></table>
+</div>
+</div><p>Then you run the service on a secure URL endpoint and send GraphQL queries to that service. The service validated the request, makes sure that it refers to well defined types only and then executes the query by invoking the provided functions and returns the result.</p>
 <p>In the above example, a query like ths:</p>
-
-<pre><code>{
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql">{
   users {
     name
   }
 }
-</code></pre>
-
-<p>will produce the following JSON result:</p>
-
-<pre><code class="language-JSON">{
-  &quot;users&quot;: [
-    { &quot;name&quot;: &quot;Morpheus&quot; },
-    { &quot;name&quot;: &quot;Neo&quot; },
-    { &quot;name&quot;: &quot;Trinity&quot; }
+</code></pre></td></tr></table>
+</div>
+</div><p>will produce the following JSON result:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+  <span style="color:#ff79c6">&#34;users&#34;</span>: [
+    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Morpheus&#34;</span> },
+    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Neo&#34;</span> },
+    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Trinity&#34;</span> }
   ]
-</code></pre>
-
-<p>You can run these queries using an API explorer provided by the GraphQL server (for example, see <a href="https://developer.github.com/v4/explorer/">Github&rsquo;s API explorer</a>). Alternately, you can run it using curl - see the example below:</p>
-
-<pre><code>curl -H &quot;Authorization: bearer token&quot; -X POST -d &quot; \
-{ \
-\&quot;query\&quot;: \&quot;query { viewer { login }}\&quot; \
-} \&quot; _https://api.github.com/graphql
-</code></pre>
-
-<h2 id="unique-features-of-graphql">Unique Features of GraphQL</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><p>You can run these queries using an API explorer provided by the GraphQL server (for example, see <a href="https://developer.github.com/v4/explorer/" target="_blank" rel="noopener">Github&rsquo;s API explorer</a>). Alternately, you can run it using curl - see the example below:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -H <span style="color:#f1fa8c">&#34;Authorization: bearer token&#34;</span> -X POST -d <span style="color:#f1fa8c">&#34; \
+</span><span style="color:#f1fa8c">{ \
+</span><span style="color:#f1fa8c">\&#34;query\&#34;: \&#34;query { viewer { login }}\&#34; \
+</span><span style="color:#f1fa8c">} \&#34; _https://api.github.com/graphql
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="unique-features-of-graphql">Unique Features of GraphQL</h2>
 <p>As we have seen so far, here are the unique features of GraphQL that sets it apart:</p>
-
 <ul>
-<li><strong>Defines the shape of the data</strong> - GraphQL queries mirror their response which makes it easy to write a query if you know the data your app needs.</li>
-<li><strong>Strongly typed</strong> - schema defines the API type system. Each level of the query corresponds to a type and each type contains a set of fields which in turn may be nested types.</li>
-
-<li><p><strong>Introspective</strong> - client can query the GraphQL server for the schema of the data. So you can write a (meta) GraphQL query to get the fields of the GraphQL schema.</p>
-
+<li>
+<p><strong>Defines the shape of the data</strong> - GraphQL queries mirror their response which makes it easy to write a query if you know the data your app needs.</p>
+</li>
+<li>
+<p><strong>Strongly typed</strong> - schema defines the API type system. Each level of the query corresponds to a type and each type contains a set of fields which in turn may be nested types.</p>
+</li>
+<li>
+<p><strong>Introspective</strong> - client can query the GraphQL server for the schema of the data. So you can write a (meta) GraphQL query to get the fields of the GraphQL schema.</p>
 <p>Here is an example:</p>
-
-<pre><code>query {
-  __schema {
-    types {
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">query</span> {
+  <span style="color:#50fa7b">__schema</span> {
+    <span style="color:#8be9fd;font-style:italic">type</span><span style="color:#50fa7b">s</span> {
       name
       kind
       description
@@ -360,86 +404,127 @@ function User_name(user) {
     }
   }
 }
-</code></pre></li>
-
-<li><p><strong>Hierarchical</strong> - shape of the query mirrors the shape of the schema. The term &lsquo;graph&rsquo; in GraphQL refers to graph structures defined in the schema, where nodes define objects and edges define connections between objects. When you query a connection, you traverse its edges to get to its nodes. Every &ldquo;edges&rdquo; field has a &ldquo;node&rdquo; field and a &ldquo;cursor&rdquo; field (for pagination).</p></li>
-
-<li><p><strong>Version free</strong> - GraphQL follows a Single Evolving Version model where the query determines the shape of the data instead oa version of the API. So APIs can evolve without versions by adding new fields / types and deprecating aging fields.</p>
-
-<pre><code class="language-Java">type {   
-  User {   
-    name: String
-    avatar: String
-    character: String @deprecated
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Hierarchical</strong> - shape of the query mirrors the shape of the schema. The term &lsquo;graph&rsquo; in GraphQL refers to graph structures defined in the schema, where nodes define objects and edges define connections between objects. When you query a connection, you traverse its edges to get to its nodes. Every &ldquo;edges&rdquo; field has a &ldquo;node&rdquo; field and a &ldquo;cursor&rdquo; field (for pagination).</p>
+</li>
+<li>
+<p><strong>Version free</strong> - GraphQL follows a Single Evolving Version model where the query determines the shape of the data instead oa version of the API. So APIs can evolve without versions by adding new fields / types and deprecating aging fields.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">type</span> {   
+  <span style="color:#50fa7b">User</span> {   
+    name: <span style="color:#50fa7b">String</span>
+    avatar: <span style="color:#50fa7b">String</span>
+    character: <span style="color:#50fa7b">String</span> @deprecated
   }    
 }
-</code></pre></li>
-
-<li><p><strong>Great Tooling</strong> - It also provides powerful developer tools like <a href="https://github.com/graphql/graphiql">GraphiQL</a>, an in-browser IDE to explore GraphQL and know the request/response of the GraphQL service before writing the code.</p></li>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Great Tooling</strong> - It also provides powerful developer tools like <a href="https://github.com/graphql/graphiql" target="_blank" rel="noopener">GraphiQL</a>, an in-browser IDE to explore GraphQL and know the request/response of the GraphQL service before writing the code.</p>
+</li>
 </ul>
-
 <h2 id="graphql-vs-rest">GraphQL vs. REST</h2>
-
 <p>As you may have realized by now, GraphQL is essentially a technology that involves sending / receiving an HTTP request / response. So you may wonder how it compares to the classic REST model which is also built for the same purpose. What are the similarities and/or differences between GraphQL and REST? Let&rsquo;s explore that a bit here.</p>
-
 <ul>
-<li><p>REST is centered around the concept of a <strong>resource</strong> (for eg: User, Book etc.), where each resource is identified by a URL (endpoint). On the otherhand, GraphQL APIs are organized in terms of <strong>types</strong> in the schema. This ensures that the client apps ask for only what is possible and they can avoid hand-written code to parse JSON response.</p></li>
-
-<li><p>In REST, you retrieve the resource by sending a GET request to the resource&rsquo;s URL, for example <code>GET /users/10100</code>. As you can see here, the way you fetch a resource is coupled with the <em>type</em> of the resource. In contrast, GraphQL keeps these two concepts separate because your schema contains the definition for all your <em>types</em> and you fetch the data using a single URL <a href="https://api.github.com/graphql">https://api.github.com/graphql</a></p></li>
-
-<li><p>GraphQL gives the clients the power to ask for exactly what they need, nothing more and nothing less. REST does not provide that level of granularity as the server sends all the data associated with the resource and the client has to parse out what it needs after the response reaches it.</p></li>
-
-<li><p>GraphQL queries can access multiple resources in a single request originated from the client. In the REST world, client will have to send multiple requests - one for reach resource. This</p></li>
-
-<li><p>In REST, every operation that can be performed on the resource (read/add/edit/delete) are specified by HTTP verbs (<em>GET/POST/PUT/DELETE</em>) in the request. In GraphQL, the operations (query/mutation) are specified in the JSON encoded body of the request and the HTTP verb is almost always <em>POST</em> (except for Introspection of schema which uses GET)</p></li>
-
-<li><p>In REST, the shape and size of the resource is determined by the server. In GraphQL, the server declares what resources are available; the client asks for what it needs.</p></li>
+<li>
+<p>REST is centered around the concept of a <strong>resource</strong> (for eg: User, Book etc.), where each resource is identified by a URL (endpoint). On the otherhand, GraphQL APIs are organized in terms of <strong>types</strong> in the schema. This ensures that the client apps ask for only what is possible and they can avoid hand-written code to parse JSON response.</p>
+</li>
+<li>
+<p>In REST, you retrieve the resource by sending a GET request to the resource&rsquo;s URL, for example <code>GET /users/10100</code>. As you can see here, the way you fetch a resource is coupled with the <em>type</em> of the resource. In contrast, GraphQL keeps these two concepts separate because your schema contains the definition for all your <em>types</em> and you fetch the data using a single URL <a href="https://api.github.com/graphql">https://api.github.com/graphql</a></p>
+</li>
+<li>
+<p>GraphQL gives the clients the power to ask for exactly what they need, nothing more and nothing less. REST does not provide that level of granularity as the server sends all the data associated with the resource and the client has to parse out what it needs after the response reaches it.</p>
+</li>
+<li>
+<p>GraphQL queries can access multiple resources in a single request originated from the client. In the REST world, client will have to send multiple requests - one for reach resource. This</p>
+</li>
+<li>
+<p>In REST, every operation that can be performed on the resource (read/add/edit/delete) are specified by HTTP verbs (<em>GET/POST/PUT/DELETE</em>) in the request. In GraphQL, the operations (query/mutation) are specified in the JSON encoded body of the request and the HTTP verb is almost always <em>POST</em> (except for Introspection of schema which uses GET)</p>
+</li>
+<li>
+<p>In REST, the shape and size of the resource is determined by the server. In GraphQL, the server declares what resources are available; the client asks for what it needs.</p>
+</li>
 </ul>
-
-<h2 id="key-concepts-operations-resolvers">Key Concepts - Operations &amp; Resolvers</h2>
-
+<h2 id="key-concepts---operations--resolvers">Key Concepts - Operations &amp; Resolvers</h2>
 <p>Let&rsquo;s go a little deeper to understand the key concepts of GraphQL.</p>
-
 <p>The two types of operations allowed in GraphQL are <em>queries</em> and <em>mutations</em>. Every GraphQL schema has a root type for both queries and mutations.</p>
-
 <h3 id="queries">Queries</h3>
-
 <p>Query is an operation that defines what we want to get from the GraphQL server. Queries return only the data that you ask for and a query has the same shape as the result. You create a query by specifying the fields (top-level fields or nested fields) of the types until every leaf node is a scalar. You can also pass <em>arguments</em> to every field and nested object in the query. Queries can also include reusable snippets called <em>fragments</em> that help in splitting complex queries into smaller chunks and avoid repetition of fields.</p>
-
 <p>Here is a sample query that fetches a github issue from the repository <a href="https://github.com/octocat/Hello-World/issues/392:">https://github.com/octocat/Hello-World/issues/392:</a></p>
-
-<pre><code>query {
-  repository(owner:&quot;octocat&quot;, name:&quot;Hello-World&quot;) {
-      issue(number:349) {
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">query</span> {
+  <span style="color:#50fa7b">repository</span>(owner:<span style="color:#f1fa8c">&#34;octocat&#34;</span>, <span style="color:#50fa7b">name</span>:<span style="color:#f1fa8c">&#34;Hello-World&#34;</span>) {
+      <span style="color:#50fa7b">issue</span>(number:<span style="color:#50fa7b">349</span>) {
         id
       }
   }
 }
-</code></pre>
-
-<h3 id="mutations">Mutations</h3>
-
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="mutations">Mutations</h3>
 <p>Mutation is an operation to execute a modification on an object. You form a mutation by specifying three things:</p>
-
 <ul>
 <li><strong>mutationName</strong> - type of modification that you want to perform</li>
 <li><strong>Input object</strong> - the data that you want to send to server, composed of input fields. Pass  *  argument to the mutationName</li>
 <li><strong>Payload object</strong> - the data that you want to return from the server. Pass it as the body of the mutationName</li>
 </ul>
-
 <p>This is how a mutation is structured:</p>
-
-<pre><code class="language-Java">mutation {
-  mutationName(input: {MutationNameInput!}) {
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java">mutation <span style="color:#ff79c6">{</span>
+  mutationName<span style="color:#ff79c6">(</span>input<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">{</span>MutationNameInput<span style="color:#ff79c6">!})</span> <span style="color:#ff79c6">{</span>
     MutationNamePayload
-}
-</code></pre>
-
-<p>And here is a sample mutation that adds a <em>HOORAY</em> reaction to the above github repo:</p>
-
-<pre><code>mutation AddReactionToIssue {
-  addReaction(input:{subjectId:&quot;MDU6SXNzdWUyMzEzOTE1NTE=&quot;,content:HOORAY}) {
-    reaction {
+<span style="color:#ff79c6">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>And here is a sample mutation that adds a <em>HOORAY</em> reaction to the above github repo:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">mutation</span> <span style="color:#50fa7b">AddReactionToIssue</span> {
+  addReaction(<span style="color:#8be9fd;font-style:italic">input</span>:{<span style="color:#50fa7b">subjectId</span>:<span style="color:#f1fa8c">&#34;MDU6SXNzdWUyMzEzOTE1NTE=&#34;</span>,<span style="color:#50fa7b">content</span>:<span style="color:#50fa7b">HOORAY</span>}) {
+    <span style="color:#50fa7b">reaction</span> {
       content
     }
     subject {
@@ -447,38 +532,48 @@ function User_name(user) {
     }
   }
 }
-</code></pre>
-
-<p>You can execute the above query and mutation in the GitHub API explorer after you login with your github credentials - <a href="https://developer.github.com/v4/explorer/">https://developer.github.com/v4/explorer/</a>.</p>
-
+</code></pre></td></tr></table>
+</div>
+</div><p>You can execute the above query and mutation in the GitHub API explorer after you login with your github credentials - <a href="https://developer.github.com/v4/explorer/">https://developer.github.com/v4/explorer/</a>.</p>
 <h3 id="resolvers">Resolvers</h3>
-
 <p>Resolvers are the server side functions that a GraphQL API developer writes to fulfill the queries and mutations. Using these resolvers, the GraphQL execution library builds up the response to match the shape of the query and sends the response to the client. See here a few resolvers in JavaScript:</p>
-
-<pre><code class="language-JavaScript">const resolvers = {
-    Query: {
-        hello: () =&gt; {
-            return 'Hello world!';
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#ff79c6">const</span> resolvers <span style="color:#ff79c6">=</span> {
+    Query<span style="color:#ff79c6">:</span> {
+        hello<span style="color:#ff79c6">:</span> () =&gt; {
+            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;Hello world!&#39;</span>;
         },
-        author: (root, { id }) =&gt; {
-            find(authors, { id: id })
+        author<span style="color:#ff79c6">:</span> (root, { id }) =&gt; {
+            find(authors, { id<span style="color:#ff79c6">:</span> id })
         },
     },
-    Author: {
-        posts: (author) =&gt; filter(posts, { authorId: author.id }),
+    Author<span style="color:#ff79c6">:</span> {
+        posts<span style="color:#ff79c6">:</span> (author) =&gt; filter(posts, { authorId<span style="color:#ff79c6">:</span> author.id }),
     }
 };
-</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="conclusion">Conclusion</h2>
 <p>As we have seen so far, GraphQL is an excellent solution that can power all the data fetching requirements of client applications. It can be a complete replacement for resource-dependent REST services, orchestration services and services custom-built for applications. What I love the most about GraphQL is how it solves the data-fetching problem from the application developer&rsquo;s point of view without compromising the server-side developer&rsquo;s desire to create flexible maintainable code.</p>
-
 <h2 id="references">References</h2>
-
 <p>Of course there is a lot more to explore and experiment to get a deep understanding of this technology. The specific topics I would like to explore are the Single Version model and the advanced type systems (Union Types, Interface Types etc.)
 Here is a list of some great articles and documentation to learn more.</p>
-
 <ul>
 <li>GraphQL main learning site - <a href="http://graphql.org/learn/">http://graphql.org/learn/</a></li>
 <li>GraphQL docs on Github V4 API - <a href="https://developer.github.com/v4/">https://developer.github.com/v4/</a></li>
@@ -510,7 +605,7 @@ Here is a list of some great articles and documentation to learn more.</p>
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://ann.chiramattel.com/post/mocking-network-requests-ios/">How To mock network requests in iOS</a>
+      <a href="https://ann.chiramattel.com/post/mocking-network-requests-ios/">How to mock network requests in iOS</a>
     </nav>
     
   </div>

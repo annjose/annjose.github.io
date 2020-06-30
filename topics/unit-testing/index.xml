@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Unit Testing on Reflections</title>
+    <title>unit-testing on Reflections</title>
     <link>https://ann.chiramattel.com/topics/unit-testing/</link>
-    <description>Recent content in Unit Testing on Reflections</description>
+    <description>Recent content in unit-testing on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>How To mock network requests in iOS</title>
+      <title>How to mock network requests in iOS</title>
       <link>https://ann.chiramattel.com/post/mocking-network-requests-ios/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       

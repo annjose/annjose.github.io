@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Reflections</title>
@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 29 Jun 2020 22:32:55 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Tinkering with VS Code, Mac and C&#43;&#43;</title>
+      <title>Upgrade Hugo</title>
+      <link>https://ann.chiramattel.com/post/upgrade-hugo/</link>
+      <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/upgrade-hugo/</guid>
+      <description>Today I upgraded my blog engine Hugo from version 0.30.0 to 0.73.0. As you can see, it&amp;rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. It turned out that my whole blog site went blank right after the upgrade; but with a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running.</description>
+    </item>
+    
+    <item>
+      <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://ann.chiramattel.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       
@@ -32,7 +41,7 @@ So I was pleasantly surprised when I found the book Data Structures and Algorith
     </item>
     
     <item>
-      <title>How To mock network requests in iOS</title>
+      <title>How to mock network requests in iOS</title>
       <link>https://ann.chiramattel.com/post/mocking-network-requests-ios/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       
@@ -56,8 +65,8 @@ What and Why of Mocking Even though we are convinced about the benefits of testi
       <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
       
       <guid>https://ann.chiramattel.com/post/swift42-whats-new/</guid>
-      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at Swift4_2-WhatsNew.playground.
-Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  let randomInt = Int.</description>
+      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.
+Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  1 2  let randomInt = Int.</description>
     </item>
     
     <item>
@@ -108,12 +117,12 @@ This post is an attempt to share the main highlights and the announcements that 
     </item>
     
     <item>
-      <title>How to display Mathematical Expressions in blog</title>
+      <title>Display mathematical expressions in blog</title>
       <link>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       
       <guid>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
-      <description>As part of my Machine Learning course, I wanted to share some of my learnings / notes in this blog so that someone will find it useful and I could also refer to it later. But I was not sure how to display the mathemtical expressions used in calculating cost function, gradient descent etc. in my blog. I have used the OneNote Equation tool before, but didn&amp;rsquo;t know how to do it on the Web for my blog.</description>
+      <description>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using OneNote Equation tool earlier, but I wanted to do the same in my blog posts.</description>
     </item>
     
     <item>

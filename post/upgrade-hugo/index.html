@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gotchas found while upgrading my Hugo version">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  <title>Upgrade Hugo &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://ann.chiramattel.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/post/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/ios"><i class='fa fa-list fa-fw'></i>iOS</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2020. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Upgrade Hugo</h1>
+  <h2>Gotchas found while upgrading my Hugo version</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 Jun 2020, 14:09</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://ann.chiramattel.com/topics/hugo">hugo</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/how-to">how-to</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Today I upgraded my <a href="https://gohugo.io" target="_blank" rel="noopener">blog engine Hugo</a> from version 0.30.0 to 0.73.0. As you can see, it&rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. It turned out that my whole blog site went blank right after the upgrade; but with a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running. Hence this post is share the learnings if anyone else is stuck with the same issue.</p>
+<h2 id="first-things-first---upgrade-the-binary">First things first - upgrade the binary</h2>
+<p>The first step is to upgrade the Hugo binary to the latest version. The detailed instructions can be found in the <a href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener">Hugo website</a>, I did it using the HomeBrew on my MacOS and regenerated the site:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">    brew upgrade hugo
+    hugo server</code></pre></div>
+<p>Soon after I ran that command, Hugo threw a bunch of warnings and my blog home page was blank! Let&rsquo;s fix them one by one.</p>
+<h2 id="remove-deprecated-shortcodes-from-the-content">Remove deprecated shortcodes from the content</h2>
+<p>Hugo warns that some of the shortcodes used in the content are deprecated in the new version. For example, the following warning indicates that the <code>Page.RSSLink</code> is deprecated:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">    WARN 2020/06/30 11:05:39 Page.RSSLink is deprecated 
+    and will be removed in a future release.</code></pre></div>
+<p>This can be fixed by replacing the RSSLink as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  // delete the three lines below
+  {{ if .RSSLink }}
+  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;alternate&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;application/rss+xml&#34;</span> <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Site.Title }}&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .RSSLink }}&#34;</span> /&gt;
+  {{ end }}
+
+  // add the lines below
+  {{ if .OutputFormats.Get &#34;RSS&#34; }}
+  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;alternate&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;application/rss+xml&#34;</span> <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Site.Title }}&#34;</span>
+    <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;{{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}&#39;</span> /&gt;
+  {{ end }}
+</code></pre></td></tr></table>
+</div>
+</div><p>This had to be done in 2 partial layout files - <code>layouts/partials/head.html</code>  and <code>layouts/partials/social.html</code>
+The second warning was a lot more tricker - it says as follows, but does not give an indication of where the offending code is:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">WARN 2020/06/30 11:11:27 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo <span style="color:#ff79c6">function</span>.
+</code></pre></td></tr></table>
+</div>
+</div><p>It turns out that Hugo has removed the usage of <code>Page.Hugo</code> in the newer version and hence we need to is to use the <code>hugo</code> function <a href="https://gohugo.io/variables/hugo/" target="_blank" rel="noopener">as described here</a>. Here is how to modify the file <code>layouts/partials/head.html</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  <span style="color:#ff79c6">{{</span>.Hugo.Generator<span style="color:#ff79c6">}}</span> // remove this line
+  <span style="color:#ff79c6">{{</span>hugo.Generator<span style="color:#ff79c6">}}</span>  // add this line</code></pre></div>
+<h2 id="fix-the-blank-home-page">Fix the blank home page</h2>
+<p>The root cause of this issue was that Hugo changed the location of the post index file from <code>layouts/index/post.html</code> to <code>layouts/post/post.html</code>. When I moved the file from old location to new, viola! my home page was up and running again</p>
+<h2 id="miscellaneous-issues--goodness">Miscellaneous Issues &amp; Goodness</h2>
+<p>There were a few more issues most of which were easy to fix:</p>
+<ul>
+<li>
+<p>All external hyperlinks that were using the href tag in the markdown were broken since Goldmark has a better way to open external links. The concept is called Render Hook Templates which allow you to define templates to render a link, image etc. and add them to the folder <code>layouts/_default/_markup</code>. So I added a file named <code>render-link.html</code> in the folder with the following content:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Destination | safeURL }}&#34;</span>{{ <span style="color:#50fa7b">with</span> .<span style="color:#50fa7b">Title</span>}} <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ . }}&#34;</span>{{ <span style="color:#50fa7b">end</span> }}
+    {{ <span style="color:#50fa7b">if</span> <span style="color:#50fa7b">strings</span>.<span style="color:#50fa7b">HasPrefix</span> .<span style="color:#50fa7b">Destination</span> &#34;<span style="color:#50fa7b">http</span>&#34; }} <span style="color:#50fa7b">target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;_blank&#34;</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;noopener&#34;</span>{{ <span style="color:#50fa7b">end</span> }}&gt;
+    {{ .Text | safeHTML }}
+&lt;/<span style="color:#ff79c6">a</span>&gt;</code></pre></div></p>
+<p>With this, I could simply update my content as follows, which will open the link in a new tab:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">[<span style="color:#ff79c6">my github repo Book Learnings</span>](<span style="color:#50fa7b">https://github.com/annjose/book-learnings</span>)</code></pre></div></p>
+<p>Go on, click this link and try it out - <a href="https://github.com/annjose/book-learnings" target="_blank" rel="noopener">open in new tab</a></p>
+</li>
+<li>
+<p>The new Hugo version has changed the markdown generator from Blackfriday to <a href="https://gohugo.io/getting-started/configuration-markup#goldmark" target="_blank" rel="noopener">Goldmark</a> which is faster and more flexible option.</p>
+</li>
+<li>
+<p>It uses Chroma syntax highlighter that provides a more flexible support for highlighting code that can be configured in the confog.toml as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[markup]
+    [markup.highlight]
+        codeFences = <span style="color:#ff79c6">true</span>
+        lineNos = <span style="color:#ff79c6">true</span>
+        style = <span style="color:#f1fa8c">&#34;dracula&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>After adding this config, I updated all the content to use the correct syntax-highlighting language. The full list of the languages supported are <a href="https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages" target="_blank" rel="noopener">listed in Hugo docs</a>. You can highlight a block of code by either using the 3 backtock method or using the <a href="https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode" target="_blank" rel="noopener">built-in <code>highlight</code> shortcode</a>.</p>
+</li>
+</ul>
+<h2 id="wrapping-everything-up">Wrapping Everything Up</h2>
+<p>Armed with all the goodnews of Goldmark and the new version of Hugo, I updated my entire content to fix broken links, adjust syntax highlighting in all posts and also applied some styling tweaks including adding the Avenir font and some subtle contrast coloring in the page. Check it out at <a href="https://ann.chiramattel.com/">Home</a></p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://ann.chiramattel.com/post/vscode-macos-cpp/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://ann.chiramattel.com/post/vscode-macos-cpp/">Tinkering with VS Code, MacOS and C&#43;&#43;</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://ann.chiramattel.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75357261-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

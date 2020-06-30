@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A quick glance at all the goodness in Swift 4.2">
-  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <title>Swift 4.2 - What&#39;s New &middot; Reflections</title>
 
@@ -33,16 +33,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet" type="text/css">
 
   
   
 
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
@@ -269,121 +264,177 @@
 
 </div>
 
-  
-
-<p>In this post, I would like to share what&rsquo;s new in Swift 4.2. All the code displayed in this post is available at <a href="https://github.com/annjose/my-learnings/tree/master/Swift4.2/Swift4_2-WhatsNew.playground">Swift4_2-WhatsNew.playground</a>.</p>
-
+  <p>In this post, I would like to share what&rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo <a href="https://github.com/annjose/my-learnings/tree/master/Swift4.2" target="_blank" rel="noopener">my-learnings/Swift4.2</a>.</p>
 <h2 id="random-number-generation">Random Number Generation</h2>
-
 <ul>
 <li>Swift 4.2 added random number generator API to standard library. You can use it on <code>Int</code>, <code>Double</code>, <code>Float</code>, <code>CGFloat</code> and <code>Bool</code>.</li>
 <li>It also provides a convenient API <code>randomElement</code> which returns a random element from a sequence</li>
 <li>It also provides the APIs <code>shuffle</code> and <code>shuffled</code> to shuffle a sequence</li>
 </ul>
-
-<pre><code>let randomInt = Int.random(in: 0..&lt;10)
-let randomElement = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;].randomElement()
-</code></pre>
-
-<h2 id="dynamic-member-lookup">Dynamic Member Lookup</h2>
-
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">randomInt</span> = <span style="color:#8be9fd;font-style:italic">Int</span>.random(<span style="color:#ff79c6">in</span>: <span style="color:#bd93f9">0.</span>.&lt;<span style="color:#bd93f9">10</span>)
+<span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">randomElement</span> = [<span style="color:#f1fa8c">&#34;one&#34;</span>, <span style="color:#f1fa8c">&#34;two&#34;</span>, <span style="color:#f1fa8c">&#34;three&#34;</span>, <span style="color:#f1fa8c">&#34;four&#34;</span>].randomElement()
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="dynamic-member-lookup">Dynamic Member Lookup</h2>
 <p>Swift 4.2 introduces a dot syntax to access custom subscripts; this is much cleaner than the earlier square bracket calls. The compiler evaluates the subscript call dynamically at runtime, but provides a cleaner syntax.</p>
-
 <p>In order to use this feature, you have annotate your type with <code>@dynamicMemberLookup</code> and implement the method <code>subscript(dynamicMember:)</code></p>
-
-<pre><code>@dynamicMemberLookup
-class Person {
-    let name: String, let age: Int, let details: [String: String]
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">@dynamicMemberLookup
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Person</span> {
+    <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">name</span>: <span style="color:#8be9fd;font-style:italic">String</span>, <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">age</span>: <span style="color:#8be9fd;font-style:italic">Int</span>, <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">details</span>: [<span style="color:#8be9fd;font-style:italic">String</span>: <span style="color:#8be9fd;font-style:italic">String</span>]
     
-    subscript(dynamicMember key: String) -&gt; String {
-        switch key {
-        case &quot;info&quot;:
-            return &quot;\(name) is \(age) years old&quot;
-        default:
-            return details[key] ?? &quot;unknown&quot;
+    <span style="color:#8be9fd;font-style:italic">subscript</span>(dynamicMember key: <span style="color:#8be9fd;font-style:italic">String</span>) -&gt; <span style="color:#8be9fd;font-style:italic">String</span> {
+        <span style="color:#ff79c6">switch</span> key {
+        <span style="color:#ff79c6">case</span> <span style="color:#f1fa8c">&#34;info&#34;</span>:
+            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\(</span>name<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c"> is </span><span style="color:#f1fa8c">\(</span>age<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c"> years old&#34;</span>
+        <span style="color:#ff79c6">default</span>:
+            <span style="color:#ff79c6">return</span> details[key] ?? <span style="color:#f1fa8c">&#34;unknown&#34;</span>
         }
     }
 }
-let p = Person(name: &quot;John&quot;, age: 34, details: [&quot;title&quot;: &quot;Author&quot;])
+<span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">p</span> = Person(name: <span style="color:#f1fa8c">&#34;John&#34;</span>, age: <span style="color:#bd93f9">34</span>, details: [<span style="color:#f1fa8c">&#34;title&#34;</span>: <span style="color:#f1fa8c">&#34;Author&#34;</span>])
 p.info
-</code></pre>
-
-<h2 id="enumeration-case-collections">Enumeration Case Collections</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="enumeration-case-collections">Enumeration Case Collections</h2>
 <p>Swift 4.2 has added enumeration case arrays <code>allCases</code> to all enumerations so that you can loop through all the cases of an enumerator without having to define an array of your own with all the cases. Swift does this automatically for you through the protocol.</p>
-
 <p>If you want to customize the cases that is returned by <code>allCases</code>, you can implement the <code>CaseIterator</code> yourself.</p>
-
-<pre><code>for (index, season) in Season.allCases.enumerated() {
-    print (&quot;[\(index)]: \(season.rawValue.capitalized)&quot;)
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#ff79c6">for</span> (index, season) <span style="color:#ff79c6">in</span> Season.allCases.enumerated() {
+    print (<span style="color:#f1fa8c">&#34;[</span><span style="color:#f1fa8c">\(</span>index<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">]: </span><span style="color:#f1fa8c">\(</span>season.rawValue.capitalized<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
 }
-</code></pre>
-
-<h2 id="sequence-enhancements">Sequence Enhancements</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="sequence-enhancements">Sequence Enhancements</h2>
 <p>Swift 4.2 made some neat enhancements to the Sequence APIs, for example, <code>last(where:)</code>, <code>lastIndex(of:)</code>, <code>lastIndes(where:)</code>. They also added a new method <code>allSatisfy(:)</code> that checks whether all elements in a sequence satisfy a specific condition.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">numbers</span> = [<span style="color:#bd93f9">11</span>, <span style="color:#bd93f9">14</span>, <span style="color:#bd93f9">91</span>, <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">43</span>]
+numbers.last(<span style="color:#ff79c6">where</span>: { <span style="color:#8be9fd;font-style:italic">$0</span> <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> == <span style="color:#bd93f9">0</span> })    
+numbers.lastIndex(<span style="color:#ff79c6">where</span>: { <span style="color:#8be9fd;font-style:italic">$0</span> <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> == <span style="color:#bd93f9">0</span> })
 
-<pre><code>let numbers = [11, 14, 91, 12, 43]
-numbers.last(where: { $0 % 2 == 0 })    
-numbers.lastIndex(where: { $0 % 2 == 0 })
+[<span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">21</span>, <span style="color:#bd93f9">30</span>].allSatisfy { <span style="color:#8be9fd;font-style:italic">$0</span> <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> == <span style="color:#bd93f9">0</span> }  <span style="color:#6272a4">// true</span>
 
-[10, 21, 30].allSatisfy { $0 % 2 == 0 }  // true
-
-</code></pre>
-
-<h2 id="conditional-conformance">Conditional Conformance</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="conditional-conformance">Conditional Conformance</h2>
 <p>Swift 4.2 provides default implementation for conditional conformance to <code>Equatable</code>, <code>Hashable</code> and <code>Codable</code> in extensions. In Swift 4.1, you had to manually implement these protocols even though the conforming protocol provided the implementations.</p>
-
-<pre><code>// Swift 4.1 - you have to implement the Equatable for conditional conformance 
-extension Screencast: Equatable where Tutorial: Equatable {
-    /*static func ==(lhs: Screencast, rhs: Screencast) -&gt; Bool {
-       return lhs.author == rhs.author &amp;&amp; lhs.tutorial == rhs.tutorial
-    }*/
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#6272a4">// Swift 4.1 - you have to implement the Equatable for conditional conformance </span>
+<span style="color:#8be9fd;font-style:italic">extension</span> <span style="color:#50fa7b">Screencast</span>: <span style="color:#8be9fd;font-style:italic">Equatable</span> <span style="color:#ff79c6">where</span> Tutorial: <span style="color:#8be9fd;font-style:italic">Equatable</span> {
+    <span style="color:#6272a4">/*static func ==(lhs: Screencast, rhs: Screencast) -&gt; Bool {
+</span><span style="color:#6272a4">       return lhs.author == rhs.author &amp;&amp; lhs.tutorial == rhs.tutorial
+</span><span style="color:#6272a4">    }*/</span>
 }
 
-// Swift 4.2 - you can just use the default implementation 
-extension Screencast: Equatable where Tutorial: Equatable { }
-extension Screencast: Equatable where Tutorial: Hashable { }
-extension Screencast: Equatable where Tutorial: Codable { }
-</code></pre>
-
-<p>Also, optionals, arrays, dictionaries and ranges are <code>Hashable</code> when their elements are <code>Hashable</code>.</p>
-
+<span style="color:#6272a4">// Swift 4.2 - you can just use the default implementation </span>
+<span style="color:#8be9fd;font-style:italic">extension</span> <span style="color:#50fa7b">Screencast</span>: <span style="color:#8be9fd;font-style:italic">Equatable</span> <span style="color:#ff79c6">where</span> Tutorial: <span style="color:#8be9fd;font-style:italic">Equatable</span> { }
+<span style="color:#8be9fd;font-style:italic">extension</span> <span style="color:#50fa7b">Screencast</span>: <span style="color:#8be9fd;font-style:italic">Equatable</span> <span style="color:#ff79c6">where</span> Tutorial: <span style="color:#8be9fd;font-style:italic">Hashable</span> { }
+<span style="color:#8be9fd;font-style:italic">extension</span> <span style="color:#50fa7b">Screencast</span>: <span style="color:#8be9fd;font-style:italic">Equatable</span> <span style="color:#ff79c6">where</span> Tutorial: Codable { }
+</code></pre></td></tr></table>
+</div>
+</div><p>Also, optionals, arrays, dictionaries and ranges are <code>Hashable</code> when their elements are <code>Hashable</code>.</p>
 <h2 id="other-improvements">Other improvements</h2>
-
 <ul>
-<li><p>Swift 4.2 provides universal hash functions which enables us to implement custom hash functions for a class much easier, more correct and performant. The <code>Hashable</code> protocol defines a new method <code>hash(into:)</code> which repalces <code>hasValue</code> of Swift 4.1</p>
-
-<pre><code>func hash(into hasher: inout Hasher) {
-    hasher.combine(url)
-}
-</code></pre></li>
-
-<li><p>Convenience method to remove elements of a collection that satisfy a condition</p>
-
-<pre><code>var nums = [1, 2, 3, 4]
-nums.removeAll { $0 % 2 == 0}   // {1, 3}
-</code></pre></li>
-
-<li><p>And finally, Yes! Swift 4.2 adds <code>toggle</code> to <code>Bool</code></p>
-
-<pre><code>var flipMe = true
+<li>Swift 4.2 provides universal hash functions which enables us to implement custom hash functions for a class much easier, more correct and performant. The <code>Hashable</code> protocol defines a new method <code>hash(into:)</code> which repalces <code>hasValue</code> of Swift 4.1</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">    <span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">hash</span>(into hasher: <span style="color:#ff79c6">inout</span> Hasher) {
+        hasher.combine(url)
+    }
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Convenience method to remove elements of a collection that satisfy a condition</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">var</span> <span style="color:#8be9fd;font-style:italic">nums</span> = [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>]
+nums.removeAll { <span style="color:#8be9fd;font-style:italic">$0</span> <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> == <span style="color:#bd93f9">0</span>}   <span style="color:#6272a4">// {1, 3}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>And finally, Yes! Swift 4.2 adds <code>toggle</code> to <code>Bool</code></li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">var</span> <span style="color:#8be9fd;font-style:italic">flipMe</span> = <span style="color:#ff79c6">true</span>
 flipMe.toggle()
-</code></pre></li>
-</ul>
-
-<h2 id="references">References</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="references">References</h2>
 <ul>
-<li><a href="https://www.raywenderlich.com/5357-what-s-new-in-swift-4-2">Ray Wenderlich article</a></li>
-<li><a href="https://www.hackingwithswift.com/articles/77/whats-new-in-swift-4-2">Hacking With Swift</a></li>
+<li><a href="https://www.raywenderlich.com/5357-what-s-new-in-swift-4-2" target="_blank" rel="noopener">Ray Wenderlich article</a></li>
+<li><a href="https://www.hackingwithswift.com/articles/77/whats-new-in-swift-4-2" target="_blank" rel="noopener">Hacking With Swift</a></li>
 </ul>
-
 <h2 id="conclusion">Conclusion</h2>
-
 <p>All in all, Swift 4.2 contains many improvements to existing features and adds a few nice new features which makes the language more delightful to work with. This concludes the major enhancements in Swift 4.2. There are a few more enhancements listed in Ray Wenderlich tutorial. If you would like to know more, you can find them at <a href="https://www.raywenderlich.com/5357-what-s-new-in-swift-4-2">https://www.raywenderlich.com/5357-what-s-new-in-swift-4-2</a>.</p>
-
 <p>It will be really interesting to see how these enhancements will bring Swift closer to ABI stability.</p>
 
 

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React Native on Reflections</title>
+    <title>react-native on Reflections</title>
     <link>https://ann.chiramattel.com/topics/react-native/</link>
-    <description>Recent content in React Native on Reflections</description>
+    <description>Recent content in react-native on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>

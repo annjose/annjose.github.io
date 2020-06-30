@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech Explorations on Reflections</title>
+    <title>tech-explorations on Reflections</title>
     <link>https://ann.chiramattel.com/tags/tech-explorations/</link>
-    <description>Recent content in Tech Explorations on Reflections</description>
+    <description>Recent content in tech-explorations on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Tinkering with VS Code, Mac and C&#43;&#43;</title>
+      <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://ann.chiramattel.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       
@@ -27,8 +27,8 @@
       <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
       
       <guid>https://ann.chiramattel.com/post/swift42-whats-new/</guid>
-      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at Swift4_2-WhatsNew.playground.
-Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  let randomInt = Int.</description>
+      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.
+Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  1 2  let randomInt = Int.</description>
     </item>
     
     <item>

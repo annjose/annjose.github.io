@@ -4,8 +4,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="description" content="Test Driven Development in Xcode Playground">
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <title>TDD in Xcode Playground &middot; Reflections</title>
 
@@ -33,16 +33,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet" type="text/css">
 
   
   
 
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
@@ -224,7 +219,7 @@
 
 <div class="header">
   <h1>TDD in Xcode Playground</h1>
-  <h2></h2>
+  <h2>Test Driven Development in Xcode Playground</h2>
 </div>
 <div class="content">
 
@@ -260,55 +255,87 @@
 </div>
 
   <p>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground. This was really cumbersome and error-prone and I was hoping that there would be a better solution for this.</p>
-
 <p>No wonder why I was really excited when I learned about a simple trick that enables us to write unit tests in Xcode playground itself. Yes! We can do TDD in Xcode Playgrounds! Let&rsquo;s see how to do it.</p>
-
-<p>Essentially, the trick is as follows - you create a regular test class that derives from XCTestCase and run it using Xcode&rsquo;s default test suite <code>defaultTestSuite()</code>. This is the test suite that contains the test cases for all the tests in the class (<a href="https://developer.apple.com/reference/xctest/xctestcase/1496289-defaulttestsuite">https://developer.apple.com/reference/xctest/xctestcase/1496289-defaulttestsuite</a>). So all you need to do is write a test class and invoke <code>defaultTestSuite().run()</code> on the test class.</p>
-
+<p>Essentially, the trick is as follows - you create a regular test class that derives from <code>XCTestCase</code> and run it using Xcode&rsquo;s default test suite namely <code>defaultTestSuite()</code>. There is very little documentation on this class <a href="https://developer.apple.com/documentation/xctest/xctestcase/1496289-defaulttestsuite" target="_blank" rel="noopener">in Apple docs</a>, but this is the test suite that contains the test cases for all the tests in the class . So all you need to do is write a test class and invoke <code>defaultTestSuite().run()</code> on the test class.</p>
 <p>Here is an example:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Foundation</span>
+<span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">XCTest</span>
 
-<pre><code>import Foundation
-import XCTest
+<span style="color:#8be9fd;font-style:italic">var</span> <span style="color:#8be9fd;font-style:italic">str</span> = <span style="color:#f1fa8c">&#34;Hello, playground&#34;</span>
 
-var str = &quot;Hello, playground&quot;
-
-struct TodoItem {
-    let title: String
-    let toBeCompletedBy: Date?
+<span style="color:#8be9fd;font-style:italic">struct</span> <span style="color:#50fa7b">TodoItem</span> {
+    <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">title</span>: <span style="color:#8be9fd;font-style:italic">String</span>
+    <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">toBeCompletedBy</span>: Date?
     
-    init(title: String) {
-        self.title = title
-        self.toBeCompletedBy = nil
+    <span style="color:#8be9fd;font-style:italic">init</span>(title: <span style="color:#8be9fd;font-style:italic">String</span>) {
+        <span style="color:#ff79c6">self</span>.title = title
+        <span style="color:#ff79c6">self</span>.toBeCompletedBy = <span style="color:#ff79c6">nil</span>
     }
 }
 
-class TodoTests: XCTestCase {
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">TodoTests</span>: XCTestCase {
     
-    func testTodo() {
-        let todo = TodoItem(title: &quot;finish laundry&quot;)
+    <span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">testTodo</span>() {
+        <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">todo</span> = TodoItem(title: <span style="color:#f1fa8c">&#34;finish laundry&#34;</span>)
         XCTAssertNotNil(todo)
-        XCTAssertEqual(todo.title, &quot;finish laundry&quot;)
+        XCTAssertEqual(todo.title, <span style="color:#f1fa8c">&#34;finish laundry&#34;</span>)
     }
-    
 }
 
 TodoTests.defaultTestSuite().run()
-</code></pre>
 
-<p>This will execute all the tests in the test class and display the results in the familiar Xcode test format as folllows:</p>
-
-<pre><code>Test Suite 'TodoTests' started at 2017-04-02 01:36:16.888
-Test Case '-[__lldb_expr_49.TodoTests testTodo]' started.
-Test Case '-[__lldb_expr_49.TodoTests testTodo]' passed (0.004 seconds).
-Test Suite 'TodoTests' passed at 2017-04-02 01:36:16.894.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
-</code></pre>
-
-<p>Now you can write your code snippets and tests side-by-side and verify the results using the tests. The ultimate beauty of this approach is that these tests are run automatically whenever you make changes in the class-under-test, thanks to Xcode playground&rsquo;s auto-refresh capability.</p>
-
-<p>So where did I learn this from? Initially, I read about this concept from the <a href="http://initwithstyle.net/2015/11/tdd-in-swift-playground">blog initWithStyle</a> where the author implemented a slightly complex solution that creates <code>PlaygroundTestObserver</code>, <code>TestRunner</code> and connected it to the Playground&rsquo;s <code>XCTestObservationCenter</code>. But recently I read another <a href="https://m.pardel.net/tdd-in-xcode-playgrounds-544a95db11e2">blog post</a> which proposed a much simple solution as described above.</p>
-
-<p>If you would like to try it out for yourself, here is a simple gist that demonstrates the code - <a href="https://gist.github.com/annjose/1baa75b0796d0d2fef1a10ab74d5bd65">annjose/XcodePlaygroundUnitTests.swift</a></p>
+</code></pre></td></tr></table>
+</div>
+</div><p>This will execute all the tests in the test class and display the results in the familiar Xcode test format as folllows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Test Suite <span style="color:#f1fa8c">&#39;TodoTests&#39;</span> started at 2017-04-02 01:36:16.888
+Test Case <span style="color:#f1fa8c">&#39;-[__lldb_expr_49.TodoTests testTodo]&#39;</span> started.
+Test Case <span style="color:#f1fa8c">&#39;-[__lldb_expr_49.TodoTests testTodo]&#39;</span> passed <span style="color:#ff79c6">(</span>0.004 seconds<span style="color:#ff79c6">)</span>.
+Test Suite <span style="color:#f1fa8c">&#39;TodoTests&#39;</span> passed at 2017-04-02 01:36:16.894.
+	 Executed <span style="color:#bd93f9">1</span> test, with <span style="color:#bd93f9">0</span> failures <span style="color:#ff79c6">(</span><span style="color:#bd93f9">0</span> unexpected<span style="color:#ff79c6">)</span> in 0.004 <span style="color:#ff79c6">(</span>0.006<span style="color:#ff79c6">)</span> seconds
+</code></pre></td></tr></table>
+</div>
+</div><p>Now you can write your code snippets and tests side-by-side and verify the results using the tests. The ultimate beauty of this approach is that these tests are run automatically whenever you make changes in the class-under-test, thanks to Xcode playground&rsquo;s auto-refresh capability.</p>
+<p>So where did I learn this from? Initially, I read about this concept from the <a href="http://initwithstyle.net/2015/11/tdd-in-swift-playgrounds" target="_blank" rel="noopener">blog initWithStyle</a> where the author implemented a slightly complex solution that creates <code>PlaygroundTestObserver</code>, <code>TestRunner</code> and connected it to the Playground&rsquo;s <code>XCTestObservationCenter</code>. But recently I read another <a href="https://m.pardel.net/tdd-in-xcode-playgrounds-544a95db11e2" target="_blank" rel="noopener">blog post</a> which proposed a much simple solution as described above.</p>
+<p>If you would like to try it out for yourself, here is a simple gist that demonstrates the code - <a href="https://gist.github.com/annjose/1baa75b0796d0d2fef1a10ab74d5bd65" target="_blank" rel="noopener">annjose/XcodePlaygroundUnitTests.swift</a></p>
 
 
   

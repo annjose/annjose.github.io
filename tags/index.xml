@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Reflections</title>
@@ -7,49 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 23 May 2017 03:37:57 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Android</title>
-      <link>https://ann.chiramattel.com/tags/android/</link>
-      <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ghc 2018</title>
-      <link>https://ann.chiramattel.com/tags/ghc-2018/</link>
-      <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/tags/ghc-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Highlights</title>
-      <link>https://ann.chiramattel.com/tags/highlights/</link>
-      <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/tags/highlights/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>How To</title>
+      <title>how-to</title>
       <link>https://ann.chiramattel.com/tags/how-to/</link>
-      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
+      <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
       
       <guid>https://ann.chiramattel.com/tags/how-to/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ios</title>
+      <title>tech-explorations</title>
+      <link>https://ann.chiramattel.com/tags/tech-explorations/</link>
+      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/tags/tech-explorations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
       <link>https://ann.chiramattel.com/tags/ios/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       
@@ -58,7 +40,7 @@
     </item>
     
     <item>
-      <title>Mobile Tech</title>
+      <title>mobile-tech</title>
       <link>https://ann.chiramattel.com/tags/mobile-tech/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       
@@ -67,7 +49,7 @@
     </item>
     
     <item>
-      <title>Swift</title>
+      <title>swift</title>
       <link>https://ann.chiramattel.com/tags/swift/</link>
       <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
       
@@ -76,11 +58,29 @@
     </item>
     
     <item>
-      <title>Tech Explorations</title>
-      <link>https://ann.chiramattel.com/tags/tech-explorations/</link>
-      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
+      <title>ghc-2018</title>
+      <link>https://ann.chiramattel.com/tags/ghc-2018/</link>
+      <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/tags/tech-explorations/</guid>
+      <guid>https://ann.chiramattel.com/tags/ghc-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>highlights</title>
+      <link>https://ann.chiramattel.com/tags/highlights/</link>
+      <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/tags/highlights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://ann.chiramattel.com/tags/android/</link>
+      <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/tags/android/</guid>
       <description></description>
     </item>
     

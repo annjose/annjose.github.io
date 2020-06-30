@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Fastlane - an intro and sneak peek">
-  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <title>Fastlane &middot; Reflections</title>
 
@@ -33,16 +33,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Avenir" rel="stylesheet" type="text/css">
 
   
   
 
-  
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  
-  <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
@@ -267,14 +262,9 @@
 
 </div>
 
-  
-
-<p><a href="https://fastlane.tools/">Fastlane</a> is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.</p>
-
+  <p><a href="https://fastlane.tools/" target="_blank" rel="noopener">Fastlane</a> is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.</p>
 <h2 id="the-toolchain">The Toolchain</h2>
-
 <p>fastlane comes out-of-the-box with a set of very good tools (better known as <em>actions</em>) such as:</p>
-
 <ul>
 <li><strong>produce</strong> - create new iOS apps on iTunes and Apple Developer portal. The Android equivalent is <em>supply</em>.</li>
 <li><strong>gym</strong> - builds the iOS app using Xcode build tools</li>
@@ -284,7 +274,6 @@
 <li><strong>pilot</strong> - manages the TestFlight testers and builds (TestFlight is Apple&rsquo;s beta deployment tool)</li>
 <li><strong>supply</strong> - updates metadata and apps of Android apps</li>
 </ul>
-
 <p>Here is the classic fastlane diagram that shows some of the main built-in actions:
 
 
@@ -306,40 +295,55 @@
 
 </div>
 </p>
-
 <p>In addition to these built-in tools, fastlane provides an extension model that allows anyone to create plugins like <em>firebase</em>, <em>aws_s3</em>, <em>mobile_center</em> etc. See the full list of plugins at <a href="https://docs.fastlane.tools/plugins/available-plugins/">https://docs.fastlane.tools/plugins/available-plugins/</a>.</p>
-
 <h2 id="getting-started">Getting Started</h2>
-
-<p>It is very easy to get started with fastlane. Follow the instructions for <a href="https://docs.fastlane.tools/getting-started/ios/setup/">iOS setup</a> or <a href="https://docs.fastlane.tools/getting-started/android/setup/">Android setup</a>. As described towards the end of those documents (see section <em>Use a Gemfile</em>), it is recommended that you use a Gemfile to define the fastlane version and its dependencies in a versioned manner.</p>
-
+<p>It is very easy to get started with fastlane. Follow the instructions for <a href="https://docs.fastlane.tools/getting-started/ios/setup/" target="_blank" rel="noopener">iOS setup</a> or <a href="https://docs.fastlane.tools/getting-started/android/setup/" target="_blank" rel="noopener">Android setup</a>. As described towards the end of those documents (see section <em>Use a Gemfile</em>), it is recommended that you use a Gemfile to define the fastlane version and its dependencies in a versioned manner.</p>
 <p>Once the installation is done, you can create a configuration file named <em>Fastfile</em> in the root folder of your application and define the <em>lanes</em> with a set of actions. In fastlane, lanes are just a collection of actions grouped together so that they can be executed as a single command. It is recommended that all the fastlane configuration files are checked-in to the source repo. Refer this link to set up your <em>.gitignore</em> correctly for fastlane - <a href="https://docs.fastlane.tools/best-practices/source-control/">https://docs.fastlane.tools/best-practices/source-control/</a>.</p>
-
 <p>Here is an example of a Fastfile that defines two lanes - one for the <strong>beta</strong> deployment and another for AppStore <strong>release</strong>.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">lane <span style="color:#f1fa8c">:beta</span> <span style="color:#ff79c6">do</span>
+  increment_build_number    <span style="color:#6272a4"># increment build number before building the final version</span>
+  build_app                 <span style="color:#6272a4"># build the app using gym</span>
+  upload_to_testflight      <span style="color:#6272a4"># upload the binaries to TestFlight</span>
+<span style="color:#ff79c6">end</span>
 
-<pre><code class="language-ruby">lane :beta do
-  increment_build_number    # increment the build number before building the final version
-  build_app                 # build the app using gym
-  upload_to_testflight      # upload the binaries to TestFlight
-end
-
-lane :release do
+lane <span style="color:#f1fa8c">:release</span> <span style="color:#ff79c6">do</span>
   capture_screenshots
   build_app
-  upload_to_app_store       # Upload the screenshots and the binary to iTunes
-  slack                     # Let your team-mates know the new version is live
-end
-</code></pre>
-
-<p>Now you can execute each of the lane by running one of the following commands from your terminal:</p>
-
-<pre><code class="language-bash">&gt;&gt; fastlane beta
+  upload_to_app_store       <span style="color:#6272a4"># Upload the screenshots and the binary to iTunes</span>
+  slack                     <span style="color:#6272a4"># Let your team-mates know the new version is live</span>
+<span style="color:#ff79c6">end</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Now you can execute each of the lane by running one of the following commands from your terminal:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;&gt; fastlane beta
 
 &gt;&gt; fastlane release
-</code></pre>
-
-<h2 id="advantages-of-fastlane">Advantages of fastlane</h2>
-
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="advantages-of-fastlane">Advantages of fastlane</h2>
 <ul>
 <li>Easy to get started - just do the one-time setup, add a fastfile and you are done</li>
 <li>Integrates well with existing tools and services like TestFlight, HockeyApp, SonarQube, gradle etc.</li>
@@ -349,11 +353,8 @@ end
 <li>Custom private lanes / actions for custom scripts</li>
 <li>100% open source under MIT license - <a href="https://github.com/fastlane/fastlane">https://github.com/fastlane/fastlane</a></li>
 </ul>
-
 <h2 id="advanced-concepts">Advanced Concepts</h2>
-
 <p>Fastlane supports some cool features that are very helpful in managing mobile applications.</p>
-
 <ul>
 <li>Pass parameters to your lane from command line</li>
 <li>Private lanes</li>

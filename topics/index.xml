@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topics on Reflections</title>
@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 29 Jun 2020 22:32:55 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/topics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>C&#43;&#43;</title>
+      <title>hugo</title>
+      <link>https://ann.chiramattel.com/topics/hugo/</link>
+      <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
       <link>https://ann.chiramattel.com/topics/c&#43;&#43;/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       
@@ -22,61 +31,16 @@
     </item>
     
     <item>
-      <title>Fastlane</title>
-      <link>https://ann.chiramattel.com/topics/fastlane/</link>
-      <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
+      <title>visual-studio-code</title>
+      <link>https://ann.chiramattel.com/topics/visual-studio-code/</link>
+      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/topics/fastlane/</guid>
+      <guid>https://ann.chiramattel.com/topics/visual-studio-code/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Graphql</title>
-      <link>https://ann.chiramattel.com/topics/graphql/</link>
-      <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
-      
-      <guid>https://ann.chiramattel.com/topics/graphql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://ann.chiramattel.com/topics/machine-learning/</link>
-      <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/topics/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React Native</title>
-      <link>https://ann.chiramattel.com/topics/react-native/</link>
-      <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/topics/react-native/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Realm</title>
-      <link>https://ann.chiramattel.com/topics/realm/</link>
-      <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/topics/realm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Swift</title>
-      <link>https://ann.chiramattel.com/topics/swift/</link>
-      <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
-      
-      <guid>https://ann.chiramattel.com/topics/swift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Thinking Loud</title>
+      <title>thinking-loud</title>
       <link>https://ann.chiramattel.com/topics/thinking-loud/</link>
       <pubDate>Sun, 28 Jun 2020 11:26:39 -0700</pubDate>
       
@@ -85,7 +49,7 @@
     </item>
     
     <item>
-      <title>Unit Testing</title>
+      <title>unit-testing</title>
       <link>https://ann.chiramattel.com/topics/unit-testing/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       
@@ -94,11 +58,56 @@
     </item>
     
     <item>
-      <title>Visual Studio Code</title>
-      <link>https://ann.chiramattel.com/topics/visual-studio-code/</link>
-      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
+      <title>graphql</title>
+      <link>https://ann.chiramattel.com/topics/graphql/</link>
+      <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/topics/visual-studio-code/</guid>
+      <guid>https://ann.chiramattel.com/topics/graphql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swift</title>
+      <link>https://ann.chiramattel.com/topics/swift/</link>
+      <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fastlane</title>
+      <link>https://ann.chiramattel.com/topics/fastlane/</link>
+      <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/fastlane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>realm</title>
+      <link>https://ann.chiramattel.com/topics/realm/</link>
+      <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/realm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://ann.chiramattel.com/topics/machine-learning/</link>
+      <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react-native</title>
+      <link>https://ann.chiramattel.com/topics/react-native/</link>
+      <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/react-native/</guid>
       <description></description>
     </item>
     
