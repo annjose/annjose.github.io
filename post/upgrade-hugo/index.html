@@ -258,16 +258,17 @@
 
 </div>
 
-  <p>Today I upgraded my <a href="https://gohugo.io" target="_blank" rel="noopener">blog engine Hugo</a> from version 0.30.0 to 0.73.0. As you can see, it&rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. It turned out that my whole blog site went blank right after the upgrade; but with a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running. Hence this post is share the learnings if anyone else is stuck with the same issue.</p>
+  <p>Today I upgraded my <a href="https://gohugo.io" target="_blank" rel="noopener">blog engine Hugo</a> from version 0.30.0 to 0.73.0. It&rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it. This post is to share my learnings from the experience hoping that it may be useful to somebody else. <em>Learn Teach Learn</em>.</p>
 <h2 id="first-things-first---upgrade-the-binary">First things first - upgrade the binary</h2>
 <p>The first step is to upgrade the Hugo binary to the latest version. The detailed instructions can be found in the <a href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener">Hugo website</a>, I did it using the HomeBrew on my MacOS and regenerated the site:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">    brew upgrade hugo
     hugo server</code></pre></div>
 <p>Soon after I ran that command, Hugo threw a bunch of warnings and my blog home page was blank! Let&rsquo;s fix them one by one.</p>
-<h2 id="remove-deprecated-shortcodes-from-the-content">Remove deprecated shortcodes from the content</h2>
-<p>Hugo warns that some of the shortcodes used in the content are deprecated in the new version. For example, the following warning indicates that the <code>Page.RSSLink</code> is deprecated:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">    WARN 2020/06/30 11:05:39 Page.RSSLink is deprecated 
-    and will be removed in a future release.</code></pre></div>
+<h2 id="fix-the-warnings">Fix the warnings</h2>
+<p>Hugo warns that some of the shortcodes used in the content are deprecated in the new version.
+<img src="https://ann.chiramattel.com/img/hugo-upgrade-warning.jpg" alt="Warning"></p>
+<p>The first warning indicates that the <code>Page.RSSLink</code> is deprecated:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  WARN 2020/06/30 11:05:39 Page.RSSLink is deprecated and will be removed in a future release.</code></pre></div>
 <p>This can be fixed by replacing the RSSLink as follows:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -295,17 +296,10 @@
   {{ end }}
 </code></pre></td></tr></table>
 </div>
-</div><p>This had to be done in 2 partial layout files - <code>layouts/partials/head.html</code>  and <code>layouts/partials/social.html</code>
-The second warning was a lot more tricker - it says as follows, but does not give an indication of where the offending code is:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">WARN 2020/06/30 11:11:27 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo <span style="color:#ff79c6">function</span>.
-</code></pre></td></tr></table>
-</div>
-</div><p>It turns out that Hugo has removed the usage of <code>Page.Hugo</code> in the newer version and hence we need to is to use the <code>hugo</code> function <a href="https://gohugo.io/variables/hugo/" target="_blank" rel="noopener">as described here</a>. Here is how to modify the file <code>layouts/partials/head.html</code>:</p>
+</div><p>This had to be done in 2 partial layout files - <code>layouts/partials/head.html</code>  and <code>layouts/partials/social.html</code>.</p>
+<p>The second warning was a lot more tricker - it says as follows, but does not give an indication of where the offending code is:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  WARN 2020/06/30 11:11:27 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo function.</code></pre></div></p>
+<p>It turns out that Hugo has removed the usage of <code>Page.Hugo</code> in the newer version and hence we need to is to use the <code>hugo</code> function <a href="https://gohugo.io/variables/hugo/" target="_blank" rel="noopener">as described here</a>. Here is how to modify the file <code>layouts/partials/head.html</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  <span style="color:#ff79c6">{{</span>.Hugo.Generator<span style="color:#ff79c6">}}</span> // remove this line
   <span style="color:#ff79c6">{{</span>hugo.Generator<span style="color:#ff79c6">}}</span>  // add this line</code></pre></div>
 <h2 id="fix-the-blank-home-page">Fix the blank home page</h2>
@@ -320,14 +314,14 @@ The second warning was a lot more tricker - it says as follows, but does not giv
     {{ .Text | safeHTML }}
 &lt;/<span style="color:#ff79c6">a</span>&gt;</code></pre></div></p>
 <p>With this, I could simply update my content as follows, which will open the link in a new tab:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">[<span style="color:#ff79c6">my github repo Book Learnings</span>](<span style="color:#50fa7b">https://github.com/annjose/book-learnings</span>)</code></pre></div></p>
-<p>Go on, click this link and try it out - <a href="https://github.com/annjose/book-learnings" target="_blank" rel="noopener">open in new tab</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">  [<span style="color:#ff79c6">my github repo Book Learnings</span>](<span style="color:#50fa7b">https://github.com/annjose/book-learnings</span>)</code></pre></div></p>
+<p>Go on, click this link and try it out - <a href="https://github.com/annjose/book-learnings" target="_blank" rel="noopener">open in new tab</a>.</p>
 </li>
 <li>
 <p>The new Hugo version has changed the markdown generator from Blackfriday to <a href="https://gohugo.io/getting-started/configuration-markup#goldmark" target="_blank" rel="noopener">Goldmark</a> which is faster and more flexible option.</p>
 </li>
 <li>
-<p>It uses Chroma syntax highlighter that provides a more flexible support for highlighting code that can be configured in the confog.toml as follows:</p>
+<p>It uses Chroma syntax highlighter that provides a more flexible support for highlighting code that can be configured in the config.toml as follows:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -350,7 +344,7 @@ The second warning was a lot more tricker - it says as follows, but does not giv
 </li>
 </ul>
 <h2 id="wrapping-everything-up">Wrapping Everything Up</h2>
-<p>Armed with all the goodnews of Goldmark and the new version of Hugo, I updated my entire content to fix broken links, adjust syntax highlighting in all posts and also applied some styling tweaks including adding the Avenir font and some subtle contrast coloring in the page. Check it out at <a href="https://ann.chiramattel.com/">Home</a></p>
+<p>Armed with all the goodness of Goldmark and the new version of Hugo, I updated my entire content to fix broken links, adjust syntax highlighting and applied some styling tweaks like adding the Avenir font and some subtle contrast coloring in the page. Overall, it feels good and I got a deeper understanding of Hugo and my blog under-the-hood. Check it out at <a href="https://ann.chiramattel.com/">Home</a>.</p>
 
 
   
