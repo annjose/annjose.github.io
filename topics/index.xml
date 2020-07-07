@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 20:55:36 -0700</lastBuildDate>
     
 	<atom:link href="https://ann.chiramattel.com/topics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>thinking-loud</title>
+      <link>https://ann.chiramattel.com/topics/thinking-loud/</link>
+      <pubDate>Mon, 06 Jul 2020 20:55:36 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/topics/thinking-loud/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>
@@ -36,15 +45,6 @@
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       
       <guid>https://ann.chiramattel.com/topics/visual-studio-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thinking-loud</title>
-      <link>https://ann.chiramattel.com/topics/thinking-loud/</link>
-      <pubDate>Sun, 28 Jun 2020 11:26:39 -0700</pubDate>
-      
-      <guid>https://ann.chiramattel.com/topics/thinking-loud/</guid>
       <description></description>
     </item>
     
