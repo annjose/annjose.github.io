@@ -6,12 +6,8 @@
     <description>Recent content in swift on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 12 Oct 2018 20:09:12 -0800</lastBuildDate>
-    
-	<atom:link href="https://ann.chiramattel.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; 2022. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 12 Oct 2018 20:09:12 -0800</lastBuildDate><atom:link href="https://ann.chiramattel.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift 4.2 - What&#39;s New</title>
       <link>https://ann.chiramattel.com/post/swift42-whats-new/</link>
@@ -19,7 +15,7 @@
       
       <guid>https://ann.chiramattel.com/post/swift42-whats-new/</guid>
       <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.
-Random Number Generation  Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence  1 2  let randomInt = Int.</description>
+Random Number Generation Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence 1 2 let randomInt = Int.</description>
     </item>
     
     <item>

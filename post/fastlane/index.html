@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Fastlane - an intro and sneak peek">
-  <meta name="generator" content="Hugo 0.73.0" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>Fastlane &middot; Reflections</title>
 
@@ -203,7 +203,7 @@
 
   <div>
   <div class="small-print">
-    <small>&copy; 2020. All rights reserved.</small>
+    <small>&copy; 2022. All rights reserved.</small>
   </div>
   <div class="small-print">
     <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
@@ -274,7 +274,7 @@
 <li><strong>pilot</strong> - manages the TestFlight testers and builds (TestFlight is Apple&rsquo;s beta deployment tool)</li>
 <li><strong>supply</strong> - updates metadata and apps of Android apps</li>
 </ul>
-<p>Here is the classic fastlane diagram that shows some of the main built-in actions:
+<p>Here is the classic fastlane diagram that shows some of the main built-in actions: 
 
 
 <div class="pure-g">
@@ -295,63 +295,63 @@
 
 </div>
 </p>
-<p>In addition to these built-in tools, fastlane provides an extension model that allows anyone to create plugins like <em>firebase</em>, <em>aws_s3</em>, <em>mobile_center</em> etc. See the full list of plugins at <a href="https://docs.fastlane.tools/plugins/available-plugins/">https://docs.fastlane.tools/plugins/available-plugins/</a>.</p>
+<p>In addition to these built-in tools, fastlane provides an extension model that allows anyone to create plugins like <em>firebase</em>, <em>aws_s3</em>, <em>mobile_center</em> etc. See the full list of plugins at <a href="https://docs.fastlane.tools/plugins/available-plugins/" target="_blank" rel="noopener">https://docs.fastlane.tools/plugins/available-plugins/</a>.</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>It is very easy to get started with fastlane. Follow the instructions for <a href="https://docs.fastlane.tools/getting-started/ios/setup/" target="_blank" rel="noopener">iOS setup</a> or <a href="https://docs.fastlane.tools/getting-started/android/setup/" target="_blank" rel="noopener">Android setup</a>. As described towards the end of those documents (see section <em>Use a Gemfile</em>), it is recommended that you use a Gemfile to define the fastlane version and its dependencies in a versioned manner.</p>
-<p>Once the installation is done, you can create a configuration file named <em>Fastfile</em> in the root folder of your application and define the <em>lanes</em> with a set of actions. In fastlane, lanes are just a collection of actions grouped together so that they can be executed as a single command. It is recommended that all the fastlane configuration files are checked-in to the source repo. Refer this link to set up your <em>.gitignore</em> correctly for fastlane - <a href="https://docs.fastlane.tools/best-practices/source-control/">https://docs.fastlane.tools/best-practices/source-control/</a>.</p>
+<p>Once the installation is done, you can create a configuration file named <em>Fastfile</em> in the root folder of your application and define the <em>lanes</em> with a set of actions. In fastlane, lanes are just a collection of actions grouped together so that they can be executed as a single command. It is recommended that all the fastlane configuration files are checked-in to the source repo. Refer this link to set up your <em>.gitignore</em> correctly for fastlane - <a href="https://docs.fastlane.tools/best-practices/source-control/" target="_blank" rel="noopener">https://docs.fastlane.tools/best-practices/source-control/</a>.</p>
 <p>Here is an example of a Fastfile that defines two lanes - one for the <strong>beta</strong> deployment and another for AppStore <strong>release</strong>.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">lane <span style="color:#f1fa8c">:beta</span> <span style="color:#ff79c6">do</span>
-  increment_build_number    <span style="color:#6272a4"># increment build number before building the final version</span>
-  build_app                 <span style="color:#6272a4"># build the app using gym</span>
-  upload_to_testflight      <span style="color:#6272a4"># upload the binaries to TestFlight</span>
-<span style="color:#ff79c6">end</span>
-
-lane <span style="color:#f1fa8c">:release</span> <span style="color:#ff79c6">do</span>
-  capture_screenshots
-  build_app
-  upload_to_app_store       <span style="color:#6272a4"># Upload the screenshots and the binary to iTunes</span>
-  slack                     <span style="color:#6272a4"># Let your team-mates know the new version is live</span>
-<span style="color:#ff79c6">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>lane <span style="color:#f1fa8c">:beta</span> <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>  increment_build_number    <span style="color:#6272a4"># increment build number before building the final version</span>
+</span></span><span style="display:flex;"><span>  build_app                 <span style="color:#6272a4"># build the app using gym</span>
+</span></span><span style="display:flex;"><span>  upload_to_testflight      <span style="color:#6272a4"># upload the binaries to TestFlight</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lane <span style="color:#f1fa8c">:release</span> <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>  capture_screenshots
+</span></span><span style="display:flex;"><span>  build_app
+</span></span><span style="display:flex;"><span>  upload_to_app_store       <span style="color:#6272a4"># Upload the screenshots and the binary to iTunes</span>
+</span></span><span style="display:flex;"><span>  slack                     <span style="color:#6272a4"># Let your team-mates know the new version is live</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Now you can execute each of the lane by running one of the following commands from your terminal:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;&gt; fastlane beta
-
-&gt;&gt; fastlane release
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt;&gt; fastlane beta
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&gt;&gt; fastlane release
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="advantages-of-fastlane">Advantages of fastlane</h2>
 <ul>
 <li>Easy to get started - just do the one-time setup, add a fastfile and you are done</li>
 <li>Integrates well with existing tools and services like TestFlight, HockeyApp, SonarQube, gradle etc.</li>
 <li>Integrates well with exall major CI systems like Jenkins, CircleCI, Travis</li>
-<li>Supports a wide range of capabilities through 170 actions <a href="https://docs.fastlane.tools/actions">https://docs.fastlane.tools/actions</a>. There is an action for everything that you can think of - yes of course for clearing derived data too :-)</li>
+<li>Supports a wide range of capabilities through 170 actions <a href="https://docs.fastlane.tools/actions" target="_blank" rel="noopener">https://docs.fastlane.tools/actions</a>. There is an action for everything that you can think of - yes of course for clearing derived data too :-)</li>
 <li>Easy to extend and customize actions as needed</li>
 <li>Custom private lanes / actions for custom scripts</li>
-<li>100% open source under MIT license - <a href="https://github.com/fastlane/fastlane">https://github.com/fastlane/fastlane</a></li>
+<li>100% open source under MIT license - <a href="https://github.com/fastlane/fastlane" target="_blank" rel="noopener">https://github.com/fastlane/fastlane</a></li>
 </ul>
 <h2 id="advanced-concepts">Advanced Concepts</h2>
 <p>Fastlane supports some cool features that are very helpful in managing mobile applications.</p>

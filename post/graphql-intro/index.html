@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="An introduction to GraphQL with examples and comparison to REST">
-  <meta name="generator" content="Hugo 0.73.0" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>Learn GraphQL By Example &middot; Reflections</title>
 
@@ -203,7 +203,7 @@
 
   <div>
   <div class="small-print">
-    <small>&copy; 2020. All rights reserved.</small>
+    <small>&copy; 2022. All rights reserved.</small>
   </div>
   <div class="small-print">
     <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
@@ -271,98 +271,98 @@
 </ul>
 <h2 id="an-example">An Example</h2>
 <p>As an example, if you want to create a GraphQL service that provides a list of users in your database and some basic information about the user, you can define a <strong>User</strong> type as follows:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#50fa7b">Query</span> {
-  users: [<span style="color:#50fa7b">User</span>]
-}
-
-<span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#50fa7b">User</span> {
-  id: <span style="color:#50fa7b">Int</span>
-  name: <span style="color:#50fa7b">String</span>
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#50fa7b">Query</span> {
+</span></span><span style="display:flex;"><span>  users: [<span style="color:#50fa7b">User</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">type</span> <span style="color:#50fa7b">User</span> {
+</span></span><span style="display:flex;"><span>  id: <span style="color:#50fa7b">Int</span>
+</span></span><span style="display:flex;"><span>  name: <span style="color:#50fa7b">String</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>and then define the functions corresponding to each fields on the type</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#8be9fd;font-style:italic">function</span> Query_users(request) {
-  <span style="color:#ff79c6">return</span> mydb.users;
-}
-<span style="color:#8be9fd;font-style:italic">function</span> User_name(user) {
-  <span style="color:#ff79c6">return</span> user.getName();
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> Query_users(request) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> mydb.users;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> User_name(user) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> user.getName();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then you run the service on a secure URL endpoint and send GraphQL queries to that service. The service validated the request, makes sure that it refers to well defined types only and then executes the query by invoking the provided functions and returns the result.</p>
 <p>In the above example, a query like ths:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql">{
-  users {
-    name
-  }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  users {
+</span></span><span style="display:flex;"><span>    name
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>will produce the following JSON result:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
-  <span style="color:#ff79c6">&#34;users&#34;</span>: [
-    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Morpheus&#34;</span> },
-    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Neo&#34;</span> },
-    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Trinity&#34;</span> }
-  ]
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;users&#34;</span>: [
+</span></span><span style="display:flex;"><span>    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Morpheus&#34;</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Neo&#34;</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Trinity&#34;</span> }
+</span></span><span style="display:flex;"><span>  ]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>You can run these queries using an API explorer provided by the GraphQL server (for example, see <a href="https://developer.github.com/v4/explorer/" target="_blank" rel="noopener">Github&rsquo;s API explorer</a>). Alternately, you can run it using curl - see the example below:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -H <span style="color:#f1fa8c">&#34;Authorization: bearer token&#34;</span> -X POST -d <span style="color:#f1fa8c">&#34; \
-</span><span style="color:#f1fa8c">{ \
-</span><span style="color:#f1fa8c">\&#34;query\&#34;: \&#34;query { viewer { login }}\&#34; \
-</span><span style="color:#f1fa8c">} \&#34; _https://api.github.com/graphql
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -H <span style="color:#f1fa8c">&#34;Authorization: bearer token&#34;</span> -X POST -d <span style="color:#f1fa8c">&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">{ \
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">\&#34;query\&#34;: \&#34;query { viewer { login }}\&#34; \
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">} \&#34; _https://api.github.com/graphql
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="unique-features-of-graphql">Unique Features of GraphQL</h2>
 <p>As we have seen so far, here are the unique features of GraphQL that sets it apart:</p>
@@ -376,35 +376,35 @@
 <li>
 <p><strong>Introspective</strong> - client can query the GraphQL server for the schema of the data. So you can write a (meta) GraphQL query to get the fields of the GraphQL schema.</p>
 <p>Here is an example:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">query</span> {
-  <span style="color:#50fa7b">__schema</span> {
-    <span style="color:#8be9fd;font-style:italic">type</span><span style="color:#50fa7b">s</span> {
-      name
-      kind
-      description
-      fields {
-          name
-      }
-    }
-  }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">query</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">__schema</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">type</span><span style="color:#50fa7b">s</span> {
+</span></span><span style="display:flex;"><span>      name
+</span></span><span style="display:flex;"><span>      kind
+</span></span><span style="display:flex;"><span>      description
+</span></span><span style="display:flex;"><span>      fields {
+</span></span><span style="display:flex;"><span>          name
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -412,25 +412,25 @@
 </li>
 <li>
 <p><strong>Version free</strong> - GraphQL follows a Single Evolving Version model where the query determines the shape of the data instead oa version of the API. So APIs can evolve without versions by adding new fields / types and deprecating aging fields.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">type</span> {   
-  <span style="color:#50fa7b">User</span> {   
-    name: <span style="color:#50fa7b">String</span>
-    avatar: <span style="color:#50fa7b">String</span>
-    character: <span style="color:#50fa7b">String</span> @deprecated
-  }    
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">type</span> {   
+</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">User</span> {   
+</span></span><span style="display:flex;"><span>    name: <span style="color:#50fa7b">String</span>
+</span></span><span style="display:flex;"><span>    avatar: <span style="color:#50fa7b">String</span>
+</span></span><span style="display:flex;"><span>    character: <span style="color:#50fa7b">String</span> @deprecated
+</span></span><span style="display:flex;"><span>  }    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -444,7 +444,7 @@
 <p>REST is centered around the concept of a <strong>resource</strong> (for eg: User, Book etc.), where each resource is identified by a URL (endpoint). On the otherhand, GraphQL APIs are organized in terms of <strong>types</strong> in the schema. This ensures that the client apps ask for only what is possible and they can avoid hand-written code to parse JSON response.</p>
 </li>
 <li>
-<p>In REST, you retrieve the resource by sending a GET request to the resource&rsquo;s URL, for example <code>GET /users/10100</code>. As you can see here, the way you fetch a resource is coupled with the <em>type</em> of the resource. In contrast, GraphQL keeps these two concepts separate because your schema contains the definition for all your <em>types</em> and you fetch the data using a single URL <a href="https://api.github.com/graphql">https://api.github.com/graphql</a></p>
+<p>In REST, you retrieve the resource by sending a GET request to the resource&rsquo;s URL, for example <code>GET /users/10100</code>. As you can see here, the way you fetch a resource is coupled with the <em>type</em> of the resource. In contrast, GraphQL keeps these two concepts separate because your schema contains the definition for all your <em>types</em> and you fetch the data using a single URL <a href="https://api.github.com/graphql" target="_blank" rel="noopener">https://api.github.com/graphql</a></p>
 </li>
 <li>
 <p>GraphQL gives the clients the power to ask for exactly what they need, nothing more and nothing less. REST does not provide that level of granularity as the server sends all the data associated with the resource and the client has to parse out what it needs after the response reaches it.</p>
@@ -464,26 +464,26 @@
 <p>The two types of operations allowed in GraphQL are <em>queries</em> and <em>mutations</em>. Every GraphQL schema has a root type for both queries and mutations.</p>
 <h3 id="queries">Queries</h3>
 <p>Query is an operation that defines what we want to get from the GraphQL server. Queries return only the data that you ask for and a query has the same shape as the result. You create a query by specifying the fields (top-level fields or nested fields) of the types until every leaf node is a scalar. You can also pass <em>arguments</em> to every field and nested object in the query. Queries can also include reusable snippets called <em>fragments</em> that help in splitting complex queries into smaller chunks and avoid repetition of fields.</p>
-<p>Here is a sample query that fetches a github issue from the repository <a href="https://github.com/octocat/Hello-World/issues/392:">https://github.com/octocat/Hello-World/issues/392:</a></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+<p>Here is a sample query that fetches a github issue from the repository <a href="https://github.com/octocat/Hello-World/issues/392" target="_blank" rel="noopener">https://github.com/octocat/Hello-World/issues/392</a>:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">query</span> {
-  <span style="color:#50fa7b">repository</span>(owner:<span style="color:#f1fa8c">&#34;octocat&#34;</span>, <span style="color:#50fa7b">name</span>:<span style="color:#f1fa8c">&#34;Hello-World&#34;</span>) {
-      <span style="color:#50fa7b">issue</span>(number:<span style="color:#50fa7b">349</span>) {
-        id
-      }
-  }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">query</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">repository</span>(owner:<span style="color:#f1fa8c">&#34;octocat&#34;</span>, <span style="color:#50fa7b">name</span>:<span style="color:#f1fa8c">&#34;Hello-World&#34;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#50fa7b">issue</span>(number:<span style="color:#50fa7b">349</span>) {
+</span></span><span style="display:flex;"><span>        id
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="mutations">Mutations</h3>
 <p>Mutation is an operation to execute a modification on an object. You form a mutation by specifying three things:</p>
@@ -493,95 +493,95 @@
 <li><strong>Payload object</strong> - the data that you want to return from the server. Pass it as the body of the mutationName</li>
 </ul>
 <p>This is how a mutation is structured:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java">mutation <span style="color:#ff79c6">{</span>
-  mutationName<span style="color:#ff79c6">(</span>input<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">{</span>MutationNameInput<span style="color:#ff79c6">!})</span> <span style="color:#ff79c6">{</span>
-    MutationNamePayload
-<span style="color:#ff79c6">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>mutation <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  mutationName<span style="color:#ff79c6">(</span>input<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">{</span>MutationNameInput<span style="color:#ff79c6">!})</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    MutationNamePayload
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>And here is a sample mutation that adds a <em>HOORAY</em> reaction to the above github repo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#8be9fd;font-style:italic">mutation</span> <span style="color:#50fa7b">AddReactionToIssue</span> {
-  addReaction(<span style="color:#8be9fd;font-style:italic">input</span>:{<span style="color:#50fa7b">subjectId</span>:<span style="color:#f1fa8c">&#34;MDU6SXNzdWUyMzEzOTE1NTE=&#34;</span>,<span style="color:#50fa7b">content</span>:<span style="color:#50fa7b">HOORAY</span>}) {
-    <span style="color:#50fa7b">reaction</span> {
-      content
-    }
-    subject {
-      id
-    }
-  }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-graphql" data-lang="graphql"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">mutation</span> <span style="color:#50fa7b">AddReactionToIssue</span> {
+</span></span><span style="display:flex;"><span>  addReaction(<span style="color:#8be9fd;font-style:italic">input</span>:{<span style="color:#50fa7b">subjectId</span>:<span style="color:#f1fa8c">&#34;MDU6SXNzdWUyMzEzOTE1NTE=&#34;</span>,<span style="color:#50fa7b">content</span>:<span style="color:#50fa7b">HOORAY</span>}) {
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">reaction</span> {
+</span></span><span style="display:flex;"><span>      content
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    subject {
+</span></span><span style="display:flex;"><span>      id
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>You can execute the above query and mutation in the GitHub API explorer after you login with your github credentials - <a href="https://developer.github.com/v4/explorer/">https://developer.github.com/v4/explorer/</a>.</p>
+</div><p>You can execute the above query and mutation in the GitHub API explorer after you login with your github credentials - <a href="https://developer.github.com/v4/explorer/" target="_blank" rel="noopener">https://developer.github.com/v4/explorer/</a>.</p>
 <h3 id="resolvers">Resolvers</h3>
 <p>Resolvers are the server side functions that a GraphQL API developer writes to fulfill the queries and mutations. Using these resolvers, the GraphQL execution library builds up the response to match the shape of the query and sends the response to the client. See here a few resolvers in JavaScript:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#ff79c6">const</span> resolvers <span style="color:#ff79c6">=</span> {
-    Query<span style="color:#ff79c6">:</span> {
-        hello<span style="color:#ff79c6">:</span> () =&gt; {
-            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;Hello world!&#39;</span>;
-        },
-        author<span style="color:#ff79c6">:</span> (root, { id }) =&gt; {
-            find(authors, { id<span style="color:#ff79c6">:</span> id })
-        },
-    },
-    Author<span style="color:#ff79c6">:</span> {
-        posts<span style="color:#ff79c6">:</span> (author) =&gt; filter(posts, { authorId<span style="color:#ff79c6">:</span> author.id }),
-    }
-};
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> resolvers <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>    Query<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        hello<span style="color:#ff79c6">:</span> () =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;Hello world!&#39;</span>;
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        author<span style="color:#ff79c6">:</span> (root, { id }) =&gt; {
+</span></span><span style="display:flex;"><span>            find(authors, { id<span style="color:#ff79c6">:</span> id })
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    Author<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        posts<span style="color:#ff79c6">:</span> (author) =&gt; filter(posts, { authorId<span style="color:#ff79c6">:</span> author.id }),
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="conclusion">Conclusion</h2>
 <p>As we have seen so far, GraphQL is an excellent solution that can power all the data fetching requirements of client applications. It can be a complete replacement for resource-dependent REST services, orchestration services and services custom-built for applications. What I love the most about GraphQL is how it solves the data-fetching problem from the application developer&rsquo;s point of view without compromising the server-side developer&rsquo;s desire to create flexible maintainable code.</p>
 <h2 id="references">References</h2>
-<p>Of course there is a lot more to explore and experiment to get a deep understanding of this technology. The specific topics I would like to explore are the Single Version model and the advanced type systems (Union Types, Interface Types etc.)
+<p>Of course there is a lot more to explore and experiment to get a deep understanding of this technology. The specific topics I would like to explore are the Single Version model and the advanced type systems (Union Types, Interface Types etc.) 
 Here is a list of some great articles and documentation to learn more.</p>
 <ul>
-<li>GraphQL main learning site - <a href="http://graphql.org/learn/">http://graphql.org/learn/</a></li>
-<li>GraphQL docs on Github V4 API - <a href="https://developer.github.com/v4/">https://developer.github.com/v4/</a></li>
-<li>GraphQL type system - <a href="http://graphql.org/learn/schema">http://graphql.org/learn/schema</a></li>
-<li>GraphQL vs. REST – Apollo GraphQL - <a href="https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b">https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b</a></li>
-<li>Facebook&rsquo;s post on GraphQL - an excellent description of why they built GraphQL <a href="https://code.facebook.com/posts/1691455094417024/graphql-a-data-query-language/">https://code.facebook.com/posts/1691455094417024/graphql-a-data-query-language/</a></li>
-<li>Details on Schema - <a href="https://github.com/apollographql/graphql-guide/blob/master/source/schemas.md">https://github.com/apollographql/graphql-guide/blob/master/source/schemas.md</a></li>
-<li>Write you first GraphQL server - <a href="https://medium.com/the-graphqlhub/your-first-graphql-server-3c766ab4f0a2">https://medium.com/the-graphqlhub/your-first-graphql-server-3c766ab4f0a2</a></li>
+<li>GraphQL main learning site - <a href="http://graphql.org/learn/" target="_blank" rel="noopener">http://graphql.org/learn/</a></li>
+<li>GraphQL docs on Github V4 API - <a href="https://developer.github.com/v4/" target="_blank" rel="noopener">https://developer.github.com/v4/</a></li>
+<li>GraphQL type system - <a href="http://graphql.org/learn/schema" target="_blank" rel="noopener">http://graphql.org/learn/schema</a></li>
+<li>GraphQL vs. REST – Apollo GraphQL - <a href="https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b" target="_blank" rel="noopener">https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b</a></li>
+<li>Facebook&rsquo;s post on GraphQL - an excellent description of why they built GraphQL <a href="https://code.facebook.com/posts/1691455094417024/graphql-a-data-query-language/" target="_blank" rel="noopener">https://code.facebook.com/posts/1691455094417024/graphql-a-data-query-language/</a></li>
+<li>Details on Schema - <a href="https://github.com/apollographql/graphql-guide/blob/master/source/schemas.md" target="_blank" rel="noopener">https://github.com/apollographql/graphql-guide/blob/master/source/schemas.md</a></li>
+<li>Write you first GraphQL server - <a href="https://medium.com/the-graphqlhub/your-first-graphql-server-3c766ab4f0a2" target="_blank" rel="noopener">https://medium.com/the-graphqlhub/your-first-graphql-server-3c766ab4f0a2</a></li>
 </ul>
 
 

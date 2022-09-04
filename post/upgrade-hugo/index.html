@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Gotchas found while upgrading my Hugo version">
-  <meta name="generator" content="Hugo 0.73.0" />
+  <meta name="generator" content="Hugo 0.102.3" />
 
   <title>Upgrading my blog engine Hugo and content &middot; Reflections</title>
 
@@ -203,7 +203,7 @@
 
   <div>
   <div class="small-print">
-    <small>&copy; 2020. All rights reserved.</small>
+    <small>&copy; 2022. All rights reserved.</small>
   </div>
   <div class="small-print">
     <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
@@ -261,47 +261,47 @@
   <p>Today I upgraded my <a href="https://gohugo.io" target="_blank" rel="noopener">blog engine Hugo</a> from version 0.30.0 to 0.73.0. It&rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it. This post is to share my learnings from the experience hoping that it may be useful to somebody else. <em>Learn Teach Learn</em>.</p>
 <h2 id="first-things-first---upgrade-the-binary">First things first - upgrade the binary</h2>
 <p>The first step is to upgrade the Hugo binary to the latest version. The detailed instructions can be found in the <a href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener">Hugo website</a>, I did it using the HomeBrew on my MacOS and regenerated the site:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">    brew upgrade hugo
-    hugo server</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>    brew upgrade hugo
+</span></span><span style="display:flex;"><span>    hugo server</span></span></code></pre></div>
 <p>Soon after I ran that command, Hugo threw a bunch of warnings and my blog home page was blank! Let&rsquo;s fix them one by one.</p>
 <h2 id="fix-the-warnings">Fix the warnings</h2>
-<p>Hugo warns that some of the shortcodes used in the content are deprecated in the new version.
+<p>Hugo warns that some of the shortcodes used in the content are deprecated in the new version. 
 <img src="https://ann.chiramattel.com/img/hugo-upgrade-warning.jpg" alt="Warning"></p>
 <p>The first warning indicates that the <code>Page.RSSLink</code> is deprecated:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  WARN 2020/06/30 11:05:39 Page.RSSLink is deprecated and will be removed in a future release.</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>  WARN 2020/06/30 11:05:39 Page.RSSLink is deprecated and will be removed in a future release.</span></span></code></pre></div>
 <p>This can be fixed by replacing the RSSLink as follows:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  // delete the three lines below
-  {{ if .RSSLink }}
-  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;alternate&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;application/rss+xml&#34;</span> <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Site.Title }}&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .RSSLink }}&#34;</span> /&gt;
-  {{ end }}
-
-  // add the lines below
-  {{ if .OutputFormats.Get &#34;RSS&#34; }}
-  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;alternate&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;application/rss+xml&#34;</span> <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Site.Title }}&#34;</span>
-    <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;{{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}&#39;</span> /&gt;
-  {{ end }}
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  // delete the three lines below
+</span></span><span style="display:flex;"><span>  {{ if .RSSLink }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;alternate&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;application/rss+xml&#34;</span> <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Site.Title }}&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .RSSLink }}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  // add the lines below
+</span></span><span style="display:flex;"><span>  {{ if .OutputFormats.Get &#34;RSS&#34; }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;alternate&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;application/rss+xml&#34;</span> <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Site.Title }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;{{ with .OutputFormats.Get &#34;RSS&#34; }}{{ .RelPermalink }}{{ end }}&#39;</span> /&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>This had to be done in 2 partial layout files - <code>layouts/partials/head.html</code>  and <code>layouts/partials/social.html</code>.</p>
 <p>The second warning was a lot more tricker - it says as follows, but does not give an indication of where the offending code is:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  WARN 2020/06/30 11:11:27 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo function.</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>  WARN 2020/06/30 11:11:27 Page.Hugo is deprecated and will be removed in a future release. Use the global hugo function.</span></span></code></pre></div></p>
 <p>It turns out that Hugo has removed the usage of <code>Page.Hugo</code> in the newer version and hence we need to is to use the <code>hugo</code> function <a href="https://gohugo.io/variables/hugo/" target="_blank" rel="noopener">as described here</a>. Here is how to modify the file <code>layouts/partials/head.html</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  <span style="color:#ff79c6">{{</span>.Hugo.Generator<span style="color:#ff79c6">}}</span> // remove this line
-  <span style="color:#ff79c6">{{</span>hugo.Generator<span style="color:#ff79c6">}}</span>  // add this line</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  <span style="color:#ff79c6">{{</span>.Hugo.Generator<span style="color:#ff79c6">}}</span> // remove this line
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">{{</span>hugo.Generator<span style="color:#ff79c6">}}</span>  // add this line</span></span></code></pre></div>
 <h2 id="fix-the-blank-home-page">Fix the blank home page</h2>
 <p>The root cause of this issue was that Hugo changed the location of the post index file from <code>layouts/index/post.html</code> to <code>layouts/post/post.html</code>. When I moved the file from old location to new, viola! my home page was up and running again</p>
 <h2 id="miscellaneous-issues--goodness">Miscellaneous Issues &amp; Goodness</h2>
@@ -309,12 +309,12 @@
 <ul>
 <li>
 <p>All external hyperlinks that were using the href tag in the markdown were broken since Goldmark has a better way to open external links. The concept is called Render Hook Templates which allow you to define templates to render a link, image etc. and add them to the folder <code>layouts/_default/_markup</code>. So I added a file named <code>render-link.html</code> in the folder with the following content:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Destination | safeURL }}&#34;</span>{{ <span style="color:#50fa7b">with</span> .<span style="color:#50fa7b">Title</span>}} <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ . }}&#34;</span>{{ <span style="color:#50fa7b">end</span> }}
-    {{ <span style="color:#50fa7b">if</span> <span style="color:#50fa7b">strings</span>.<span style="color:#50fa7b">HasPrefix</span> .<span style="color:#50fa7b">Destination</span> &#34;<span style="color:#50fa7b">http</span>&#34; }} <span style="color:#50fa7b">target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;_blank&#34;</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;noopener&#34;</span>{{ <span style="color:#50fa7b">end</span> }}&gt;
-    {{ .Text | safeHTML }}
-&lt;/<span style="color:#ff79c6">a</span>&gt;</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Destination | safeURL }}&#34;</span>{{ <span style="color:#50fa7b">with</span> .<span style="color:#50fa7b">Title</span>}} <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ . }}&#34;</span>{{ <span style="color:#50fa7b">end</span> }}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#50fa7b">if</span> <span style="color:#50fa7b">strings</span>.<span style="color:#50fa7b">HasPrefix</span> .<span style="color:#50fa7b">Destination</span> &#34;<span style="color:#50fa7b">http</span>&#34; }} <span style="color:#50fa7b">target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;_blank&#34;</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;noopener&#34;</span>{{ <span style="color:#50fa7b">end</span> }}&gt;
+</span></span><span style="display:flex;"><span>    {{ .Text | safeHTML }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;</span></span></code></pre></div></p>
 <p>With this, I could simply update my content as follows, which will open the link in a new tab:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">  [<span style="color:#ff79c6">my github repo Book Learnings</span>](<span style="color:#50fa7b">https://github.com/annjose/book-learnings</span>)</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>  [<span style="color:#ff79c6">my github repo Book Learnings</span>](<span style="color:#50fa7b">https://github.com/annjose/book-learnings</span>)</span></span></code></pre></div></p>
 <p>Go on, click this link and try it out - <a href="https://github.com/annjose/book-learnings" target="_blank" rel="noopener">open in new tab</a>.</p>
 </li>
 <li>
@@ -322,21 +322,21 @@
 </li>
 <li>
 <p>It uses Chroma syntax highlighter that provides a more flexible support for highlighting code that can be configured in the config.toml as follows:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[markup]
-    [markup.highlight]
-        codeFences = <span style="color:#ff79c6">true</span>
-        lineNos = <span style="color:#ff79c6">true</span>
-        style = <span style="color:#f1fa8c">&#34;dracula&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[markup]
+</span></span><span style="display:flex;"><span>    [markup.highlight]
+</span></span><span style="display:flex;"><span>        codeFences = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>        lineNos = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>        style = <span style="color:#f1fa8c">&#34;dracula&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
