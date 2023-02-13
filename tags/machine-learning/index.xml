@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine-learning on Reflections</title>
+    <link>https://ann.chiramattel.com/tags/machine-learning/</link>
+    <description>Recent content in machine-learning on Reflections</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 12 Feb 2023 22:57:43 -0800</lastBuildDate><atom:link href="https://ann.chiramattel.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT Intro - 3 Ways</title>
+      <link>https://ann.chiramattel.com/post/chatgpt-intro-3-ways/</link>
+      <pubDate>Sun, 12 Feb 2023 22:57:43 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/chatgpt-intro-3-ways/</guid>
+      <description>I have been eager to write a blog about ChatGPT since its release last year, but was held back by the fear of facing a blank page and the challenge of starting to write. Today, I finally mustered up the courage and sat down to write. I followed my usual process by creating an outline of what I wanted to cover in the blog post.
+However, I decided to do a meta experiment and see how I could utilize ChatGPT to help me write the blog.</description>
+    </item>
+    
+    <item>
+      <title>ChatGPT Intro - Ann&#39;s draft, improvised by ChatGPT</title>
+      <link>https://ann.chiramattel.com/post/chatgpt-fully-improvised-by-chatgpt/</link>
+      <pubDate>Sun, 12 Feb 2023 21:25:12 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/chatgpt-fully-improvised-by-chatgpt/</guid>
+      <description>ChatGPT is an AI-powered chatbot that can hold human-like conversations on a vast array of topics. Developed by OpenAI, the creators of DallE-2, a popular AI text-to-image generator, and Whisper, a powerful speech recognition system, ChatGPT is designed to answer questions, write code, summarize text, and explain concepts using natural language processing.
+ChatGPT is currently in its research preview phase and is available for everyone to use for free. However, OpenAI recently announced ChatGPT Plus, a subscription plan that costs $20 per month.</description>
+    </item>
+    
+    <item>
+      <title>ChatGPT Intro - Fully written by ChatGPT</title>
+      <link>https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/</link>
+      <pubDate>Sun, 12 Feb 2023 20:54:11 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/</guid>
+      <description>Have you ever heard of ChatGPT? It&amp;rsquo;s a large language model that has taken the AI world by storm. But what exactly is ChatGPT and how does it work? This post will break down the basics and give you a good understanding of what it is, how it&amp;rsquo;s built and how it can be used in the real world.
+What is ChatGPT?
+ChatGPT is a language model that combines the GPT part (Generative Pretrained Transformer) with the chat part.</description>
+    </item>
+    
+    <item>
+      <title>ChatGPT - An Introduction</title>
+      <link>https://ann.chiramattel.com/post/chatgpt-intro/</link>
+      <pubDate>Sun, 12 Feb 2023 18:59:18 -0800</pubDate>
+      
+      <guid>https://ann.chiramattel.com/post/chatgpt-intro/</guid>
+      <description>Like many of you, I have been reading about ChatGPT in various forums and from industry experts. This blog post is a brief summary of my understanding of ChatGPT - what is it, how it works, its power and pitfalls, and its future potential in my perspective.
+What is ChatGPT? ChatGPT is an AI powered chatbot that is capable of having human-like conversations on a wide range of topics using natural launguage processing.</description>
+    </item>
+    
+  </channel>
+</rss>

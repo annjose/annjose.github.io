@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An introduction to ChatGPT, its power, pitfalls and future">
+  <meta name="generator" content="Hugo 0.102.3" />
+
+  <title>ChatGPT - An Introduction &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/google-font-local.css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://ann.chiramattel.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/post/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/ios"><i class='fa fa-list fa-fw'></i>iOS</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2022. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>ChatGPT - An Introduction</h1>
+  <h2>An introduction to ChatGPT, its power, pitfalls and future</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Feb 2023</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/machine-learning">machine-learning</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/tech-explorations">tech-explorations</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Like many of you, I have been reading about ChatGPT in various forums and from industry experts. This blog post is a brief summary of my understanding of ChatGPT - what is it, how it works, its power and pitfalls, and its future potential in my perspective.</p>
+<h3 id="what-is-chatgpt">What is ChatGPT?</h3>
+<p>ChatGPT is an AI powered <strong>chat</strong>bot that is capable of having human-like conversations on a wide range of topics using natural launguage processing. This model can answer your questions, write code, summarize text and explain concepts in a simple way. ChatGPT was developed by <a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a>, the creators of <a href="https://openai.com/dall-e-2/" target="_blank" rel="noopener">DallE-2</a>, the popular AI text-to-image generator and <a href="https://openai.com/blog/whisper/" target="_blank" rel="noopener">Whisper</a>, the powerful speech recognition system.</p>
+<p>ChatGPT is currently in research preview and is free for everyone to use. Just a couple of weeks ago, <a href="https://openai.com/blog/chatgpt-plus/" target="_blank" rel="noopener">OpenAI announced ChatGPT Plus</a>, a subscription plan available for $20 per month.</p>
+<h3 id="chatgpt-under-the-hood">ChatGPT under the hood</h3>
+<p>ChatGPT is built on top of the <strong>GPT 3.5</strong> series of large language models that generates human-like text. Woah! That&rsquo;s a lot of buzz words - let&rsquo;s break it down further.</p>
+<p>A large language model (<strong>LLM</strong>) is a probabilistic distribution - a mathematical function - applied on a sequence of words and predicts the most likley next word in a sentence. <strong>GPT (Generative Pre-trained Transformer)</strong> is one such family of large language models trained on huge volumes of text data and <strong>generates</strong> conversational text using supervised learning and reinforcement learning. The speciality of this model is that it uses the <strong>Transformer</strong> ML model that provides differential weighting for the signifcance of each part of the input data. This helps in prioritizing human-like responses over purely linguistically valid responses. GPT also uses human trainers throughout the process - first to train using labelled conversations (hence the term <strong>Pre-trained</strong>) and then to rank the responses generated by the model - and creates reward models to fine-tune the responses in an efficient way.</p>
+<p>GPT has a wide range of applications such as chat bots, summarizing texts, protein design, translate content in different languages and generating new content. ChatGPT is one such application of GPT that interacts with the user in a conversational way. ChatGPT and GPT 3.5 were trained on an <a href="https://azure.microsoft.com/en-us/blog/general-availability-of-azure-openai-service-expands-access-to-large-advanced-ai-models-with-added-enterprise-benefits/" target="_blank" rel="noopener">Microsoft Azure AI supercomputing infrastructure</a>.</p>
+<h3 id="get-started-with-chatgpt">Get started with ChatGPT</h3>
+<p>It is pretty simple to start, only these 3 steps:</p>
+<ol>
+<li>Go to <a href="https://chat.openai.com/chat" target="_blank" rel="noopener">https://chat.openai.com/chat</a> on your browser on your desktop, laptop or phone</li>
+<li><strong>Log in</strong> with an Open AI account. If you don&rsquo;t have an account, create on using <strong>Sign up</strong> button</li>
+<li>With a successful loging, you will see a simple chat interface with a big text box. Here is where you interact with ChatGPT.</li>
+</ol>
+<p>That&rsquo;s it! Now you can type in any question or text into the text box and ChatGPT will respond with an answer, comment or a question. You can keep asking questions and it will anser based on the context of your previous question. Have fun with it!</p>
+<p>The words that you type into the text box are called <strong>prompts</strong> and they are very crucial in determining the quality of your interaction with ChatGPT. Well-designed prompts provide meaningful answers, for example, the more context and examples you provide, the richer the answer will be. Here are a few resources that will help you create good prompts - <a href="https://www.emergentmind.com/" target="_blank" rel="noopener">Learn GPT - the best ChatGPT examples</a>,  <a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener">Awesome ChatGPT prompts</a> and <a href="https://mpost.io/100-best-chatgpt-prompts-to-unleash-ais-potential/" target="_blank" rel="noopener">100 best ChatGPT prompts</a>.</p>
+<h3 id="power-of-chatgpt---real-world-use-cases">Power of ChatGPT - Real-world use cases</h3>
+<p>ChatGPT can be used for a variety of purposes, here are a few examples where ChatGPT can..</p>
+<ul>
+<li>explain concepts (simple and complex) in a conversational teaching tone - see this prompt <strong>what is bernoulli&rsquo;s equation</strong></li>
+<li>write code for a given problem and most of the time, the generated code can be copied into an IDE and it will compi;e just fine, for eg: <strong>write a Go program to check for palindrome</strong></li>
+<li>debug a given piece of code, for eg: you can say <strong>this code is not working like i expect — how do i fix it?</strong> along with some code that manages error channels in Go and it will ask you clarifying questions and say where the problem is.</li>
+<li>summarize text into concise form - you can give it a huge paragraph of text and say <strong>summarize this into 100 words</strong></li>
+<li>be a creative writing partner for anyone who wants to write books, article or blog posts, <strong>Create a title and plot summary for a new historical fiction novel</strong></li>
+<li>generate any text content - <strong>write a 200-word summary of Homo Sapiens</strong></li>
+</ul>
+<h3 id="pitfalls-of-chatgpt">Pitfalls of ChatGPT</h3>
+<p>However powerful and exciting this technology is, ChatGPT has its own limitations and pitfalls that could cause potential issues. Like all AI bots, its knowledge is limited to the statistical regularities of its training data instead of human-like understanding the world in an abstract complex form. Hence, quite often, ChatGPT will confidently present false or invented information as facts that sound plausible. It is also vulnerable to the algorithmic bias in the training data which has manifest in how it responds to prompts about describing people. Its training data set in the initial release was also constrained to the events that occurred after 2021, so it would give incorrect answers about recent events. OpenAI team has been diligent about refreshing the model as recent as 30 Jan 2023.</p>
+<p>In short, as the old adage goes <em>A fool with a tool is still a fool</em>. We should exercise caution in using the information provide by ChatGPT. Do not blindly trust its responses; we should validate and verify its accuracy before using it anywhere.</p>
+<h3 id="future-of-chatgpt-and-llms">Future of ChatGPT and LLMs</h3>
+<p>ChatGPT has the potential to fundamentally shift the way we use generative AI and its applications. As <a href="https://www.youtube.com/watch?v=WHoWGNQRXb0" target="_blank" rel="noopener">Sam Altman, the CEO of OpenAI said in an interview with Reid Hoffman</a>, people will move away from the current paradigm of starting with a domain-specific models and applying NLP on it, to a new model where you start with large language model like GPT-3 and apply domain-specific knowledge as overlay on top of it. This increases the possibility of applying AI in almost every domain.</p>
+<p>LLMs and Generative AI could transform how we search for information and create content and art. Microsoft has announced <a href="https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/" target="_blank" rel="noopener">AI-Powered Bing and Edge</a> and is exploring ways to <a href="https://www.theverge.com/2023/1/9/23546144/microsoft-openai-word-powerpoint-outlook-gpt-integration-rumor" target="_blank" rel="noopener">integrate GPT-3 into its Office suite of applications</a>. It can be a powerful tool to explore ideas, generate content and write fluently and professionally with minimal literary expertise.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>ChatGPT and Generative AI in general are here to stay. So don&rsquo;t ignore, hide or run away from it.</p>
+<p>In a <a href="https://www.youtube.com/watch?v=UNbyT7wPwk4" target="_blank" rel="noopener">recent interview at the 2023 World Economic Forum, Satya Nadella shared an anecdote</a> that Andrej Karapathy, who led the computer vision team at Tesla, tweeted that 80% of the code he is writing is using GitHub co-pilot. If Andrej, who is one of the best AI developers could get that much leverage and productivity boost, every developer should take this seriously and understand it.</p>
+<p>We must learn how to use it and take advantage of it to improve your writing skills, coding skiils and overall productivity, albeit beware of its limitations. The benefit and productivty boost far outweights the risks associated with it.</p>
+<p>So let&rsquo;s embrace this breakthrough technology, learn how to use it and take advantage of it, being careful not to be misled.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://ann.chiramattel.com/post/grit-passion-perseverance/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://ann.chiramattel.com/post/grit-passion-perseverance/">Grit: Passion &amp; Perseverance</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/">ChatGPT Intro - Fully written by ChatGPT</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://ann.chiramattel.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75357261-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2022. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate><atom:link href="https://ann.chiramattel.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Feb 2023 22:57:43 -0800</lastBuildDate><atom:link href="https://ann.chiramattel.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>how-to</title>
-      <link>https://ann.chiramattel.com/tags/how-to/</link>
-      <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
+      <title>machine-learning</title>
+      <link>https://ann.chiramattel.com/tags/machine-learning/</link>
+      <pubDate>Sun, 12 Feb 2023 22:57:43 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/tags/how-to/</guid>
+      <guid>https://ann.chiramattel.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech-explorations</title>
       <link>https://ann.chiramattel.com/tags/tech-explorations/</link>
-      <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
+      <pubDate>Sun, 12 Feb 2023 22:57:43 -0800</pubDate>
       
       <guid>https://ann.chiramattel.com/tags/tech-explorations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>how-to</title>
+      <link>https://ann.chiramattel.com/tags/how-to/</link>
+      <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
+      
+      <guid>https://ann.chiramattel.com/tags/how-to/</guid>
       <description></description>
     </item>
     
