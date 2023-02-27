@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An introduction to ChatGPT, its power, pitfalls and future">
+  <meta name="description" content="An introductory post about ChatGPT authored by Ann - how it works, its power, pitfalls and future">
   <meta name="generator" content="Hugo 0.102.3" />
 
   <title>ChatGPT - An Introduction &middot; Reflections</title>
@@ -221,7 +221,7 @@
 
 <div class="header">
   <h1>ChatGPT - An Introduction</h1>
-  <h2>An introduction to ChatGPT, its power, pitfalls and future</h2>
+  <h2>An introductory post about ChatGPT authored by Ann - how it works, its power, pitfalls and future</h2>
 </div>
 <div class="content">
 
@@ -245,6 +245,8 @@
   <div>
     <i class="fa fa-tags fa-fw"></i>
     
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/chatgpt">chatgpt</a>&nbsp;&#47;
+    
       <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/machine-learning">machine-learning</a>&nbsp;&#47;
     
       <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/tech-explorations">tech-explorations</a>
@@ -255,58 +257,62 @@
 
 </div>
 
-  <p>Like many of you, I have been reading about ChatGPT in various forums and from industry experts. This blog post is a brief summary of my understanding of ChatGPT - what is it, how it works, its power and pitfalls, and its future potential in my perspective.</p>
-<p>And finally, to have some fun, I wrote this article in three ways - using the conventional method of writing it by myself (this post), asking ChatGPT to write it using my outline and then asking it to improvise my conventional version. Curious to know how it was and see the results? Head over to the meta post - <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways/">ChatGPT Intro in 3 ways</a></p>
+  <p>Over the past few months, ChatGPT has captured my attention through numerous forums, articles and AI experts. I am fascinated by this technology and learning more about it everyday. With this introductory post, I hope to share my knowledge and insights on ChatGPT - how it works, its capabilities and limitations, potential pitfalls, and future prospects.</p>
+<p><em>Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post. Curious to see the results of the experiment? Head over to the meta post <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways">Blog about ChatGPT in three different ways</a>.</em></p>
 <h3 id="what-is-chatgpt">What is ChatGPT?</h3>
-<p>ChatGPT is an AI powered <strong>chat</strong>bot that is capable of having human-like conversations on a wide range of topics using natural launguage processing. This model can answer your questions, write code, summarize text and explain concepts in a simple way. ChatGPT was developed by <a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a>, the creators of <a href="https://openai.com/dall-e-2/" target="_blank" rel="noopener">DallE-2</a>, the popular AI text-to-image generator and <a href="https://openai.com/blog/whisper/" target="_blank" rel="noopener">Whisper</a>, the powerful speech recognition system.</p>
+<p>ChatGPT is a <strong>chat</strong>bot capable of having human-like conversations using AI and NLP (Natural Launguage Processing). This bot can answer your questions on a wide range of topics, write code, summarize text and explain concepts in a simple way. ChatGPT was developed by <a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a>, the creators of <a href="https://openai.com/dall-e-2/" target="_blank" rel="noopener">DallE-2</a>, the popular AI text-to-image generator and <a href="https://openai.com/blog/whisper/" target="_blank" rel="noopener">Whisper</a>, the powerful speech recognition system.</p>
 <p>ChatGPT is currently in research preview and is free for everyone to use. Just a couple of weeks ago, <a href="https://openai.com/blog/chatgpt-plus/" target="_blank" rel="noopener">OpenAI announced ChatGPT Plus</a>, a subscription plan available for $20 per month.</p>
 <h3 id="chatgpt-under-the-hood">ChatGPT under the hood</h3>
-<p>ChatGPT is built on top of the <strong>GPT 3.5</strong> series of large language models that generates human-like text. Woah! That&rsquo;s a lot of buzz words - let&rsquo;s break it down further.</p>
-<p>A large language model (<strong>LLM</strong>) is a probabilistic distribution - a mathematical function - applied on a sequence of words and predicts the most likley next word in a sentence. <strong>GPT (Generative Pre-trained Transformer)</strong> is one such family of large language models trained on huge volumes of text data and <strong>generates</strong> conversational text using supervised learning and reinforcement learning. The speciality of this model is that it uses the <strong>Transformer</strong> ML model that provides differential weighting for the signifcance of each part of the input data. This helps in prioritizing human-like responses over purely linguistically valid responses. GPT also uses human trainers throughout the process - first to train using labelled conversations (hence the term <strong>Pre-trained</strong>) and then to rank the responses generated by the model - and creates reward models to fine-tune the responses in an efficient way.</p>
-<p>GPT has a wide range of applications such as chat bots, summarizing texts, protein design, translate content in different languages and generating new content. ChatGPT is one such application of GPT that interacts with the user in a conversational way. ChatGPT and GPT 3.5 were trained on an <a href="https://azure.microsoft.com/en-us/blog/general-availability-of-azure-openai-service-expands-access-to-large-advanced-ai-models-with-added-enterprise-benefits/" target="_blank" rel="noopener">Microsoft Azure AI supercomputing infrastructure</a>.</p>
+<p>ChatGPT is built on top of the <strong>GPT 3.5</strong> series of large language models that generates human-like text. Woah! That&rsquo;s a lot of buzz words - let&rsquo;s break it down one by one.</p>
+<p>A large language model (<strong>LLM</strong>) is a mathematical function (probabilistic distribution) applied on a sequence of words. Given a prompt with a few words (or technically &ldquo;tokens&rdquo;), they can predict the most likely next word to complete the sentence. <strong>GPT</strong> (Generative Pre-trained Transformer) is one such family of LLMs which is trained on huge volumes of text data and <strong>generates</strong> conversational text using supervised learning and reinforcement learning. It uses the <strong>Transformer</strong> machine learning model that provides differential weighting to determine the significance of each part of the input data. This technique helps in priroritizing human-like responses over purely linguistically valid responses.</p>
+<p>GPT uses human trainers throughout the learning process - first to train the model using labelled conversations (hence the term <strong>pre-trained</strong>) and then to rank the responses generated by the model, creating reward models to fine-tune the responses in an efficient way. GPT 3.5 was trained on <a href="https://azure.microsoft.com/en-us/blog/general-availability-of-azure-openai-service-expands-access-to-large-advanced-ai-models-with-added-enterprise-benefits/" target="_blank" rel="noopener">Microsoft Azure AI supercomputing infrastructure</a>.</p>
+<p>GPT has a wide range of Generative AI applications such as chat bots, summarizing texts, translating content in different languages and generating new content and code. ChatGPT is one such application of GPT that interacts with the user in a conversational way.</p>
 <h3 id="get-started-with-chatgpt">Get started with ChatGPT</h3>
-<p>It is pretty simple to start, only these 3 steps:</p>
+<p>It is pretty simple to start, follow these three steps:</p>
 <ol>
-<li>Go to <a href="https://chat.openai.com/chat" target="_blank" rel="noopener">https://chat.openai.com/chat</a> on your browser on your desktop, laptop or phone</li>
-<li><strong>Log in</strong> with an Open AI account. If you don&rsquo;t have an account, create on using <strong>Sign up</strong> button</li>
-<li>With a successful loging, you will see a simple chat interface with a big text box. Here is where you interact with ChatGPT.</li>
+<li>Go to <a href="https://chat.openai.com/chat" target="_blank" rel="noopener">https://chat.openai.com/chat</a> on your browser - use your desktop, laptop or phone</li>
+<li><strong>Log in</strong> with an Open AI account. If you don&rsquo;t have an OpenAI account, create one using <strong>Sign up</strong> button</li>
+<li>Once you login, ChatGPT will show you a few examples, capabilities and limitations. It will also show a text box at the bottom. This is the main interfac wHere you can interact with ChatGPT.</li>
 </ol>
-<p>That&rsquo;s it! Now you can type in any question or text into the text box and ChatGPT will respond with an answer, comment or a question. You can keep asking questions and it will anser based on the context of your previous question. Have fun with it!</p>
-<p>The words that you type into the text box are called <strong>prompts</strong> and they are very crucial in determining the quality of your interaction with ChatGPT. Well-designed prompts provide meaningful answers, for example, the more context and examples you provide, the richer the answer will be. Here are a few resources that will help you create good prompts - <a href="https://www.emergentmind.com/" target="_blank" rel="noopener">Learn GPT - the best ChatGPT examples</a>,  <a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener">Awesome ChatGPT prompts</a> and <a href="https://mpost.io/100-best-chatgpt-prompts-to-unleash-ais-potential/" target="_blank" rel="noopener">100 best ChatGPT prompts</a>.</p>
-<h3 id="power-of-chatgpt---real-world-use-cases">Power of ChatGPT - Real-world use cases</h3>
-<p>ChatGPT can be used for a variety of purposes, here are a few examples where ChatGPT can..</p>
+<p>That&rsquo;s it! You can type in anything into the text box and ChatGPT will respond with an answer, comment or a question. You can keep on asking questions and it will remember the context from your previous question and answer the next one based on that. Have fun with it!</p>
+<p>The words that you type into the text box are called <strong>prompts</strong> and play a critical role in determining the quality of your interaction with ChatGPT. Well-designed prompts generate meaningful responses from ChatGPT. The more context and examples you provide, the richer the response will be. Here are a few resources that will help you create good prompts - <a href="https://www.emergentmind.com/" target="_blank" rel="noopener">Learn GPT - the best ChatGPT examples</a>,  <a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener">Awesome ChatGPT prompts</a> and <a href="https://mpost.io/100-best-chatgpt-prompts-to-unleash-ais-potential/" target="_blank" rel="noopener">100 best ChatGPT prompts</a>.</p>
+<h3 id="the-power-of-chatgpt">The Power of ChatGPT</h3>
+<p>ChatGPT can perform a variety of tasks. For example, it can..</p>
 <ul>
-<li>explain concepts (simple and complex) in a conversational teaching tone - see this prompt <strong>what is bernoulli&rsquo;s equation</strong></li>
-<li>write code for a given problem and most of the time, the generated code can be copied into an IDE and it will compi;e just fine, for eg: <strong>write a Go program to check for palindrome</strong></li>
-<li>debug a given piece of code, for eg: you can say <strong>this code is not working like i expect — how do i fix it?</strong> along with some code that manages error channels in Go and it will ask you clarifying questions and say where the problem is.</li>
-<li>summarize text into concise form - you can give it a huge paragraph of text and say <strong>summarize this into 100 words</strong></li>
-<li>be a creative writing partner for anyone who wants to write books, article or blog posts, <strong>Create a title and plot summary for a new historical fiction novel</strong></li>
-<li>generate any text content - <strong>write a 200-word summary of Homo Sapiens</strong></li>
+<li>explain complex concepts in a conversational teaching tone - for eg:, try this prompt <strong>what is bernoulli&rsquo;s equation</strong></li>
+<li>generate any text content - <strong>write a 200-word summary of mobile technology platforms</strong></li>
+<li>generate code for a given problem - for eg: <strong>write a Go program to check for palindrome</strong>. The code will be so complete that if you copy into an IDE, it will most likely just compile successfully.</li>
+<li>debug a given piece of code, for eg: you can say <strong>this code is not working like i expect — how do i fix it?</strong> along with some code that manages error channels in Go. It will ask you clarifying questions and tell you where the problem is.</li>
+<li>summarize text into concise form - you can give it a huge paragraph of text and say <strong>summarize this into 100 words</strong>, or <strong>write a summary of the book Homo Sapiens</strong></li>
+<li>be a creative writing partner that can help write books, article or blog posts, <strong>Create a title and plot summary for a new historical fiction novel</strong></li>
 </ul>
-<h3 id="pitfalls-of-chatgpt">Pitfalls of ChatGPT</h3>
-<p>However powerful and exciting this technology is, ChatGPT has its own limitations and pitfalls that could cause potential issues. Like all AI bots, its knowledge is limited to the statistical regularities of its training data instead of human-like understanding the world in an abstract complex form. Hence, quite often, ChatGPT will confidently present false or invented information as facts that sound plausible. It is also vulnerable to the algorithmic bias in the training data which has manifest in how it responds to prompts about describing people. Its training data set in the initial release was also constrained to the events that occurred after 2021, so it would give incorrect answers about recent events. OpenAI team has been diligent about refreshing the model as recent as 30 Jan 2023.</p>
-<p>In short, as the old adage goes <em>A fool with a tool is still a fool</em>. We should exercise caution in using the information provide by ChatGPT. Do not blindly trust its responses; we should validate and verify its accuracy before using it anywhere.</p>
-<h3 id="future-of-chatgpt-and-llms">Future of ChatGPT and LLMs</h3>
-<p>ChatGPT has the potential to fundamentally shift the way we use generative AI and its applications. As <a href="https://www.youtube.com/watch?v=WHoWGNQRXb0" target="_blank" rel="noopener">Sam Altman, the CEO of OpenAI said in an interview with Reid Hoffman</a>, people will move away from the current paradigm of starting with a domain-specific models and applying NLP on it, to a new model where you start with large language model like GPT-3 and apply domain-specific knowledge as overlay on top of it. This increases the possibility of applying AI in almost every domain.</p>
+<h3 id="the-pitfalls">The Pitfalls</h3>
+<p>Despite its incredible power and potential, ChatGPT has its own limitations and pitfalls that could cause potential issues. Like all AI bots, its knowledge is limited to the statistical regularities of its training data and does not have human-like understanding the world in an abstract complex form. Hence, quite often, ChatGPT will confidently present false or invented information as facts that sound plausible.</p>
+<p>It is also vulnerable to the algorithmic bias in the training data which manifests in how it responds to prompts about describing people. Its training data set in the initial release was also constrained to the events that occurred after 2021, so it would give incorrect answers about recent events. OpenAI team has been diligent about refreshing the model as recent as 30 Jan 2023.</p>
+<p>As the old adage goes <em>A fool with a tool is still a fool</em>. Anyone who uses ChatGPT should exercise caution in how the information provided by ChatGPT is used. Do not blindly trust its responses; we should verify its accuracy before using it anywhere.</p>
+<h3 id="the-future">The Future</h3>
+<p>ChatGPT (and LLMs in general) can fundamentally transform the way we apply AI to solve problems in the real world. As <a href="https://www.youtube.com/watch?v=WHoWGNQRXb0" target="_blank" rel="noopener">Sam Altman, the CEO of OpenAI said in an interview with Reid Hoffman</a>, companies will move away from the current paradigm of starting with a domain-specific models and applying NLP on it, to a new paradigm where they will start with large language model like GPT-3 and apply domain-specific knowledge on top of it. This increases the possibility of applying AI in almost every domain.</p>
 <p>LLMs and Generative AI could transform how we search for information and create content and art. Microsoft has announced <a href="https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/" target="_blank" rel="noopener">AI-Powered Bing and Edge</a> and is exploring ways to <a href="https://www.theverge.com/2023/1/9/23546144/microsoft-openai-word-powerpoint-outlook-gpt-integration-rumor" target="_blank" rel="noopener">integrate GPT-3 into its Office suite of applications</a>. It can be a powerful tool to explore ideas, generate content and write fluently and professionally with minimal literary expertise.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>ChatGPT and Generative AI in general are here to stay. So don&rsquo;t ignore, hide or run away from it.</p>
-<p>In a <a href="https://www.youtube.com/watch?v=UNbyT7wPwk4" target="_blank" rel="noopener">recent interview at the 2023 World Economic Forum, Satya Nadella shared an anecdote</a> that Andrej Karapathy, who led the computer vision team at Tesla, tweeted that 80% of the code he is writing is using GitHub co-pilot. If Andrej, who is one of the best AI developers could get that much leverage and productivity boost, every developer should take this seriously and understand it.</p>
-<p>We must learn how to use it and take advantage of it to improve your writing skills, coding skiils and overall productivity, albeit beware of its limitations. The benefit and productivty boost far outweights the risks associated with it.</p>
-<p>So let&rsquo;s embrace this breakthrough technology, learn how to use it and take advantage of it, being careful not to be misled.</p>
+<p>What does this mean to all of us? Does Generative AI pose a risk to artists, authors and software developers? Well, no.</p>
+<p>Andrej Karapathy, who led the computer vision team at Tesla, <a href="https://twitter.com/karpathy/status/1608895189078380544?s=20" target="_blank" rel="noopener">tweeted that GitHub copilot has accelerated his coding</a> so much that 80% of the code he writes is using GitHub co-pilot.</p>
+<p>As Satya Nadella shared in a <a href="https://www.youtube.com/watch?v=UNbyT7wPwk4" target="_blank" rel="noopener">recent interview at the 2023 World Economic Forum</a>, if Andrej, who is one of the best AI developers could get that much leverage and productivity boost, why wouldn&rsquo;t every developer adopt this technology and take advantage of it? And I agree.</p>
+<p>I myself did an experiment to understand how I can use ChatGPT in my day-to-day and it has completely changed the way I work. You can read about my experiment and its results at <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways">Blog about ChatGPT in three different ways</a>.</p>
+<p>Generative AI technologies like ChatGPT are here to stay and they can help us. We must learn how to use it and take advantage of it to improve our writing skills, coding skiils and overall productivity, albeit beware of its limitations. The benefit and productivty boost far outweights the risks associated with it.</p>
+<p>So let&rsquo;s not ignore or run away from this technology. Let&rsquo;s embrace it, learn and use it carefully.</p>
 
 
   
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://ann.chiramattel.com/post/grit-passion-perseverance/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://ann.chiramattel.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://ann.chiramattel.com/post/grit-passion-perseverance/">Grit: Passion &amp; Perseverance</a>
+      <a href="https://ann.chiramattel.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/">ChatGPT Introduction - written by ChatGPT using Ann&#39;s outline</a>
     </nav>
     
   </div>
@@ -316,13 +322,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/">ChatGPT Intro - Fully written by ChatGPT</a>
+      <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways/">Blog about ChatGPT in three different ways</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
