@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My key insights and takeaways from the GPT-4 Technical Report">
+  <meta name="generator" content="Hugo 0.102.3" />
+
+  <title>GPT-4 Technical Report Highlights &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="https://ann.chiramattel.com/css/google-font-local.css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://ann.chiramattel.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://ann.chiramattel.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/post/"><i class='fa fa-list fa-fw'></i>Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/ios"><i class='fa fa-list fa-fw'></i>iOS</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://ann.chiramattel.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2022. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>GPT-4 Technical Report Highlights</h1>
+  <h2>My key insights and takeaways from the GPT-4 Technical Report</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Apr 2023</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/gpt">gpt</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/generative-ai">generative-ai</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/LLM">LLM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://ann.chiramattel.com/tags/tech-explorations">tech-explorations</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>OpenAI published the <a href="https://cdn.openai.com/papers/gpt-4.pdf" target="_blank" rel="noopener">GPT-4 Technical Report</a> on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&rsquo;s always beneficial to obtain this information directly from the source.</p>
+<p>The main content of the technical report is only about 14 pages, and the rest of the report is filled with citations and appendix sections that describe the exam benchmark methodologies. The final section includes a system card detailing safety challenges with GPT-4 and the safety processes developed by OpenAI to prepare GPT-4 for deployment.. This section is lengthy but provides valuable information on improving safety, including examples of prompts, responses, and instructions.</p>
+<p>In this blog post, I intend to share my key takeaways from the main technical report. It will begin with a summary before delving into the report&rsquo;s three main topics from the report. I hope that sharing my key takeaways from the report will inspire you to read it and deepen your understanding of the exciting advancements in large-language models and generative AI in general.</p>
+<h2 id="summary">Summary</h2>
+<p>GPT-4 is a large-scale multimodal model that can accept <strong>image and text inputs</strong> and produce text outputs. It is a transformer-based model pretrained to predict the next token in a document. It is trained on publicly available data and data licensed from third-party providers. with a cut-off date of Sep 2021. It lacks knowledge of events that occured after that date.</p>
+<p>The pretrained model was fine-tuned using <strong>Reinforcement Learning with Human Feedback</strong> (RLHF) to improve alignment with user intent - i.e. produce responses that were better aligned iwth user&rsquo;s intent. The post-training alignment process enhances performance on factuality and adherence to the desired behavior. This helped the GPT-4 team accomplish the primary goal of improving the model&rsquo;s ability to understand and generate natural language text, especially in complex and nuanced scenarios.</p>
+<p>They also developed deep learning infrastructure and optimizations that behave predictably across a wide range of scales. This helped them predict the expected performance of GPT-4 using less than 1/1000th of the compute of GPT-4.</p>
+<h2 id="capabilities">Capabilities</h2>
+<p>GPT-4 was tested on a diverse set of benchmarks - simulating exams that were designed for humans. Exam questions included multiple-choice and free-response questions. Some questions included images as well. The model was not given specific training for these exams. The model saw a small set of these exams during training. But they tested with <strong>two variants</strong> - one with these questions included and the other with these questions removed, and they took the lowest of the two scores. This prevents data contamination issues where the test data appears in the training set.</p>
+<table>
+<thead>
+<tr>
+<th>Exam Type</th>
+<th>GPT-4</th>
+<th>GPT-3.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uniform Bar Exam</td>
+<td>90th (198/400)</td>
+<td>10th (213/400)</td>
+</tr>
+<tr>
+<td>SAT</td>
+<td>93rd</td>
+<td>87th</td>
+</tr>
+<tr>
+<td>GRE (Quantitative)</td>
+<td>80th</td>
+<td>25th</td>
+</tr>
+<tr>
+<td>AP Calc BC</td>
+<td>4/5</td>
+<td>1/5</td>
+</tr>
+<tr>
+<td>AP Physics 2</td>
+<td>4/5</td>
+<td>3/5</td>
+</tr>
+<tr>
+<td>Leetcode Easy</td>
+<td>31/41</td>
+<td>12/41</td>
+</tr>
+<tr>
+<td>Leetcode Hard</td>
+<td>3/45</td>
+<td>0/</td>
+</tr>
+</tbody>
+</table>
+<p>These capabilities on exams seem to be because of the pre-training process and not from RLHF.</p>
+<h3 id="visual-inputs">Visual Inputs</h3>
+<p>GPT-4 takes images and text as inputs which can be arbitrarily interlaced (documents with text and photographs, diagrams, screenshots). A good demo of this  capability was done by giving the three-panel image of a VGA adapter connected to an iPhone charging port (<a href="https://www.reddit.com/r/hmmm/comments/ubab5v/hmmm/" target="_blank" rel="noopener">original post in Reddit</a> to GPT-4 along with the prompt <code>What is funny about this image? Describe it panel by panel.</code> Not only did GPT-4 describe the image in each panel, it also understood the humor in the image and included that nuance in the response - the absurdity of plugging in a large legacy adapter into a modern smartphone charging port.</p>
+<h2 id="limitations">Limitations</h2>
+<p>GPT-4 is not fully  reliable, has a limited context window and does not learn from experience. The report says..</p>
+<blockquote>
+<p>Care should be taken when using the output of GPT-4, particularly in the context where reliability is important.</p>
+</blockquote>
+<p>GPT-4 has significantly reduced hallucinations compared to GPT 3.5 models (19 points higher than GPT-3.5 on adversarially-designed factuality evaluations). It can be confidently wrong in its predictions, not taking care to double-check the work.</p>
+<p><a href="https://cdn.openai.com/papers/gpt-4-system-card.pdf" target="_blank" rel="noopener">System card</a> describes the safety risks they foresee around bias, disinformation, over-reliance, privacy, and cybersecurity. It also describes the interventions made by OpenAI to mitigate potential harms - they gave an additional set of safety-relevant RLHF prompts and a rule-based reward model (RBRM). They also used deployment-time safety techniques that monitor for abuse.</p>
+<h2 id="risks-and-mitigations">Risks and Mitigations</h2>
+<p>The report claims that OpenAI put in a lot of effort to improve the safety and alignment of GPT-4 and used a varierty of techniques such as..</p>
+<ol>
+<li>
+<p><strong>Adversarial testing via domain experts</strong> - they engaged 50 experts from various domains (long-term AI alignment risks, cybersecurity, biorisk etc.) to adversarially test the model. The model was improved using the recommendations and training data from these experts, for example, to refuse requests on how to synthesize dangerous chemicals.</p>
+</li>
+<li>
+<p><strong>Model-assisted safety pipelines</strong> - despite RLHF, the model could exhibit undesired behaviors on safe and unsafe inputs (eg: advising on committing crimes). This could arise due to underspecified instructions given to labelers during the reward model data collection process in RLHF. This was resolved in GPT-4 using an additional set of safety-relevant RLHF prompts and <strong>Rule-Based Reward Models (RBRMs)</strong>. RBRMs are a set of zero-shot classifiers that provide an additional reward signal to the model for correct behaviors. It takes three inputs 1) a prompt, 2) the model&rsquo;s output and 3) a human-written rubric that defines how the output should be evaluated. A rubric is a set of rules in multiple-choice style - it instructs the model to classify the output in one of those categories (eg: refusal in a desired style, refusal in an undesired style, safe non-refusal response).tructs the model to classify the output in one of those cateogories (eg: refusal in a desired style, refusal in undesired style, safe non-refusal response).</p>
+</li>
+</ol>
+<p>These safety and alignment techniques have improved the safety metrics of GPT-4 significantly compared to GPT-3.5 For example, it reduced the model&rsquo;s tendency to respond to requests for disallowed content like medical advice and self-harm by 82% compared to GPT-3.5.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>GPT-4 significantly outperforms existing LLMs and a vast majority of state-of-the-art systems on a wide range of tasks. It has a huge potential to influence human society in good ways as well as harmful ways, which is a big risk. OpenAI has taken a series of measures to improve its safety and alignment.</p>
+<p>OpenAI has also open-sourced the <a href="https://github.com/openai/evals" target="_blank" rel="noopener">OpenAI Evals</a>, a framework to evaluate OpenAI models and an open-source registry of benchmarks. You can use Evals to create and run evaluations that use datasets to generate prompts, measure the quality of completions and compare performance across different models.</p>
+<p>However, all of this is only the beginning, there is a lot more work to be done. The AI community should continue to understand, assess and mitigate the safety risks of these models.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://ann.chiramattel.com/post/chatgpt-intro-3-ways/">Blog about ChatGPT in three different ways</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://ann.chiramattel.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75357261-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+
