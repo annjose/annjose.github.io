@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>generative-ai on Reflections</title>
-    <link>https://ann.chiramattel.com/tags/generative-ai/</link>
+    <link>https://annjose.com/tags/generative-ai/</link>
     <description>Recent content in generative-ai on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2022. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2023 12:59:18 -0800</lastBuildDate><atom:link href="https://ann.chiramattel.com/tags/generative-ai/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2023. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 09 Apr 2023 12:59:18 -0800</lastBuildDate><atom:link href="https://annjose.com/tags/generative-ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPT-4 Technical Report Highlights</title>
-      <link>https://ann.chiramattel.com/post/gpt-4-tech-report-highlights/</link>
+      <link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>
       <pubDate>Sun, 09 Apr 2023 12:59:18 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/gpt-4-tech-report-highlights/</guid>
+      <guid>https://annjose.com/post/gpt-4-tech-report-highlights/</guid>
       <description>OpenAI published the GPT-4 Technical Report on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&amp;rsquo;s always beneficial to obtain this information directly from the source.</description>
     </item>
     

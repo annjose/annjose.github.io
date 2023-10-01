@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mobile-tech on Reflections</title>
-    <link>https://ann.chiramattel.com/tags/mobile-tech/</link>
+    <link>https://annjose.com/tags/mobile-tech/</link>
     <description>Recent content in mobile-tech on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2022. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 20:00:52 -0800</lastBuildDate><atom:link href="https://ann.chiramattel.com/tags/mobile-tech/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2023. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 20:00:52 -0800</lastBuildDate><atom:link href="https://annjose.com/tags/mobile-tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to mock network requests in iOS</title>
-      <link>https://ann.chiramattel.com/post/mocking-network-requests-ios/</link>
+      <link>https://annjose.com/post/mocking-network-requests-ios/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/mocking-network-requests-ios/</guid>
+      <guid>https://annjose.com/post/mocking-network-requests-ios/</guid>
       <description>One of the challenges of mobile application development is to ensure that the application is resilient to various error responses from the services that are consumed by the application. Mobile devices are more susceptible to network connectivity issues, timeout etc. So we need to take extra care to make sure that we test all error scenarios and handle them in a meaningful manner.
 What and Why of Mocking Even though we are convinced about the benefits of testing server errors, these services are running in Production serving real customer requests.</description>
     </item>
     
     <item>
       <title>Learn GraphQL By Example</title>
-      <link>https://ann.chiramattel.com/post/graphql-intro/</link>
+      <link>https://annjose.com/post/graphql-intro/</link>
       <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/graphql-intro/</guid>
+      <guid>https://annjose.com/post/graphql-intro/</guid>
       <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
     </item>
     
     <item>
       <title>Swift 4.2 - What&#39;s New</title>
-      <link>https://ann.chiramattel.com/post/swift42-whats-new/</link>
+      <link>https://annjose.com/post/swift42-whats-new/</link>
       <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/swift42-whats-new/</guid>
+      <guid>https://annjose.com/post/swift42-whats-new/</guid>
       <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.
 Random Number Generation Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence 1 2 let randomInt = Int.</description>
     </item>
     
     <item>
       <title>Fastlane</title>
-      <link>https://ann.chiramattel.com/post/fastlane/</link>
+      <link>https://annjose.com/post/fastlane/</link>
       <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/fastlane/</guid>
+      <guid>https://annjose.com/post/fastlane/</guid>
       <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
 The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
     </item>
     
     <item>
       <title>Google IO 2017</title>
-      <link>https://ann.chiramattel.com/post/GoogleIO-2017/</link>
+      <link>https://annjose.com/post/GoogleIO-2017/</link>
       <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/GoogleIO-2017/</guid>
+      <guid>https://annjose.com/post/GoogleIO-2017/</guid>
       <description>I had the wonderful opportunity to attend Google I/O last week and absolutely loved it. I learned a lot of things during the three days. Btw, it was tiring too with the continuous sessions and the sunny Sun.
 This post is an attempt to share the main highlights and the announcements that I found interesting. If you attended the event or watched the sessions online, let me know if there were more things that you found interesting.</description>
     </item>
     
     <item>
       <title>TDD in Xcode Playground</title>
-      <link>https://ann.chiramattel.com/post/xcode-playgrounds-tdd/</link>
+      <link>https://annjose.com/post/xcode-playgrounds-tdd/</link>
       <pubDate>Sun, 02 Apr 2017 02:02:31 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/xcode-playgrounds-tdd/</guid>
+      <guid>https://annjose.com/post/xcode-playgrounds-tdd/</guid>
       <description>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground.</description>
     </item>
     
     <item>
       <title>Realm Mobile Platform</title>
-      <link>https://ann.chiramattel.com/post/realm-announces-mobile-platform/</link>
+      <link>https://annjose.com/post/realm-announces-mobile-platform/</link>
       <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/realm-announces-mobile-platform/</guid>
+      <guid>https://annjose.com/post/realm-announces-mobile-platform/</guid>
       <description>Realm is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast Mobile database software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. That is why I am happy to see that today they announced Realm Mobile Platform that combines Realm client side database with server-side technology (Object Server as they call it).</description>
     </item>
     
     <item>
       <title>ReactNative in Visual Studio Code</title>
-      <link>https://ann.chiramattel.com/post/react-native-visual-studio-code/</link>
+      <link>https://annjose.com/post/react-native-visual-studio-code/</link>
       <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/react-native-visual-studio-code/</guid>
+      <guid>https://annjose.com/post/react-native-visual-studio-code/</guid>
       <description>I have been thoroughly enjoying working on ReactNative projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like Nuclide (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&amp;hellip;</description>
     </item>
     
     <item>
       <title>Conversation as Interface</title>
-      <link>https://ann.chiramattel.com/post/conversation-as-interface/</link>
+      <link>https://annjose.com/post/conversation-as-interface/</link>
       <pubDate>Fri, 08 Apr 2016 20:47:54 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/conversation-as-interface/</guid>
+      <guid>https://annjose.com/post/conversation-as-interface/</guid>
       <description>The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. Conversation As Interface. It is a more natural form of communication, especially for question-answer / interview experiences.
 Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running many experiments in their Messenger app allowing a few developers like Uber, Assist etc.</description>
     </item>
