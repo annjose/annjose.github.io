@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>graphql on Reflections</title>
-    <link>https://ann.chiramattel.com/topics/graphql/</link>
+    <link>https://annjose.com/topics/graphql/</link>
     <description>Recent content in graphql on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 28 Jan 2019 14:30:28 -0800</lastBuildDate>
-    
-	<atom:link href="https://ann.chiramattel.com/topics/graphql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; 2023. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 28 Jan 2019 14:30:28 -0800</lastBuildDate><atom:link href="https://annjose.com/topics/graphql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learn GraphQL By Example</title>
-      <link>https://ann.chiramattel.com/post/graphql-intro/</link>
+      <link>https://annjose.com/post/graphql-intro/</link>
       <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/graphql-intro/</guid>
+      <guid>https://annjose.com/post/graphql-intro/</guid>
       <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
     </item>
     

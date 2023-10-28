@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>realm on Reflections</title>
-    <link>https://ann.chiramattel.com/topics/realm/</link>
+    <link>https://annjose.com/topics/realm/</link>
     <description>Recent content in realm on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 27 Sep 2016 08:22:02 -0700</lastBuildDate>
-    
-	<atom:link href="https://ann.chiramattel.com/topics/realm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; 2023. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 27 Sep 2016 08:22:02 -0700</lastBuildDate><atom:link href="https://annjose.com/topics/realm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Realm Mobile Platform</title>
-      <link>https://ann.chiramattel.com/post/realm-announces-mobile-platform/</link>
+      <link>https://annjose.com/post/realm-announces-mobile-platform/</link>
       <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/realm-announces-mobile-platform/</guid>
+      <guid>https://annjose.com/post/realm-announces-mobile-platform/</guid>
       <description>Realm is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast Mobile database software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. That is why I am happy to see that today they announced Realm Mobile Platform that combines Realm client side database with server-side technology (Object Server as they call it).</description>
     </item>
     

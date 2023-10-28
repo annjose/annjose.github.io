@@ -59,13 +59,28 @@
     <loc>https://annjose.com/post/grit-passion-perseverance/</loc>
     <lastmod>2020-07-06T20:55:36-07:00</lastmod>
   </url><url>
+    <loc>https://annjose.com/topics/thinking-loud/</loc>
+    <lastmod>2020-07-06T20:55:36-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/</loc>
+    <lastmod>2020-07-06T20:55:36-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/tags/how-to/</loc>
+    <lastmod>2020-06-30T14:09:57-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/hugo/</loc>
     <lastmod>2020-06-30T14:09:57-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/upgrade-hugo/</loc>
     <lastmod>2020-06-30T14:09:57-07:00</lastmod>
   </url><url>
+    <loc>https://annjose.com/topics/c&#43;&#43;/</loc>
+    <lastmod>2020-06-29T22:32:55-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/post/vscode-macos-cpp/</loc>
+    <lastmod>2020-06-29T22:32:55-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/visual-studio-code/</loc>
     <lastmod>2020-06-29T22:32:55-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/what-do-i-really-want/</loc>
@@ -83,8 +98,17 @@
     <loc>https://annjose.com/tags/mobile-tech/</loc>
     <lastmod>2019-03-11T20:00:52-08:00</lastmod>
   </url><url>
+    <loc>https://annjose.com/topics/unit-testing/</loc>
+    <lastmod>2019-03-11T20:00:52-08:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/graphql/</loc>
+    <lastmod>2019-01-28T14:30:28-08:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/post/graphql-intro/</loc>
     <lastmod>2019-01-28T14:30:28-08:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/swift/</loc>
+    <lastmod>2018-10-12T20:09:12-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/swift/</loc>
     <lastmod>2018-10-12T20:09:12-08:00</lastmod>
@@ -101,6 +125,9 @@
     <loc>https://annjose.com/tags/highlights/</loc>
     <lastmod>2018-09-30T21:17:46-07:00</lastmod>
   </url><url>
+    <loc>https://annjose.com/topics/fastlane/</loc>
+    <lastmod>2017-12-23T12:02:23-08:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/post/fastlane/</loc>
     <lastmod>2017-12-23T12:02:23-08:00</lastmod>
   </url><url>
@@ -113,14 +140,23 @@
     <loc>https://annjose.com/post/xcode-playgrounds-tdd/</loc>
     <lastmod>2017-04-02T02:02:31-07:00</lastmod>
   </url><url>
+    <loc>https://annjose.com/topics/realm/</loc>
+    <lastmod>2016-09-27T08:22:02-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/post/realm-announces-mobile-platform/</loc>
     <lastmod>2016-09-27T08:22:02-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/display-math-expressions-in-hugo/</loc>
     <lastmod>2016-09-24T07:49:00-07:00</lastmod>
   </url><url>
+    <loc>https://annjose.com/topics/machine-learning/</loc>
+    <lastmod>2016-09-24T07:49:00-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/post/machine-learning-coursera/</loc>
     <lastmod>2016-08-09T20:05:54-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/react-native/</loc>
+    <lastmod>2016-04-13T21:22:02-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/react-native-visual-studio-code/</loc>
     <lastmod>2016-04-13T21:22:02-07:00</lastmod>

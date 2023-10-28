@@ -2,31 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>machine-learning on Reflections</title>
-    <link>https://ann.chiramattel.com/topics/machine-learning/</link>
+    <link>https://annjose.com/topics/machine-learning/</link>
     <description>Recent content in machine-learning on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2020. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 24 Sep 2016 07:49:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://ann.chiramattel.com/topics/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; 2023. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 24 Sep 2016 07:49:00 -0700</lastBuildDate><atom:link href="https://annjose.com/topics/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Display mathematical expressions in blog</title>
-      <link>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
+      <link>https://annjose.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/display-math-expressions-in-hugo/</guid>
+      <guid>https://annjose.com/post/display-math-expressions-in-hugo/</guid>
       <description>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using OneNote Equation tool earlier, but I wanted to do the same in my blog posts.</description>
     </item>
     
     <item>
       <title>Machine Learning - A new journey</title>
-      <link>https://ann.chiramattel.com/post/machine-learning-coursera/</link>
+      <link>https://annjose.com/post/machine-learning-coursera/</link>
       <pubDate>Tue, 09 Aug 2016 20:05:54 -0700</pubDate>
       
-      <guid>https://ann.chiramattel.com/post/machine-learning-coursera/</guid>
+      <guid>https://annjose.com/post/machine-learning-coursera/</guid>
       <description>Few weeks ago, I started the Machine Learning course on Coursera by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.
 The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college).</description>
     </item>
