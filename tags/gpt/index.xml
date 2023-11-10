@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2023. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2023 12:59:18 -0800</lastBuildDate><atom:link href="https://annjose.com/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Nov 2023 05:32:13 -0800</lastBuildDate><atom:link href="https://annjose.com/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI DevDay 2023 - Highlights</title>
+      <link>https://annjose.com/post/openai-devday-2023-highlights/</link>
+      <pubDate>Thu, 09 Nov 2023 05:32:13 -0800</pubDate>
+      
+      <guid>https://annjose.com/post/openai-devday-2023-highlights/</guid>
+      <description>This week I attended the Open AI Dev Day on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right?</description>
+    </item>
+    
     <item>
       <title>GPT-4 Technical Report Highlights</title>
       <link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>
