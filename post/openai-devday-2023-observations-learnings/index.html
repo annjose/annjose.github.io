@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My observations and learnings from the OpenAI DevDay">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  <title>OpenAI DevDay 2023 - Observations &amp; Learnings &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  
+  
+  <link rel="stylesheet" href="https://annjose.com/css/google-font-local.css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2023. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>OpenAI DevDay 2023 - Observations &amp; Learnings</h1>
+  <h2>My observations and learnings from the OpenAI DevDay</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Nov 2023</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/gpt">gpt</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/generative-ai">generative-ai</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/conferences">conferences</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>This is the fast follow (Part 2) of the previous post <a href="https://annjose.com/post/openai-devday-2023-highlights">OpenAI DevDay 2023 - Highlights</a> (aka Part 1) where I shared the highlights and the announcements made at <a href="https://devday.openai.com/" target="_blank" rel="noopener">OpenAI DevDay 2023</a>.</p>
+<p>In this post right here, I will share <strong>my observations</strong> - about the event and OpenAI tech - and <strong>my learnings</strong> - from talking to people during the event and by trying out the tech hands-on. So, let&rsquo;s jump in!</p>
+<h2 id="about-the-event">About the event</h2>
+<ul>
+<li>I felt that the DevDay had an indie vibe to it, perhaps because most of the people there were startups and OpenAI is a young startup itself. I loved that!</li>
+<li>The attendees mostly were passionate and practitioners of this technology - some were tinkering with the tech, some have built startup business around it.</li>
+<li>The crowd was also very friendly - all the attendees were eager to connect with each other and learn what they are doing. There was a feeling of &lsquo;we are in this together, learning and doing&rsquo;.</li>
+<li>All the sessions were developer friendly - Sam and all the presenters repeatedly said - we heard loud and clear from developers and we made this change because of that.</li>
+<li>All the demos were live on stage - which was really refreshing, especially after a series of pre-recorded tech announcements lately.</li>
+<li>The sessions were well rehearsed and timed. The content was meaningful and relevant to us.</li>
+<li>The food was also great, nice spread of all cuisines and great desserts too!</li>
+<li>My travel to the event was also interesting. I decided to take Caltrain, but it was delayed by an hour, thanks to the electrification work. On the positive side, I made a few acquaintances at the station - all of them are regular commuters and said that the train schedule is awry for the last 2 weeks.</li>
+</ul>
+<h2 id="about-the-tech-of-openai">About the tech of OpenAI</h2>
+<ul>
+<li>this company is moving so fast, they are fully benefiting from the first-mover advantage. Yes, other models are also improving quickly, but GPT-4 series will progress further ahead.</li>
+<li>Plugins are replaced by the actions in the GPTs. OpenAI&rsquo;s strategy to bring in the agent experiences with GPTs and make it availabe through ChatGPT and Assistants API.</li>
+<li>I think Completions API will be replaced by the Assistants API. OpenAI has all modalities - text, image, voice (and next video I guess)</li>
+<li>By introducing GPTs with built-in RAG <a href="https://www.pinecone.io/learn/retrieval-augmented-generation/" target="_blank" rel="noopener">Retrieval Augmented Generation</a>, OpenAI has taken a giant leap in building agent-like experiences. And you can do it easily- no need to maintain state, conversation history, pass in a ton of context into the prompt. Amazing!</li>
+<li>AI apps and agents are here to stay and OpenAI is making it so easy to do! I can almost hear them saying &quot; Auto GPT - move over! It&rsquo;s show time.&quot;</li>
+<li>I remember one of the panelists saying that all the problems that we see now with LLMs like latency, cost etc. will go away very soon. Don&rsquo;t wait for the problems to be solved - in fact, seeing the current pace, OpenAI will solve faster than any of us. So we should focus on using this tech and building the solutions around it.</li>
+<li>Companies should unlock the power of LLMs completely - the tech is evolving so fast that it would be a mistake to build abstractions around it. Companies who want the competitive edge in the AI space should leverage the full extent of the tech and learn continuously by trying out.</li>
+</ul>
+<h2 id="learnings-from-networking">Learnings from networking</h2>
+<p>Here is what I learned from talking to OpenAI team and hanging out with the other attendees.</p>
+<ul>
+<li>Heuristics to decide when to use RAG vs Fine-tuning
+<ul>
+<li>when you want to give new knowledge to LLM, use RAG.</li>
+<li>when you want LLM to do a new task (with existing knowledge) - fine-tune</li>
+<li>When you have pushed the boundary of RAG and not getting the results, try RAG + fine-tuning.</li>
+</ul>
+</li>
+<li>Best approach - start with prompt engineering, if that is not enough, do RAG; if this is also not enough, add fine-tuning</li>
+<li>Heuristics to decide when to use Assistants API this vs. roll your own system.
+<ul>
+<li>they said if you are building a chatbot that expands its knowledge by calling an API or adding docs, creating embeddings and storing in vector store, your needs will be met just using Assistants API.</li>
+<li>If you want to do more custom things, then you can build your own. Of course, you need to check all data protection measures with OpenAI Assistants API.</li>
+</ul>
+</li>
+<li>a startup founder I met at the event said that most of the things that I have built so far need to be changed all over (for example, ChatGPT plugin to GPTs, but that&rsquo;s ok. He was excited about the reach and agency he is getting with this technology.</li>
+</ul>
+<h2 id="learnings-from-hands-on-experiments">Learnings from hands-on experiments</h2>
+<p>I made a simple custom GPT using the new GPT Builder. My GPT is &ldquo;Bug Hunter&rdquo; which will find bugs in the code. I pasted some code I had written during the JS course and asked &lsquo;is there anything wrong with this code&rsquo; - it understood it correctly and suggested that I test for negative numbers, zeroes and non-integer numbers also! And (wait for it) - it told me &rsquo;to make the error message better, you can enhance the error message to include the input params x and y!&quot;  It explained what is wrong in the code, and gave the fix for the bug also. Then I gave another code that works correctly, and it explained it properly too. It showed the output also correctly.</p>
+<p>After publishing this custom GPT, I modified its behavior to focus <strong>only on bug hunting</strong> and <strong>not code formatting</strong> - using &ldquo;Configure&rdquo; tab in GPT Builder. With this change, it gracefully declines any formatting requests.</p>
+<p>The whole experience was so amazing and magical that I wanted to tell someone. Since I was alone at home, I <a href="https://twitter.com/annjose/status/1722677077286260945" target="_blank" rel="noopener">tweeted about it immediately</a>.</p>
+<p>You can see the custom GPT here - <a href="https://chat.openai.com/g/g-fa1XjkATp-bug-hunter" target="_blank" rel="noopener">ChatGPT - Bug Hunter (openai.com)</a>. And you can build your own GPTs with a Plus account or ChatGPT Enterprise.</p>
+<p>Overall, it was a great experience attending this event - I learned a lot, met a lot of people and had fun!</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/openai-devday-2023-highlights/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/openai-devday-2023-highlights/">OpenAI DevDay 2023 - Highlights</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75357261-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+
