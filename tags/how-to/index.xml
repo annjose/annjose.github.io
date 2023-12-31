@@ -7,43 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2023. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate><atom:link href="https://annjose.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
+    <atom:link href="https://annjose.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Upgrading my blog engine Hugo and content</title>
       <link>https://annjose.com/post/upgrade-hugo/</link>
       <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
-      
       <guid>https://annjose.com/post/upgrade-hugo/</guid>
       <description>Today I upgraded my blog engine Hugo from version 0.30.0 to 0.73.0. It&amp;rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it.</description>
     </item>
-    
     <item>
       <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://annjose.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
-      
       <guid>https://annjose.com/post/vscode-macos-cpp/</guid>
       <description>After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book Data Structures and Algorithms in C++ by Adam Drozdek.</description>
     </item>
-    
     <item>
       <title>Fastlane</title>
       <link>https://annjose.com/post/fastlane/</link>
       <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
-      
       <guid>https://annjose.com/post/fastlane/</guid>
-      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
-The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
+      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.&#xA;The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
     </item>
-    
     <item>
       <title>Display mathematical expressions in blog</title>
       <link>https://annjose.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
-      
       <guid>https://annjose.com/post/display-math-expressions-in-hugo/</guid>
       <description>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using OneNote Equation tool earlier, but I wanted to do the same in my blog posts.</description>
     </item>
-    
   </channel>
 </rss>

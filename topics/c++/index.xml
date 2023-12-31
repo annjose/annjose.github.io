@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2023. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 29 Jun 2020 22:32:55 -0700</lastBuildDate><atom:link href="https://annjose.com/topics/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Jun 2020 22:32:55 -0700</lastBuildDate>
+    <atom:link href="https://annjose.com/topics/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://annjose.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
-      
       <guid>https://annjose.com/post/vscode-macos-cpp/</guid>
       <description>After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book Data Structures and Algorithms in C++ by Adam Drozdek.</description>
     </item>
-    
   </channel>
 </rss>

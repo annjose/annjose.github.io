@@ -7,131 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2023. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2023 12:59:18 -0800</lastBuildDate><atom:link href="https://annjose.com/tags/tech-explorations/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Apr 2023 12:59:18 -0800</lastBuildDate>
+    <atom:link href="https://annjose.com/tags/tech-explorations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPT-4 Technical Report Highlights</title>
       <link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>
       <pubDate>Sun, 09 Apr 2023 12:59:18 -0800</pubDate>
-      
       <guid>https://annjose.com/post/gpt-4-tech-report-highlights/</guid>
       <description>OpenAI published the GPT-4 Technical Report on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&amp;rsquo;s always beneficial to obtain this information directly from the source.</description>
     </item>
-    
     <item>
       <title>Blog about ChatGPT in three different ways</title>
       <link>https://annjose.com/post/chatgpt-intro-3-ways/</link>
       <pubDate>Sun, 12 Feb 2023 22:57:43 -0800</pubDate>
-      
       <guid>https://annjose.com/post/chatgpt-intro-3-ways/</guid>
-      <description>Ever since ChatGPT was released to the public last November, I&amp;rsquo;ve been eager to write a blog about it. However, the daunting prospect of facing a blank screen kept me from starting the task, and I found myself procrastinating. Today, I finally summoned the courage to begin writing, but with a few tweaks from my usual approach.
-Allow me to describe the meta experiment to understand how I can utilize ChatGPT to help me write the blog.</description>
+      <description>Ever since ChatGPT was released to the public last November, I&amp;rsquo;ve been eager to write a blog about it. However, the daunting prospect of facing a blank screen kept me from starting the task, and I found myself procrastinating. Today, I finally summoned the courage to begin writing, but with a few tweaks from my usual approach.&#xA;Allow me to describe the meta experiment to understand how I can utilize ChatGPT to help me write the blog.</description>
     </item>
-    
     <item>
       <title>ChatGPT - An Introduction</title>
       <link>https://annjose.com/post/chatgpt-intro/</link>
       <pubDate>Sun, 12 Feb 2023 21:59:18 -0800</pubDate>
-      
       <guid>https://annjose.com/post/chatgpt-intro/</guid>
-      <description>Over the past few months, ChatGPT has captured my attention through numerous forums, articles and AI experts. I am fascinated by this technology and learning more about it everyday. With this introductory post, I hope to share my knowledge and insights on ChatGPT - how it works, its capabilities and limitations, potential pitfalls, and future prospects.
-Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post.</description>
+      <description>Over the past few months, ChatGPT has captured my attention through numerous forums, articles and AI experts. I am fascinated by this technology and learning more about it everyday. With this introductory post, I hope to share my knowledge and insights on ChatGPT - how it works, its capabilities and limitations, potential pitfalls, and future prospects.&#xA;Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post.</description>
     </item>
-    
     <item>
       <title>ChatGPT Introduction - written by ChatGPT using Ann&#39;s outline</title>
       <link>https://annjose.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/</link>
       <pubDate>Sun, 12 Feb 2023 20:54:11 -0800</pubDate>
-      
       <guid>https://annjose.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/</guid>
-      <description>Note - This post is written by ChatGPT expanding on the outline of my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.
-Have you ever heard of ChatGPT? It&amp;rsquo;s a large language model that has taken the AI world by storm.</description>
+      <description>Note - This post is written by ChatGPT expanding on the outline of my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.&#xA;Have you ever heard of ChatGPT? It&amp;rsquo;s a large language model that has taken the AI world by storm.</description>
     </item>
-    
     <item>
       <title>ChatGPT Introduction - rewritten by ChatGPT from Ann&#39;s originial post</title>
       <link>https://annjose.com/post/chatgpt-intro-rewritten-by-chatgpt/</link>
       <pubDate>Sun, 12 Feb 2023 18:25:12 -0800</pubDate>
-      
       <guid>https://annjose.com/post/chatgpt-intro-rewritten-by-chatgpt/</guid>
-      <description>Note - This post is written by ChatGPT by rewriting my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.
-As an avid learner and technology enthusiast, I have been following the advancements and discussions surrounding ChatGPT in various forums and sources.</description>
+      <description>Note - This post is written by ChatGPT by rewriting my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.&#xA;As an avid learner and technology enthusiast, I have been following the advancements and discussions surrounding ChatGPT in various forums and sources.</description>
     </item>
-    
     <item>
       <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://annjose.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
-      
       <guid>https://annjose.com/post/vscode-macos-cpp/</guid>
       <description>After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book Data Structures and Algorithms in C++ by Adam Drozdek.</description>
     </item>
-    
     <item>
       <title>Swift 4.2 - What&#39;s New</title>
       <link>https://annjose.com/post/swift42-whats-new/</link>
       <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
-      
       <guid>https://annjose.com/post/swift42-whats-new/</guid>
-      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.
-Random Number Generation Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence 1 2 let randomInt = Int.</description>
+      <description>In this post, I would like to share what&amp;rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.&#xA;Random Number Generation Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence 1 2 let randomInt = Int.</description>
     </item>
-    
     <item>
       <title>TDD in Xcode Playground</title>
       <link>https://annjose.com/post/xcode-playgrounds-tdd/</link>
       <pubDate>Sun, 02 Apr 2017 02:02:31 -0700</pubDate>
-      
       <guid>https://annjose.com/post/xcode-playgrounds-tdd/</guid>
       <description>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground.</description>
     </item>
-    
     <item>
       <title>Realm Mobile Platform</title>
       <link>https://annjose.com/post/realm-announces-mobile-platform/</link>
       <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
-      
       <guid>https://annjose.com/post/realm-announces-mobile-platform/</guid>
       <description>Realm is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast Mobile database software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. That is why I am happy to see that today they announced Realm Mobile Platform that combines Realm client side database with server-side technology (Object Server as they call it).</description>
     </item>
-    
     <item>
       <title>Machine Learning - A new journey</title>
       <link>https://annjose.com/post/machine-learning-coursera/</link>
       <pubDate>Tue, 09 Aug 2016 20:05:54 -0700</pubDate>
-      
       <guid>https://annjose.com/post/machine-learning-coursera/</guid>
-      <description>Few weeks ago, I started the Machine Learning course on Coursera by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.
-The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college).</description>
+      <description>Few weeks ago, I started the Machine Learning course on Coursera by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.&#xA;The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college).</description>
     </item>
-    
     <item>
       <title>ReactNative in Visual Studio Code</title>
       <link>https://annjose.com/post/react-native-visual-studio-code/</link>
       <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
-      
       <guid>https://annjose.com/post/react-native-visual-studio-code/</guid>
       <description>I have been thoroughly enjoying working on ReactNative projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like Nuclide (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Conversation as Interface</title>
       <link>https://annjose.com/post/conversation-as-interface/</link>
       <pubDate>Fri, 08 Apr 2016 20:47:54 -0700</pubDate>
-      
       <guid>https://annjose.com/post/conversation-as-interface/</guid>
-      <description>The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. Conversation As Interface. It is a more natural form of communication, especially for question-answer / interview experiences.
-Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running many experiments in their Messenger app allowing a few developers like Uber, Assist etc.</description>
+      <description>The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. Conversation As Interface. It is a more natural form of communication, especially for question-answer / interview experiences.&#xA;Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running many experiments in their Messenger app allowing a few developers like Uber, Assist etc.</description>
     </item>
-    
     <item>
       <title>First post from Hugo</title>
       <link>https://annjose.com/post/first-post-from-hugo/</link>
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
-      
       <guid>https://annjose.com/post/first-post-from-hugo/</guid>
-      <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.
-I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
+      <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.&#xA;I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
     </item>
-    
   </channel>
 </rss>
