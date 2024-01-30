@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2023. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 09 Apr 2023 12:59:18 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jan 2024 16:42:25 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/tech-explorations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Code Llama 70B locally</title>
+      <link>https://annjose.com/post/run-code-llama-70B-locally/</link>
+      <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
+      <guid>https://annjose.com/post/run-code-llama-70B-locally/</guid>
+      <description>Today, Meta AI announced they are releasing a new model Code Llama 70B, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.&#xA;In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.&#xA;As usual, the best way to run the inference on any model locally is to run Ollama.</description>
+    </item>
     <item>
       <title>GPT-4 Technical Report Highlights</title>
       <link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>

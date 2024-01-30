@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/tags/generative-ai/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/how-to/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/LLM/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/run-code-llama-70B-locally/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/tech-explorations/</loc>
+    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/tags/building/</loc>
     <lastmod>2024-01-27T20:13:13-07:00</lastmod>
   </url><url>
@@ -15,15 +39,6 @@
     <lastmod>2024-01-27T20:13:13-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/personal-growth/</loc>
-    <lastmod>2024-01-27T20:13:13-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/post/</loc>
-    <lastmod>2024-01-27T20:13:13-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2024-01-27T20:13:13-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
     <lastmod>2024-01-27T20:13:13-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/goodbye-thankyou-2023/</loc>
@@ -41,13 +56,7 @@
     <loc>https://annjose.com/tags/conferences/</loc>
     <lastmod>2023-11-09T09:02:53-08:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/generative-ai/</loc>
-    <lastmod>2023-11-09T09:02:53-08:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/tags/gpt/</loc>
-    <lastmod>2023-11-09T09:02:53-08:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/LLM/</loc>
     <lastmod>2023-11-09T09:02:53-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/openai-devday-2023-observations-learnings/</loc>
@@ -69,9 +78,6 @@
     <lastmod>2023-10-14T10:44:09-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/gpt-4-tech-report-highlights/</loc>
-    <lastmod>2023-04-09T12:59:18-08:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/tech-explorations/</loc>
     <lastmod>2023-04-09T12:59:18-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/chatgpt-intro-3-ways/</loc>
@@ -100,9 +106,6 @@
   </url><url>
     <loc>https://annjose.com/topics/</loc>
     <lastmod>2020-07-06T20:55:36-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/how-to/</loc>
-    <lastmod>2020-06-30T14:09:57-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/topics/hugo/</loc>
     <lastmod>2020-06-30T14:09:57-07:00</lastmod>
