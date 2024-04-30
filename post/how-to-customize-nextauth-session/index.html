@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discover how to build and customize authentication in your app">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>How to customize session data in NextAuth &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2023. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>How to customize session data in NextAuth</h1>
+  <h2>Discover how to build and customize authentication in your app</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Mar 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/building">building</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/technology">technology</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/next-js">next-js</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/modern-web-dev">modern-web-dev</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Of late, I have been diving into <a href="https://nextjs.org" target="_blank" rel="noopener">Next.js</a> and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use <a href="https://next-auth.js.org/" target="_blank" rel="noopener">NextAuth</a>, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well. In this post, I&rsquo;ll be sharing those experiences and learnings.</p>
+<p>First, setting up NextAuth was a breeze, thanks to the <a href="https://nextjs.org/learn/dashboard-app" target="_blank" rel="noopener">Next.js sample course</a> where you build all the core pieces of a modern web app, including authentication using the NextAuth library. Plus, the documentation of NextAuth, especially the <a href="https://next-auth.js.org/getting-started/example" target="_blank" rel="noopener">getting started sample</a> was simple and straightforward. Within a few minutes of onboarding, I was able to implement sign-in/sign-out using the simple <a href="https://next-auth.js.org/configuration/providers/credentials" target="_blank" rel="noopener">Credentials Provider</a>.</p>
+<p>Next, I wanted to allow multiple users to sign-in to my app and show the data specific to each user. My database schema has a column <code>userId</code> to associate each entity to a specific user. I wanted to make this <code>userId</code> available to the components and pages across my app. Essentially, once the user logs in, I want to identify the logged-in user, fetch the user&rsquo;s <code>userId</code> from the database and make it available to all parts of the app.</p>
+<p>So, how do I do it? There were a few options at my disposal.</p>
+<p>The question is how to extend the <code>session</code> object and add the <code>userdId</code> property.</p>
+<h2 id="the-options">The options</h2>
+<p>One option was to use the <code>ReactContext</code> object that allows global sharing of the data. If I can store the sesion in a global context, then that would work. However, this is supported only in client components, not server components. I could circumvent this problem by <a href="https://vercel.com/guides/react-context-state-management-nextjs#rendering-third-party-context-providers-in-server-components" target="_blank" rel="noopener">wrapping a client component that wraps a server component</a>. Also, session data has to be handled securely. So this wasn&rsquo;t an ideal solution.</p>
+<p>Another option to use session cookies, as described in this video by the Vercel team - <a href="https://www.youtube.com/watch?v=DJvM2lSPn6w" target="_blank" rel="noopener">Next.js App Router Authentication</a>. But they were using many low-level APIs and too complicated flow. I was convinced that there must be a simpler out-of-the-box solution within NextAuth itself.</p>
+<p>After some digging, a third option presented itself and it turned out to be the best solution. Let&rsquo;s take a look.</p>
+<p>NextAuth provides a <code>session</code> object containing a few user attributes like <code>name</code> and <code>email</code>. It also extends an internal object <code>AdapterUser</code> that has an <code>id</code> property, but this is internal to NextAuth and is different from the <code>userId</code> that I store in my database. So I need to add an additional property <code>userId</code> to this <code>session</code> object. Once the <code>userId</code> is there in the session, I can access it using the NextAuth API and get the<code>userId</code> anywhere I need.</p>
+<p>The next question is how to incorporate this <code>userId</code> property into the <code>session</code> object? I got a good starting point with these two artifacts - <a href="https://notes.dt.in.th/NextAuthUserIdInSession" target="_blank" rel="noopener">this blog post by dt.in.th</a>  and <a href="https://www.youtube.com/watch?v=pEXIId2HTCk" target="_blank" rel="noopener">this short YouTube video by Coding in Flow</a>. With a bit of head scratching and few rounds of trial and error, I managed to make it work and solved the problem in a clean way! The whole process was not fully straight-forward, so it would help to understand it step by step.</p>
+<h2 id="step-by-step-flow">Step-by-step flow</h2>
+<ol>
+<li>
+<p>Define the shape of your extended <code>session</code> object. Remember, <code>session</code> object already has the <code>user</code> property that contains <code>name</code>, <code>email</code>, and the transient <code>id</code> from the extension object <code>AdapterUser</code>. So you won&rsquo;t be able to add <code>id</code> property inside the <code>session.user</code> object, but you can add <code>userId</code> property at the same level as <code>user</code>. Then you can access it as <code>session.userId</code> and other properties will be <code>session.user.name</code> and <code>session.user.email</code>.</p>
+</li>
+<li>
+<p>Incorporate the <code>userId</code> property to the <code>session</code> schema. Create a file <code>@types/next-auth.d.ts</code> with this content:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> NextAuth <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;next-auth&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">declare</span> module <span style="color:#f1fa8c">&#39;next-auth&#39;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">interface</span> Session {
+</span></span><span style="display:flex;"><span>        userId: <span style="color:#8be9fd">string</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Implement a callback to inject the additional property <code>userId</code> into the session. In your authentication configuration file <code>**auth.config.ts**</code>, add a callback for session where you assign the userId to the session object. Here, <code>fetchUser</code> retrieves the <code>userId</code> from the database based on the user&rsquo;s <code>email</code>. The extended session with the <code>userId</code> property is then returned.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> authConfig <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>    pages<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        signIn<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;/login&#39;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    callbacks<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        authorized({ auth, request<span style="color:#ff79c6">:</span> { nextUrl } }) {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">const</span> isLoggedIn <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">!!</span>auth<span style="color:#ff79c6">?</span>.user;
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">const</span> isOnDashboard <span style="color:#ff79c6">=</span> nextUrl.pathname.startsWith(<span style="color:#f1fa8c">&#39;/dashboard&#39;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> (isOnDashboard) {
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> (isLoggedIn) <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">false</span>; <span style="color:#6272a4">// Redirect unauthenticated users to login page
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            } <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (isLoggedIn) {
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">return</span> Response.redirect(<span style="color:#ff79c6">new</span> URL(<span style="color:#f1fa8c">&#39;/dashboard&#39;</span>, nextUrl));
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Add the userId to the session so that we can fetch data for the current user. 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#6272a4">//  The extended shape of session is defined in @types/next-auth.d.ts
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">async</span> session({ session }) {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">const</span> user: <span style="color:#8be9fd">User</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> fetchUser(session<span style="color:#ff79c6">?</span>.user<span style="color:#ff79c6">?</span>.email);
+</span></span><span style="display:flex;"><span>            session.userId <span style="color:#ff79c6">=</span> user.id;
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> session
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    providers<span style="color:#ff79c6">:</span> [], <span style="color:#6272a4">// Add providers with an empty array for now
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>} satisfies NextAuthConfig;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="results">Results</h2>
+<p>With these pieces in place, any component, page, or route in your app can access the <code>userId</code> as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span>  <span style="color:#6272a4">// items-page.tsx
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">import</span> { auth } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;@/auth&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> session <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> auth();
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> userId <span style="color:#ff79c6">=</span> session <span style="color:#ff79c6">?</span> session.userId <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>  csont username <span style="color:#ff79c6">=</span> session <span style="color:#ff79c6">?</span> session.user.name <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When calling the auth() method, NextAuth invokes your callback to inject the userId and return the extended session object, ensuring access to userId in the session object.</p>
+<p>That&rsquo;s all there is to it! You can customize the <code>session</code> object and add any custom data to your authenticated sessions.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This experience underscored the significance of adding extension hooks in libraries and frameworks, allowing developers to customize functionality without hacking into the code. Kudos to the NextAuth team for providing an extensible library!</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/run-code-llama-70B-locally/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/run-code-llama-70B-locally/">Run Code Llama 70B locally</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+

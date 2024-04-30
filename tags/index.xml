@@ -7,20 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2023. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 29 Jan 2024 16:42:25 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 22 Mar 2024 10:25:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>generative-ai</title>
-      <link>https://annjose.com/tags/generative-ai/</link>
-      <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
-      <guid>https://annjose.com/tags/generative-ai/</guid>
+      <title>building</title>
+      <link>https://annjose.com/tags/building/</link>
+      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/building/</guid>
       <description></description>
     </item>
     <item>
       <title>how-to</title>
       <link>https://annjose.com/tags/how-to/</link>
-      <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
+      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
       <guid>https://annjose.com/tags/how-to/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>modern-web-dev</title>
+      <link>https://annjose.com/tags/modern-web-dev/</link>
+      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/modern-web-dev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>next-js</title>
+      <link>https://annjose.com/tags/next-js/</link>
+      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/next-js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>technology</title>
+      <link>https://annjose.com/tags/technology/</link>
+      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>generative-ai</title>
+      <link>https://annjose.com/tags/generative-ai/</link>
+      <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
+      <guid>https://annjose.com/tags/generative-ai/</guid>
       <description></description>
     </item>
     <item>
@@ -35,13 +63,6 @@
       <link>https://annjose.com/tags/tech-explorations/</link>
       <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
       <guid>https://annjose.com/tags/tech-explorations/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>building</title>
-      <link>https://annjose.com/tags/building/</link>
-      <pubDate>Sat, 27 Jan 2024 20:13:13 -0700</pubDate>
-      <guid>https://annjose.com/tags/building/</guid>
       <description></description>
     </item>
     <item>

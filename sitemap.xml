@@ -2,32 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://annjose.com/tags/generative-ai/</loc>
-    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
+    <loc>https://annjose.com/tags/building/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/how-to-customize-nextauth-session/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/how-to/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/modern-web-dev/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/next-js/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/technology/</loc>
+    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/generative-ai/</loc>
     <lastmod>2024-01-29T16:42:25-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/LLM/</loc>
     <lastmod>2024-01-29T16:42:25-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/post/</loc>
-    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/post/run-code-llama-70B-locally/</loc>
-    <lastmod>2024-01-29T16:42:25-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
     <lastmod>2024-01-29T16:42:25-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/tech-explorations/</loc>
     <lastmod>2024-01-29T16:42:25-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/building/</loc>
-    <lastmod>2024-01-27T20:13:13-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/career/</loc>
     <lastmod>2024-01-27T20:13:13-07:00</lastmod>
