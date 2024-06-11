@@ -272,9 +272,9 @@
 </div>
 
   <p>A few months ago, Next.js introduced <strong>App Router</strong>, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the <strong>Pages Router</strong> eventually. I have been using the App Router for all my <a href="https://annjose.com/post/learning-to-building/">builder projects</a> for a while now. In fact, I usually kicked off projects with the standard <code>create-next-app</code> script that starts a new app from scratch.</p>
-<p>This worked pretty fine, until&hellip;.</p>
+<p>This worked well, until&hellip;.</p>
 <p>I started a new project to build a photo gallery app that sprouted from the need to manage all the photos taken from my recent Europe trip. Instead of relying on platforms like Google Photos and One Drive, I wanted to build an app to view and share photos hosted on a server of my choice. It is a fun privacy-focused project that could be useful for others too.</p>
-<p>Rather than starting with the usual create-next-app tookit, I decided to find a good image gallery template that uses Next.js and Tailwind CSS as a starting point. Luckily, I found a good one in the <a href="]%28https://vercel.com/templates/next.js/image-gallery-starter%29">Vercel template gallery</a>. The only catch was, it used the traditional Next.js Pages router instead of the newer App router approach. I knew I would tweak the code extensively, so I decided to migrate to the App router right away.</p>
+<p>Rather than starting with the usual create-next-app tookit, I decided to find a good image gallery template that uses Next.js and Tailwind CSS as a starting point. Luckily, I found a good one in the <a href="https://vercel.com/templates/next.js/image-gallery-starter" target="_blank" rel="noopener">Vercel template gallery</a>). The only catch was, it used the traditional Next.js Pages router instead of the newer App router approach. I knew I would tweak the code extensively, so I decided to migrate to the App router right away.</p>
 <p>I was able to migrate the code in a couple of hours of coding, but learned a lot along the way. As always, a good learning experience is worth sharing and hence this post to share how to do it and the lessons/gotchas I encountered along the way.</p>
 <h2 id="how-to-migrate">How to migrate</h2>
 <p>Let&rsquo;s go through the steps one by one.</p>
@@ -383,7 +383,7 @@
 <p>The signature and behavior of <code>router.push</code> method has changed. It now accepts fewer parameters, and the option for shallow rendering has been removed. However, you can achieve similar behavior using the <a href="https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#using-the-native-history-api" target="_blank" rel="noopener">native window History API</a>.</p>
 </li>
 </ul>
-<h2 id="learnings-and-pleasant-surpirises">Learnings and pleasant surpirises</h2>
+<h2 id="learnings-and-pleasant-surprises">Learnings and pleasant surprises</h2>
 <ul>
 <li>Next.js provides a <a href="%28https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration%29">helpful migration guide</a> that makes it easy to understand the changes.</li>
 <li>Next.js documentation has dedicated sections for Pages router and App router for each of the features. So you can always switch back and forth between the two methods.</li>
