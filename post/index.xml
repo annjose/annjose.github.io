@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 22 Mar 2024 10:25:12 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2024 12:42:25 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next.js - Migrate from Pages to App Router</title>
+      <link>https://annjose.com/post/nextjs-migrate-pages-app-router/</link>
+      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
+      <guid>https://annjose.com/post/nextjs-migrate-pages-app-router/</guid>
+      <description>A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.</description>
+    </item>
     <item>
       <title>How to customize session data in NextAuth</title>
       <link>https://annjose.com/post/how-to-customize-nextauth-session/</link>

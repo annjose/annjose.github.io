@@ -7,20 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 22 Mar 2024 10:25:12 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2024 12:42:25 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how-to</title>
+      <link>https://annjose.com/tags/how-to/</link>
+      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
+      <guid>https://annjose.com/tags/how-to/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>next.js</title>
+      <link>https://annjose.com/tags/next.js/</link>
+      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
+      <guid>https://annjose.com/tags/next.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>tech-explorations</title>
+      <link>https://annjose.com/tags/tech-explorations/</link>
+      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
+      <guid>https://annjose.com/tags/tech-explorations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>web-development</title>
+      <link>https://annjose.com/tags/web-development/</link>
+      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
+      <guid>https://annjose.com/tags/web-development/</guid>
+      <description></description>
+    </item>
     <item>
       <title>building</title>
       <link>https://annjose.com/tags/building/</link>
       <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
       <guid>https://annjose.com/tags/building/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>how-to</title>
-      <link>https://annjose.com/tags/how-to/</link>
-      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/how-to/</guid>
       <description></description>
     </item>
     <item>
@@ -56,13 +77,6 @@
       <link>https://annjose.com/tags/LLM/</link>
       <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
       <guid>https://annjose.com/tags/LLM/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>tech-explorations</title>
-      <link>https://annjose.com/tags/tech-explorations/</link>
-      <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
-      <guid>https://annjose.com/tags/tech-explorations/</guid>
       <description></description>
     </item>
     <item>

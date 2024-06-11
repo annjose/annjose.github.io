@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A step-by-step guide with lessons and gotchas for a smooth migration">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Next.js - Migrate from Pages to App Router &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Next.js - Migrate from Pages to App Router</h1>
+  <h2>A step-by-step guide with lessons and gotchas for a smooth migration</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jun 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/web-development">web-development</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/next.js">next.js</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>A few months ago, Next.js introduced <strong>App Router</strong>, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the <strong>Pages Router</strong> eventually. I have been using the App Router for all my <a href="https://annjose.com/post/learning-to-building/">builder projects</a> for a while now. In fact, I usually kicked off projects with the standard <code>create-next-app</code> script that starts a new app from scratch.</p>
+<p>This worked pretty fine, until&hellip;.</p>
+<p>I started a new project to build a photo gallery app that sprouted from the need to manage all the photos taken from my recent Europe trip. Instead of relying on platforms like Google Photos and One Drive, I wanted to build an app to view and share photos hosted on a server of my choice. It is a fun privacy-focused project that could be useful for others too.</p>
+<p>Rather than starting with the usual create-next-app tookit, I decided to find a good image gallery template that uses Next.js and Tailwind CSS as a starting point. Luckily, I found a good one in the <a href="]%28https://vercel.com/templates/next.js/image-gallery-starter%29">Vercel template gallery</a>. The only catch was, it used the traditional Next.js Pages router instead of the newer App router approach. I knew I would tweak the code extensively, so I decided to migrate to the App router right away.</p>
+<p>I was able to migrate the code in a couple of hours of coding, but learned a lot along the way. As always, a good learning experience is worth sharing and hence this post to share how to do it and the lessons/gotchas I encountered along the way.</p>
+<h2 id="how-to-migrate">How to migrate</h2>
+<p>Let&rsquo;s go through the steps one by one.</p>
+<h3 id="step-1-understand-the-differences-between-pages-and-app-router">Step 1: Understand the differences between Pages and App router</h3>
+<p>If you are not familiar with Pages or App router, it is best to read a brief introduction about them so that you have a solid foundation for the migration process. Of course, GitHub Copilot and ChatGPT will help with the migration, but it is important to understand what it does under the hood and you can navigate the changes well.</p>
+<p>Here are a few key differences to understand:</p>
+<ol>
+<li><strong>Client/server components</strong>: In Pages router, all components are considered to have client-side interactions and hence are client components by default. They are pre-rendered on the server, but React has to perform hydration to attach the event handlers. In App router, there is an explicit distinction of server components (default) client components (explicitly marked with &lsquo;use client&rsquo; directive).</li>
+<li><strong>Folder structure</strong>: Pages are stored in pages folder in the root of the application, where each page corresponds to a route in the application (eg: <code>pages/about.tsx</code> corresponds to the route <code>/about</code>). App pages are in the app/ folder in the root of the application. The file corresponding to the route <code>/about</code> is in <code>app/about/page.tsx</code>.</li>
+<li><strong>Data Fetching</strong>: Pages router had several data fetching methods including <code>getStaticProps</code>, <code>getServerSideProps</code>, and <code>getStaticPaths</code>. In app router, data can be fetched in any server component or in server actions, and the data can be passed as props to the client components.</li>
+<li><strong>Custom routing</strong>: App router uses custom routing mechanism that allows more dynamic routing, handling query parameters and nested routes.</li>
+<li><strong>Built-in SEO</strong>: App router introduces built-in SEO using regular HTML tags to handle metadata, making the <code>next/head</code> component of Pages redundant.</li>
+</ol>
+<h3 id="step-3-upgrade-to-nextjs-version-13">Step 3: Upgrade to Next.js version 13</h3>
+<p>App router was introduced in Next.js 13, so you need to upgrade to that version and the corresponsing minimum React version v18.17.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>npm install next@latest react@latest react-dom@latest
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="step-2-migrate-the-_app-_document-pages-to-root-layout">Step 2: Migrate the _app, _document pages to root layout</h3>
+<ol>
+<li>Create a new folder named <code>app</code> in the root of the project (same level as the pages folder)</li>
+</ol>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>project-root/
+</span></span><span style="display:flex;"><span>  |- pages/
+</span></span><span style="display:flex;"><span>  |   |- ...
+</span></span><span style="display:flex;"><span>  |- app/
+</span></span><span style="display:flex;"><span>  |   |- layout.tsx
+</span></span><span style="display:flex;"><span>  |   |- page.tsx
+</span></span><span style="display:flex;"><span>  |- ...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Migrate /pages/_document.tsx to /app/layout.tsx - define a new function <code>RootLayout</code> that takes in a parameter <code>children</code> of type <code>React.ReactNode</code>.</li>
+</ol>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tsx" data-lang="tsx"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#34;../styles/index.css&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#8be9fd;font-style:italic">function</span> RootLayout({
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Layouts must accept a children prop.
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// This will be populated with nested layouts or pages
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    children,
+</span></span><span style="display:flex;"><span>}<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    children: <span style="color:#8be9fd">React.ReactNode</span>
+</span></span><span style="display:flex;"><span>}) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">body</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;bg-black antialiased&#34;</span>&gt;{children}&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="step-4-migrate-each-page-from-pages-to-app">Step 4: Migrate each page from /pages to /app</h3>
+<ol>
+<li>For each page in the pages folder (eg: pages/foo.tsx), create a corresponding folder in the app folder (eg: app/foo).</li>
+<li>Copy the file <code>foo.tsx</code> from <code>pages/</code> folder to the new <code>app/foo</code> folder.</li>
+<li>Rename the copied file <code>foo.tsx</code> to <code>page.tsx</code>.</li>
+<li>Replace usage of <code>next/head</code> with the built-in <code>Metadata</code> <a href="https://nextjs.org/docs/app/api-reference/functions/generate-metadata" target="_blank" rel="noopener">objects and functions</a></li>
+<li>Separate out the data fetching logic into a server component</li>
+<li>Pass the data as props into the client components.</li>
+</ol>
+<p>Repeat this process for all the pages. Note that App router treats all components are server components by default, but you can nest client components inside server components, and thus get the best performance.</p>
+<h3 id="step-5-remove-old-code">Step 5: Remove old code</h3>
+<p>Remove any remaining usage of Pages router and related files. Build the app for production using <code>next build</code> and make sure everything works fine.</p>
+<h2 id="gotchas">Gotchas</h2>
+<p>Here are a few changes that were tricky to migrate:</p>
+<ul>
+<li>
+<p><code>userouter</code> hook has moved from <code>next/router</code> to <code>next/navigation</code>. The <code>pathname</code> string is replaced by a new hook <code>usePathname()</code> and <code>query</code> is replaced by <code>useParams</code> for dynamic route params and <code>useSearchParams</code> for query parameters.</p>
+</li>
+<li>
+<p>The signature and behavior of <code>router.push</code> method has changed. It now accepts fewer parameters, and the option for shallow rendering has been removed. However, you can achieve similar behavior using the <a href="https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#using-the-native-history-api" target="_blank" rel="noopener">native window History API</a>.</p>
+</li>
+</ul>
+<h2 id="learnings-and-pleasant-surpirises">Learnings and pleasant surpirises</h2>
+<ul>
+<li>Next.js provides a <a href="%28https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration%29">helpful migration guide</a> that makes it easy to understand the changes.</li>
+<li>Next.js documentation has dedicated sections for Pages router and App router for each of the features. So you can always switch back and forth between the two methods.</li>
+<li>You can migrate your app incrementally rather than a giant one-shot upgrade. The app directory works alongside the pages directory, so it is super easy.</li>
+<li>Upgrading to Next.js 13 does not require using the new app directory. You can continue using pages with new features that work in both directories, such as the updated Image component, Link component, Script component, and Font optimization.</li>
+<li>The Pages Routing system is simple, intuitive and effective. App Routing system is more capable and advanced, albeit with a steeper learning curve.</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li>The official Next.js guide to migrate from Pages to App router - <a href="https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration" target="_blank" rel="noopener">App router incremental adoption guide</a></li>
+<li>A good video by Lee Robinson, the VP of Product at Vercel - <a href="https://www.youtube.com/watch?v=YQMSietiFm0" target="_blank" rel="noopener">Incrementally adopt the Next.js App Router</a></li>
+<li>Another good migration guide by <a href="https://clerk.com/blog/migrating-pages-router-to-app-router-an-incremental-guide" target="_blank" rel="noopener">Clerk.com</a></li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/how-to-customize-nextauth-session/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/how-to-customize-nextauth-session/">How to customize session data in NextAuth</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+
