@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Apple Intelligence: Highlights from Apple WWDC24">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>The Apple of AI &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>The Apple of AI</h1>
+  <h2>Apple Intelligence: Highlights from Apple WWDC24</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jun 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/generative-ai">generative-ai</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was <a href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/" target="_blank" rel="noopener">Apple Intelligence</a>, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.</p>
+<h2 id="what-is-apple-intelligence">What is Apple Intelligence?</h2>
+<p>Apple Intelligence comprises of multiple highly-capable and efficient generative models - language models and diffusion models. These models include on-device models as well as server-based foundation models.</p>
+<p>The foundation models are trained on Apple&rsquo;s open-source AXLearn library for dep learning, built on top of <a href="https://jax.readthedocs.io/en/latest/" target="_blank" rel="noopener">JAX</a> (Python library for accelerated computing and transformation) and <a href="https://www.tensorflow.org/xla" target="_blank" rel="noopener">XLA</a> (Accelerated Linear Algebra, an open-source ML compiler).</p>
+<p>The branding of Apple Intelligence is intriguing, positioning it as Apple&rsquo;s take on &ldquo;AI&rdquo;. Nevertheless, this technology looks very promising and stands out as unique in four distinct ways&hellip;.</p>
+<h3 id="1-on-device-ai">1. On-device AI</h3>
+<p>Apple Intelligence has a 3 billion parameter language model that runs on the user&rsquo;s device - phone, tablet or macOS - performing local inference without collecting data or sending it over the network to remote servers. This model was compressed using low-bit palletization maintaining high quality using a framework that uses LoRA adapters and implements a quantization strategy at just 3.5 bits per weight. This optimization enabled Apple to run these models on an iPhone 15 with high accuracy and speed.</p>
+<p>This is a huge leap forward, promising secure, low latency inferences directly on the device. Can&rsquo;t wait to see this capability made available to app developers. Incredible! 💪</p>
+<h3 id="2-privacy-first-design">2. Privacy-first design</h3>
+<p>The new system is built using a privacy-first design in multiple ways. First, the on-device model handles the simple operations securely using user&rsquo;s personal context such as messages, emails and notes, ensuring that everything remains on the device itself, without any leaving.</p>
+<p>For more complex operations beyond the device&rsquo;s capabilities, tasks are routed to the server-based larger language models running on Apple&rsquo;s <a href="https://security.apple.com/blog/private-cloud-compute/" target="_blank" rel="noopener">Private Compute Cloud</a>, leveraging secure trustworthy hardware in Apple&rsquo;s own data centers.</p>
+<p>If the task requires broader world knowledge not available in either of the Apple foundational models, it routes the request to OpenAI&rsquo;s GPT 4o, always with explicit permission from the user.</p>
+<p>This seamless flexibility between on-device and server-based processing strikes an optimal balance between performance and privacy. Fantastic! 🎉</p>
+<h3 id="3-security--performance">3. Security &amp; Performance</h3>
+<p>The machines in the Private Cloud Compute (PCC) are hardened with security measures to ensure that user&rsquo;s data is not tampered with and is not stored anywhere any time. For instance, the software that runs on these machines are stateless, as in the server/node is rekeyed and wiped clean after every reboot. The user&rsquo;s data is not presisted anywhere, even in the event of errors. All the metrics and the transparency logs of the software running on PCC will be made publicly available for independent security researchers to verify. For a detailed assessment of this approach, read <a href="https://x.com/matthew_d_green/status/1800291897245835616" target="_blank" rel="noopener">this thread by a security expert at Johns Hopkins</a>.</p>
+<p>Benchmarking - The two language models from Apple (3B on-device and the server-based model) were benchmarked against various open-source models (Gemma-2B, Gemma-7B, Phi-3-mini, and Mistral-7B) as well as commercial models (DBRX-Instruct, GPT 3.5 Turbo, and Mixtral 8x-22B). They outperformed or matched the performance of these models in human evaluation, safety and helpfulness. See the details of the benchmarks in the <a href="https://machinelearning.apple.com/research/introducing-apple-foundation-models" target="_blank" rel="noopener">Apple research blog</a>.</p>
+<h3 id="4-ubiquitious-ai">4. Ubiquitious AI</h3>
+<p>Apple will integrate this new system across their ecosystem - spanning multiple devices (iPhones, iPads and macOS) and integrating with various applications (Notes, Messages, Mail, Pages and more).</p>
+<p>Text generation system will be used in the Writing Tools system that helps summarize, edit and rewrite text content. They also brought in more language features to the apps - to transcribe notes, prioritize notifications based on content.</p>
+<p>Image generation capabilities will be leveraged in two areas - Genmoji to generate emojis from simple text in three artistic styles and the Image playground to create images based on the surrounding content. Fun fact - the keynote session talked about Genmoji without ever mentioning generative AI 🙃.</p>
+<h2 id="and-one-more-thing">And one more thing&hellip;</h2>
+<p>Finally, a special mention to Siri - Apple declared that &lsquo;Siri enters a new era&rsquo; where Siri will be integrared deeply into the system with richer language understanding, smarter and more contextually relevant - going far beyond setting an alarm. You can chat with Siri through text as well. Another fun fact - the task demonstrated with Siri during the keynote was ‘set an alarm for 10am.’. 😎</p>
+<p>Yes I understand that the revamped Siri could become a big deal (and not just a minor thing), but I&rsquo;ll need to see it in action to believe it.</p>
+<h2 id="in-conclusion">In conclusion</h2>
+<p>Well, all said and done, the proof is in the pudding. The real results are yet to be seen when these capabilites will come to life later in the fall. Until then, we wait and watch&hellip;.</p>
+<p>In the meantime, I am eager to hear more about the following in Apple Intelligence - when will they be available for prime time use?</p>
+<ul>
+<li>When will the coding model be integrated into Xcode to enhance developer productivity?</li>
+<li>What are the plans for integrating audio and video capabilities into Apple Intelligence?</li>
+<li>How critical will text-to-speech functionality be for enhancing Siri&rsquo;s capabilities?</li>
+</ul>
+<p>Looking forward to hearing more updates on these exciting developments! 😎</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/nextjs-migrate-pages-app-router/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/nextjs-migrate-pages-app-router/">Next.js - Migrate from Pages to App Router</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+
