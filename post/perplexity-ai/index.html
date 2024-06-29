@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A new way of discovering information through Perplexity AI">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Perplexity AI: A Deep Dive &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Perplexity AI: A Deep Dive</h1>
+  <h2>A new way of discovering information through Perplexity AI</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Jun 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/generative-ai">generative-ai</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/machine-learning">machine-learning</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p><strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.</p>
+<p>All that changed last week when I watched <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">this recent interview</a> of Perplexity CEO <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a> by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a>. It is a <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">fascinating interview</a> - highly recommended for everyone to watch, but personally, it opened my eyes to the fact that Perplexity is very different from other chatbots, not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
+<p>In this post, I would like to share my thoughts on Perplexity - the good and bad - as well as a few interesting insights from the interview with Aravind. All of this information from my own personal experience, and not copy-pasted or generated from some documents.</p>
+<h2 id="about-perplexity">About Perplexity</h2>
+<p>Perplexity is an AI search (answer) engine that answers questions only based on <strong>factual, real-time data</strong> retrieved from trusted sources. Every answer it returns has the relevant sources as citations. When you ask a question, it doesn&rsquo;t give you a bunch of links like Google does, nor does it give just a potentially unreliable answer like most of the LLMs. Instead, it gives a concise answer based on grounded factual truth along with the links to the sources of that answer so that you can do the fact checking yourself.</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>It uses the fundamental principles of RAG (Retrieval Augemented Query) where in given a query, it retrieves the relevant documents and extracts the relevant paragraphs from those documents and uses this information to craft a clear concise answer along with the citations of the sources. But it goes much further than RAG. While RAG which adds the information from the relevant documents to the context and sends it as context to an LLM to generate the answer, Perplexity sticks to the ground truth only and follows the principle that you are not supposed to say anything that you didn&rsquo;t retrieve. So if it doesn&rsquo;t have enough information to give an answer, it would say so rather than cooking up some information generated by an LLM. Sure, it uses LLMs to craft the answer, but not to generate it. This is very powerful and reduces the impact of hallucination.</p>
+<p>They have a Search component which focuses on retrieval and an LLM component that focuses on writing the answer. They have trained their own model <em>Sonar Large 32K</em>, based on LLaMA 70B fine tuned for specific skills like referencing citations, summarization etc. It also works with the frontier models like GPT-4o, Claude Sonnet, Claude Opus (for which you need the Pro subscription). Thus they are model agnostic.</p>
+<p>Under the hood, it uses language models to understand the context of the question, then searches the web for accurate up-to-date information, gives the relevant results to LLM which in turn crafts the answer in a comprehensive concise way along with the citations.</p>
+<h2 id="my-use-cases">My use cases</h2>
+<p>All tools come to life when we use it for our own purposes. Here are a few use cases where I found Perplexity to be useful. Some of these may be more detailed than needed, but I hope it will help you appreciate how the tools adds value in day to day life, vs. hypothetical scenarios.</p>
+<ol>
+<li>
+<p><strong>Understand concepts deeply</strong> - As part of a book club shared in HN, I am reading the book <strong>Understanding Software Dynamics</strong> by Richard Sites, a fantastic book about performance debugging that goes deep into CS concepts of microprocessors, memory, hard disk, network. As a Math (not CS) major, I only have a shallow knowledge of these concepts. So I realized that unless I understand these concepts really well, I cannot understand or appreciate the crux of the book. And I have the time at hand to learn what I want, so it is the perfect opportunity to learn this too.</p>
+<p>So I started reading the book with Perplexity by my side. Whenever I encountered a concept that I don&rsquo;t fully understand (eg: CPU clock cycle, instruction fetching etc.), I would ask what it is and got a detailed, yet succinct answer with at least 5 credible references. Not only did this help me understand the concept, it also motivated me to go to the references and dive deeper as needed. I would keep doing this over and over until I understand the fundamental of each chapter. Initially this was very slow as I cross reference between the book and Perplexity, but very soon I could see myself getting more and more comfortable with challenging concepts. It is expanding my knowledge and helps me derive more knowledge from the book, which in turn expands my knowledge of application performance.</p>
+</li>
+<li>
+<p><strong>Expand your knowledge</strong> A few months ago, I started making home made yoghurt and made a routine of making it every other week. The process is very simple with three main steps - 1) boil the milk to 195F for 10 minutes, 2) cool it down to 110F and 3) keep it in the proofing box at 115 for an hour and then 86F for 4 hours. It is mostly a hands-off process except for Step (1) where I need to wait until the milk cools down from 190 F to 110 F. In my understanding, the purpose of this step is to kill the bad bacteria so that good bacteria can ferment the milk at 110 F. This sounds vaguely familiar to milk pasteurization, so I wanted to know what it does and if I use pasteurized milk, can I skip the Step 1 and the asociated wait time? Well, only one way to find out. ask Perplexity. So I did and got a decent explanation of what pasteurization does, the two types of pasteurization (High Temperature Short Time, Ultra etc) and <em>Pasteurization is crucial for food safety, as it eliminates harmful bacteria such as E. coli, Salmonella, Listeria, and Campylobacter that may be present in raw milk</em>.</p>
+<p>I went one step further and asked - my yoghut recipe involves a step to heat the milk to 195 F for 10 minutes. If I use pasteurized milk, can I skip that step and go directly to Step 2? It replied <em>Heating milk to 195°F (90.5°C) for 10 minutes isn&rsquo;t just about killing bacteria. This step also denatures the proteins in the milk, particularly whey proteins. This denaturation is crucial for creating a thicker, more stable yogurt texture. The heating process also evaporates some water, concentrating the milk slightly, which contributes to a thicker final product.</em> Pretty useful! This is the <a href="https://www.perplexity.ai/search/what-is-pasteurized-yBUboZ8cQRuJLI1lxf3Q2w" target="_blank" rel="noopener">link to the full answer</a>.</p>
+</li>
+<li>
+<p><strong>Discover credible sources</strong> For every answer, Perplexity shows a list of <em>related questions</em> to know more about that topic or the answer. They show these questions in the Home page as well. And yes, this is rabbit hole waiting for me, 😎. But I love going down that path and learn a bunch of interesting information - may not be particularly &lsquo;useful&rsquo;. For example, one question was <em>did Edison discover the light bulb</em> - I had some vague memory of an unconventional answer, but Perplexity&rsquo;s response made it clear to me.</p>
+<p>The best part was that one of the references in the answer was an <a href="https://www.britannica.com/video/226779/did-you-know-who-invented-the-light-bulb" target="_blank" rel="noopener">article from Britannica</a> which also had a good video about who really invented the lightbulb. It made me realize that it&rsquo;s been a long time since I saw the Britannica website. Searching for things in Google hardly bring up these links.</p>
+</li>
+<li>
+<p><strong>Writing code</strong> - I had to write C code to implement the exercises in the book. The last time I wrote C code was in 2010!. So I sought help from Perplexity and it worked out very well. The results were pretty much comparable to ChatGPT, however, I felt Perplexity&rsquo;s answers were more concise and to the point. However, I think GitHub Copilot is is the hero in this area and will be for the near future.</p>
+</li>
+<li>
+<p><strong>It says I don&rsquo;t know</strong> - I asked how to activate the Info button in the Tidal app on Apple TV. And it answered <em>Unfortunately, there is no specific information in the search results about activating an info button in the Tidal app on Apple TV. The Tidal app for Apple TV appears to have limited functionality compared to other platforms.</em> Yes! when you don&rsquo;t find a result, say it so, instead of making up a stupid answer or giving a bunch of irrelevant search results just to keep me &rsquo;engaged&rsquo;. Perplexity got this right!</p>
+</li>
+<li>
+<p><strong>General questions</strong> - You can ask regular general questions like &lsquo;suggest a few good bathroom fixture stores near San Jose&rsquo;, &lsquo;why is Midwest called Midwest&rsquo;, &lsquo;can you play Scrabble with yourself&rsquo;, &lsquo;how important is data alignment in terms of performance&rsquo; and met questions like &lsquo;what is perplexity&rsquo;  - I told you it takes you down rabbit holes :)</p>
+</li>
+</ol>
+<h2 id="more-goodness">More goodness</h2>
+<p>After using it multiple times a day for more than a week, I see that the answers given by Perplexity are more dependable than many other AI models including ChatGPT or Gemini. The main reason for that is the answers come with the citations, so I could always go to the source and verify.</p>
+<p>They have a mobile app too, which works really well - the erstwhile mobile developer in me is happy. I use it quite often.</p>
+<p>With their Pro account, you can create Pages, where you can share your thread (your conversational queries and answers) with others. The page is automatically created for you and you can publish it along with all the references and images if you wish. For example, I had a thread with a lot of questions about CPU cycle and the answers solidified my understanding. So I converted it to a page and published it as <a href="https://www.perplexity.ai/page/CPU-cycle-time-0vTp2.GVSr.hwzGbF.XS_A" target="_blank" rel="noopener">CPU Cycle Time</a>.</p>
+<p>I found this feature fascinating because this &lsquo;article&rsquo; is unique to me, but also useful for others who may want to learn about the same topic. They can also see my learning path. The best part is that - it is so easy to do, a natural progression of what I was doing.</p>
+<h2 id="less-goodness">Less goodness</h2>
+<p>Like everything in the world, there are certain things that I don&rsquo;t like about Perplexity.</p>
+<p>First, I am &lsquo;perplexed&rsquo; by the UI information architecture of pages and threads. When you click on <a href="https://www.perplexity.ai/library" target="_blank" rel="noopener">Library button</a> on the left, it shows page with a top level menu with buttons to create  a thread / page / collection and there is another tab with &lsquo;Thread&rsquo; and Pages where you can see the threads and pages that are saved. If you click on any page or thread, it opens that content in almost full screen, so you don&rsquo;t see the top menu or the tab any more. So if you want to see another page/thread, you need to go to Library, the tab and then select the page/thread. It would be great if I don&rsquo;t lose the context like this, so you could show the menu and tab somewhere on the left or right, so that I can get it to again.</p>
+<p>I got quirky answers to some questions. For example, one of the sample queries in the Home page was <em>Penalty for late tax filing</em>. The answer to this prompt was about income tax filing in India, not the US where I live. While it could have been more personalized, I want to caution from going too far on that direction - no, I don&rsquo;t want to see ads of Scrabble or bathroom fixtures wherever I go. It is a balance.</p>
+<p>The workflow to create an account was confusing to me - when I gave my email address, it sent me the magic link, which worked well. But when I clicked on it, it showed me the page to sign up for the Pro account, that too as a full page modal which seemed to be indismissable. So I signed up for the Pro account so that I can get into the app. But then when I read the FAQ, it feels that I can do everything I need with non-Pro account. I wish the benefits of the Pro account was more clearly laid out in the modal, or have a subtext that &lsquo;you can do this later&rsquo;.</p>
+<p>Finally, there are ongoing controversies about <a href="https://rknight.me/blog/perplexity-ai-is-lying-about-its-user-agent/" target="_blank" rel="noopener">Perplexity Bot using not honoring robots.txt or proper user agents</a> and the recent <a href="https://x.com/JohnPaczkowski/status/1799135156051255799" target="_blank" rel="noopener">clash with Forbes on potential plagiarism in Perplexity Pages</a>.</p>
+<h2 id="screenshots">Screenshots</h2>
+<p>
+
+
+<img src="perplexity-ai-library.jpeg" alt="Perplexity Library"  width="909"
+    height="846"  /></p>
+<h2 id="the-interview">The Interview</h2>
+<p>As I mentioned in the beginning, my deeper exploration of Perplexity was inspired by the interview of their CEO. In this long (three hours!) long interview, Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.</p>
+<p>All the while I  was using this tool, I would think back to the interview and realized that there are a lot of great nuggets that I need to write down. I did that, but the list is too long to fit into this post. So I wrote them in a separate post here - <a href="https://annjose.com/post/perplexity-ai-ceo-interview/">Inside Perplexity AI: Insights from the CEO Aravind Srinivas</a>. Hope you will enjoy the read!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>As of now, my verdict about Perplexity is that it is reliable and useful to discover new information and increase our understanding. It seems to be living up to the promise of being a tool to discover knowledge. At the end of the day, it also comes down to how they do it, including how they handle the controversies mentioned above. So if (and that is a big if) they do it right, this could revolutionize the way we discover knowledge.</p>
+<p>I wish all the best to the team at Perplexity so that they can make a positive change in how we discover information and that too, do it the right way. Please don&rsquo;t take shortcuts, don&rsquo;t disrespect the privacy of people and definitely don&rsquo;t make this an ad business.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/apple-intelligence/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/apple-intelligence/">The Apple of AI</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://annjose.com/post/perplexity-ai-ceo-insights/">Perplexity AI: Insights from the CEO Aravind Srinivas</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://annjose.com/post/perplexity-ai-ceo-insights/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+

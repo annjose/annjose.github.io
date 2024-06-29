@@ -8,7 +8,7 @@
     content="">
   <meta name="generator" content="Hugo 0.121.1">
 
-  <title>AI &middot; Reflections</title>
+  <title> &middot; Reflections</title>
 
   
   
@@ -45,9 +45,6 @@
   
 
   
-  
-  <link rel="alternate" type="application/rss+xml" title="Reflections"
-    href='https://annjose.com/tags/AI/index.xml' />
   
 
   
@@ -124,11 +121,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://annjose.com/tags/AI/index.xml'><i
-          class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -240,171 +232,83 @@
 
 
 <div class="header">
-  <h1>AI</h1>
+  <h1></h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="https://annjose.com/post/perplexity-ai-ceo-insights/">Perplexity AI: Insights from the CEO Aravind Srinivas</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Jun 2024</time>
+    <time>01 Jan 0001</time>
   </div>
 
   
 
   
-  
-  
-  
 
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>
-    
-  </div>
-  
   
 
 </div>
 
-  </header>
+  <p>How to integrate R2 with an application</p>
+<ol>
+<li>Create a bucket. Do not make it public - leave the default settings as is</li>
+<li>Create an API token with access to the bucket you want to use. You can create a tpken that has access too all the buckets too, but it is not good practice. Details in <a href="https://developers.cloudflare.com/r2/api/s3/tokens/" target="_blank" rel="noopener">https://developers.cloudflare.com/r2/api/s3/tokens/</a>. Copy the Access key id and Secret Access Key and put it into the .env file</li>
+<li>Add the bucketname.account.r2cloudstorage in nbext.config.js
+Give bthe bucket name in the S3 client config
+Use the s3-request-presigner SDK to get signed download urls</li>
+</ol>
 
-  <p>
-  Last week, I watched an interview of Aravind Srinivas, the CEO of Perplexity AI (https://www.perplexity.ai). It is a three-hour interview done by Lex Fridman where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.
-Fascinating interview - highly recommended for everyone to watch.
-  </p>
-
-  
-  <footer>
-    <a href="https://annjose.com/post/perplexity-ai-ceo-insights/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://annjose.com/post/perplexity-ai/">Perplexity AI: A Deep Dive</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>27 Jun 2024</time>
-  </div>
-
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/generative-ai">generative-ai</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/machine-learning">machine-learning</a>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
     
   </div>
-  
-  
-
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://annjose.com/post/first-post-from-hugo/">First post from Hugo</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://annjose.com/post/first-post-from-hugo/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
 </div>
 
-  </header>
 
-  <p>
-  Perplexity AI (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.
-All that changed last week when I watched this recent interview of Perplexity CEO Aravind Srinivas by Lex Fridman.
-  </p>
 
   
-  <footer>
-    <a href="https://annjose.com/post/perplexity-ai/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
 
-  
-    <article>
-  <header>
-    <h2><a href="https://annjose.com/post/apple-intelligence/">The Apple of AI</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>11 Jun 2024</time>
-  </div>
-
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
+(function() {
     
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/generative-ai">generative-ai</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>
-    
-  </div>
-  
-  
+    if (window.location.hostname == "localhost")
+        return;
 
-</div>
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-  </header>
 
-  <p>
-  The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was Apple Intelligence, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.
-What is Apple Intelligence? Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.
-The foundation models are trained on Apple&rsquo;s open-source AXLearn library for deep learning, built on top of JAX (Python library for accelerated computing and transformation) and XLA (Accelerated Linear Algebra, an open-source ML compiler).
-  </p>
-
-  
-  <footer>
-    <a href="https://annjose.com/post/apple-intelligence/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 </div>
 
 </div>
@@ -444,3 +348,4 @@ MathJax.Hub.Config({
 
 </body>
 </html>
+

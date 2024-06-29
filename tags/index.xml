@@ -7,34 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 11 Jun 2024 20:14:23 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2024 20:21:42 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>https://annjose.com/tags/AI/</link>
-      <pubDate>Tue, 11 Jun 2024 20:14:23 -0700</pubDate>
+      <pubDate>Thu, 27 Jun 2024 20:21:42 -0700</pubDate>
       <guid>https://annjose.com/tags/AI/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>generative-ai</title>
-      <link>https://annjose.com/tags/generative-ai/</link>
-      <pubDate>Tue, 11 Jun 2024 20:14:23 -0700</pubDate>
-      <guid>https://annjose.com/tags/generative-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
       <link>https://annjose.com/tags/LLM/</link>
-      <pubDate>Tue, 11 Jun 2024 20:14:23 -0700</pubDate>
+      <pubDate>Thu, 27 Jun 2024 20:21:42 -0700</pubDate>
       <guid>https://annjose.com/tags/LLM/</guid>
       <description></description>
     </item>
     <item>
       <title>tech-explorations</title>
       <link>https://annjose.com/tags/tech-explorations/</link>
-      <pubDate>Tue, 11 Jun 2024 20:14:23 -0700</pubDate>
+      <pubDate>Thu, 27 Jun 2024 20:21:42 -0700</pubDate>
       <guid>https://annjose.com/tags/tech-explorations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>generative-ai</title>
+      <link>https://annjose.com/tags/generative-ai/</link>
+      <pubDate>Thu, 27 Jun 2024 16:19:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/generative-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>machine-learning</title>
+      <link>https://annjose.com/tags/machine-learning/</link>
+      <pubDate>Thu, 27 Jun 2024 16:19:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
@@ -133,13 +140,6 @@
       <link>https://annjose.com/tags/chatgpt/</link>
       <pubDate>Sun, 12 Feb 2023 22:57:43 -0800</pubDate>
       <guid>https://annjose.com/tags/chatgpt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>machine-learning</title>
-      <link>https://annjose.com/tags/machine-learning/</link>
-      <pubDate>Sun, 12 Feb 2023 22:57:43 -0800</pubDate>
-      <guid>https://annjose.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>

@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 12 Feb 2023 22:57:43 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2024 16:19:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perplexity AI: A Deep Dive</title>
+      <link>https://annjose.com/post/perplexity-ai/</link>
+      <pubDate>Thu, 27 Jun 2024 16:19:12 -0700</pubDate>
+      <guid>https://annjose.com/post/perplexity-ai/</guid>
+      <description>Perplexity AI (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&amp;rsquo;t take it much seriously.&#xA;All that changed last week when I watched this recent interview of Perplexity CEO Aravind Srinivas by Lex Fridman.</description>
+    </item>
     <item>
       <title>Blog about ChatGPT in three different ways</title>
       <link>https://annjose.com/post/chatgpt-intro-3-ways/</link>

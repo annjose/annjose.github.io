@@ -3,25 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://annjose.com/tags/AI/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/generative-ai/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/LLM/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/perplexity-ai-ceo-insights/</loc>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/tech-explorations/</loc>
-    <lastmod>2024-06-11T20:14:23-07:00</lastmod>
+    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/generative-ai/</loc>
+    <lastmod>2024-06-27T16:19:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/machine-learning/</loc>
+    <lastmod>2024-06-27T16:19:12-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/perplexity-ai/</loc>
+    <lastmod>2024-06-27T16:19:12-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/apple-intelligence/</loc>
     <lastmod>2024-06-11T20:14:23-07:00</lastmod>
@@ -111,9 +120,6 @@
     <lastmod>2023-02-12T22:57:43-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/chatgpt/</loc>
-    <lastmod>2023-02-12T22:57:43-08:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/machine-learning/</loc>
     <lastmod>2023-02-12T22:57:43-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/chatgpt-intro/</loc>
@@ -229,6 +235,8 @@
   </url><url>
     <loc>https://annjose.com/post/first-post-from-hugo/</loc>
     <lastmod>2015-04-27T00:49:45-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/serve-images-cloudflare-r2/</loc>
   </url><url>
     <loc>https://annjose.com/categories/</loc>
   </url>
