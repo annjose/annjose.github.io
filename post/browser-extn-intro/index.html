@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="An introductory guide to building and troubleshooting browser extensions">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Browser Extensions: What, Why and How &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Browser Extensions: What, Why and How</h1>
+  <h2>An introductory guide to building and troubleshooting browser extensions</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Sep 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/modern-web-dev">modern-web-dev</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/web-development">web-development</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/building">building</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to <strong>Browser extensions</strong>.</p>
+<p>In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.</p>
+<h3 id="the-what">The What</h3>
+<p>Browser extensions are lightweight software components that can be integrated into web browsers to customize and enhance the web browsing experience. It enables you to modify web page content, add UI elements like buttons or sidebars, observe browser events, capture user input and run background scripts.</p>
+<p>These extensions are built using standard web technologies: HTML, CSS and JavaScript. You can use TypeScript too, but more on that later.  The extension package includes all the necessary resources (pages, stylesheets, images) as well as the business logic (code and scripts). They have access to many APIs including:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noopener">Web APIs</a> (eg: DOM APIs, fetch, alert etc.)</li>
+<li><a href="https://developer.chrome.com/docs/extensions/reference" target="_blank" rel="noopener">Chrome Extension APIs</a> (eg: chrome.action, chrome.alarms, chrome.scripting etc.)</li>
+</ul>
+<p>When ready to release, the extensions can be submitted to official stores like <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Google Chrome Web Store</a> or <a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home" target="_blank" rel="noopener">Microsoft Edge Add-ons</a> where it undergoes a thorough review and approval process. The approved extensions are published to these stores and users can easily install them to their browsers.</p>
+<p>An important security feature of browser extensions is that their source code is distributed as part of the package, and no additional code can be downloaded at runtime. This ensures that the extension&rsquo;s behavior is not altered after it was reviewed and approved by the store.</p>
+<p>A few examples of browser extensions that I found to be useful are <a href="https://chromewebstore.google.com/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn" target="_blank" rel="noopener">ublock ad-blocker</a>, <a href="https://chromewebstore.google.com/detail/readwise/egfepjgjabnppmaiadpedbgadkcelcbd" target="_blank" rel="noopener">Readwise reader</a>, <a href="https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi" target="_blank" rel="noopener">Readwise highlighter</a> and <a href="https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi" target="_blank" rel="noopener">React developer tools</a>.</p>
+<h3 id="the-why">The Why</h3>
+<p>Browser extensions give you a low-barrier way to customize websites. They are very easy to build, distribute and maintain - in fact, the simplest extension is often easier to create than the simplest website. You don&rsquo;t need your own domain or server to host the extension. No hosting costs. No special infrastructure required.</p>
+<p>They are also a great addition to your product portfolio, alongside other platforms such as websites, desktop apps for macOS and Windows, and mobile apps for iOS and Android. Browser extension helps you meet users wherever they are. Also, extensions built for one browser (eg: Chrome) typically work as-is for others (like MS Edge or Firefox), thereby expanding your reach  with minimal effort.</p>
+<p>And here is my favorite reason to build browser extension - the ability to tailor every website to my specific needs, while keeping them private and secure. For instance, you can integrate Perplexity or ChatGPT-like functionality to any website you browse. Instead of constantly copying and pasting content between standalone AI assistants and web pages, the extension brings that functionality into your browsing context - wherever you are. Keeping it in your private session ensures security and privacy. I love it!</p>
+<h3 id="the-how">The How</h3>
+<p>So, how do we build a browser extension. Let&rsquo;s dive in step-by-step in detail.</p>
+<p>The full source code for this extension is available in my GitHub repo <a href="https://github.com/annjose/browser-extensions/tree/main/hello-world-ext" target="_blank" rel="noopener">browser-extensions/hello-world-ext/</a>.</p>
+<h4 id="step-1-create-a-manifest-file">Step #1: Create a manifest file</h4>
+<p>Manifest file is a JSON file that defines all the metadata about the extension - <strong>name</strong>, <strong>version</strong>, <strong>author</strong>, the schema version of the manifest itself (<strong>manifest_version</strong>) and other attributes. The file is required to be named as <code>manifest.json</code> and located in the root directory of the extension.</p>
+<p>So, if you are creating a <strong>Hello Ext World</strong> extension, create a folder named <em>hello-world-ext</em> and create a manifest file as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;manifest_version&#34;</span>: <span style="color:#bd93f9">3</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Hello Ext World&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;A simple extension to say hello to the world.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;0.0.1&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;action&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;default_popup&#34;</span>: <span style="color:#f1fa8c">&#34;hello.html&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;default_icon&#34;</span>: <span style="color:#f1fa8c">&#34;hello.png&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You can learn more about the manifest file in the <a href="https://developer.chrome.com/docs/extensions/reference/manifest" target="_blank" rel="noopener">Chrome docs for manifest</a>.</p>
+<h4 id="step-2-create-the-resources-that-define-the-extension">Step #2: Create the resources that define the extension</h4>
+<p>The <strong>action</strong> attribute in the manifest file defines the appearance and behavior of the extension&rsquo;s icon in the browser toolbar. So we create the files that make up the extension and specify them inside the action attribute.</p>
+<p>First, create the icons that represent the extension. You can create one or more icons to represent the extension as per the following convention:</p>
+
+
+
+<table class="pure-table pure-table-striped">
+  <thead><tr>
+    
+      <th>Icon size </th>
+    
+      <th> Icon use                                              </th>
+    
+  </thead></tr>
+  <tbody>
+  
+    <tr>
+      
+      
+        <td>16x16     </td>
+      
+        <td> Favicon on the extension&#39;s pages and context menu     </td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>32x32     </td>
+      
+        <td> Windows computers often require this size             </td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>48x48     </td>
+      
+        <td> Displays on the Extensions page (chrome://extensions) </td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>128x128   </td>
+      
+        <td> Displays on installation and in the Chrome Web Store  </td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+<p>At the minimum, you should provide a 128 x 128 icon and a 48 x 48 icon to be used in the extensions page.</p>
+<p>Next, you create an HTML page to define the user interface of the extension. The UI will be displayed when the user clicks on the icon in the toolbar. The HTML page could be as simple as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>            Hello Ext World!
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Finally, specify the icon and the HTML file in the manifest file under the <strong>action</strong> key as properties <strong>default_icon</strong> for the main image of the extension and <strong>default_popup</strong> for the HTML page. You can also specify a title to displayed when the user hovers over the extension icon. It can also specify the web pages you are allowed to interact with, as URL match patterns. Make sure that all the HTML and image files are in the root folder of the extension.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;manifest_version&#34;</span>: <span style="color:#bd93f9">3</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Hello Ext World&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;A simple extension to say hello to the world.&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;0.0.1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;icons&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;16&#34;</span>: <span style="color:#f1fa8c">&#34;hello-icon-16.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;32&#34;</span>: <span style="color:#f1fa8c">&#34;hello-icon-32.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;48&#34;</span>: <span style="color:#f1fa8c">&#34;hello-icon-48.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;128&#34;</span>: <span style="color:#f1fa8c">&#34;hello-icon-128.png&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;action&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;default_popup&#34;</span>: <span style="color:#f1fa8c">&#34;hello.html&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;default_icon&#34;</span>: <span style="color:#f1fa8c">&#34;hello-icon-48.png&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="step-3-create-the-content-scripts">Step #3: Create the content scripts.</h4>
+<p>Content scripts are the JavaScript (or TypeScript) files that implement the core functionality of the extension. They can also include CSS files. They run in the context of the web pages and can read details of the web pages the browser visits, update their UI and pass information to other files in the extension. These scripts can be included in the extension in three ways:</p>
+<ol>
+<li><strong>Declare statically</strong> - specify the names of the script files in the manifest file under the key <strong>content_scripts</strong>. The <strong>js</strong> key specifies the JavaScript files, <strong>css</strong> key specifies the CSS files and the <strong>matches</strong> key specifies the web pages where this content script is injected into. Here is an example (see the full source code at <a href="https://github.com/annjose/browser-extensions/tree/main/reading-time-ext" target="_blank" rel="noopener">my GitHub repo browser-extensions</a>):</li>
+</ol>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;manifest_version&#34;</span>: <span style="color:#bd93f9">3</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Reading Time&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;0.2&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Calculates the reading time of the page and adds it at the top.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;content_scripts&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;js&#34;</span>: [<span style="color:#f1fa8c">&#34;scripts/my-content-script.js&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;matches&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;https://annjose.com/post/*&#34;</span>
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>Declare dynamically</strong> - register the content scripts with Chrome using the Scripting API in the <strong>chrome.scripting</strong> namespace. Use the APIs <em>registerContentScripts</em>, <em>updateContentScripts</em> and <em>unregisterContentScripts</em> to register, update and unregister the content scripts, and the <em>getRegisteredContentScripts</em> to get a list of registered scripts.</li>
+</ol>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>chrome.scripting
+</span></span><span style="display:flex;"><span>  .registerContentScripts([{
+</span></span><span style="display:flex;"><span>    id<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;my-content-script&#34;</span>,
+</span></span><span style="display:flex;"><span>    js<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#34;hello-script.js&#34;</span>],
+</span></span><span style="display:flex;"><span>    css<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#34;hello-styles.css&#34;</span>]
+</span></span><span style="display:flex;"><span>    matches<span style="color:#ff79c6">:</span> [<span style="color:#f1fa8c">&#34;https://*.annjose.com/*&#34;</span>],
+</span></span><span style="display:flex;"><span>    persistAcrossSessions<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    runAt<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;document_start&#34;</span>,
+</span></span><span style="display:flex;"><span>  }])
+</span></span><span style="display:flex;"><span>  .then(() =&gt; console.log(<span style="color:#f1fa8c">&#34;content script registered successfully.&#34;</span>))
+</span></span><span style="display:flex;"><span>  .<span style="color:#ff79c6">catch</span>((err) =&gt; console.warn(<span style="color:#f1fa8c">&#34;Error registering content script&#34;</span>, err))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>Inject programmatically</strong> - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Chrome Scripting API <strong>chrome.scripting.executeScript</strong>. This function will take either an array of script files or a function body, either of which will be executed in the context of the extension.</li>
+</ol>
+<h4 id="step-4-load-the-extension-in-your-browser">Step #4: Load the extension in your browser</h4>
+<p>As you are developing your extension, you can load them into your local browser to test and verify that everything is working as intended. Follow these steps:</p>
+<ul>
+<li>open the Extensions page in your browser by navigating to the page <strong>chrome://extensions/</strong> in your browser (Chrome or Microsoft Edge). Alternately, you can click the puzzle icon on the browser toolbar and select the option &lsquo;Manage Extensions&rsquo;.</li>
+<li>click the button <strong>Load Unpacked</strong>.</li>
+<li>Select the root folder of the extension, i.e. the folder where the manifest.json file is present.</li>
+</ul>
+<p>Now you will see the extension listed in the Extensions page. Make sure that the extension is enabled, if not use the switch button to enable it. Alternately, you can click the puzzle icon on the toolbar, scroll down to your extension and click the eye button to enable the extension.</p>
+<p>Now you should see the icon of your extension in the browser toolbar. If not, there may be some errors in loading the extension. Go back to the Extensions page and find the your extension&rsquo;s tile. If the tile shows a button named &lsquo;Errors&rsquo;, click on the button, review the loading errors and fix them.</p>
+<p>That&rsquo;s it! Your Hello World extension is ready!</p>
+<h4 id="step-5-modify-and-reload-the-extension">Step #5: Modify and reload the extension</h4>
+<p>You can continue to modify the extension by updating the HTML, JS or CSS files. Some of these changes will be updated automatically in the extension&rsquo;s user interface, while others may need an explicit &lsquo;reload&rsquo; step. You can reload an extension from the Extensions page by clicking on the <strong>Reload</strong> button inside your extension&rsquo;s tile. Apply the following neuristics to decide whether to reload the extension or not.</p>
+<ul>
+<li>have you changed the manifest (name, description, any json in it)? - Reload it!</li>
+<li>have you moved the extension files to another folder? - Reload it!</li>
+<li>have you modified the service worker? Reload it!</li>
+<li>have you modified the popup page (eg: hello.html) or options page? - Don&rsquo;t reload, done automatically.</li>
+<li>have you modified any of the other pages in the extension? - Don&rsquo;t reload, done automatically.</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>Let&rsquo;s look at a few issues that are frequently seen while building extensions and how to resolve them.</p>
+<h4 id="debugging-the-extension">Debugging the extension</h4>
+<p>In order to debug an extension, you can right click the extension&rsquo;s icon on the toolbar and click the button <strong>Inspect Pop-up Window</strong>. It will open a developer console in a popup window. This will display any console.log or console.error statements that you have put in your content scripts. It will also display any JS errors from your extension.</p>
+<p>Another way to debug the errors is to go to the Extensions page, locate the tile of your extension and look for an &lsquo;Error&rsquo;s button. This button is displayed only when there are any errors in loading the extension. Click on the button to see the errors and fix them.</p>
+<h4 id="file-not-found-error">File not found error</h4>
+<p>When you click on the tool bar icon of your extension, it shows &lsquo;File not found&rsquo;. The reason for this error is that the manifest file is not at the root directory of the extension.</p>
+<h4 id="extensions-icon-is-not-loaded">Extension&rsquo;s icon is not loaded</h4>
+<p>Sometimes, you may see that the icon shown in the toolbar is different from what you specified in the manifest file. This happens when the manifest file is not correct, for example, the icon is specified in the wrong attribute &lsquo;popup_action&rsquo;, it said &lsquo;popup_icon&rsquo;. If the browser cannot find the icon specified in the manifest, it will generate a default icon and use it. Fix the JSON and you will see the correct icon.</p>
+<h3 id="whats-next">What&rsquo;s Next</h3>
+<p>Chrome developer documentation has a lot of good tutorials on building extensions, for example:</p>
+<ul>
+<li><a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world" target="_blank" rel="noopener">Hello World extension</a></li>
+<li><a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab" target="_blank" rel="noopener">Run scripts on every page</a></li>
+</ul>
+<p>You can also look at the extensions that are available in my GitHub repo <a href="https://github.com/annjose/browser-extensions/" target="_blank" rel="noopener">annjose/browser-extensions</a>.</p>
+<p>I have also built an extension to calculate the reading time of a page and is integrated with my website. The source code for this extension is available at <a href="https://github.com/annjose/browser-extensions/tree/main/reading-time-ext" target="_blank" rel="noopener">browser-extensions/reading-time-ext</a>.</p>
+<p>Next, I want to build a private local extension that can bring the GPT 4o or Perplexity capabilities to every webpage I visit. I also want to write a follow-up of this post to explain the advanced concepts of browser extension. I have an early draft of that and will publich in the next couple of days. Stay tuned!</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab" target="_blank" rel="noopener">Chrome Documentation</a></li>
+<li>all my browser extensions - <a href="https://github.com/annjose/browser-extensions/" target="_blank" rel="noopener">annjose/browser-extensions</a></li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/reimagine-milestone/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/reimagine-milestone/">Reimagine Journey - A Big Milestone</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+

@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 01 Aug 2024 12:49:23 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2024 10:12:32 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Browser Extensions: What, Why and How</title>
+      <link>https://annjose.com/post/browser-extn-intro/</link>
+      <pubDate>Wed, 04 Sep 2024 10:12:32 -0700</pubDate>
+      <guid>https://annjose.com/post/browser-extn-intro/</guid>
+      <description>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.&#xA;In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.</description>
+    </item>
     <item>
       <title>Reimagine Journey - A Big Milestone</title>
       <link>https://annjose.com/post/reimagine-milestone/</link>

@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/post/browser-extn-intro/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/building/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/how-to/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/modern-web-dev/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/tech-explorations/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/web-development/</loc>
+    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/tags/career/</loc>
     <lastmod>2024-08-01T12:49:23-07:00</lastmod>
   </url><url>
@@ -11,16 +38,7 @@
     <loc>https://annjose.com/tags/personal-growth/</loc>
     <lastmod>2024-08-01T12:49:23-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/post/</loc>
-    <lastmod>2024-08-01T12:49:23-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2024-08-01T12:49:23-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/post/reimagine-milestone/</loc>
-    <lastmod>2024-08-01T12:49:23-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
     <lastmod>2024-08-01T12:49:23-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/AI/</loc>
@@ -30,9 +48,6 @@
     <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/perplexity-ai-ceo-insights/</loc>
-    <lastmod>2024-06-27T20:21:42-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/tech-explorations/</loc>
     <lastmod>2024-06-27T20:21:42-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/generative-ai/</loc>
@@ -47,25 +62,13 @@
     <loc>https://annjose.com/post/apple-intelligence/</loc>
     <lastmod>2024-06-11T20:14:23-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/how-to/</loc>
-    <lastmod>2024-06-05T12:42:25-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/tags/next.js/</loc>
     <lastmod>2024-06-05T12:42:25-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/nextjs-migrate-pages-app-router/</loc>
     <lastmod>2024-06-05T12:42:25-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/web-development/</loc>
-    <lastmod>2024-06-05T12:42:25-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/building/</loc>
-    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/post/how-to-customize-nextauth-session/</loc>
-    <lastmod>2024-03-22T10:25:12-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/modern-web-dev/</loc>
     <lastmod>2024-03-22T10:25:12-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/next-js/</loc>
