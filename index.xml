@@ -10,11 +10,11 @@
     <lastBuildDate>Fri, 25 Oct 2024 17:22:33 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Compare LLMs and AI Assistants</title>
-      <link>https://annjose.com/post/compare-llms-ai-assistants/</link>
+      <title>Compare AI Tools: LLMs and AI Assistants</title>
+      <link>https://annjose.com/post/compare-ai-tools-llms/</link>
       <pubDate>Fri, 25 Oct 2024 17:22:33 -0700</pubDate>
-      <guid>https://annjose.com/post/compare-llms-ai-assistants/</guid>
-      <description>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and how I found them useful in my day-to-day use.&#xA;There are multiple models to look at and multiple dimensions for each model. So they are represented as mind maps in three sections:&#xA;Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that use one or more of the above models.</description>
+      <guid>https://annjose.com/post/compare-ai-tools-llms/</guid>
+      <description>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.&#xA;In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:&#xA;Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that are powered by one or more of the above models.</description>
     </item>
     <item>
       <title>Ammachi Song</title>
