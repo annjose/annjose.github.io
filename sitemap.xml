@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/post/compare-llms-ai-assistants/</loc>
+    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/generative-ai/</loc>
+    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/how-to/</loc>
+    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/</loc>
+    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/ammachi/</loc>
     <lastmod>2024-09-30T12:14:56-07:00</lastmod>
   </url><url>
@@ -11,19 +29,7 @@
     <loc>https://annjose.com/tags/building/</loc>
     <lastmod>2024-09-04T10:12:32-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/how-to/</loc>
-    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/tags/modern-web-dev/</loc>
-    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/post/</loc>
-    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
     <lastmod>2024-09-04T10:12:32-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/tech-explorations/</loc>
@@ -52,9 +58,6 @@
   </url><url>
     <loc>https://annjose.com/post/perplexity-ai-ceo-insights/</loc>
     <lastmod>2024-06-27T20:21:42-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/generative-ai/</loc>
-    <lastmod>2024-06-27T16:19:12-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/machine-learning/</loc>
     <lastmod>2024-06-27T16:19:12-07:00</lastmod>

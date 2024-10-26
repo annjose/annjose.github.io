@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 04 Sep 2024 10:12:32 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2024 17:22:33 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compare LLMs and AI Assistants</title>
+      <link>https://annjose.com/post/compare-llms-ai-assistants/</link>
+      <pubDate>Fri, 25 Oct 2024 17:22:33 -0700</pubDate>
+      <guid>https://annjose.com/post/compare-llms-ai-assistants/</guid>
+      <description>In this post, I am comparing the most popular frontier models based on what I have read from vrious sources and my own personal experience of using them for various tasks.&#xA;At the end, we will also see a list of tasks that can be accomplished using LLMs and which tool is best for each task.&#xA;Compare the language models Compare the AI Assistants Compare the other models Tasks and the best tools Task Good options My choice explore world knowledge with latest up-to-date information ChatGPT, Perplexity AI , Microsoft Copilot Perplexity AI step-by-step reasoning, problem solving Claude 3.</description>
+    </item>
     <item>
       <title>Browser Extensions: What, Why and How</title>
       <link>https://annjose.com/post/browser-extn-intro/</link>
