@@ -303,12 +303,5 @@
       <guid>https://annjose.com/post/first-post-from-hugo/</guid>
       <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.&#xA;I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
     </item>
-    <item>
-      <title></title>
-      <link>https://annjose.com/post/serve-images-cloudflare-r2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://annjose.com/post/serve-images-cloudflare-r2/</guid>
-      <description>How to integrate R2 with an application&#xA;Create a bucket. Do not make it public - leave the default settings as is Create an API token with access to the bucket you want to use. You can create a tpken that has access too all the buckets too, but it is not good practice. Details in https://developers.cloudflare.com/r2/api/s3/tokens/. Copy the Access key id and Secret Access Key and put it into the .</description>
-    </item>
   </channel>
 </rss>
