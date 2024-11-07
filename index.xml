@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Oct 2024 17:22:33 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2024 15:54:13 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vercel&#39;s v0.dev: My Firsthand Experience</title>
+      <link>https://annjose.com/post/v0-dev-firsthand/</link>
+      <pubDate>Mon, 04 Nov 2024 15:54:13 -0700</pubDate>
+      <guid>https://annjose.com/post/v0-dev-firsthand/</guid>
+      <description>I have been using Vercel products for my web projects - their Next.js app framework, their deployment infrastructure and their AI SDK. All these tools are easy to use and onboard, they are reliable and fast - and most of them are open source, which I love ❤️.&#xA;Their latest innovation is v0.dev, an AI-powered tool that allows building frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code.</description>
+    </item>
     <item>
       <title>Compare AI Tools: LLMs and AI Assistants</title>
       <link>https://annjose.com/post/compare-ai-tools-llms/</link>
@@ -309,6 +316,13 @@
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
       <guid>https://annjose.com/post/first-post-from-hugo/</guid>
       <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.&#xA;I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://annjose.com/epsilla-eval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://annjose.com/epsilla-eval/</guid>
+      <description>Testing Method I uploaded a document that contains my notes from a JavaScript course I did a few months ago. These notes were very detailed and formatted as md file, so I thought it will be a good input to try Epsilla. I tried various prompts - all related to the document. I uploaded the same file to Perplexity and asked the same questions and compared the results.&#xA;Context I had tried this tool a few months ago, uploaded a couple of documents and created an application to ask questions about the document.</description>
     </item>
     <item>
       <title></title>

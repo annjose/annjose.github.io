@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/tags/how-to/</loc>
+    <lastmod>2024-11-04T15:54:13-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/</loc>
+    <lastmod>2024-11-04T15:54:13-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2024-11-04T15:54:13-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2024-11-04T15:54:13-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/v0-dev-firsthand/</loc>
+    <lastmod>2024-11-04T15:54:13-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/web-development/</loc>
+    <lastmod>2024-11-04T15:54:13-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/topics/AI/</loc>
     <lastmod>2024-10-25T17:22:33-07:00</lastmod>
   </url><url>
@@ -12,15 +30,6 @@
     <lastmod>2024-10-25T17:22:33-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/LLM/</loc>
-    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/post/</loc>
-    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
     <lastmod>2024-10-25T17:22:33-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/tech-explorations/</loc>
@@ -38,13 +47,7 @@
     <loc>https://annjose.com/tags/building/</loc>
     <lastmod>2024-09-04T10:12:32-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/how-to/</loc>
-    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/tags/modern-web-dev/</loc>
-    <lastmod>2024-09-04T10:12:32-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/web-development/</loc>
     <lastmod>2024-09-04T10:12:32-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/career/</loc>
@@ -250,6 +253,8 @@
   </url><url>
     <loc>https://annjose.com/post/first-post-from-hugo/</loc>
     <lastmod>2015-04-27T00:49:45-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/epsilla-eval/</loc>
   </url><url>
     <loc>https://annjose.com/post/serve-images-cloudflare-r2/</loc>
   </url><url>

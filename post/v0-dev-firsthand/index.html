@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="An introduction, hands-on experience and thoughts on why it matters to everyone">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Vercel&#39;s v0.dev: My Firsthand Experience &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Vercel&#39;s v0.dev: My Firsthand Experience</h1>
+  <h2>An introduction, hands-on experience and thoughts on why it matters to everyone</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Nov 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/web-development">web-development</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>I have been using <a href="https://vercel.com/home" target="_blank" rel="noopener">Vercel</a> products for my web projects - their <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js app framework</a>, their <a href="https://vercel.com/docs/deployments/overview" target="_blank" rel="noopener">deployment infrastructure</a> and their <a href="https://sdk.vercel.ai/" target="_blank" rel="noopener">AI SDK</a>. All these tools are easy to use and onboard, they are reliable and fast - and most of them are open source, which I love ❤️.</p>
+<p>Their latest innovation is <a href="https://vercel.com/ai" target="_blank" rel="noopener">v0.dev</a>, an AI-powered tool that allows building frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code.</p>
+<p>But recently, Vercel <a href="https://x.com/v0/status/1826020673908535325" target="_blank" rel="noopener">announced a major update</a> to v0.dev that includes integration with the popular <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components and external npm packages. So I decided to try it out yesterday.</p>
+<p>I was blown away by the experience. In just an hour, I was able to build a functional, good-looking website using v0.dev&rsquo;s chat interface. It was like magic - a series of &ldquo;jaw-drop&rdquo; moments. I was so excited that when George got home from work, I ran downstairs to rave about how awesome the tool was. Fun fact -  he had already tried it out and was thoroughly impressed, just that he admired it in a more quiet way than my excited reaction 🙂. Now it it time to share it with you.</p>
+<p>In this post, I&rsquo;ll share my firsthand experience with v0.dev - what I loved about it, a few quirks I found while using it, and what I wish the tool could do better. Most importantly, I&rsquo;ll discuss what I believe v0.dev means for developers, designers, entrepreneurs, and anyone building for the web.</p>
+<p>If you read this much and are thinking this is some crazy tech stuff and it&rsquo;s not relevant to me, I urge you to read the last section <a href="https://annjose.com/post/v0-dev-get-real/#final-thoughts">Final Thoughts</a> - because there I explain how (and this may sound cliché) this tool can transform your own abilities (or lack thereof) to build any website and do things you couldn&rsquo;t imagine before. Perhaps that will convince you to come back here and read the next section that explains what v0.dev is and what you can do with it.</p>
+<h3 id="what-is-v0dev">What is v0.dev?</h3>
+<p>v0.dev is a generative UI system that can generate code using modern web technologies like Next.js, React and Tailwind. In the latest update, they also revamped the conversational UI to be more meaningful and added the ability to pull third party packages into the generated code.</p>
+<ul>
+<li>
+<p>v0 can generate code in terms of UI, Next.js pages, or plain TypeScript / JavaScript. You can create a first version of the page and then &lsquo;modify&rsquo; it through the prompts in the chat interface. For example, you can ask &lsquo;show me another version of this page&rsquo;, &rsquo;the blue is too dark, make it lighter&rsquo;.</p>
+</li>
+<li>
+<p>In addition to the individual pages and components it creates, v0 can create an end-to-end project with all the files in the appropriate folder structure as per the Next.js convention. This was my biggest surprise. I asked it to create a charity website and asked it to create a few pages (About, Contact etc.). Then I clicked the button <code>Add to codebase</code> and it gives a npx command with a git repository. I copied it and ran it on my iTerm. And it created the project. That was awesome!</p>
+<p>Ideally, you should be able to run the app using <em>npm run dev</em>. But it didn&rsquo;t work for me right out of the box, there were a few build issues that I had to fix - more on that later.</p>
+</li>
+<li>
+<p>You can give a website&rsquo;s URL or screenshot and ask it to recreate the website using Next.js, Tailwind. I tried this with my website and it was fun watching it generate the code - that too with an animation as if it  &lsquo;printing&rsquo; my website.</p>
+</li>
+<li>
+<p>The UI code that it generates is built using <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components, a popular collection of re-usable components that are accessible, customizable and open source. The reverse is also true, every component on <a href="https://ui.shadcn.com/docs/v0" target="_blank" rel="noopener">shadcn.ui</a> is editable on v0. So you can choose any shadcn component, for example, this <a href="https://ui.shadcn.com/docs/components/calendar" target="_blank" rel="noopener">calendar component</a> and click the button &lsquo;Open in v0&rsquo; in the Preview mode. It will open up v0 with that component. So you can edit and customize it through the chat interface. This two-way integration works pretty well.</p>
+</li>
+</ul>
+<h3 id="how-is-it-different-from-chatgpt-or-claude">How is it different from ChatGPT or Claude?</h3>
+<p>It uses the up-to-date information of Next.js, including things that are in theit canary or experimental stream. This is the #1 thing that differentiates v0.dev from ChatGPT or Claude. We know that these tools also offer a conversation UI to answer questions, show code and execute it. But this is fine-tuned to the latest information.
+For example, here is the output of the same question to all these tools - it gave the client side form submission instead of the Next.js best practice of server actions. it also gives answers based on the Pages router instead of the newer App router paradigm. Interestingly, App router is no longer new, it is the defacto way of building Next.js apps.</p>
+<h3 id="other-goodies">Other goodies</h3>
+<ul>
+<li>
+<p>it can use third-party npm packages to render the UI. For example, it uses the use-debounce package to show confettit at the end of a form submission interaction. It used three.js library and generates complex code to render grass.</p>
+</li>
+<li>
+<p>it can generate diagrams using Mermaid to respond your questions with answers that are more meaningful with diagrams.</p>
+</li>
+<li>
+<p>You can publish your code and the prompts with anyone.</p>
+</li>
+<li>
+<p>In addition to Next.js, it can generate code in Vue.js. It doesn&rsquo;t support other web frameworks like Svelte or Flutter for mobile. In this video by Lee Robinson, they say that they are actively working on adding support for more frameworks.</p>
+</li>
+</ul>
+<h2 id="my-experience-of-using-v0">My experience of using v0</h2>
+<p>I used v0 for a few hours yesterday - at first to just create random projects like hello world, to do list etc. But then I decided to use it to create a charity website that I wanted to create for my uncle. I had been thinking about what this website should contain, referring to similar websites as inspiration and had selected a couple of templates to use. I also had a bunch of notes from talking to my uncle about all the work that his organization does.</p>
+<p>I just started giving all this information as &lsquo;requirements&rsquo; to v0. At first, I typed out the snippets of information and asked it to create a page. After that, I found it easier to just dictate the instructions, so I took my hand off the keyboard and started the dictation mode and just started narrating what I want in the website. v0 diligently followed the instructions and created the pages, tweaked it as I asked it to. At the end, I asked it to create a project &lsquo;Add to codebase&rsquo;</p>
+<h3 id="the-joy-and-magic">The joy and magic</h3>
+<p>It was a joy to start with</p>
+<ul>
+<li>I gave all the prompts through voice. Didn&rsquo;t touch the keyboard for the most part.
+it describes what it is going to do and then shows the results. This chain of thought reasoning is very useful because if it gets something wrong, you can see where it went wrong.</li>
+</ul>
+<p>This was my biggest surprise. I asked it to create a charity website and asked it to create a few pages (About, Contact etc.). Then I clicked the button <code>Add to codebase</code> and it gives a npx command . I copied it and ran it on my iTerm. And it created the project. That was awesome!</p>
+<p>When I tried to run it, there were a few issues - more on that later</p>
+<h3 id="the-hiccups-along-the-way">The hiccups along the way</h3>
+<p>When you try to run <code>npm run dev</code> you get an error like this:
+
+
+
+
+
+
+<figure>
+    <a href="https://annjose.com/post/v0-dev-firsthand/build-error.png" target="_blank">
+        <img srcset="https://annjose.com/post/v0-dev-firsthand/build-error_hudbdddaceb5de95541531230be8181f1d_71654_480x0_resize_box_3.png 480w, https://annjose.com/post/v0-dev-firsthand/build-error_hudbdddaceb5de95541531230be8181f1d_71654_768x0_resize_box_3.png 768w, https://annjose.com/post/v0-dev-firsthand/build-error_hudbdddaceb5de95541531230be8181f1d_71654_1024x0_resize_box_3.png 1024w"
+            sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/v0-dev-firsthand/build-error.png"
+            alt="alt text"  loading="lazy">
+    </a>
+    
+</figure>
+</p>
+<p>This is because of a name conflict in the project</p>
+<p>You have two entities named Page in the same scope, which is causing confusion for the compiler. Here&rsquo;s how to resolve this issue:
+The imported Page component:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { Page } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@/components/page&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The default exported function also named Page:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#8be9fd;font-style:italic">function</span> Page() {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> &lt;<span style="color:#ff79c6">Page</span> /&gt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The best way to solve it is to address the root cause - there should be only one Page component for the home page.
+So rename the page.tsx in components to HomePage.tsx and modify the main Page.tsx to refer to it as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#8be9fd;font-style:italic">function</span> Page() {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> &lt;<span style="color:#ff79c6">HomePage</span> /&gt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note that you need to put the <code>feault</code> keyboard on the export statement</p>
+<p>When i asked it create multiple pages, the exported project had only one page. I expected all the three pages to be added to the project. So I had to manually copy them</p>
+<p>Another error was
+Cannot find module &lsquo;@/components/ui/use-toast&rsquo; or its corresponding type declarations.ts(2307)</p>
+<p>from the line
+import { toast } from &ldquo;@/components/ui/use-toast&rdquo;</p>
+<p>Here, the <code>use-toast</code> is a hook which is in the folder `/components/hooks so update the path in the import statement
+import { toast } from &ldquo;@/hooks/use-toast&rdquo;</p>
+<p>Then you have one more error
+Cannot find module &lsquo;@/components/ui/toast&rsquo; or its corresponding type declarations.ts(2307)</p>
+<p>from the use-toast hook file.
+So you need to add the shadcn component for this</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>npx shadcn@latest add toast    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Refer <a href="https://ui.shadcn.com/docs/components/toast" target="_blank" rel="noopener">https://ui.shadcn.com/docs/components/toast</a> for details on this component</p>
+<h2 id="my-wishlist-for-v0dev">My wishlist for v0.dev</h2>
+<p>While my initial experience with v0 was fantastic, there are a few things that I didn&rsquo;t quite like and would give as feedback to the v0 team.</p>
+<ol>
+<li>
+<p>When it is asked to create multiple pages, the project should contain all of them, not just the page that was in the selection.</p>
+</li>
+<li>
+<p>I want continuity of the project. Once I create the project, there is no link between the chat and the project. It would be great if there is a way to carry it back and forth between the IDE and the chat. Perhaps a seamless handoff to Cusror AI or GitHub Copilot would be awesome.</p>
+</li>
+</ol>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>To put it in one sentence, this tool proves that Jensen Huang was right when he said that the next programming language is English. What they have done is a logical next step of</p>
+<p>It takes out a lot of repetitive low-level work that you need to do when you create a website.</p>
+<p>And let me remind you - it is never too late to start. If you have seen a post that has been going around - start in November, start on the 30th, start of Friday, start at 5pm, start today. Start Now!</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/compare-ai-tools-llms/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/compare-ai-tools-llms/">Compare AI Tools: LLMs and AI Assistants</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+

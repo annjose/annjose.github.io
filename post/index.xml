@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Oct 2024 17:22:33 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2024 15:54:13 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vercel&#39;s v0.dev: My Firsthand Experience</title>
+      <link>https://annjose.com/post/v0-dev-firsthand/</link>
+      <pubDate>Mon, 04 Nov 2024 15:54:13 -0700</pubDate>
+      <guid>https://annjose.com/post/v0-dev-firsthand/</guid>
+      <description>I have been using Vercel products for my web projects - their Next.js app framework, their deployment infrastructure and their AI SDK. All these tools are easy to use and onboard, they are reliable and fast - and most of them are open source, which I love ❤️.&#xA;Their latest innovation is v0.dev, an AI-powered tool that allows building frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code.</description>
+    </item>
     <item>
       <title>Compare AI Tools: LLMs and AI Assistants</title>
       <link>https://annjose.com/post/compare-ai-tools-llms/</link>
