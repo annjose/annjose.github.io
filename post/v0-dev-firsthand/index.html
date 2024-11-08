@@ -5,10 +5,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="An introduction, hands-on experience and thoughts on why it matters to everyone">
+    content="An introduction, hands-on experience and thoughts about v0.dev">
   <meta name="generator" content="Hugo 0.121.1">
 
-  <title>Vercel&#39;s v0.dev: My Firsthand Experience &middot; Reflections</title>
+  <title>Vercel v0.dev: My Firsthand Experience &middot; Reflections</title>
 
   
   
@@ -232,8 +232,8 @@
 
 
 <div class="header">
-  <h1>Vercel&#39;s v0.dev: My Firsthand Experience</h1>
-  <h2>An introduction, hands-on experience and thoughts on why it matters to everyone</h2>
+  <h1>Vercel v0.dev: My Firsthand Experience</h1>
+  <h2>An introduction, hands-on experience and thoughts about v0.dev</h2>
 </div>
 <div class="content">
 
@@ -267,60 +267,73 @@
 
 </div>
 
-  <p>I have been using <a href="https://vercel.com/home" target="_blank" rel="noopener">Vercel</a> products for my web projects - their <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js app framework</a>, their <a href="https://vercel.com/docs/deployments/overview" target="_blank" rel="noopener">deployment infrastructure</a> and their <a href="https://sdk.vercel.ai/" target="_blank" rel="noopener">AI SDK</a>. All these tools are easy to use and onboard, they are reliable and fast - and most of them are open source, which I love ❤️.</p>
-<p>Their latest innovation is <a href="https://vercel.com/ai" target="_blank" rel="noopener">v0.dev</a>, an AI-powered tool that allows building frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code.</p>
-<p>But recently, Vercel <a href="https://x.com/v0/status/1826020673908535325" target="_blank" rel="noopener">announced a major update</a> to v0.dev that includes integration with the popular <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components and external npm packages. So I decided to try it out yesterday.</p>
-<p>I was blown away by the experience. In just an hour, I was able to build a functional, good-looking website using v0.dev&rsquo;s chat interface. It was like magic - a series of &ldquo;jaw-drop&rdquo; moments. I was so excited that when George got home from work, I ran downstairs to rave about how awesome the tool was. Fun fact -  he had already tried it out and was thoroughly impressed, just that he admired it in a more quiet way than my excited reaction 🙂. Now it it time to share it with you.</p>
-<p>In this post, I&rsquo;ll share my firsthand experience with v0.dev - what I loved about it, a few quirks I found while using it, and what I wish the tool could do better. Most importantly, I&rsquo;ll discuss what I believe v0.dev means for developers, designers, entrepreneurs, and anyone building for the web.</p>
-<p>If you read this much and are thinking this is some crazy tech stuff and it&rsquo;s not relevant to me, I urge you to read the last section <a href="https://annjose.com/post/v0-dev-get-real/#final-thoughts">Final Thoughts</a> - because there I explain how (and this may sound cliché) this tool can transform your own abilities (or lack thereof) to build any website and do things you couldn&rsquo;t imagine before. Perhaps that will convince you to come back here and read the next section that explains what v0.dev is and what you can do with it.</p>
-<h3 id="what-is-v0dev">What is v0.dev?</h3>
-<p>v0.dev is a generative UI system that can generate code using modern web technologies like Next.js, React and Tailwind. In the latest update, they also revamped the conversational UI to be more meaningful and added the ability to pull third party packages into the generated code.</p>
+  <p>I have been using many <a href="https://vercel.com/home" target="_blank" rel="noopener">Vercel</a> products in my web projects - for example, their <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js app framework</a>, <a href="https://vercel.com/docs/deployments/overview" target="_blank" rel="noopener">deployment infrastructure</a> and <a href="https://sdk.vercel.ai/" target="_blank" rel="noopener">Vercel AI SDK</a>. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.</p>
+<p>Their latest innovation is <a href="https://vercel.com/ai" target="_blank" rel="noopener">v0.dev</a>, an AI-powered tool that helps you build frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code. However, <a href="https://x.com/v0/status/1826020673908535325" target="_blank" rel="noopener">v0.dev recently announced a major update</a> that includes integration with the popular <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components and the ability to pull in external npm packages. So I decided to try it out yesterday.</p>
+<p>The experience was mind blowing. In just an hour, I was able to build a functional, good-looking website using v0.dev&rsquo;s chat interface. It felt like magic - a series of &ldquo;jaw-drop&rdquo; moments. I was so excited that when George got home from work, I ran downstairs to rave about how awesome the tool was. Fun fact -  he had already tried it out and was thoroughly impressed, just in a subdued way than my excited reaction 🙂.</p>
+<p>Now in this post, I&rsquo;ll give a brief <a href="#what-is-v0.dev">introduction of what v0.dev</a>, share <a href="#my-firsthand-experience">my firsthand experience</a> of using it - what I loved about it, a few quirks I found while using it, and what I wish the tool could do better. Most importantly, I&rsquo;ll <a href="#final-thoughts">discuss what I believe v0.dev means</a> for developers, designers, entrepreneurs, and anyone <em>using</em> the web.</p>
+<p>If you&rsquo;ve read this far and are thinking this is some crazy tech stuff and it&rsquo;s not relevant to you, I urge you to read the last section <a href="https://annjose.com/post/v0-dev-get-real/#final-thoughts">Final Thoughts</a>, There, I explain how this tool can (sorry if this sounds cliché) transform your own abilities (or perceived lack thereof) to build any website. Whether you are a developer, designer, product manager or just anyone who has dreamed of creating a website on your own, you&rsquo;ll see how v0 makes it possible. Perhaps that will convince you to come back and read the next section, which explains what v0.dev is and what you can do with it.</p>
+<h2 id="what-is-v0.dev">1. What is v0.dev?</h2>
+<p>v0.dev is a chat-based website builder that generates code using modern web technologies like Next.js, React, Tailwind CSS, and shadcn UI components. It uses AI to generate interactive web pages with minimal effort, all within your browser. You can preview, modify and seamlessly deploy these pages to the cloud. Let&rsquo;s explore a simple exercise to see this tool in action.</p>
+<h3 id="get-started">A simple example to get started</h3>
+<p>Visit <a href="https://v0.dev" target="_blank" rel="noopener">https://v0.dev</a> and give a simple prompt - <em>create a todo list app with blue theme</em>. It will generate a &lsquo;To Do List&rsquo; page and display it on the right side. In this fully interactive page, you can add, view and delete tasks. The page is built using using React, Tailwind CSS and TypeScript. You can switch to the Code mode to view the clean, modern code behind it.</p>
+<p>From here, you can modify the page simply through prompts in the chat interface - all within your browser. For example, you can say &lsquo;implement edit feature where i can edit the tasks in the list&rsquo; and it will generate an updated version of the code that implements the UI and logic for the Edit feature. You can play around this and test it out.</p>
+<p>You can have more fun with it by &rsquo;talking&rsquo; to it in plain English, for example,</p>
+<blockquote>
+<p><em>the blue in the heading is too dark, make it lighter, more pleasing to the eye. also add a search and sort features - i want to sort the tasks alphabetically</em></p>
+</blockquote>
+<p>It will update the page and the code with all these changes in just a few seconds. Impressive, right? I was also impressed by the quality of the generated code - neatly organized and following the best practices of TypeScript, React and Tailwind.</p>
+<p>Here are the three iterations of our To Do app:</p>
+<h3 id="wait-a-minute-isnt-this-what-chatgpt-or-claude-does">Wait a minute, isn&rsquo;t this what ChatGPT or Claude does?</h3>
+<p>Yes, to a small extent, as both these tools give a chat based interface to generate and execute code. However, v0 does beyond that.</p>
+<p>First, it uses the most up-to-date information of Next.js, including features from experimental releases, as v0 is fine-tuned with the latest knowledge of the framework. As an example, if you ask ChatGPT to &lsquo;create a Next.js form&rsquo;, it generates code using the client side form submission paradigm instead of the Next.js best practice of server actions. Similarly, that code would use the Pages router instead of the newer, improved App router paradigm, which is now the de facto way of building Next.js apps.</p>
+<p>v0 takes it even further - which was my biggest &ldquo;Wow! &ldquo;moment - by creating a Next.js project out-of-the-box. With the same prompt as above, ChatGPT would give you step-by-step instructions on how to create a Next.js project, install Tailwind, create a component, run the application etc. But v0 will literally do all of this for you. It gives you a complete project that you can download, open in your favorite IDE and run - all out-of-the-box. See more details about it in the next section.</p>
+<h2 id="what-it-can-do">2 What all can v0.dev do?</h2>
+<p>We will split this into two parts - the basics and the advanced - just for better readability and understanding.</p>
+<h3 id="21-what-can-it-do---the-basics">2.1 What can it do - The basics</h3>
+<p>v0.dev is a complete solution to build web applications.</p>
 <ul>
 <li>
-<p>v0 can generate code in terms of UI, Next.js pages, or plain TypeScript / JavaScript. You can create a first version of the page and then &lsquo;modify&rsquo; it through the prompts in the chat interface. For example, you can ask &lsquo;show me another version of this page&rsquo;, &rsquo;the blue is too dark, make it lighter&rsquo;.</p>
+<p>You can also <strong>share your work</strong> with someone - click the &lsquo;Share&rsquo; button and click &lsquo;Public with link&rsquo;. It creates a link with the full chat interaction along with the code and the preview is. Here is the <a href="https://v0.dev/chat/80LiwrGXZ7h?b=b_qrkTSdrxhBG" target="_blank" rel="noopener">chat for the todo app</a> that we created above.</p>
 </li>
 <li>
-<p>In addition to the individual pages and components it creates, v0 can create an end-to-end project with all the files in the appropriate folder structure as per the Next.js convention. This was my biggest surprise. I asked it to create a charity website and asked it to create a few pages (About, Contact etc.). Then I clicked the button <code>Add to codebase</code> and it gives a npx command with a git repository. I copied it and ran it on my iTerm. And it created the project. That was awesome!</p>
-<p>Ideally, you should be able to run the app using <em>npm run dev</em>. But it didn&rsquo;t work for me right out of the box, there were a few build issues that I had to fix - more on that later.</p>
+<p>You can <strong>publish the website</strong> with someone - click the &lsquo;Share&rsquo; button at the top and go to the Publish section. Here, the chat remains private, but the website is public. For example, here is the published page of the todo app - <a href="https://b_qrktsdrxhbg.v0.build/" target="_blank" rel="noopener">https://b_qrktsdrxhbg.v0.build/</a>. It is a fully functional app published on cloud - go ahead and try it out!</p>
 </li>
 <li>
-<p>You can give a website&rsquo;s URL or screenshot and ask it to recreate the website using Next.js, Tailwind. I tried this with my website and it was fun watching it generate the code - that too with an animation as if it  &lsquo;printing&rsquo; my website.</p>
+<p>If you have a website that you love and wants to be used as an inspiration for the site that you are building, you can simply give the site&rsquo;s URL (or just a screenshot of it) in the chat prompt and ask it to create a site using this as as an inspiration. I tried this with my own website and it worked great.</p>
 </li>
 <li>
-<p>The UI code that it generates is built using <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components, a popular collection of re-usable components that are accessible, customizable and open source. The reverse is also true, every component on <a href="https://ui.shadcn.com/docs/v0" target="_blank" rel="noopener">shadcn.ui</a> is editable on v0. So you can choose any shadcn component, for example, this <a href="https://ui.shadcn.com/docs/components/calendar" target="_blank" rel="noopener">calendar component</a> and click the button &lsquo;Open in v0&rsquo; in the Preview mode. It will open up v0 with that component. So you can edit and customize it through the chat interface. This two-way integration works pretty well.</p>
+<p>v0 can <strong>create a Next.js project</strong> from the web pages you have created in the chat. You can click the button <strong>Add to codebase</strong> at the top and it will generate an npx command that you can run on your local machine. This command creates a Next.js project that contains a local git repository, correct configuration files, follows the best-practice conventions and folder structure. You can open this project in your favorite IDE and run the following command:</p>
 </li>
 </ul>
-<h3 id="how-is-it-different-from-chatgpt-or-claude">How is it different from ChatGPT or Claude?</h3>
-<p>It uses the up-to-date information of Next.js, including things that are in theit canary or experimental stream. This is the #1 thing that differentiates v0.dev from ChatGPT or Claude. We know that these tools also offer a conversation UI to answer questions, show code and execute it. But this is fine-tuned to the latest information.
-For example, here is the output of the same question to all these tools - it gave the client side form submission instead of the Next.js best practice of server actions. it also gives answers based on the Pages router instead of the newer App router paradigm. Interestingly, App router is no longer new, it is the defacto way of building Next.js apps.</p>
-<h3 id="other-goodies">Other goodies</h3>
-<ul>
-<li>
-<p>it can use third-party npm packages to render the UI. For example, it uses the use-debounce package to show confettit at the end of a form submission interaction. It used three.js library and generates complex code to render grass.</p>
-</li>
-<li>
-<p>it can generate diagrams using Mermaid to respond your questions with answers that are more meaningful with diagrams.</p>
-</li>
-<li>
-<p>You can publish your code and the prompts with anyone.</p>
-</li>
-<li>
-<p>In addition to Next.js, it can generate code in Vue.js. It doesn&rsquo;t support other web frameworks like Svelte or Flutter for mobile. In this video by Lee Robinson, they say that they are actively working on adding support for more frameworks.</p>
-</li>
-</ul>
-<h2 id="my-experience-of-using-v0">My experience of using v0</h2>
-<p>I used v0 for a few hours yesterday - at first to just create random projects like hello world, to do list etc. But then I decided to use it to create a charity website that I wanted to create for my uncle. I had been thinking about what this website should contain, referring to similar websites as inspiration and had selected a couple of templates to use. I also had a bunch of notes from talking to my uncle about all the work that his organization does.</p>
-<p>I just started giving all this information as &lsquo;requirements&rsquo; to v0. At first, I typed out the snippets of information and asked it to create a page. After that, I found it easier to just dictate the instructions, so I took my hand off the keyboard and started the dictation mode and just started narrating what I want in the website. v0 diligently followed the instructions and created the pages, tweaked it as I asked it to. At the end, I asked it to create a project &lsquo;Add to codebase&rsquo;</p>
-<h3 id="the-joy-and-magic">The joy and magic</h3>
-<p>It was a joy to start with</p>
-<ul>
-<li>I gave all the prompts through voice. Didn&rsquo;t touch the keyboard for the most part.
-it describes what it is going to do and then shows the results. This chain of thought reasoning is very useful because if it gets something wrong, you can see where it went wrong.</li>
-</ul>
-<p>This was my biggest surprise. I asked it to create a charity website and asked it to create a few pages (About, Contact etc.). Then I clicked the button <code>Add to codebase</code> and it gives a npx command . I copied it and ran it on my iTerm. And it created the project. That was awesome!</p>
-<p>When I tried to run it, there were a few issues - more on that later</p>
+<blockquote>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<blockquote>
+<p>Voilà! The new website will be running on http://localhost:3000 (the port number may be different if it is already in use). How cool is that?</p>
+</blockquote>
+<p>There is a lot more that v0.dev can do, but before we go there, allow me to share my experience of using this for the first time.</p>
+<h2 id="my-firsthand-experience">3. My experience of using v0</h2>
+<p>I used v0.dev for a few days, albeit limited by the maximum amount of messages available in my Free tier. Initially, I created simple apps like a to do list, BlueSky clone with green theme and a LinkedIn clone.</p>
+<p>Then, I tried to clone my own website with the following prompt:</p>
+<blockquote>
+<p><em>this is the screenshot of a website. can you create a functioning website like this</em></p>
+</blockquote>
+<p>It created a clone of my home page. <a href="https://v0.dev/chat/uAiEwKFIMU5?b=b_x2rjbflRbZe" target="_blank" rel="noopener">Here is the output</a> - obviously not picture perfect, but pretty close. It was super fun watching it generate the code with a cool animation as if it was &lsquo;printing&rsquo; my website.</p>
+<p>Then it dawned on me that I had promised my uncle I would create a charity website for him. I have been thinking about this project for a while, had taken notes on his inputs about what he wanted in the site, and had referred to a few charity websites for inspiration and had shortlisted a few themes I liked.</p>
+<p>I opened a new chat in v0.dev and simply started inputting all this information as &lsquo;requirements&rsquo;. It created a first version of the home page. Then I gave additional prompts to tweak the UI and make it more interactive. At first, I typed out the prompts, but then I found it easier to just dictate them using the macOS built-in dictation tool.</p>
+<p>Now the fun starts - I launched the dictation tool, took my hands off the keyboard and started narrating the prompts - to make more changes, create multiple versions of the page with different themes and templates. When the basic version was good enough, I asked it to create more pages like <em>About</em>, <em>Our work</em>, <em>Stories</em>, and a <em>Contact Us</em> page. v0 diligently followed my instructions to the letter. It was super fun - I felt like I was a god, you know 😎.</p>
+<p>Throughout this process, it would explain what it is going to do, make those changes and then explain what it did - in a detailed step-by-step section. This chain of thought reasoning is very useful because if it gets something wrong, you can see where the error occurred.</p>
+<p>At the end, I used &lsquo;Add to codebase&rsquo; button to create a project from these pages, ran the npx command on my local machine and opened in my IDE. When I tried to run the app, there were a few issues - more on that in the next section.</p>
 <h3 id="the-hiccups-along-the-way">The hiccups along the way</h3>
-<p>When you try to run <code>npm run dev</code> you get an error like this:
+<h4 id="issue-1">Issue #1</h4>
+<p>After I created the project from v0.dev and tried to run the command <em>npm run dev</em> to run the application, I got the following error:
 
 
 
@@ -336,9 +349,9 @@ it describes what it is going to do and then shows the results. This chain of th
     
 </figure>
 </p>
-<p>This is because of a name conflict in the project</p>
-<p>You have two entities named Page in the same scope, which is causing confusion for the compiler. Here&rsquo;s how to resolve this issue:
-The imported Page component:</p>
+<p>I thought this was a one-off issue, so tried it again with another v0 project and got the same error. As the error states, there is a name conflict for the Page component, i.e. there are two components with the name <em>Page</em> in the same scope and they are referring each other without a qualifier.
+These are the two components in the generated code:</p>
+<p>The imported Page component:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -360,7 +373,7 @@ The imported Page component:</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>The best way to solve it is to address the root cause - there should be only one Page component for the home page.
+</div><p>The solution is simple - rename one of them and resolve the conflict, or consolidate both into one component. The best way to solve it is to address the root cause - there should be only one Page component for the home page.
 So rename the page.tsx in components to HomePage.tsx and modify the main Page.tsx to refer to it as follows:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -374,18 +387,34 @@ So rename the page.tsx in components to HomePage.tsx and modify the main Page.ts
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Note that you need to put the <code>feault</code> keyboard on the export statement</p>
-<p>When i asked it create multiple pages, the exported project had only one page. I expected all the three pages to be added to the project. So I had to manually copy them</p>
-<p>Another error was
-Cannot find module &lsquo;@/components/ui/use-toast&rsquo; or its corresponding type declarations.ts(2307)</p>
-<p>from the line
-import { toast } from &ldquo;@/components/ui/use-toast&rdquo;</p>
-<p>Here, the <code>use-toast</code> is a hook which is in the folder `/components/hooks so update the path in the import statement
-import { toast } from &ldquo;@/hooks/use-toast&rdquo;</p>
-<p>Then you have one more error
-Cannot find module &lsquo;@/components/ui/toast&rsquo; or its corresponding type declarations.ts(2307)</p>
-<p>from the use-toast hook file.
-So you need to add the shadcn component for this</p>
+</div><h4 id="issue-2">Issue #2</h4>
+<p>There was another build error as follows:</p>
+<blockquote>
+<p>Cannot find module &lsquo;@/components/ui/use-toast&rsquo; or its corresponding type declarations.ts(2307)</p>
+</blockquote>
+<p>from the line</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { toast } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@/components/ui/use-toast&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Here, the <em>use-toast</em> is a hook which is in the folder <em>/components/hooks</em> so update the path in the import statement</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { toast } from <span style="color:#f1fa8c">&#34;@/hooks/use-toast&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When you fix this, there will be one more error from the use-toast hook file</p>
+<blockquote>
+<p>Cannot find module &lsquo;@/components/ui/toast&rsquo; or its corresponding type declarations.ts(2307)</p>
+</blockquote>
+<p>So you need to add the shadcn component for this</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -394,20 +423,38 @@ So you need to add the shadcn component for this</p>
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>npx shadcn@latest add toast    
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Refer <a href="https://ui.shadcn.com/docs/components/toast" target="_blank" rel="noopener">https://ui.shadcn.com/docs/components/toast</a> for details on this component</p>
+</div><p>Refer <a href="https://ui.shadcn.com/docs/components/toast" target="_blank" rel="noopener">https://ui.shadcn.com/docs/components/toast</a> for details on this component.</p>
+<h4 id="issue-3">Issue #3</h4>
+<p>I had created three pages in the v0 chat and uses the Add to Codebase button to create the Next.js project. I expected all the three pages to be added to the project. However, the project that had only one of those pages. So I had to manually copy the other pages into the project.</p>
+<h3 id="22-what-can-it-do---the-advanced">2.2 What can it do - The advanced</h3>
+<ul>
+<li>
+<p>The UI code that it generates is built using <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components, a popular collection of re-usable components that are accessible, customizable and open source. The reverse is also true, every component on <a href="https://ui.shadcn.com/docs/v0" target="_blank" rel="noopener">shadcn.ui</a> is editable on v0. So you can choose any shadcn component, for example, this <a href="https://ui.shadcn.com/docs/components/calendar" target="_blank" rel="noopener">calendar component</a> and click the button &lsquo;Open in v0&rsquo; in the Preview mode. It will open up v0 with that component. So you can edit and customize it through the chat interface. This two-way integration works pretty well.</p>
+</li>
+<li>
+<p>For every prompt, the chat response includes a section of what it is going to do and a step-by-step breakdown of what it has done - the code changes, the new features it is implementing and how it works. This was my next biggest surprise. We know that good LLMs give chain of thought reasoning, but this was a great example of that done well and in a useful way.</p>
+</li>
+<li>
+<p>You can <strong>fork a chat</strong> from its existing point to a new snapshot. This is super helpful when you have a base version and want to modify it without disturbing the work done so far, or you want to modify a version that you received from someone else.</p>
+</li>
+<li>
+<p>it can use third-party npm packages to render the UI. For example, it uses the use-debounce package to show confetti at the end of a form submission interaction. It uses three.js library and generates complex code to render grass.</p>
+</li>
+<li>
+<p>it can generate diagrams using <a href="https://mermaid.js.org/" target="_blank" rel="noopener">Mermaid</a> to respond your questions with answers that are more meaningful with diagrams.</p>
+</li>
+<li>
+<p>In addition to Next.js, it can <strong>generate code in Vue.js</strong>. It doesn&rsquo;t support other web frameworks like Svelte or Flutter for mobile. In this video by Lee Robinson, they say that they are actively working on adding support for more frameworks.</p>
+</li>
+</ul>
 <h2 id="my-wishlist-for-v0dev">My wishlist for v0.dev</h2>
 <p>While my initial experience with v0 was fantastic, there are a few things that I didn&rsquo;t quite like and would give as feedback to the v0 team.</p>
-<ol>
-<li>
-<p>When it is asked to create multiple pages, the project should contain all of them, not just the page that was in the selection.</p>
-</li>
-<li>
-<p>I want continuity of the project. Once I create the project, there is no link between the chat and the project. It would be great if there is a way to carry it back and forth between the IDE and the chat. Perhaps a seamless handoff to Cusror AI or GitHub Copilot would be awesome.</p>
-</li>
-</ol>
+<p>My most important wish is that I want continuity of the project. Once I create the project, there is no link between the chat and the project. It would be great if there is a way to carry it back and forth between the IDE and the chat. Perhaps a seamless handoff to Cusror AI or GitHub Copilot would be awesome.</p>
+<p>As mentioned above, I was disappointed to see the aut-generated project included only one of the web pages that I created. The project should contain all of them, not just the page that was in the selection.</p>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>To put it in one sentence, this tool proves that Jensen Huang was right when he said that the next programming language is English. What they have done is a logical next step of</p>
 <p>It takes out a lot of repetitive low-level work that you need to do when you create a website.</p>
+<p>It&rsquo;s like pair programming with an AI that actually understands what you want. The ability to iterate and test in real-time, all in the browser, is game-changing for web development.</p>
 <p>And let me remind you - it is never too late to start. If you have seen a post that has been going around - start in November, start on the 30th, start of Friday, start at 5pm, start today. Start Now!</p>
 
 

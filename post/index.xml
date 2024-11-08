@@ -10,11 +10,11 @@
     <lastBuildDate>Mon, 04 Nov 2024 15:54:13 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Vercel&#39;s v0.dev: My Firsthand Experience</title>
+      <title>Vercel v0.dev: My Firsthand Experience</title>
       <link>https://annjose.com/post/v0-dev-firsthand/</link>
       <pubDate>Mon, 04 Nov 2024 15:54:13 -0700</pubDate>
       <guid>https://annjose.com/post/v0-dev-firsthand/</guid>
-      <description>I have been using Vercel products for my web projects - their Next.js app framework, their deployment infrastructure and their AI SDK. All these tools are easy to use and onboard, they are reliable and fast - and most of them are open source, which I love ❤️.&#xA;Their latest innovation is v0.dev, an AI-powered tool that allows building frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code.</description>
+      <description>I have been using many Vercel products in my web projects - for example, their Next.js app framework, deployment infrastructure and Vercel AI SDK. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.&#xA;Their latest innovation is v0.dev, an AI-powered tool that helps you build frontend applications using a conversational chat interface.</description>
     </item>
     <item>
       <title>Compare AI Tools: LLMs and AI Assistants</title>
