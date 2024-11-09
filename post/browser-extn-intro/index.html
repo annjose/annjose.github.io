@@ -5,10 +5,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="An introductory     guide to building and troubleshooting browser extensions">
+    content="An introductory guide to building and troubleshooting browser extensions">
   <meta name="generator" content="Hugo 0.121.1">
 
-  <title>Browser Extensions: What, Why and How &middot; Reflections</title>
+  <title>Browser Extensions: Part 1 - Introduction &middot; Reflections</title>
 
   
   
@@ -232,8 +232,8 @@
 
 
 <div class="header">
-  <h1>Browser Extensions: What, Why and How</h1>
-  <h2>An introductory     guide to building and troubleshooting browser extensions</h2>
+  <h1>Browser Extensions: Part 1 - Introduction</h1>
+  <h2>An introductory guide to building and troubleshooting browser extensions</h2>
 </div>
 <div class="content">
 
@@ -248,6 +248,13 @@
 
   
   
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/browser-extensions">browser-extensions</a>
+    
+  </div>
   
   
 
@@ -274,8 +281,8 @@
 </div>
 
   <p>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to <strong>Browser extensions</strong>.</p>
-<p>In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.</p>
-<h3 id="the-what">The What</h3>
+<p>In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a>.</p>
+<h2 id="the-what">The What</h2>
 <p>Browser extensions are lightweight software components that can be integrated into web browsers to customize and enhance the web browsing experience. It enables you to modify web page content, add UI elements like buttons or sidebars, observe browser events, capture user input and run background scripts.</p>
 <p>These extensions are built using standard web technologies: HTML, CSS and JavaScript. You can use TypeScript too, but more on that later.  The extension package includes all the necessary resources (pages, stylesheets, images) as well as the business logic (code and scripts). They have access to many APIs including:</p>
 <ul>
@@ -285,11 +292,11 @@
 <p>When ready to release, the extensions can be submitted to official stores like <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Google Chrome Web Store</a> or <a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home" target="_blank" rel="noopener">Microsoft Edge Add-ons</a> where it undergoes a thorough review and approval process. The approved extensions are published to these stores and users can easily install them to their browsers.</p>
 <p>An important security feature of browser extensions is that their source code is distributed as part of the package, and no additional code can be downloaded at runtime. This ensures that the extension&rsquo;s behavior is not altered after it was reviewed and approved by the store.</p>
 <p>A few examples of browser extensions that I found to be useful are <a href="https://chromewebstore.google.com/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn" target="_blank" rel="noopener">ublock ad-blocker</a>, <a href="https://chromewebstore.google.com/detail/readwise/egfepjgjabnppmaiadpedbgadkcelcbd" target="_blank" rel="noopener">Readwise reader</a>, <a href="https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi" target="_blank" rel="noopener">Readwise highlighter</a> and <a href="https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi" target="_blank" rel="noopener">React developer tools</a>.</p>
-<h3 id="the-why">The Why</h3>
+<h2 id="the-why">The Why</h2>
 <p>Browser extensions give you a low-barrier way to customize websites. They are very easy to build, distribute and maintain - in fact, the simplest extension is often easier to create than the simplest website. You don&rsquo;t need your own domain or server to host the extension. No hosting costs. No special infrastructure required.</p>
 <p>They are also a great addition to your product portfolio, alongside other platforms such as websites, desktop apps for macOS and Windows, and mobile apps for iOS and Android. Browser extension helps you meet users wherever they are. Also, extensions built for one browser (eg: Chrome) typically work as-is for others (like MS Edge or Firefox), thereby expanding your reach  with minimal effort.</p>
 <p>And here is my favorite reason to build browser extension - the ability to tailor every website to my specific needs, while keeping them private and secure. For instance, you can integrate Perplexity or ChatGPT-like functionality to any website you browse. Instead of constantly copying and pasting content between standalone AI assistants and web pages, the extension brings that functionality into your browsing context - wherever you are. Keeping it in your private session ensures security and privacy. I love it!</p>
-<h3 id="the-how">The How</h3>
+<h2 id="the-how">The How</h2>
 <p>So, how do we build a browser extension. Let&rsquo;s dive in step-by-step in detail.</p>
 <p>The source code for the extensions discussed here is available in my GitHub repo <a href="https://github.com/annjose/browser-extensions" target="_blank" rel="noopener">annjose/browser-extensions</a>.</p>
 <h4 id="step-1-create-a-manifest-file">Step #1: Create a manifest file</h4>
@@ -516,7 +523,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
-<li><strong>Inject programmatically</strong> - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Scripting API - <strong>chrome.scripting.executeScript()</strong>. The sample code this method is lengthy, so I will give it in the follow-up blog post.</li>
+<li><strong>Inject programmatically</strong> - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Scripting API - <strong>chrome.scripting.executeScript()</strong>. The sample code this method is lengthy, so I will give it in the follow-up blog post at <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a>.</li>
 </ol>
 <h4 id="step-4-load-the-extension-in-your-browser">Step #4: Load the extension in your browser</h4>
 <p>As you are developing your extension, you can load them into your local browser to test and verify that everything is working as intended. Follow these steps:</p>
@@ -546,7 +553,7 @@
 <p>When you click on the tool bar icon of your extension, it shows &lsquo;File not found&rsquo;. The reason for this error is that the manifest file is not at the root directory of the extension.</p>
 <h4 id="extensions-icon-is-not-loaded">Extension&rsquo;s icon is not loaded</h4>
 <p>Sometimes, you may see that the icon shown in the toolbar is different from what you specified in the manifest file. This happens when the manifest file is not correct, for example, the icon is specified in the wrong attribute &lsquo;popup_action&rsquo;, it said &lsquo;popup_icon&rsquo;. If the browser cannot find the icon specified in the manifest, it will generate a default icon and use it. Fix the JSON and you will see the correct icon.</p>
-<h3 id="whats-next">What&rsquo;s Next</h3>
+<h2 id="whats-next">What&rsquo;s Next</h2>
 <p>Chrome developer documentation has a lot of good tutorials on building extensions, for example:</p>
 <ul>
 <li><a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world" target="_blank" rel="noopener">Hello World extension</a></li>
@@ -559,6 +566,7 @@
 <ul>
 <li><a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab" target="_blank" rel="noopener">Chrome Documentation</a></li>
 <li>all my browser extensions - <a href="https://github.com/annjose/browser-extensions/" target="_blank" rel="noopener">annjose/browser-extensions</a></li>
+<li>Part 2 of this article - <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a></li>
 </ul>
 
 
@@ -582,13 +590,13 @@
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="https://annjose.com/post/compare-ai-tools-llms/">Compare AI Tools: LLMs and AI Assistants</a>
+      <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="https://annjose.com/post/compare-ai-tools-llms/"><i class="fa fa-chevron-right"></i></a>
+    <a href="https://annjose.com/post/browser-extn-adv/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

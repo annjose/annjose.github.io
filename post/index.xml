@@ -24,7 +24,14 @@
       <description>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.&#xA;In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:&#xA;Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that are powered by one or more of the above models.</description>
     </item>
     <item>
-      <title>Browser Extensions: What, Why and How</title>
+      <title>Browser Extensions: Part 2 - Advanced Concepts</title>
+      <link>https://annjose.com/post/browser-extn-adv/</link>
+      <pubDate>Thu, 05 Sep 2024 14:24:13 -0700</pubDate>
+      <guid>https://annjose.com/post/browser-extn-adv/</guid>
+      <description>This is the second part of my blog series on browser extensions. Here, we&amp;rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading Browser Extensions: Part 1 - Introduction before tackling these more complex topics.&#xA;How to use TypeScript in browser extensions By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic.</description>
+    </item>
+    <item>
+      <title>Browser Extensions: Part 1 - Introduction</title>
       <link>https://annjose.com/post/browser-extn-intro/</link>
       <pubDate>Wed, 04 Sep 2024 10:12:32 -0700</pubDate>
       <guid>https://annjose.com/post/browser-extn-intro/</guid>

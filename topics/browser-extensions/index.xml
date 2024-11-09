@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>modern-web-dev on Reflections</title>
-    <link>https://annjose.com/tags/modern-web-dev/</link>
-    <description>Recent content in modern-web-dev on Reflections</description>
+    <title>browser-extensions on Reflections</title>
+    <link>https://annjose.com/topics/browser-extensions/</link>
+    <description>Recent content in browser-extensions on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
     <lastBuildDate>Thu, 05 Sep 2024 14:24:13 -0700</lastBuildDate>
-    <atom:link href="https://annjose.com/tags/modern-web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://annjose.com/topics/browser-extensions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Browser Extensions: Part 2 - Advanced Concepts</title>
       <link>https://annjose.com/post/browser-extn-adv/</link>
@@ -22,13 +22,6 @@
       <pubDate>Wed, 04 Sep 2024 10:12:32 -0700</pubDate>
       <guid>https://annjose.com/post/browser-extn-intro/</guid>
       <description>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.&#xA;In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.</description>
-    </item>
-    <item>
-      <title>How to customize session data in NextAuth</title>
-      <link>https://annjose.com/post/how-to-customize-nextauth-session/</link>
-      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
-      <guid>https://annjose.com/post/how-to-customize-nextauth-session/</guid>
-      <description>Of late, I have been diving into Next.js and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use NextAuth, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well.</description>
     </item>
   </channel>
 </rss>
