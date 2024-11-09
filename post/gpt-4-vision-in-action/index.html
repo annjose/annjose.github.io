@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A practical guide to using GPT-4 Turbo Vision">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>GPT-4 Turbo Vision: In Action &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>GPT-4 Turbo Vision: In Action</h1>
+  <h2>A practical guide to using GPT-4 Turbo Vision</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Apr 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/generative-ai">generative-ai</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>It&rsquo;s been a few months since OpenAI announced <a href="https://openai.com/index/new-models-and-developer-products-announced-at-devday" target="_blank" rel="noopener">GPT-4 Turbo with Vision</a> a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.</p>
+<p>We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application. I&rsquo;ll wrap up with my observations from using this model in practice.</p>
+<h2 id="accessing-the-vision-model-through-chatgpt">Accessing the Vision Model through ChatGPT</h2>
+<p>The Vision model is built into <a href="https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4#gpt-4-turbo-and-gpt-4" target="_blank" rel="noopener">GPT-4 Turbo</a>, a multimodal model that accepts text or image as inputs. So you can directly use it in ChatGPT - just select the <strong>GPT-4</strong> option in the model dropdown at the top left corner.</p>
+<p><strong>Note</strong> - As of today, this feature is available only in the paid ChatGPT subscriptions (Plus or higher).</p>
+<p>
+
+
+
+
+ 
+ 
+
+
+    <a href="chatgpt-select-gpt-4.png" target="_blank">
+        <img src="chatgpt-select-gpt-4.png" alt="GPT-4 option in ChatGPT" 
+            loading="lazy" />
+    </a>
+    
+</p>
+<p>Once you have selected this model, you can open the chat window, upload any image and ask questions about the image. For example, here is how it interpreted an image I provided:
+
+
+
+
+
+ 
+ 
+
+
+    
+    
+    
+    
+    <figure style="margin-inline-start: 10px; margin-inline-end: 10px">
+        <a href="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response.png" target="_blank">
+            <img srcset="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_320x0_resize_box_3.png 320w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_480x0_resize_box_3.png 480w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_768x0_resize_box_3.png 768w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_1024x0_resize_box_3.png 1024w"
+                sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response.png"
+                alt="GPT-4 Vision&amp;rsquo;s interpretation of the image"  loading="lazy">
+        </a>
+        
+    </figure>
+    
+</p>
+<h2 id="using-the-vision-model-through-openai-api">Using the Vision Model through OpenAI API</h2>
+<p>You can use this model through the <a href="https://platform.openai.com/docs/api-reference" target="_blank" rel="noopener">OpenAI API</a> if you have API access to GPT-4. Simply use the Chat Completions API and pass in <strong>gpt-4-vision</strong> as the model name in the API.</p>
+<p>Here is a quick code snippet:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6272a4">// imageFile is a File object. Convert it to base64-encoded string
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> arrayBuffer <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> imageFile.arrayBuffer();
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> base64ImageBuffer <span style="color:#ff79c6">=</span> Buffer.<span style="color:#ff79c6">from</span>(arrayBuffer).toString(<span style="color:#f1fa8c">&#39;base64&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// construct the data url from the base64 encoded string and file extension 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> fileExtension <span style="color:#ff79c6">=</span> imageFile.name.split(<span style="color:#f1fa8c">&#39;.&#39;</span>).pop();
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> base64ImageDataUrl <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`data:image/</span><span style="color:#f1fa8c">${</span>fileExtension<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">;base64,</span><span style="color:#f1fa8c">${</span>base64ImageBuffer<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> openai <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> OpenAI();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> response <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> openai.chat.completions.create({
+</span></span><span style="display:flex;"><span>    model<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;gpt-4-vision&#34;</span>,
+</span></span><span style="display:flex;"><span>    messages<span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            role<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;user&#34;</span>,
+</span></span><span style="display:flex;"><span>            content<span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#ff79c6">type</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;text&#34;</span>,
+</span></span><span style="display:flex;"><span>                    text<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">`What’s in this image? Where is this place?`</span>
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#ff79c6">type</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image_url&#34;</span>,
+</span></span><span style="display:flex;"><span>                    image_url<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>                        url: <span style="color:#8be9fd">base64ImageDataUrl</span>
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>console.log(<span style="color:#f1fa8c">`</span>\<span style="color:#f1fa8c">nResponse: </span><span style="color:#f1fa8c">${</span>JSON.stringify(response.choices[<span style="color:#bd93f9">0</span>])<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="my-observations">My observations</h2>
+<p>Overall, this vision model is pretty good - at least as a starting point.</p>
+<p>I was able to use it in my Keep Seek app and extract meaningful information from many images I gave it. The API is stable and reliable, although not very fast - responses took an average of 2-3 seconds.</p>
+<p>I found it be very useful to analyze images through ChatGPT, especially to digitize some of the handwritten notes.</p>
+<p>I am looking forward to seeing this model become faster and more reliable, and eventually being available to all users soon.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/how-to-customize-nextauth-session/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/how-to-customize-nextauth-session/">How to customize session data in NextAuth</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://annjose.com/post/nextjs-migrate-pages-app-router/">Next.js - Migrate from Pages to App Router</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://annjose.com/post/nextjs-migrate-pages-app-router/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+

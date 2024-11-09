@@ -38,6 +38,13 @@
       <description>A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.</description>
     </item>
     <item>
+      <title>GPT-4 Turbo Vision: In Action</title>
+      <link>https://annjose.com/post/gpt-4-vision-in-action/</link>
+      <pubDate>Thu, 04 Apr 2024 21:12:23 -0700</pubDate>
+      <guid>https://annjose.com/post/gpt-4-vision-in-action/</guid>
+      <description>It&amp;rsquo;s been a few months since OpenAI announced GPT-4 Turbo with Vision a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.&#xA;We&amp;rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application.</description>
+    </item>
+    <item>
       <title>How to customize session data in NextAuth</title>
       <link>https://annjose.com/post/how-to-customize-nextauth-session/</link>
       <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
