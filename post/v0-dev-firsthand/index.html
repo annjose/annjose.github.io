@@ -5,10 +5,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="An introduction, hands-on experience and thoughts about v0.dev">
+    content="Exploring the AI-powered web application builder">
   <meta name="generator" content="Hugo 0.121.1">
 
-  <title>Vercel v0.dev: My Firsthand Experience &middot; Reflections</title>
+  <title>Vercel v0.dev: A hands-on review &middot; Reflections</title>
 
   
   
@@ -232,8 +232,8 @@
 
 
 <div class="header">
-  <h1>Vercel v0.dev: My Firsthand Experience</h1>
-  <h2>An introduction, hands-on experience and thoughts about v0.dev</h2>
+  <h1>Vercel v0.dev: A hands-on review</h1>
+  <h2>Exploring the AI-powered web application builder</h2>
 </div>
 <div class="content">
 
@@ -272,24 +272,55 @@
 <p>The experience was mind blowing. In just an hour, I was able to build a functional, good-looking website using v0.dev&rsquo;s chat interface. It felt like magic - a series of &ldquo;jaw-drop&rdquo; moments. I was so excited that when George got home from work, I ran downstairs to rave about how awesome the tool was. Fun fact -  he had already tried it out and was thoroughly impressed, just in a subdued way than my excited reaction 🙂.</p>
 <p>Now in this post, I&rsquo;ll give a brief <a href="#what-is-v0.dev">introduction of what v0.dev</a>, share <a href="#my-firsthand-experience">my firsthand experience</a> of using it - what I loved about it, a few quirks I found while using it, and what I wish the tool could do better. Most importantly, I&rsquo;ll <a href="#final-thoughts">discuss what I believe v0.dev means</a> for developers, designers, entrepreneurs, and anyone <em>using</em> the web.</p>
 <p>If you&rsquo;ve read this far and are thinking this is some crazy tech stuff and it&rsquo;s not relevant to you, I urge you to read the last section <a href="https://annjose.com/post/v0-dev-get-real/#final-thoughts">Final Thoughts</a>, There, I explain how this tool can (sorry if this sounds cliché) transform your own abilities (or perceived lack thereof) to build any website. Whether you are a developer, designer, product manager or just anyone who has dreamed of creating a website on your own, you&rsquo;ll see how v0 makes it possible. Perhaps that will convince you to come back and read the next section, which explains what v0.dev is and what you can do with it.</p>
-<h2 id="what-is-v0.dev">1. What is v0.dev?</h2>
+<h2 id="what-is-v0.dev">What is v0.dev?</h2>
 <p>v0.dev is a chat-based website builder that generates code using modern web technologies like Next.js, React, Tailwind CSS, and shadcn UI components. It uses AI to generate interactive web pages with minimal effort, all within your browser. You can preview, modify and seamlessly deploy these pages to the cloud. Let&rsquo;s explore a simple exercise to see this tool in action.</p>
 <h3 id="get-started">A simple example to get started</h3>
-<p>Visit <a href="https://v0.dev" target="_blank" rel="noopener">https://v0.dev</a> and give a simple prompt - <em>create a todo list app with blue theme</em>. It will generate a &lsquo;To Do List&rsquo; page and display it on the right side. In this fully interactive page, you can add, view and delete tasks. The page is built using using React, Tailwind CSS and TypeScript. You can switch to the Code mode to view the clean, modern code behind it.</p>
+<p>Visit <a href="https://v0.dev" target="_blank" rel="noopener">https://v0.dev</a> and give a simple prompt - <em>create a todo list app with blue theme</em>. It will generate a &lsquo;To Do List&rsquo; page and display it in the App preview on the right side. In this fully interactive page, you can add, view and delete tasks. The page is built using using React, Tailwind CSS and TypeScript. You can switch to the Code mode to view the clean, modern code behind it.</p>
 <p>From here, you can modify the page simply through prompts in the chat interface - all within your browser. For example, you can say &lsquo;implement edit feature where i can edit the tasks in the list&rsquo; and it will generate an updated version of the code that implements the UI and logic for the Edit feature. You can play around this and test it out.</p>
+<p>Here is the first two versions of our app:
+
+
+
+
+
+
+<figure>
+    <a href="https://annjose.com/post/v0-dev-firsthand/todo-app-v1.png" target="_blank">
+        <img srcset="https://annjose.com/post/v0-dev-firsthand/todo-app-v1_hu608e80a5a009e163a9e3912211dcbf44_41029_480x0_resize_box_3.png 480w, https://annjose.com/post/v0-dev-firsthand/todo-app-v1_hu608e80a5a009e163a9e3912211dcbf44_41029_768x0_resize_box_3.png 768w, https://annjose.com/post/v0-dev-firsthand/todo-app-v1_hu608e80a5a009e163a9e3912211dcbf44_41029_1024x0_resize_box_3.png 1024w"
+            sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/v0-dev-firsthand/todo-app-v1.png"
+            alt="First two versions of To Do app"  loading="lazy">
+    </a>
+    
+</figure>
+</p>
 <p>You can have more fun with it by &rsquo;talking&rsquo; to it in plain English, for example,</p>
 <blockquote>
 <p><em>the blue in the heading is too dark, make it lighter, more pleasing to the eye. also add a search and sort features - i want to sort the tasks alphabetically</em></p>
 </blockquote>
 <p>It will update the page and the code with all these changes in just a few seconds. Impressive, right? I was also impressed by the quality of the generated code - neatly organized and following the best practices of TypeScript, React and Tailwind.</p>
-<p>Here are the three iterations of our To Do app:</p>
+<p>Here is the final variation of our app:
+
+
+
+
+
+
+<figure>
+    <a href="https://annjose.com/post/v0-dev-firsthand/todo-app-v2.png" target="_blank">
+        <img srcset="https://annjose.com/post/v0-dev-firsthand/todo-app-v2_hu72927aca38bbdfa6e00db1ac0f601022_96904_480x0_resize_box_3.png 480w, https://annjose.com/post/v0-dev-firsthand/todo-app-v2_hu72927aca38bbdfa6e00db1ac0f601022_96904_768x0_resize_box_3.png 768w, https://annjose.com/post/v0-dev-firsthand/todo-app-v2_hu72927aca38bbdfa6e00db1ac0f601022_96904_1024x0_resize_box_3.png 1024w"
+            sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/v0-dev-firsthand/todo-app-v2.png"
+            alt="Final version of To Do app"  loading="lazy">
+    </a>
+    
+</figure>
+</p>
 <h3 id="wait-a-minute-isnt-this-what-chatgpt-or-claude-does">Wait a minute, isn&rsquo;t this what ChatGPT or Claude does?</h3>
 <p>Yes, to a small extent, as both these tools give a chat based interface to generate and execute code. However, v0 does beyond that.</p>
 <p>First, it uses the most up-to-date information of Next.js, including features from experimental releases, as v0 is fine-tuned with the latest knowledge of the framework. As an example, if you ask ChatGPT to &lsquo;create a Next.js form&rsquo;, it generates code using the client side form submission paradigm instead of the Next.js best practice of server actions. Similarly, that code would use the Pages router instead of the newer, improved App router paradigm, which is now the de facto way of building Next.js apps.</p>
 <p>v0 takes it even further - which was my biggest &ldquo;Wow! &ldquo;moment - by creating a Next.js project out-of-the-box. With the same prompt as above, ChatGPT would give you step-by-step instructions on how to create a Next.js project, install Tailwind, create a component, run the application etc. But v0 will literally do all of this for you. It gives you a complete project that you can download, open in your favorite IDE and run - all out-of-the-box. See more details about it in the next section.</p>
-<h2 id="what-it-can-do">2 What all can v0.dev do?</h2>
+<h2 id="what-it-can-do">What all can v0.dev do?</h2>
 <p>We will split this into two parts - the basics and the advanced - just for better readability and understanding.</p>
-<h3 id="21-what-can-it-do---the-basics">2.1 What can it do - The basics</h3>
+<h3 id="what-can-it-do---the-basics">What can it do - The basics</h3>
 <p>v0.dev is a complete solution to build web applications.</p>
 <ul>
 <li>
@@ -299,7 +330,7 @@
 <p>You can <strong>publish the website</strong> with someone - click the &lsquo;Share&rsquo; button at the top and go to the Publish section. Here, the chat remains private, but the website is public. For example, here is the published page of the todo app - <a href="https://b_qrktsdrxhbg.v0.build/" target="_blank" rel="noopener">https://b_qrktsdrxhbg.v0.build/</a>. It is a fully functional app published on cloud - go ahead and try it out!</p>
 </li>
 <li>
-<p>If you have a website that you love and wants to be used as an inspiration for the site that you are building, you can simply give the site&rsquo;s URL (or just a screenshot of it) in the chat prompt and ask it to create a site using this as as an inspiration. I tried this with my own website and it worked great.</p>
+<p>If you have a website that you love and wants to be used as an inspiration for the site that you are building, you can simply give the site&rsquo;s URL (or just a screenshot of it) in the chat prompt and ask it to create a site using this as an inspiration. I tried this with my own website and it worked great.</p>
 </li>
 <li>
 <p>v0 can <strong>create a Next.js project</strong> from the web pages you have created in the chat. You can click the button <strong>Add to codebase</strong> at the top and it will generate an npx command that you can run on your local machine. This command creates a Next.js project that contains a local git repository, correct configuration files, follows the best-practice conventions and folder structure. You can open this project in your favorite IDE and run the following command:</p>
@@ -319,7 +350,7 @@
 <p>Voilà! The new website will be running on http://localhost:3000 (the port number may be different if it is already in use). How cool is that?</p>
 </blockquote>
 <p>There is a lot more that v0.dev can do, but before we go there, allow me to share my experience of using this for the first time.</p>
-<h2 id="my-firsthand-experience">3. My experience of using v0</h2>
+<h2 id="my-firsthand-experience">My experience of using v0</h2>
 <p>I used v0.dev for a few days, albeit limited by the maximum amount of messages available in my Free tier. Initially, I created simple apps like a to do list, BlueSky clone with green theme and a LinkedIn clone.</p>
 <p>Then, I tried to clone my own website with the following prompt:</p>
 <blockquote>
@@ -344,7 +375,7 @@
     <a href="https://annjose.com/post/v0-dev-firsthand/build-error.png" target="_blank">
         <img srcset="https://annjose.com/post/v0-dev-firsthand/build-error_hudbdddaceb5de95541531230be8181f1d_71654_480x0_resize_box_3.png 480w, https://annjose.com/post/v0-dev-firsthand/build-error_hudbdddaceb5de95541531230be8181f1d_71654_768x0_resize_box_3.png 768w, https://annjose.com/post/v0-dev-firsthand/build-error_hudbdddaceb5de95541531230be8181f1d_71654_1024x0_resize_box_3.png 1024w"
             sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/v0-dev-firsthand/build-error.png"
-            alt="alt text"  loading="lazy">
+            alt="Build Error in v0 generated project"  loading="lazy">
     </a>
     
 </figure>
@@ -396,9 +427,11 @@ So rename the page.tsx in components to HomePage.tsx and modify the main Page.ts
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { toast } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@/components/ui/use-toast&#34;</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { toast } <span style="color:#ff79c6">from</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@/components/ui/use-toast&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Here, the <em>use-toast</em> is a hook which is in the folder <em>/components/hooks</em> so update the path in the import statement</p>
@@ -426,7 +459,7 @@ So rename the page.tsx in components to HomePage.tsx and modify the main Page.ts
 </div><p>Refer <a href="https://ui.shadcn.com/docs/components/toast" target="_blank" rel="noopener">https://ui.shadcn.com/docs/components/toast</a> for details on this component.</p>
 <h4 id="issue-3">Issue #3</h4>
 <p>I had created three pages in the v0 chat and uses the Add to Codebase button to create the Next.js project. I expected all the three pages to be added to the project. However, the project that had only one of those pages. So I had to manually copy the other pages into the project.</p>
-<h3 id="22-what-can-it-do---the-advanced">2.2 What can it do - The advanced</h3>
+<h3 id="what-can-it-do---the-advanced">What can it do - The advanced</h3>
 <ul>
 <li>
 <p>The UI code that it generates is built using <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components, a popular collection of re-usable components that are accessible, customizable and open source. The reverse is also true, every component on <a href="https://ui.shadcn.com/docs/v0" target="_blank" rel="noopener">shadcn.ui</a> is editable on v0. So you can choose any shadcn component, for example, this <a href="https://ui.shadcn.com/docs/components/calendar" target="_blank" rel="noopener">calendar component</a> and click the button &lsquo;Open in v0&rsquo; in the Preview mode. It will open up v0 with that component. So you can edit and customize it through the chat interface. This two-way integration works pretty well.</p>
@@ -448,14 +481,44 @@ So rename the page.tsx in components to HomePage.tsx and modify the main Page.ts
 </li>
 </ul>
 <h2 id="my-wishlist-for-v0dev">My wishlist for v0.dev</h2>
-<p>While my initial experience with v0 was fantastic, there are a few things that I didn&rsquo;t quite like and would give as feedback to the v0 team.</p>
-<p>My most important wish is that I want continuity of the project. Once I create the project, there is no link between the chat and the project. It would be great if there is a way to carry it back and forth between the IDE and the chat. Perhaps a seamless handoff to Cusror AI or GitHub Copilot would be awesome.</p>
-<p>As mentioned above, I was disappointed to see the aut-generated project included only one of the web pages that I created. The project should contain all of them, not just the page that was in the selection.</p>
+<p>While my initial experience with v0 was fantastic, there are a few areas that I believe could be improved. Here&rsquo;s the feedback I would give to the v0 team:</p>
+<ol>
+<li>
+<p><strong>Continuity in the development cycle</strong>: Everything is well and good until I create the project and run it locally. But after that, there is no link between the chat and the project. Any changes I make in the project are not reflected in the chat and vice versa. It would be great if there is a way to carry changes back and forth between the IDE and the chat. Perhaps a seamless handoff between v0 and Cursor AI or GitHub Copilot would be awesome. I am sure they are working on something like this.</p>
+</li>
+<li>
+<p><strong>Incomplete project generation</strong>: I was disappointed to see that the auto-generated project included only one of the web pages I created. The project should contain all of them, not just the page that was in the selection.</p>
+</li>
+<li>
+<p><strong>Limited documentation</strong>: The <a href="https://v0.dev/docs" target="_blank" rel="noopener">documentation</a> for v0.dev is very limited. I was discovering things as I went along. Surprisingly, there is no comprehensive landing page for v0.dev. I am not sure why they haven&rsquo;t built it, despite the project being is in public beta.</p>
+</li>
+<li>
+<p><strong>Usage limitations</strong>: The usage of v0.dev is quite restrictive. I reach the maximum limit after just a few messages and then have to wait until the next day. I&rsquo;m still evaluating whether to opt for a paid subscription. It would be great if they offered a free tier for personal projects, similar to their build infrastructure.</p>
+</li>
+</ol>
 <h2 id="final-thoughts">Final Thoughts</h2>
-<p>To put it in one sentence, this tool proves that Jensen Huang was right when he said that the next programming language is English. What they have done is a logical next step of</p>
-<p>It takes out a lot of repetitive low-level work that you need to do when you create a website.</p>
-<p>It&rsquo;s like pair programming with an AI that actually understands what you want. The ability to iterate and test in real-time, all in the browser, is game-changing for web development.</p>
-<p>And let me remind you - it is never too late to start. If you have seen a post that has been going around - start in November, start on the 30th, start of Friday, start at 5pm, start today. Start Now!</p>
+<p>My main conclusion is that working with v0 is like pair programming with someone who actually understands what you want. The ability to iterate and test in real-time, all in the browser, is game-changing for web development. The words that come to mind when thinking about v0 are &ldquo;limitless&rdquo;, &ldquo;the world is your oyster&rdquo;, and &ldquo;build what you dream&rdquo;.</p>
+<p>We all have ideas in our heads, but turning them into reality often involves significant friction. In my own experience, I couldn&rsquo;t think of building quick projects when I had a full-time job. The very thought of building something out was so daunting that I didn&rsquo;t even want to pursue it. I think most of us are in the same boat. v0 can change that.</p>
+<p>The beauty of v0 is that it produces excellent code using just a few text prompts. This is production-ready code, not a bunch of throw-away code put together with duct tape. You can directly check in the code and proudly share it with someone. This opens up the possibility for anyone to build high-quality web applications. It&rsquo;s also impressive that it creates real, regular code using the most popular cutting-edge technology, not an intermediate language or framework.</p>
+<p>This means that anybody who knows how to type and has an idea or intuition can actually see it in action:</p>
+<ul>
+<li><strong>Entrepreneurs</strong> with an idea can quickly build a prototype to show potential customers without hiring someone.</li>
+<li><strong>Designers</strong> who know how to design websites but can&rsquo;t code can now create working prototypes.</li>
+<li><strong>Product managers</strong> tired of waiting for design or engineering teams can build prototypes themselves and get customer feedback.</li>
+<li><strong>Junior developers</strong> learning React, Next.js, etc., can gain practical experience with the technology.</li>
+<li><strong>Seasoned developers</strong> who are strong in programming but weak in design can create decent-looking websites using this tool.</li>
+<li><strong>Experienced developers</strong> can use v0 to handle repetitive plumbing, helping them reach 60% completion much faster.</li>
+</ul>
+<p>With v0, you can upskill yourself, you can expand your reach like never before. The possibilities are endless, and that&rsquo;s exciting. That&rsquo;s why I believe everyone should pay attention to this tool and try it out.</p>
+<p>I&rsquo;m not saying this is the ultimate tool that will do everything, but it will help you get started. It can get you 40-50% of the way on your journey to building something on your own, regardless of your expertise in the technology.</p>
+<p>It reminds me what <a href="https://www.thehrobserver.com/technology/jensen-huang-on-ai-everybody-in-the-world-is-now-a-programmer/" target="_blank" rel="noopener">Jensen Huang said a few months ago</a></p>
+<blockquote>
+<p><em>The programming language is human. Everybody in the world is now a programmer. This is the miracle of AI.</em></p>
+</blockquote>
+<p>This statement rings so true. v0 is a living, breathing example of that concept.</p>
+<p>In conclusion, I think v0 embodies the idea that AI can bridge the gap between human language and code, making web development accessible to a much wider audience. It&rsquo;s a gateway to turning your ideas into reality, regardless of your technical background.</p>
+<p>Remember, it&rsquo;s never too late to start. As a popular post says: start in November, start on the 30th, start on Friday, start at 5 pm, start today. Start Now!</p>
+<p>If you need help getting started with v0 or want to see a live demo of v0, please leave a comment below or DM me on LinkedIn. Let&rsquo;s build the future together!</p>
 
 
   
