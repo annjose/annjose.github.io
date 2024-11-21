@@ -10,6 +10,13 @@
     <lastBuildDate>Mon, 04 Nov 2024 15:54:13 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About Me</title>
+      <link>https://annjose.com/about/</link>
+      <pubDate>Thu, 21 Nov 2024 12:23:51 -0700</pubDate>
+      <guid>https://annjose.com/about/</guid>
+      <description>I&amp;rsquo;m Ann Catherine Jose, a hands-on tech enthusiast, software builder, and full-stack developer with a passion for lifelong learning. With over 20 years of experience in the software industry, I&amp;rsquo;ve recently pivoted my career to focus on advanced tech skills, personal growth, and health.&#xA;Professional Journey During my 12-year tenure at Intuit, I led the Engineering organization for QuickBooks Platform, QuickBooks Mobile, and Gen AI. As the Head of Engineering, I was responsible for driving strategy and overseeing the development of QuickBooks mobile applications and the platform infrastructure hosting QuickBooks Online.</description>
+    </item>
+    <item>
       <title>Vercel v0.dev: A hands-on review</title>
       <link>https://annjose.com/post/v0-dev-firsthand/</link>
       <pubDate>Mon, 04 Nov 2024 15:54:13 -0700</pubDate>
@@ -239,13 +246,6 @@
       <pubDate>Sun, 28 Jun 2020 11:26:39 -0700</pubDate>
       <guid>https://annjose.com/post/what-do-i-really-want/</guid>
       <description>The other day I watched a TED video where the presenter urged the audience to ask the question What do you really want? That got me thinking what do I really want. It is an interesting question to ask myself, since I have tried different roles and responsibilites - broad and deep - in the last couple of years.&#xA;So I was pleasantly surprised when I found the book Data Structures and Algorithms in C++ by Adam Drozdek on my bookshelf.</description>
-    </item>
-    <item>
-      <title>Ann Catherine Jose</title>
-      <link>https://annjose.com/about/</link>
-      <pubDate>Thu, 20 Feb 2020 10:54:56 -0700</pubDate>
-      <guid>https://annjose.com/about/</guid>
-      <description>I am a software tinkerer with a passion for all things technology and mobile. As the Director of Engineering at Intuit Inc., I lead the Mobile Engineering team in the Small Business and Self Employed group; we build the QuickBooks suite of mobile apps that serve our small business and self employed customers. Prior to this role, I worked as Principal Software Engineer in the TurboTax mobile team, and worked at other companies including Philips and SAP.</description>
     </item>
     <item>
       <title>How to mock network requests in iOS</title>

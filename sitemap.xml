@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/about/</loc>
+    <lastmod>2024-11-21T12:23:51-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/tags/how-to/</loc>
     <lastmod>2024-11-04T15:54:13-07:00</lastmod>
   </url><url>
@@ -187,9 +190,6 @@
   </url><url>
     <loc>https://annjose.com/post/what-do-i-really-want/</loc>
     <lastmod>2020-06-28T11:26:39-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/about/</loc>
-    <lastmod>2020-02-20T10:54:56-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/mocking-network-requests-ios/</loc>
     <lastmod>2019-03-11T20:00:52-08:00</lastmod>
