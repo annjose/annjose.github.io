@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 05 Sep 2024 14:24:13 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Dec 2024 12:15:21 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/modern-web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome Side Panel</title>
+      <link>https://annjose.com/post/chrome-side-panel/</link>
+      <pubDate>Sun, 15 Dec 2024 12:15:21 -0700</pubDate>
+      <guid>https://annjose.com/post/chrome-side-panel/</guid>
+      <description>Of late, I have been building and learning about browser extensions for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.&#xA;The Chrome side panel It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens.</description>
+    </item>
     <item>
       <title>Browser Extensions: Part 2 - Advanced Concepts</title>
       <link>https://annjose.com/post/browser-extn-adv/</link>
