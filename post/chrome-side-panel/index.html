@@ -410,7 +410,7 @@
 </ul>
 <p>Any website you visit, the Bookmarks side panel will be there. If you don&rsquo;t want to see it, you can close it by clicking the &lsquo;x&rsquo; button on the panel.</p>
 <h2 id="side-panel-and-browser-extensions">Side panel and browser extensions</h2>
-<p>Ok, all of them is great. But how is this side panel relevant for browser extensions? Well, a browser extension can put any custom content in the side panel in a few simple steps. This could be a simple panel to summarize the content of the page, or translate the content to another language, or show a list of related articles. The possibilities are endless!</p>
+<p>Ok, all of this is great. But how is this side panel relevant for browser extensions? Well, a browser extension can put any custom content in the side panel in a few simple steps. This could be a simple panel to summarize the content of the page, or translate the content to another language, or show a list of related articles. The possibilities are endless!</p>
 <p>The best part is that the browser takes care of all the interactions in the panel - open, close, pin, scrollbar etc. Unlike the regular &lsquo;popup&rsquo; UI of browser extensions, this side panel gives a lot more real estate to work with. So for example, you can summarize the whole content of the currently open web page and show it in the side panel.</p>
 <p>It is super easy and fun  to build a side panel. The API is straight-forward. But there are a few nuances of how to communicate with the rest of the extension, which we will learn here.</p>
 <h2 id="how-to-create-your-own-side-panel">How to create your own side panel</h2>
@@ -423,7 +423,7 @@
 </li>
 <li>Create an HTML file <strong>sidepanel.html</strong> and add any HTML content to it.</li>
 <li>Update the manifest file <strong>manifest.json</strong> to add <strong>sidePanel</strong> to the <strong>permissions</strong> array. See details about the <a href="https://developer.chrome.com/docs/extensions/reference/manifest" target="_blank" rel="noopener">manifest file</a>:</li>
-<li>Load the extension in the browser - use the &lsquo;Load unpacked&rsquo; option in the <a href="chrome://extensions/">local Chrome extensions</a> page.</li>
+<li>Load the extension in the browser using the &lsquo;Load unpacked&rsquo; option in the <a href="chrome://extensions/">local Chrome extensions</a> page.</li>
 </ol>
 <p>You can see a real example of this in my github repo <a href="https://github.com/annjose/hello-chrome-side-panel" target="_blank" rel="noopener">hello-chrome-side-panel</a>. You can clone the repo and load the extension in your browser.</p>
 <p>Or if you are in for a quick start, here is how the files would look like:</p>
@@ -775,10 +775,10 @@ Here is a comparison of the manifest file for popup and side panel:</li>
 <li><strong>Consistent UI</strong> - it is a great way to show content or functionality that is common to all web sites. It has good user experience with consistent positioning and layout - good placement, resizing, shrink/expand content, show on left/right scroll behaviors etc. - all out of the box.</li>
 <li><strong>Built-in user interactions</strong> - Chrome handles all the interactions of opening, closing and pinning, you don&rsquo;t have to write any custom code for that.</li>
 <li><strong>Spacious UI</strong> - You can show a lot of content in the side panel compared to popups.</li>
-<li><strong>Persistent UI</strong> across page navigations - the extension&rsquo;s main UI will always be shown in this page. So if your extension is like that - common to all websites, then this is a good thing.</li>
+<li><strong>Persistent UI</strong> across page navigations - the side panel stays open as you navigate between tabs and websites. This allows for a seamless workflow.</li>
 </ul>
 <h2 id="limitations-of-side-panel">Limitations of side panel</h2>
-<p>Communication between side panel and extension is a bit tricky. Specfically, the communication from side panel to extension is not straightforward. You have to go through a worker and the worker has to forward the message to the extension. Or you can use window message passing. On the other hand, communication from extension to side panel is easy - you can use chrome.runtime.message.</p>
+<p>Communication between side panel and extension is a bit tricky. Specifically, the communication from side panel to extension is not straightforward. You have to go through a worker and the worker has to forward the message to the extension. Or you can use window message passing. On the other hand, communication from extension to side panel is easy - you can use chrome.runtime.message.</p>
 <p>The side panel is available on all websites. This can be good or bad, depending on your use case. In my use case, I wanted the side panel to be displayed on specifc websites only. Online forums suggested that I use the enable/disable feature, but that didn&rsquo;t work quite well.</p>
 <p>There are only a limited set of APIs available on <strong>chrome.sidePanel</strong> - <strong>setOptions</strong>, <strong>getOptions</strong>, <strong>open</strong>. The whole documentation is in this single page - <a href="https://developer.chrome.com/docs/extensions/reference/api/sidePanel" target="_blank" rel="noopener">Side Panel API</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
