@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 15 Dec 2024 12:15:21 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2025 04:32:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tech-explorations</title>
+      <link>https://annjose.com/topics/tech-explorations/</link>
+      <pubDate>Fri, 24 Jan 2025 04:32:12 -0700</pubDate>
+      <guid>https://annjose.com/topics/tech-explorations/</guid>
+      <description></description>
+    </item>
     <item>
       <title>browser-extensions</title>
       <link>https://annjose.com/topics/browser-extensions/</link>

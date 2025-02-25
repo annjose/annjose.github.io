@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 25 Oct 2024 17:22:33 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2025 04:32:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/LLM/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code: First Impressions</title>
+      <link>https://annjose.com/post/claude-code-first-impressions/</link>
+      <pubDate>Fri, 24 Jan 2025 04:32:12 -0700</pubDate>
+      <guid>https://annjose.com/post/claude-code-first-impressions/</guid>
+      <description>Today I tried Claude Code, the new agentic coding tool announced by Anthropic this morning. Unlike other agentic tools, Claude Code is a CLI tool.&#xA;Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.&#xA;In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&amp;rsquo;t, and how it compares to other similar tools.</description>
+    </item>
     <item>
       <title>Compare AI Tools: LLMs and AI Assistants</title>
       <link>https://annjose.com/post/compare-ai-tools-llms/</link>

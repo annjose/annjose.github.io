@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Exploring Anthropic&#39;s new CLI-based agentic coding tool">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Claude Code: First Impressions &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Claude Code: First Impressions</h1>
+  <h2>Exploring Anthropic&#39;s new CLI-based agentic coding tool</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Jan 2025</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/tech-explorations">tech-explorations</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/coding-assistants">coding-assistants</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/agentic-systems">agentic-systems</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Today I tried <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Claude Code</a>, the new agentic coding tool <a href="https://www.anthropic.com/news/claude-3-7-sonnet" target="_blank" rel="noopener">announced by Anthropic</a> this morning. Unlike other agentic tools, Claude Code is a CLI tool.</p>
+<p>Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.</p>
+<p>In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&rsquo;t, and how it compares to other similar tools.</p>
+<h2 id="initial-set-up">Initial set up</h2>
+<p>I installed it as per steps in the <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Claude Code documentation</a>. It is as simple as this:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install -g @anthropic-ai/claude-code
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> your-code-folder
+</span></span><span style="display:flex;"><span>claude init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>It worked smoothly on macOS, but didn&rsquo;t work on a Windows machine.</p>
+<p>Few things to note:</p>
+<ol>
+<li>Note that the last step will initiate a one-time OAuth flow to authenticate with your Anthropic API account, so you need to have billing set up.</li>
+<li>I ran the <strong>claude init</strong> command in my IDE&rsquo;s terminal window with my <a href="https://github.com/levelup-apps/hn-enhancer" target="_blank" rel="noopener">HN Companion project</a> open. This made it easy for me to see the source files and the Code output side by side.</li>
+</ol>
+<p>Just by running this command, it scanned all the files in the project and gave a concise, accurate overview of the code.</p>
+<p>
+
+
+
+
+ 
+ 
+
+
+    
+    
+    
+    
+    <figure style="margin-inline-start: 10px; margin-inline-end: 10px">
+        <a href="https://annjose.com/post/claude-code-first-impressions/cmd-init-result.jpg" target="_blank">
+            <img srcset="https://annjose.com/post/claude-code-first-impressions/cmd-init-result_hu0b99b30c4ceb80d5d810b013da3b4e88_225353_320x0_resize_q75_box.jpg 320w, https://annjose.com/post/claude-code-first-impressions/cmd-init-result_hu0b99b30c4ceb80d5d810b013da3b4e88_225353_480x0_resize_q75_box.jpg 480w, https://annjose.com/post/claude-code-first-impressions/cmd-init-result_hu0b99b30c4ceb80d5d810b013da3b4e88_225353_768x0_resize_q75_box.jpg 768w, https://annjose.com/post/claude-code-first-impressions/cmd-init-result_hu0b99b30c4ceb80d5d810b013da3b4e88_225353_1024x0_resize_q75_box.jpg 1024w"
+                sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/claude-code-first-impressions/cmd-init-result.jpg"
+                alt="Result of init command"  loading="lazy">
+        </a>
+        
+    </figure>
+    
+</p>
+<p><strong>Pro tip</strong>: When you run this command, Claude creates a file <strong>claude.md</strong> in the project root. In this file, you can give detailed instructions on how you want Code to behave - a great way to tailor its analysis to your specific needs. You can commit this file to the repo to share with your team.</p>
+<h2 id="let-the-fun-chat-begin">Let the fun (chat) begin</h2>
+<p>Now that the set up is done, I started asking questions to Claude Code.</p>
+<p>First, I asked <em>What is the tech stack?</em>&rsquo;, it gave details on APIs, build tools, libraries. It correctly identified that the project uses pnpm package manager and supports Chrome and Firefox browsers.</p>
+<p>
+
+
+
+
+ 
+ 
+
+
+    
+    
+    
+    
+    <figure style="margin-inline-start: 10px; margin-inline-end: 10px">
+        <a href="https://annjose.com/post/claude-code-first-impressions/cmd-tech-stack-result.jpg" target="_blank">
+            <img srcset="https://annjose.com/post/claude-code-first-impressions/cmd-tech-stack-result_hudbbf0a83c75b03d5ec7871acd25b2d95_174248_320x0_resize_q75_box.jpg 320w, https://annjose.com/post/claude-code-first-impressions/cmd-tech-stack-result_hudbbf0a83c75b03d5ec7871acd25b2d95_174248_480x0_resize_q75_box.jpg 480w, https://annjose.com/post/claude-code-first-impressions/cmd-tech-stack-result_hudbbf0a83c75b03d5ec7871acd25b2d95_174248_768x0_resize_q75_box.jpg 768w, https://annjose.com/post/claude-code-first-impressions/cmd-tech-stack-result_hudbbf0a83c75b03d5ec7871acd25b2d95_174248_1024x0_resize_q75_box.jpg 1024w"
+                sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/claude-code-first-impressions/cmd-tech-stack-result.jpg"
+                alt="Result of tech stack question"  loading="lazy">
+        </a>
+        
+    </figure>
+    
+
+This seems to be a great way to explore any project - start with a high-level summary and then dive deeper as needed. Definitely a time-saver when you want to understand any codebase - no matter how big they are. Like all things with AI, it enables you to do things not only faster, but also cross the mental boundaries of what you thought was possible.</p>
+<p>Next, I asked - <em>is the project well maintained?</em></p>
+<p>It went through several steps, analyzed the git history for last 3 months, project releases etc. and finally gave a comprehensive answer to the question.</p>
+<p>Look at the nuance in the final answer. It&rsquo;s not just a yes or no, but a detailed analysis of the project&rsquo;s maintenance status with quantifiable metrics. Very impressive!</p>
+<p>
+
+
+
+
+ 
+ 
+
+
+    
+    
+    
+    
+    <figure style="margin-inline-start: 10px; margin-inline-end: 10px">
+        <a href="https://annjose.com/post/claude-code-first-impressions/cmd-project-maint-result.jpg" target="_blank">
+            <img srcset="https://annjose.com/post/claude-code-first-impressions/cmd-project-maint-result_hubadb8d3b18ae86d329b71fd8ffac0ddd_158142_320x0_resize_q75_box.jpg 320w, https://annjose.com/post/claude-code-first-impressions/cmd-project-maint-result_hubadb8d3b18ae86d329b71fd8ffac0ddd_158142_480x0_resize_q75_box.jpg 480w, https://annjose.com/post/claude-code-first-impressions/cmd-project-maint-result_hubadb8d3b18ae86d329b71fd8ffac0ddd_158142_768x0_resize_q75_box.jpg 768w, https://annjose.com/post/claude-code-first-impressions/cmd-project-maint-result_hubadb8d3b18ae86d329b71fd8ffac0ddd_158142_1024x0_resize_q75_box.jpg 1024w"
+                sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="https://annjose.com/post/claude-code-first-impressions/cmd-project-maint-result.jpg"
+                alt="Result of project maintenance question"  loading="lazy">
+        </a>
+        
+    </figure>
+    
+</p>
+<h2 id="bigger-questions">Bigger questions</h2>
+<p>Next, I asked Claude Code to review a JS file I was working on this morning and suggest improvements.</p>
+<p>It came up with 7 suggestions—covering code structure, error handling, performance, documentation, etc. I asked it to implement two of them (#3 &amp; #4) - one of them to improve async/await handling.</p>
+<p>Results:</p>
+<ul>
+<li>
+<p>It tried to implement the changes, but picked #5 instead of #4.</p>
+</li>
+<li>
+<p>It did ask for permission to run npx commands and make edits to the file, which was 🔥.</p>
+</li>
+<li>
+<p>However, the implementation overcomplicated things - for eg: it added a new package unnecessarily to improve async handling. Not great ☹️.</p>
+</li>
+</ul>
+<h2 id="what-stood-out-to-me">What stood out to me</h2>
+<ul>
+<li>
+<p>Claude Code runs in your terminal and takes actions in realtime - not just answer questions from &lsquo;memory&rsquo;.</p>
+</li>
+<li>
+<p>It understands your whole codebase, so you don&rsquo;t need to manually add files to the context.</p>
+</li>
+<li>
+<p>Each time it wanted to run a git or bash command (using its agentic tools), it asked for permission, that is 🔥.</p>
+</li>
+<li>
+<p>The playful progress messages were delightful: Honking, Herding, Cooking ❤️. And yes, at one point, I even saw Clauding! Looks like it’s officially becoming a verb. 😄</p>
+</li>
+</ul>
+<h2 id="what-didnt-impress-me">What didn&rsquo;t impress me</h2>
+<p>It showed the code diff in red/green colors in the terminal, but it was hard to follow compared to how I see the diffs in WebStorm/VS Code/ GitHub.</p>
+<p>Interestingly, it didn&rsquo;t give any suggestions about adding or improving tests - something I would’ve expected from an AI coding assistant.</p>
+<h2 id="gotchas">Gotchas</h2>
+<p>Claude Code uses the API, so remember that you will run through your token credits. So keep an eye on your <a href="https://console.anthropic.com/settings/usage" target="_blank" rel="noopener">Anthropic API Usage Dashboard</a>.</p>
+<h2 id="comparison-with-similar-tools">Comparison with similar tools</h2>
+<p>The direct equivalent of Claude Code is <a href="https://githubnext.com/projects/copilot-workspace" target="_blank" rel="noopener">GitHub Copilot Workspaces</a>, the agentic dev environment from GitHub team. It enables you to give high level instructions and it will do all the tasks. It is in Technical Preview now, but is pretty stable. We had used it to for the HN Companion project and were able to implement a couple of features end to end with it.</p>
+<p>However, it runs on the browser as a web app to take the initial instructions, so it feels disjoint from the coding environment. Once the initial step is done, you can modify the code, add tests, create PR etc.</p>
+<p>I like that Claude Code is closer to where I code, so it feels more natural. It also felt more interactive than Copilot Workspaces because it asks for permission to run commands, and you can ask it questions too. It gives you more control over the process, which is great!</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Claude Code documentation</a></li>
+<li><a href="https://news.ycombinator.com/item?id=43163011" target="_blank" rel="noopener">HN Discussion on Claude Code and Claude 3.7 Sonnet</a></li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Claude Code is a great tool to explore and understand any codebase. It&rsquo;s a great addition to my AI pair programming toolset. I will definitely use it more and more. You should give it a try too!</p>
+<p>Claude Code has huge potential. If Anthropic nails the user experience and integrates it seamlessly and directly into IDEs, it could surpass Copilot, Cursor, Windsurf, etc., and change the game again!</p>
+<p>Most capable coding model + best UX = 🔥</p>
+<p>I can’t wait to see how it evolves! Go Anthropic! 🙌 💪</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/chrome-side-panel/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/chrome-side-panel/">Chrome Side Panel</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+
