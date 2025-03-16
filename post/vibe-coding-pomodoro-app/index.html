@@ -276,21 +276,40 @@
 
 </div>
 
-  <p>Today I tried something fun - I built a Pomodoro timer app mostly by talking to AI instead of typing code myself. I have done it a few times before, but this is the first time I am using to build a full app. And guess what - there is a term for it - <a href="https://en.wikipedia.org/wiki/Vibe_coding" target="_blank" rel="noopener">vibe coding</a>, coined by Andrej Karpathy 😎. I wanted to create something to experiment with this workflow, but also worked well and felt good to use. Here&rsquo;s how it went!</p>
+  <p>Today I tried something fun - built a Pomodoro timer app mostly by talking to AI instead of typing code myself. And guess what - there is a term for it - <a href="https://en.wikipedia.org/wiki/Vibe_coding" target="_blank" rel="noopener">vibe coding</a>, coined by Andrej Karpathy 😎.</p>
+<p>I have done it a few times before, but this is the first time I am using it to build a full app. I wanted to create something that was useful and worked well, so I chose the Pomodoro timer. Here&rsquo;s how it went and my key takeaways from this way of building products.</p>
 <h2 id="how-i-built-it">How I Built It</h2>
-<p>Instead of typing code, I mostly just talked to an LLM - in this case Claude Sonnet 3.7 through GitHub Copilot in Visual Studio Code. I used the macOS built-in Narrator app that I have configured as a double-press on the Fn key. It pops up quickly and I&rsquo;d describe what I wanted, and the LLM would write the code.</p>
-<p>After each change, I&rsquo;d check if it worked and looked good. I&rsquo;d review the code to see if it did what I asked correctly. If I needed changes, I&rsquo;d just tell the LLM what to fix - no typing needed. It felt a bit like having a super-fast coding buddy who does all the typing for you while you focus on the big picture.</p>
-<p>Using this approach, I built a Pomodoro timer with these features:</p>
+<p>Instead of typing code, I mostly just talked to an LLM through an AI coding assitant - in this case, Claude Sonnet 3.7 with GitHub Copilot in Visual Studio Code and the macOS built-in Dictation app. I&rsquo;d open the Copilot chat on the right side, simply double press the Fn ke (my shortcut key for dictation app) and I&rsquo;d simple describe what I want to do, and the LLM would write the code.</p>
+<p>Here are a few examples:</p>
+<blockquote>
+<p><em>create a pomodoro timer page with three modes - focus, short break, long break. I want it to have multiple themes the user can choose. There should be a way to start and stop the timer</em></p>
+</blockquote>
+<blockquote>
+<p><em>make the timer duration to be configurable by the user</em></p>
+</blockquote>
+<blockquote>
+<p><em>when the focus time is over, can you do something to alert the user that it is time for a short break</em></p>
+</blockquote>
+<p>After each change, I&rsquo;d check if it was implemented correctly and if it looked good in the app. I&rsquo;d review the code to see if there are any mistakes. If I want something to change, I&rsquo;d just tell Copilot to fix - no typing needed. Here are a few examples:</p>
+<blockquote>
+<p><em>change the layout and colors to make it more creative and vibrant</em></p>
+</blockquote>
+<blockquote>
+<p><em>update the theme colors to improve color contrast</em></p>
+</blockquote>
+<h2 id="the-final-result">The Final Result</h2>
+<p>Using this approach, the app <strong>Pomodoro Flow</strong> has these features&hellip;</p>
 <ul>
-<li>Focus, short break, and long break modes</li>
+<li>Three modes - focus, short break, and long break</li>
 <li>Several color themes (I kept asking for new ones until I found ones I liked)</li>
-<li>A notification system when timers finish</li>
+<li>A notification popup and sound when the timers finish</li>
 <li>Options to customize timer durations</li>
 <li>Options to customize the number of sessions per cycle</li>
 <li>A debug mode for testing with shorter times</li>
 </ul>
-<p>All of this happened through conversation rather than me writing code directly. I could just sit back, think about what I wanted, and ask for it.</p>
-<p>This is a key point: the conversation being integrated into the IDE makes a huge difference. I&rsquo;ve been using Copilot for many months, but the seamless combination of voice input, code generation, and access to the full context of all source files created an experience that felt different - almost magical. This integration is what makes vibe coding truly work.</p>
+<p>The finished app is deployed at <a href="https://my-pomodoro-flow.netlify.app/" target="_blank" rel="noopener">https://my-pomodoro-flow.netlify.app/</a>. You can try it yourself. It&rsquo;s not perfect, but it&rsquo;s pretty good for something I built mostly by talking!</p>
+<p>The code is open source and available on GitHub: <a href="https://github.com/annjose/pomodoro-flow" target="_blank" rel="noopener">https://github.com/annjose/pomodoro-flow</a></p>
+<p>In fact, just now, as I am writing this blog post, my app was running in the background in a browser tab and it suddenly made the &rsquo;tada&rsquo; sound to say that my pomodoro session was complete. It is time for a break. So I got up and walked around for 5 min and came back to write.</p>
 <p>
 
 
@@ -314,13 +333,15 @@
     </figure>
     
 </p>
+<p>All of this happened through conversation rather than me writing code directly. I could just sit back, focus on the big picture while my super fast &ldquo;coding buddy&rdquo; did all the typing. When the code is ready, I will review and correct. Rinse, repeat.</p>
+<p>The conversation being integrated into the IDE makes a huge difference. I&rsquo;ve been using Copilot for many months, but the combination of voice input, code generation, and access to the full context of all source files created an experience that felt different - almost magical. This seamless integration is what makes vibe coding truly work.</p>
 <h2 id="what-worked-well">What Worked Well</h2>
-<p><strong>It was super easy</strong> - I could just sit back and talk. The default macOS Dictation app worked just fine, and while I could have used a more advanced tool like MacWhisper, the built-in option served the purpose well.</p>
+<p><strong>It was super easy</strong> - I could just sit back and talk easily. While I could have used a more advanced tool like MacWhisper, the built-in Dictation app in macOS served the purpose well.</p>
 <p><strong>Saved tons of time</strong> - Features that would normally take hours happened in minutes. For example, implementing a new theme with animations would typically take me an hour of CSS work, but happened in about 5 minutes with voice commands.</p>
-<p><strong>Got me 80% there</strong> - I still had to set up the initial project structure and handle deployment myself, which is super easy with platforms like Netlify and Vercel. The AI handled the complex React components and state management, while I focused on project setup and configuration.</p>
+<p><strong>Got me 80% there</strong> - AI did the heavy-lifting of the mundane work to make the app functional. I still had to do the initial project setup and deployment myself, but these are super easy to do using modern frameworks and platforms like Netlify, Vercel etc.</p>
 <p><strong>Made experimenting painless</strong> - I could try different themes, layouts, features without worrying about wasting code. This made me much more willing to experiment and try creative approaches I might have skipped otherwise.</p>
-<p><strong>The LLM was clear</strong> - It would tell me what it planned to do, then show me what it did. This made the back-and-forth smooth.</p>
-<p><strong>The LLM understood context</strong> - It could see all my files and make changes that worked together, maintaining consistency across the codebase.</p>
+<p><strong>The AI was clear and transparent</strong> - It would tell me what it planned to do, then show me what it did. This made the back-and-forth smooth.</p>
+<p><strong>The AI understood context</strong> - It could see all my files and make changes that worked together, maintaining consistency across the codebase.</p>
 <p>
 
 
@@ -337,10 +358,10 @@
     
 </p>
 <h2 id="what-could-be-better">What Could Be Better</h2>
-<p><strong>It was slower</strong> than typing for things I already know well. Many times, my instinct was to type, but then I would switch to voice to stay consistent with the experiment.</p>
+<p><strong>It was slower</strong> than typing at times, for example for things I already know well. Many times, my instinct was to type, but then I would switch to voice to stay consistent with the experiment.</p>
 <p><strong>Claude worked better than GPT-4o</strong> for this project. GPT-4o sometimes said it would do something but then didn&rsquo;t. When I asked it to make the UI more fun, it thought for a while but didn&rsquo;t change anything. Claude gave much better results and followed through on requests more consistently.</p>
-<p><strong>Not sufficient for serious products</strong> - This approach works for personal projects or prototypes, but shipping to real customers would need more work on error handling, accessibility, and testing. The AI gets you a big head start but doesn&rsquo;t handle these production concerns well yet.</p>
 <p><strong>Occasional glitches</strong> - Sometimes I got &ldquo;Sorry, no response&rdquo; errors. Probably just the Claude model is busy (I get overloaded errors when using Claude through web chat as well).</p>
+<p><strong>Not sufficient yet</strong> - This approach works great for personal projects or prototypes, but shipping large scale products to real customers would need more work on architecture, system design, database, observability and end to end integration. These will evolve very quickly.</p>
 <p>
 
 
@@ -365,16 +386,16 @@
     
 </p>
 <h2 id="other-thoughts">Other Thoughts</h2>
-<p>The output from Claude web chat was pretty similar to what I&rsquo;ve seen from GitHub Copilot. I wondered if there would be big differences between AI tools, but they seemed fairly similar.</p>
-<p>This really feels like the golden age of personal apps. You can make exactly what you want without a huge team or budget.
-You do need to be comfortable &ldquo;letting go&rdquo; - asking the AI to be creative and then reviewing what it comes up with, rather than controlling every detail yourself.</p>
+<p>The output from Claude through Copilot was pretty similar to what I&rsquo;ve seen from Claude.ai web chat. I wondered if there would be big differences due to system prompts, but they seemed fairly similar.</p>
+<p>You do need to be comfortable &ldquo;letting go&rdquo; - asking the AI to be creative and then reviewing what it comes up with, rather than controlling every detail yourself.</p>
+<p>This really feels like the golden age of personal apps. You can make exactly what you want without a huge team or budget.</p>
 <h2 id="what-this-means-for-developers">What This Means for Developers</h2>
-<p>I think this changes how we&rsquo;ll build software. The AI gets you most of the way there, but it won&rsquo;t handle everything just yet.</p>
-<p>Vibe coding gives you a good starting point - in fact, it will take you almost 70-80% there. But a product or application is much more than just UI and plumbing. There&rsquo;s architecture, systems thinking, and understanding how different components interact. Developers still need to understand these aspects deeply. Without this knowledge, apps built purely through AI prompting will likely be sub-optimal, slow, and hard to maintain.</p>
+<p>I think vibe coding (and AI assisted programming) has fundamentally changed how we build software. It gives you a good starting point - in fact, it will take you almost 70-80% there. But a product or application is much more than just UI and plumbing. There&rsquo;s architecture, systems thinking, and understanding how different components interact. Developers still need to understand these aspects deeply. Without this knowledge, apps built purely through AI prompting will likely be sub-optimal, slow, and hard to maintain.</p>
+<p>This is an opportunity and call to action.</p>
 <p>As developers, we&rsquo;ll need to be good at:</p>
 <ol>
 <li><strong>Giving clear instructions</strong> - Explaining what you want and checking if the code does it right</li>
-<li><strong>Reading code</strong> - Understanding what the AI wrote</li>
+<li><strong>Reading code</strong> - Understanding the code written by AI</li>
 <li><strong>Thinking about the big picture</strong> - Understanding how all the pieces fit together</li>
 <li><strong>Designing good experiences</strong> - As coding gets easier, making things that feel good to use becomes more important</li>
 <li><strong>Architecture and optimization</strong> - Ensuring the underlying structure is solid and performance is good</li>
@@ -383,15 +404,11 @@ You do need to be comfortable &ldquo;letting go&rdquo; - asking the AI to be cre
 <h2 id="tips-if-you-want-to-try-this">Tips If You Want to Try This</h2>
 <p>Work in small steps! Ask the LLM to add one feature, check if it works, save your progress, and then move on to the next feature.</p>
 <p>If you try to make too many changes at once, it gets messy and hard to fix things that don&rsquo;t work. Ironically, this brings us back to the old programming advice of making small, focused commits.</p>
-<h2 id="the-final-result">The Final Result</h2>
-<p>My finished app, <strong>Pomodoro Flow</strong> is deployed at <a href="https://my-pomodoro-flow.netlify.app/" target="_blank" rel="noopener">https://my-pomodoro-flow.netlify.app/</a>. It has multiple themes and customizable settings. It&rsquo;s not perfect, but it&rsquo;s pretty good for something I built mostly by talking!</p>
-<p>The code is open source and available on GitHub: <a href="https://github.com/annjose/pomodoro-flow" target="_blank" rel="noopener">https://github.com/annjose/pomodoro-flow</a></p>
-<p>In fact, just now, as I am writing this blog post, my app was running in the background in a browser tab and it suddenly made the &rsquo;tada&rsquo; sound to say that my pomodoro session was complete. It is time for a break. So I got up and walked around for 5 min and came back to write.</p>
-<p>The best part of this workflow is that I am focusing on what I wanted the app to do and how I wanted it to look and feel, rather than getting stuck on lower level coding details. The AI handled turning my ideas into working code.</p>
 <h2 id="wrapping-up">Wrapping Up</h2>
-<p>This isn&rsquo;t going to replace regular coding completely, but it&rsquo;s great for quickly making personal projects. Being able to just talk about your ideas and see them become real code feels like a genuine shift in how we might build software.</p>
-<p>As AI tools get better, I think we&rsquo;ll see more people building this way. The question will change from &ldquo;can we build this?&rdquo; to &ldquo;what should we build and how should it work?&rdquo;</p>
-<p>Have you tried building something with vibe coding? I&rsquo;d love to hear about it!</p>
+<p>Vibe coding isn&rsquo;t going to replace regular coding completely, but it&rsquo;s a fantastic option for quickly making personal projects. Being able to just talk about your ideas and see them turn into working code feels amazing.</p>
+<p>As AI tools get better, we&rsquo;ll see more people building this way. The question will change from &ldquo;can we build this?&rdquo; to &ldquo;what should we build and how should it work?&rdquo;</p>
+<p>I will do this more and more. But I will be diligent about reviewing the work and ensuring that my code is secure, performant and architecturally stable.</p>
+<p>I hope all developers, non-developers will do this too. There is no better time to be in this space!</p>
 
 
   
