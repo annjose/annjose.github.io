@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 13 Mar 2025 14:24:23 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2025 15:18:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://annjose.com/tags/AI/</link>
+      <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/AI/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>coding-assistants</title>
+      <link>https://annjose.com/tags/coding-assistants/</link>
+      <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/coding-assistants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://annjose.com/tags/LLM/</link>
+      <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/LLM/</guid>
+      <description></description>
+    </item>
     <item>
       <title>health</title>
       <link>https://annjose.com/tags/health/</link>
@@ -28,27 +49,6 @@
       <link>https://annjose.com/tags/agentic-systems/</link>
       <pubDate>Mon, 24 Feb 2025 04:32:12 -0700</pubDate>
       <guid>https://annjose.com/tags/agentic-systems/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://annjose.com/tags/AI/</link>
-      <pubDate>Mon, 24 Feb 2025 04:32:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/AI/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>coding-assistants</title>
-      <link>https://annjose.com/tags/coding-assistants/</link>
-      <pubDate>Mon, 24 Feb 2025 04:32:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/coding-assistants/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://annjose.com/tags/LLM/</link>
-      <pubDate>Mon, 24 Feb 2025 04:32:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/LLM/</guid>
       <description></description>
     </item>
     <item>

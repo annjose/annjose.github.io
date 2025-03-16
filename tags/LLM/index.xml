@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 24 Feb 2025 04:32:12 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2025 15:18:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/LLM/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vibe coding a Pomodoro app with AI</title>
+      <link>https://annjose.com/post/vibe-coding-pomodoro-app/</link>
+      <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
+      <guid>https://annjose.com/post/vibe-coding-pomodoro-app/</guid>
+      <description>Today I tried something fun - I built a Pomodoro timer app mostly by talking to AI instead of typing code myself. I have done it a few times before, but this is the first time I am using to build a full app. And guess what - there is a term for it - vibe coding, coined by Andrej Karpathy 😎. I wanted to create something to experiment with this workflow, but also worked well and felt good to use.</description>
+    </item>
     <item>
       <title>Claude Code: First Impressions</title>
       <link>https://annjose.com/post/claude-code-first-impressions/</link>
