@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Comparison of privacy features in Chrome, Firefox, and Brave browsers">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Which browser cares about privacy the most? &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fa fa-list fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/generative-ai"><i class='fa fa-list fa-fw'></i>Generative AI</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fa fa-list fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fa fa-list fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fa fa-list fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fa fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/annjose" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/402100" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2024. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Which browser cares about privacy the most?</h1>
+  <h2>Comparison of privacy features in Chrome, Firefox, and Brave browsers</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Mar 2025</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/tech-explorations">tech-explorations</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/privacy">privacy</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/browsers">browsers</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>I stopped using Chrome a long time ago due to privacy concerns, and I&rsquo;ve been switching between Firefox, Edge, and occasionally Brave. But I never spent the time to fully compare these browsers and analyze which one best suits my needs. Today, I decided to look deeply into these browsers and ended up going down a rabbit hole of researching their privacy features.</p>
+<p><strong>Why is this important?</strong> Every time we browse a website, we are sharing bits of our digital life with companies we don&rsquo;t know. These companies collect vast amounts of data about our browsing habits, preferences, and personal information.  It is so cringy and annoying to see YouTube showing a &lsquo;suggested video&rsquo; of the dental procedure that you searched about and are planning to get done. The browser you choose plays a significant role in how much of your data is collected and shared.</p>
+<p>This post summarizes my findings about privacy features in three popular browsers - <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">Google Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/" target="_blank" rel="noopener">Mozilla Firefox</a> and <a href="https://brave.com/" target="_blank" rel="noopener">Brave</a>. This analysis isn&rsquo;t comprehensive, but it covers the key privacy aspects that helped me make my decision. If you have seen similar or more information, please share them in the  comments. There is always room to learn. I hope this helps anyone who is evaluating their own browser choices.</p>
+<h2 id="1-browsing-data-synchronization">1. Browsing data synchronization</h2>
+<p>This is the feature where the browsing data (bookmarks, history, passwords, preferences etc.) can be kept in sync across multiple devices (laptop, phone etc.).</p>
+<ul>
+<li><strong>Google</strong> implements this by asking the user to login to their Google account and updates the server copy whenever there are changes in any of the devices. It also stores all the browsing data on Google servers.</li>
+<li><strong>Firefox</strong> follows a slightly different approach that balances privacy with convenience. It encrypts the sync data locally on the device using an encryption key derived locally from the user&rsquo;s Firefox account password and sends the encrypted data to Mozilla&rsquo;s servers. The encryption key never leaves the user&rsquo;s device, so the servers cannot decrypt the data.</li>
+<li><strong>Brave</strong> follows a privacy-first approach which synchronizes the data using encrypted chains. It asks the user to create a sync code (a QR code) on the &lsquo;source&rsquo; device and enter the same code in the &lsquo;destination&rsquo; device - this is the encrypted sync chain. Then the source device encrypts the data and synchronizes it through an end-to-end encrypted channel passing date to Brave&rsquo;s relay servers. These servers cannot read the data because it is encrypted and do NOT store the sync data. Only the user&rsquo;s devices with the proper keys can read the data. So the destination device where the user gave the sync code will download the data, decrypt it locally using the user&rsquo;s private key and update it.
+<ul>
+<li>Here is one of the PRs in Brave repository that disables the Chrome settings that send user data to Google servers - <a href="https://github.com/brave/brave-core/pull/244/files" target="_blank" rel="noopener">https://github.com/brave/brave-core/pull/244/files</a></li>
+<li>This is the full list of features completely disabled in Brave - <a href="https://support.brave.com/hc/en-us/articles/10742158329613-What-does-Brave-remove-from-the-Chromium-engine" target="_blank" rel="noopener">https://support.brave.com/hc/en-us/articles/10742158329613-What-does-Brave-remove-from-the-Chromium-engine</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="2safe-browsing">2.Safe Browsing</h2>
+<p>This is the feature developed by Google that protects users from malicious users. The server maintains a list of websites that have phishing attempts, malware distribution, deceptive software etc.</p>
+<ul>
+<li>In <strong>Chrome</strong>, when the user visits a website, it sends partial hash of the URL to Google servers and checks against the blacklisted sites and warn the user if it appears in that last.</li>
+<li><strong>Brave</strong> has replaced this implementation with a privacy-focused version where it downloads the blacklisted domains locally and performs the check locally on the user&rsquo;&rsquo;s device.</li>
+<li><strong>Firefox</strong> - similar to Brave, it downloads the list of malicious sites to the devices and checks against the requested URL locally. This list is updated periodically. So the requested URL is not sent to the Firefox servers.</li>
+</ul>
+<h2 id="3-telemetry-and-usage-statistics">3. Telemetry and usage statistics</h2>
+<p>Telemetry is the automated collection and sending of data about how the software (in this case the browser) performs, its usage patterns, and technical metrics. Browsers can collect a lot of data about your usage and performance as part of telemetry.</p>
+<ul>
+<li>In <strong>Chrome</strong>, telemetry is enabled by default, with few options to opt-out. Collects data including performance, extensive usage statistics, user interactions, search queries, data about websites visited and location data (if permission granted)</li>
+<li><strong>Firefox</strong> collect usage statistics like performance, feature usage and user interactions, but is not as extensive as Chrome and offers more granular control to opt-out. More importantly, Mozilla is very transparent about the data that they collect and is well documented in <a href="https://www.mozilla.org/en-US/privacy/firefox/" target="_blank" rel="noopener">Mozilla&rsquo;s privacy policy</a> and <a href="https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/" target="_blank" rel="noopener">Firefox Telemetry Documentation</a> that lists what data it collects, how they use it and how it is stored.</li>
+<li><strong>Brave</strong> has disabled telemetry by default and uses an opt-in model if the user wants to. It has disabled the Chromium feature of automatic reporting of usage data and crash reports to Google. It uses the <a href="https://brave.com/blog/privacy-preserving-product-analytics-p3a/" target="_blank" rel="noopener">Privacy-Preserving Product Analytics</a> system (also known as P3A system) which anonymizes usage data such that it prevents the user to be individually identifies or tracked.</li>
+</ul>
+<h2 id="4-browser-fingerprinting">4. Browser Fingerprinting</h2>
+<p>This is a tracking technique that collects information about the user&rsquo;s browser configuration to create a unique &ldquo;fingerprint&rdquo; that can identify and track the user across websites, even without cookies.</p>
+<ul>
+<li><strong>Chrome</strong> offers very little built-in protection against fingerprinting. Users have to rely on extensions to prevent it. Interestingly, when I searched for &lsquo;fingerprint&rsquo; in Chrome settings, it showed that there are two results, but when I go into those settings, there is no mention of fingerprint.</li>
+<li><strong>Firefox</strong> offers <em>Enhanced Tracking Protection</em> with three protection levels, of which <em>Strict</em> level prevents <em>known and suspected fingerprinters</em> in addition to blocking cross-site cookies, tracking content in all windows etc.</li>
+<li><strong>Brave</strong> enables fingerprinting protection by default. You see the pattern here - privacy-first approach. It can be turned off Settings &gt; Shields. Its protection approach (&ldquo;privacy through randomization&rdquo;) is considered quite strong among mainstream browsers.</li>
+</ul>
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="scr-chrome-fingerprint.png"
+        alt="Fastlane">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="scr-firefox-fingerprint.png"
+        alt="Fastlane">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="scr-brave-fingerprint.png"
+        alt="Fastlane">
+    </div>
+  </div>
+  
+
+</div>
+
+<p>In addition to these factors, we need to consider a few things that are not directly related to privacy, but impact the design choices made by the browser vendors and hence are critical for our decision.</p>
+<h2 id="5-mobile-browsers">5. Mobile Browsers</h2>
+<p>Many of us browse websites on our mobile devices. So we must take that also into consideration. All three browser have similar defaults and tracking protection on mobile as they have on desktop.</p>
+<ul>
+<li><strong>Chrome for Mobile</strong>: Similar privacy concerns as desktop, with additional permissions for location tracking.</li>
+<li><strong>Firefox for Mobile</strong>: Offers tracking protection similar to desktop version, supports extensions on Android.</li>
+<li><strong>Brave for Mobile</strong>: Maintains the same privacy features as desktop, including ad and tracker blocking by default.</li>
+</ul>
+<h2 id="6-source-code-transparency">6. Source code transparency</h2>
+<ul>
+<li><strong>Chrome</strong> is closed source, although it is based on the open-source Chromium browser engine (Blink) with additional proprietary components that aren&rsquo;t open source.</li>
+<li><strong>Brave</strong> is also built on Chromium&rsquo;s Blink engine and all their additions and customizations are open source.</li>
+<li><strong>Firefox</strong> is built on its own Gecko engine.</li>
+</ul>
+<p>The source code of Firefox and Brave are available at the links below. This code has been reviewed and studied by security experts and independent researchers.</p>
+<ul>
+<li><a href="https://github.com/mozilla/gecko-dev" target="_blank" rel="noopener">Gecko repository</a></li>
+<li><a href="https://github.com/brave/brave-core" target="_blank" rel="noopener">Brave core repository</a></li>
+<li><a href="https://chromium.googlesource.com/chromium/src/&#43;/refs/heads/main/third_party/blink/" target="_blank" rel="noopener">Chromium Git repository</a></li>
+</ul>
+<h2 id="7-business-model">7. Business Model</h2>
+<p>The business model of the browser directly influences its privacy practices. When a company&rsquo;s revenue depends on collecting and selling user data, there is an inherent conflict of interest with privacy protection.</p>
+<ul>
+<li><strong>Google Chrome</strong>: Google&rsquo;s primary revenue comes from advertising, which relies on collecting user data. So privacy protections are often secondary to their financial interests.</li>
+<li><strong>Firefox</strong>: Mozilla is a non-profit organization funded primarily through partnerships with search engines. While this includes Google, Mozilla has demonstrated commitment to privacy as part of its mission.</li>
+<li><strong>Brave</strong>: Operates on a unique model with Brave Rewards, allowing users to opt into privacy-respecting ads and earn BAT tokens. This creates a business model aligned with privacy interests rather than opposing them.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Brave and Firefox offer strong privacy features, with Brave taking a more aggressive approach out of the box while Firefox offers more customization options.</p>
+<p>So here is how I see it based on what the user wants:</p>
+<ul>
+<li>For users who want maximum <strong>privacy with minimal configuration</strong>: <strong>Brave</strong></li>
+<li>For users who want a <strong>customizable privacy</strong> experience: <strong>Firefox</strong> with privacy tweaks</li>
+<li>For users <strong>transitioning from Chrome</strong> who want better privacy: Start with <strong>Firefox</strong>, then consider Brave</li>
+<li>For users who need both strong privacy and Chrome compatibility (eg: extensions from Chrome Web Store): <strong>Brave</strong> is the ideal choice.</li>
+</ul>
+<p>My decision is to go all in with Brave with all the default settings for maximum privacy. I will also set up Firefox with the strictest privacy settings so that I can keep it as a backup browser for sites that might have compatibility issues with Brave. All other browsers will be gone from my machine!</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/vibe-coding-pomodoro-app/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/vibe-coding-pomodoro-app/">Vibe coding a Pomodoro app with AI</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+</body>
+</html>
+

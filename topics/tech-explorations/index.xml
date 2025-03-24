@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2024. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 15 Mar 2025 15:18:12 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 23 Mar 2025 16:14:23 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/topics/tech-explorations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Which browser cares about privacy the most?</title>
+      <link>https://annjose.com/post/browsers-privacy-compare/</link>
+      <pubDate>Sun, 23 Mar 2025 16:14:23 -0700</pubDate>
+      <guid>https://annjose.com/post/browsers-privacy-compare/</guid>
+      <description>I stopped using Chrome a long time ago due to privacy concerns, and I&amp;rsquo;ve been switching between Firefox, Edge, and occasionally Brave. But I never spent the time to fully compare these browsers and analyze which one best suits my needs. Today, I decided to look deeply into these browsers and ended up going down a rabbit hole of researching their privacy features.&#xA;Why is this important? Every time we browse a website, we are sharing bits of our digital life with companies we don&amp;rsquo;t know.</description>
+    </item>
     <item>
       <title>Vibe coding a Pomodoro app with AI</title>
       <link>https://annjose.com/post/vibe-coding-pomodoro-app/</link>
