@@ -7,8 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 23 Mar 2025 16:14:23 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 23 May 2025 17:54:13 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://annjose.com/tags/AI/</link>
+      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
+      <guid>https://annjose.com/tags/AI/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>cloudflare</title>
+      <link>https://annjose.com/tags/cloudflare/</link>
+      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
+      <guid>https://annjose.com/tags/cloudflare/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>how-to</title>
+      <link>https://annjose.com/tags/how-to/</link>
+      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
+      <guid>https://annjose.com/tags/how-to/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://annjose.com/tags/LLM/</link>
+      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
+      <guid>https://annjose.com/tags/LLM/</guid>
+      <description></description>
+    </item>
     <item>
       <title>browsers</title>
       <link>https://annjose.com/tags/browsers/</link>
@@ -24,24 +52,10 @@
       <description></description>
     </item>
     <item>
-      <title>AI</title>
-      <link>https://annjose.com/tags/AI/</link>
-      <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/AI/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>coding-assistants</title>
       <link>https://annjose.com/tags/coding-assistants/</link>
       <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
       <guid>https://annjose.com/tags/coding-assistants/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://annjose.com/tags/LLM/</link>
-      <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/LLM/</guid>
       <description></description>
     </item>
     <item>
@@ -70,13 +84,6 @@
       <link>https://annjose.com/tags/building/</link>
       <pubDate>Sun, 15 Dec 2024 12:15:21 -0700</pubDate>
       <guid>https://annjose.com/tags/building/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>how-to</title>
-      <link>https://annjose.com/tags/how-to/</link>
-      <pubDate>Sun, 15 Dec 2024 12:15:21 -0700</pubDate>
-      <guid>https://annjose.com/tags/how-to/</guid>
       <description></description>
     </item>
     <item>

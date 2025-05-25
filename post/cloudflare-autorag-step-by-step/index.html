@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Build a RAG Pipeline with Cloudflare AutoRAG — No Infrastructure Needed">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Cloudflare AutoRAG: RAG on auto-pilot &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  
+  <script src="https://kit.fontawesome.com/3e898cf239.js" crossorigin="anonymous"></script>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fas fa-pen-to-square fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/LLM"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fas fa-magnifying-glass fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fas fa-arrow-up-right-dots fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/web-development"><i class='fas fa-globe fa-fw'></i>Web Development</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fas fa-mobile-screen fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fas fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2025. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Cloudflare AutoRAG: RAG on auto-pilot</h1>
+  <h2>Build a RAG Pipeline with Cloudflare AutoRAG — No Infrastructure Needed</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 May 2025</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/RAG">RAG</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/LLM">LLM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/cloudflare">cloudflare</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.</p>
+<p>However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database. At inference time, you need to generate an embedding of the user query using an embedding model, retrieve the relevant data from the indexed store and return a meaningful context-aware response to the user. On top of that, any change in the data source means that you need to re-index the data, re-generate embeddings, and update the store. Rinse and repeat.</p>
+<p>Now with AutoRAG - Cloudflare&rsquo;s fully managed end-to-end RAG pipeline, almost all of this complexity disappears. All you need to do is gather the right data and upload it to a Cloudflare R2 bucket (equivalent of Amazon S3) and AutoRAG takes care of the rest. It handles data chunking, indexes them and stores the embeddings in a globally distributed vector database (<a href="https://developers.cloudflare.com/vectorize/" target="_blank" rel="noopener">Cloudflare Vectorize</a>). During inference with a user query, it retrieves relevant data using semantic search and generates responses using any of the ML models hosted on Cloudflare servers (<a href="https://developers.cloudflare.com/workers-ai/" target="_blank" rel="noopener">Worker AI</a>).</p>
+<h2 id="intro-to-autorag">Intro to AutoRAG</h2>
+<p><strong>AutoRAG</strong> is Cloudflare&rsquo;s fully-managed solution for building RAG (Retrieval Augmented Generation) pipelines that provide accurate and up-to-date information to your LLM applications without dealing with the hassles of managing infrastructure on your own. It simplifies the RAG process by doing a few specific things:</p>
+<ul>
+<li>indexes and updates your data source <strong>continuously and automatically</strong></li>
+<li>exposes the AutoRAG instance via the familiar <strong>Worker binding</strong> <a href="https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/" target="_blank" rel="noopener">syntax</a></li>
+<li>provides <strong>multitenancy</strong> that allows data segmentation based on customer, user or workspace to support</li>
+</ul>
+<p>This is a brand-new release, announced just a few days ago at <a href="https://www.cloudflare.com/developer-week-2025/updates/" target="_blank" rel="noopener">Cloudflare&rsquo;s 2025 Developer Week</a>.</p>
+<h2 id="how-to-set-up-autorag-with-your-own-data">How to set up AutoRAG with your own data</h2>
+<p>Setting up AutoRAG with your custom data is easy. I tried it with my blog posts as the data source and it worked out pretty well. Let&rsquo;s walk through this step by step.</p>
+<h3 id="step-1-prepare-your-data">Step 1: Prepare your data</h3>
+<p>Upload your data to Cloudflare R2, the S3-compatible data storage solution with zero egress free. It offers free storage up to 10 GB/month and then $0.015 per additional GB/month. If you don&rsquo;t have an account, you can create one - you won’t be charged until you exceed the free tier.</p>
+<p>The data can be plain text files, config files, source code, PDF, images, CSV files and more. See the <a href="https://developers.cloudflare.com/autorag/configuration/data-source/" target="_blank" rel="noopener">full list of supported files and size limits</a>.</p>
+<p>I simply created a new R2 bucket and selected the option <em>Select from computer</em> -&gt; <em>Folders</em> and selected the top folder of my blog content. It had md files, images, text files etc. and that&rsquo;s just fine, no need to filter out any files.</p>
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-r2-bucket-empty.png"
+        alt="R2 bucket - new">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-r2-bucket-select-files.png"
+        alt="R2 bucket - select files">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-r2-bucket-files-uploaded.png"
+        alt="R2 bucket - files uploaded">
+    </div>
+  </div>
+  
+
+</div>
+
+<h3 id="step-2-create-an-autorag">Step 2: Create an AutoRAG</h3>
+<p>Go to <a href="https://dash.cloudflare.com/" target="_blank" rel="noopener">Cloudflare dashboard</a>, login with your account and go to <strong>AI</strong> -&gt; <strong>AutoRAG</strong>. Click <strong>Create AutoRAG</strong> button. Select the data source you created in the previous step or any other data source available. Go through the workflow and select the configurations (the default config is good enough for the first iteration).</p>
+<p>At the end of this step, your RAG will be created. Now Cloudflare will start indexing the documents you uploaded and they will be marked as <em>Queued</em>. This will take a few minutes, so be patient.</p>
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-create-new.png"
+        alt="Create new AutoRAG">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-create-select-datasource.png"
+        alt="Select datasource">
+    </div>
+  </div>
+  
+
+</div>
+
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-create-configure.png"
+        alt="Select configurations">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-create-select-name.png"
+        alt="Select the name for the RAG">
+    </div>
+  </div>
+  
+
+</div>
+
+<h3 id="step-3-wait-for-autorag-to-index-your-data">Step 3: Wait for AutoRAG to index Your data</h3>
+<p>As the indexing process continues, the status of the document will change to <em>Success</em> or <em>Completed</em> depending on the result of indexing. When all the docs are indexed, the top level status of the RAG will change to <em>Ready</em>.</p>
+<p>In my attempts so far, the only time the indexing failed was when I uploaded a file above the size limit or when I uploaded an unsupported file (eg: the GIMP file for an image). I had around 85 files and it took around 5 minutes. Now the fun starts!</p>
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-indexing-queued.png"
+        alt="Indexing - queued">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-indexing-completed.png"
+        alt="Indexing - completed">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-3">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-indexing-errored.png"
+        alt="Indexing - errored">
+    </div>
+  </div>
+  
+
+</div>
+
+<h3 id="step-4-try-out-your-new-autorag-no-code">Step 4: Try out your new AutoRAG (no code)</h3>
+<p>You can do this in the AutoRAG playground by going to the <em>Playground</em> tab in your RAG page. Here you will see two options - <em>Search</em> and <em>Search with AI</em>.</p>
+<ul>
+<li>
+<p><strong>Search</strong> - a standard document search that returns links relevant to the user query, similar to classic Google-style results (aka the ‘10 blue links’ experience)</p>
+</li>
+<li>
+<p><strong>Search with AI</strong> - this is the newer LLM-style search result that shows a concise summarized response that answers the user question. In addition to this summary, it shows the citations - the link to the documents where that information is present. It rewrites the user query to be more relevant to an LLM.</p>
+</li>
+</ul>
+<p>You can run the query with any of the models that are available on Cloudflare and listed in the Playground settings panel on the right (eg: Llama 3.3 70B, Llama 3.1 8B etc.). Select the model of your choice.</p>
+<p>I tried multiple queries in my RAG and all of them returned accurate response with correct citations. See a few examples below:</p>
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-inference-search.png"
+        alt="Inference - Search">
+    </div>
+  </div>
+  
+
+  
+  
+  
+  
+  <div class="pure-u-1 pure-u-md-1-2">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-inference-search-with-ai-1.png"
+        alt="Inference - Search with AI">
+    </div>
+  </div>
+  
+
+</div>
+
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="autorag-inference-search-with-ai-2.png"
+        alt="Inference - Search main takes">
+    </div>
+  </div>
+  
+
+</div>
+
+<h3 id="step-5-add-this-rag-to-your-application">Step 5: Add this RAG to your application.</h3>
+<p>You can access this RAG by creating a binding in your worker config and refer to it in your application code.</p>
+<p>In your wrangler config file, you define the binding for AI.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#6272a4">// File: wrangler.jsonrc
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;ai&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;binding&#34;</span>: <span style="color:#f1fa8c">&#34;AI&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then in your application code, call the aiSearch API on the AI binding.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#6272a4">// File: index.js
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> response <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> env.AI.autorag(<span style="color:#f1fa8c">&#34;ann-blog-rag&#34;</span>).aiSearch({
+</span></span><span style="display:flex;"><span>  query<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;main takes on web development&#34;</span>,
+</span></span><span style="display:flex;"><span>  model<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@cf/meta/llama-3.3-70b-instruct-sd&#34;</span>,
+</span></span><span style="display:flex;"><span>  ranking_options<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    score_threshold<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0.3</span>,
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  stream<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="look-under-the-hood">Look under the hood</h2>
+<p>AutoRAG connects the tools required to index the data, retrieve the relevant context and generate the response for the user query. It keeps the data in sync behind the scenes and responds to the query in real time.</p>
+<p>This involves two main processes - <strong>indexing</strong>  and <strong>querying</strong>.</p>
+<h3 id="indexing">Indexing</h3>
+<p>This is the background (asynchronous) process that converts your data into vectors, monitors your data source for changes and automatically updates them when there are changes.</p>
+<p>During this process, AutoRAG converts all the data into markdown format in order to ensure consistency across all file types. Interestingly, it also converts images to Markdown text. The extracted text is chunked to smaller pieces, each chunk is embedded (transformed into vectors) using an embedding model and stored in an instance of the Vectorize database.</p>
+<h3 id="querying">Querying</h3>
+<p>This is the synchronous process triggered by user queries. It retrieves the most relevant content and generates context-aware responses.</p>
+<p>The process starts when a request is sent to AutoRAG through either the AI Search or Search options. Optionally, the input query can be rewritten using a Workers AI language model to enhance retrieval quality. Then, the question is turned into a vector using the same model as the one used for the stored data. The system finds the most relevant information by matching this vector against the Vectorize database and pulls the actual content from R2 storage. If regular search is used, this content is sent as a response to the user. If AI Search is used, the retrieved content and the query (original or rewritten) is fed into an LLM to generate a helpful concise answer.</p>
+<h2 id="cost-and-availability">Cost and Availability</h2>
+<p>AutoRAG is free to use during its open beta and is available on all Cloudflare plans - both free and paid. It runs on top of other Cloudflare services like R2, Workers AI, Vectorize and AI Gateway, each with its own pricing and usage limits. However, all of these services offer a reasonable free tier, so you will be charged only if you exceed the monthly limits.</p>
+<p>See the full details at <a href="https://developers.cloudflare.com/autorag/platform/limits-pricing/" target="_blank" rel="noopener">Cloudflare AutoRAG Pricing</a>.</p>
+<p>For reference, everything mentioned in this post was done using the free tiers - I didn’t pay anything.</p>
+<h2 id="overall-impressions">Overall impressions</h2>
+<p>All in all, I love AutoRAG - it is easy to use and powerful. It was amazing how quickly I could set up a semantic search for my blog content with hardly any effort. It will be fun to integrate this into my blog website and front it with a simple search UI - &lsquo;my own&rsquo; RAG implementation 😎.</p>
+<p>I was also impressed that Cloudflare has masterfully combined the best of their technologies to build something really powerful. This includes the following:</p>
+<ul>
+<li><a href="https://developers.cloudflare.com/r2/" target="_blank" rel="noopener">Cloudflare R2</a> - R2 is the S3-compatible data storage solution from Cloudflare with zero egress fees</li>
+<li><a href="https://developers.cloudflare.com/workers-ai/" target="_blank" rel="noopener">Workers AI</a> - The serverless infrastructure to run AI models on Cloudflare&rsquo;s globally distributed network</li>
+<li><a href="https://developers.cloudflare.com/vectorize/" target="_blank" rel="noopener">Vectorize</a> - The vector database that is distributed globally and makes querying for embeddings fast, easy and affordable.</li>
+<li><a href="https://developers.cloudflare.com/ai-gateway/" target="_blank" rel="noopener">AI Gateway</a> - Provides analytics, metrics and caching of your AI applications so that you can monitor all the requests made on any of the services</li>
+</ul>
+<h2 id="a-final-thought">A final thought</h2>
+<p>I&rsquo;ve been using various Cloudflare products for a while now and found them to be solid and reliable, but some of them were not beginner-friendly. I remember struggling with the R2 storage API when building a photo gallery for the first time. The compatibility with S3 API made it powerful, but it made the learning curve steeper than I expected.</p>
+<p>But AutoRAG feels different - it is polished, intuitive and just works from the get go. It took me just a few minutes to set up a RAG pipeline with my blog content and start running queries in the playground. The documentation was clear and detailed. It’s clear that Cloudflare is now prioritizing developer experience in addition to its focus on reliability. That&rsquo;s awesome ❤️.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://blog.cloudflare.com/introducing-autorag-on-cloudflare/" target="_blank" rel="noopener">Cloudflare&rsquo;s announcement of AutoRAG</a></li>
+<li><a href="https://developers.cloudflare.com/autorag/" target="_blank" rel="noopener">AutoRAG documentation</a></li>
+<li><a href="https://www.youtube.com/watch?v=JUFdbkiDN2U" target="_blank" rel="noopener">Good video - First look at AutoRAG</a></li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/browsers-privacy-compare/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/browsers-privacy-compare/">Which browser cares about privacy the most?</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+
+<script 
+    id="counterscale-script" 
+    data-site-id="annjose-blog"
+    src="https://counterscale.annjose.workers.dev/tracker.js" 
+    defer>
+</script>
+
+</body>
+</html>
+

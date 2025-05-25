@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 23 Mar 2025 16:14:23 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 23 May 2025 17:54:13 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudflare AutoRAG: RAG on auto-pilot</title>
+      <link>https://annjose.com/post/cloudflare-autorag-step-by-step/</link>
+      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
+      <guid>https://annjose.com/post/cloudflare-autorag-step-by-step/</guid>
+      <description>We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.&#xA;However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database.</description>
+    </item>
     <item>
       <title>Image test</title>
       <link>https://annjose.com/image-test/</link>
