@@ -7,20 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 23 May 2025 17:54:13 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 31 May 2025 13:13:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/topics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>RAG</title>
-      <link>https://annjose.com/topics/RAG/</link>
-      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
-      <guid>https://annjose.com/topics/RAG/</guid>
+      <title>on-device-ai</title>
+      <link>https://annjose.com/topics/on-device-ai/</link>
+      <pubDate>Sat, 31 May 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/topics/on-device-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>tech-explorations</title>
       <link>https://annjose.com/topics/tech-explorations/</link>
-      <pubDate>Sun, 23 Mar 2025 16:14:23 -0700</pubDate>
+      <pubDate>Sat, 31 May 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/topics/tech-explorations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://annjose.com/topics/RAG/</link>
+      <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
+      <guid>https://annjose.com/topics/RAG/</guid>
       <description></description>
     </item>
     <item>

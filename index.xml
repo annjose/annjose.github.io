@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 23 May 2025 17:54:13 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 31 May 2025 13:13:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mobile On-device AI</title>
+      <link>https://annjose.com/post/mobile-ondevice-ai/</link>
+      <pubDate>Sat, 31 May 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/post/mobile-ondevice-ai/</guid>
+      <description>A lot of the buzz around AI is about big cloud models, but I’ve often wondered what we can do with AI right on our phones and tablets - making things more private, fast, and user-friendly. As someone who is passionate about mobile development and has been tinkering a lot with AI recently, I am fascinated by what happens when mobile development and AI come together - especially the possibilities of running AI directly on the device.</description>
+    </item>
     <item>
       <title>Cloudflare AutoRAG: RAG on auto-pilot</title>
       <link>https://annjose.com/post/cloudflare-autorag-step-by-step/</link>
