@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hands-on on Reflections</title>
+    <link>https://annjose.com/tags/hands-on/</link>
+    <description>Recent content in hands-on on Reflections</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2025. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 30 May 2025 12:32:08 -0700</lastBuildDate>
+    <atom:link href="https://annjose.com/tags/hands-on/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edge AI: The Essentials</title>
+      <link>https://annjose.com/post/edge-ai-essentials/</link>
+      <pubDate>Fri, 30 May 2025 12:32:08 -0700</pubDate>
+      <guid>https://annjose.com/post/edge-ai-essentials/</guid>
+      <description>Every day we&amp;rsquo;re seeing fantastic advancements in AI, thanks to more data and powerful computers. This may make it seem like the future of AI is all about getting even more data and bigger computers. But I believe a critical and rapidly evolving piece of the puzzle is about bringing the Intelligence of Artificial Intelligence onto the devices where the data originates (eg: our phones, cameras, and IoT devices) and doing the &amp;ldquo;smarts&amp;rdquo; using their own computing capabilities.</description>
+    </item>
+  </channel>
+</rss>

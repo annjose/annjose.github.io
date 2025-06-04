@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="An essential introduction to Edge AI and how it works">
+  <meta name="generator" content="Hugo 0.121.1">
+
+  <title>Edge AI: The Essentials &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  
+  <script src="https://kit.fontawesome.com/3e898cf239.js" crossorigin="anonymous"></script>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fas fa-pen-to-square fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/LLM"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fas fa-magnifying-glass fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fas fa-arrow-up-right-dots fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/web-development"><i class='fas fa-globe fa-fw'></i>Web Development</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fas fa-mobile-screen fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fas fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2025. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Edge AI: The Essentials</h1>
+  <h2>An essential introduction to Edge AI and how it works</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>30 May 2025</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/on-device-ai">on-device-ai</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/edge-ai">edge-ai</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/hands-on">hands-on</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Every day we&rsquo;re seeing fantastic advancements in AI, thanks to more data and powerful computers. This may make it seem like the future of AI is all about getting even more data and bigger computers. But I believe a critical and rapidly evolving piece of the puzzle is about bringing the <em>Intelligence</em> of Artificial Intelligence onto the devices where the data originates (eg: our phones, cameras, and IoT devices) and doing the &ldquo;smarts&rdquo; using their own computing capabilities. This is the essence of <strong>Edge AI</strong>, the topic we’ll explore in this post.</p>
+<h2 id="edge-ai">Edge AI</h2>
+<p>In traditional <strong>Cloud AI</strong>, an end device (like a security camera) sends all its collected data to a remote server for processing. The server then sends the result back (e.g., &ldquo;intruder detected&rdquo;). But Edge AI offers a different approach: processing the data locally on the device itself. So, your camera software runs the AI model, crunches the data, and generates the &ldquo;intruder detected&rdquo; response all on its own hardware. This avoids the need to send data to the cloud for this immediate analysis.</p>
+<p><strong>Edge AI</strong> is the implementation of AI algorithms at the <em>edge</em> of the network rather than in a centralized cloud computing facility or a remote data center. This means that the AI computations, particularly the inference step of making predictions or decisions based on new data happen <strong>locally on the end device</strong>, or on a more powerful <strong>server physically located nearby</strong> (an edge server). These two variations of Edge AI are called <strong>on-device AI</strong> and <strong>edge server</strong>.</p>
+<p>If you want to learn more about on-device AI, read my post <a href="https://annjose.com/post/mobile-ondevice-ai">Mobile on-device AI</a>.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>
+<p>In <strong>retail stores</strong>, numerous cameras and smart shelves can collect in-store analytics (tracking customer behavior, monitoring shelf stock). Then a small server in the store&rsquo;s back office could process video feeds for customer analytics (foot traffic, dwell times), manage inventory data, and enable faster checkout, improving the customer experience.</p>
+</li>
+<li>
+<p><strong>Autonomous vehicles</strong> have significant onboard processing capabilities, which can be augmented by providing real-time traffic information, localized HD maps and realtime hazard warnings processed by servers co-located in the 5G cell towers. This system named as MEC (Multi-Access Computing) was <a href="https://www.rcrwireless.com/20211021/telco-cloud/verizon-and-nissan-demonstrate-edge-computing-for-improved-connected-vehicle-communication" target="_blank" rel="noopener">tested by Verizon and Nissan</a> for sharing a multi-viewpoint picture of potential safety hazards, relayed to drivers via Verizon&rsquo;s 5G Edge, enhancing road safety.</p>
+</li>
+<li>
+<p>On <strong>smartphones</strong>, advanced photo and video editing features like object removal and background blur are performed directly on the device. This on-device processing makes editing faster and allows users to edit media offline, eliminating the need to upload large files to the cloud for basic modifications, ensuring user privacy and convenience.</p>
+</li>
+</ul>
+<h3 id="advantages-of-edge-ai">Advantages of Edge AI</h3>
+<ul>
+<li><strong>Reduced Latency:</strong> Eliminates the need for data to travel to and from the cloud, resulting in faster response times.</li>
+<li><strong>Offline Operation:</strong> Enables AI-powered features to function reliably even without extensive network connectivity.</li>
+<li><strong>Enhanced Privacy and Security:</strong> Processing data locally - on the device or a nearby edge server - reduces the need to send sensitive information to the cloud, enhancing data protection.</li>
+<li><strong>Efficient Use of Bandwidth:</strong> Reduces the amount of data transmitted over networks, lowering bandwidth consumption.</li>
+<li><strong>Lower Power Consumption:</strong> Locally running optimized models reduce the energy demands of constant cloud communication.</li>
+<li><strong>Decreased Operational Costs:</strong> Reduces reliance on cloud computing resources for inference, leading to potential cost savings.</li>
+</ul>
+<h3 id="challenges-of-edge-ai">Challenges of Edge AI:</h3>
+<ul>
+<li><strong>Resource Constraints at the Edge:</strong> Edge hardware, whether an end device or a local server, typically has less memory, processing power, and storage compared to centralized cloud servers.</li>
+<li><strong>Complex Model Updates and Management:</strong> Ensuring consistent and timely updates across a diverse and distributed fleet of edge devices or servers.</li>
+<li><strong>Security Vulnerabilities at the Edge:</strong> Edge deployments, being physically distributed and sometimes in less controlled environments than data centers, can present unique security challenges for protecting models and data.</li>
+<li><strong>Data Management and Labeling for Distributed Data:</strong> Managing data collection, annotation, and quality from diverse and distributed sources at the edge can be complex, especially for training and retraining robust models.</li>
+<li><strong>Developing and Optimizing Models for Diverse Edge Hardware:</strong> Creating AI models that can run efficiently on a wide range of processors and architectures found at the edge.</li>
+</ul>
+<h3 id="trade-off">Trade-off</h3>
+<p>Choosing between Edge AI and Cloud AI comes down to balancing privacy, real-time performance, and offline capabilities against the inherent limitations of edge devices. Edge AI prioritizes keeping data locally (either on the end-device itself or on a nearby edge server), which is excellent for privacy and enables operation without network connectivity. However, it is constrained by the memory, processing power, and storage available on the diverse range of edge hardware. Cloud AI, on the other hand, can handle significantly more complex tasks and larger datasets, but requires sending data to external servers and relies on a stable internet connection.</p>
+<p>A classic example illustrating this trade-off is facial recognition. Edge AI implemented on a smart camera ensures that facial data never leaves the device, safeguarding privacy. In contrast, cloud-based facial recognition services can rapidly process and index vast libraries of images but necessitate the transmission of personal biometric data to remote servers.</p>
+<h2 id="how-edge-ai-works">How Edge AI Works</h2>
+<p>At its core, Edge AI involves running AI models directly on edge devices. This typically begins with an edge device downloading a pre-trained AI model from a central server or model repository. Once downloaded, an application on the device can load this model into memory on demand and perform <strong>inference</strong>, which is the process of making predictions or decisions based on new, local data. A significant advantage of this approach is that inference can often happen entirely offline, without any network connection.</p>
+<p>Going one step further, Edge AI systems can incorporate feedback loops for continuous improvement. Models deployed on edge devices can be managed centrally. If issues or anomalies are detected during local inference, this information can be sent back to a central server for diagnosis and model refinement. The improved model is then pushed back to the edge devices as an update, ensuring that the local AI capabilities remain current and effective. This combination of local processing and centralized management offers the benefits of both efficiency and continuous learning.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Nvidia article on Edge AI: <a href="https://blogs.nvidia.com/blog/what-is-edge-ai/" target="_blank" rel="noopener">What is Edge AI</a></li>
+<li>A Simple Intro to Edge AI: <a href="https://www.ibm.com/think/topics/edge-ai" target="_blank" rel="noopener">IBM - What is Edge AI?</a></li>
+<li>My post: <a href="https://annjose.com/post/mobile-ondevice-ai">Mobile On-device AI</a></li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/cloudflare-autorag-step-by-step/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/cloudflare-autorag-step-by-step/">Cloudflare AutoRAG: RAG on auto-pilot</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://annjose.com/post/mobile-ondevice-ai/">Mobile On-device AI</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://annjose.com/post/mobile-ondevice-ai/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+
+<script 
+    id="counterscale-script" 
+    data-site-id="annjose-blog"
+    src="https://counterscale.annjose.workers.dev/tracker.js" 
+    defer>
+</script>
+
+</body>
+</html>
+

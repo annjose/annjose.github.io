@@ -262,7 +262,9 @@
     
       <a class="post-taxonomy-topic" href="https://annjose.com/topics/tech-explorations">tech-explorations</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-topic" href="https://annjose.com/topics/on-device-ai">on-device-ai</a>
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/on-device-ai">on-device-ai</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/edge-ai">edge-ai</a>
     
   </div>
   
@@ -284,119 +286,167 @@
 
 </div>
 
-  <p>A lot of the buzz around AI is about big cloud models, but I’ve often wondered what we can do with AI right on our phones and tablets - making things more private, fast, and user-friendly. As someone who is passionate about mobile development and has been tinkering a lot with AI recently, I am fascinated by what happens when mobile development and AI come together - especially the possibilities of running AI directly on the device. I’ve been following this space on the side, but was excited by last week’s <a href="https://developers.googleblog.com/en/introducing-gemma-3n/" target="_blank" rel="noopener">Google’s announcement of Gemma 3n</a>, the latest efficient, cutting-edge model for Edge AI. So I decided to dig deeper.</p>
-<p>But as I started exploring this space more, I noticed how fragmented the information is. There are a lot of announcements and high-level overviews, but it&rsquo;s hard to find practical, step-by-step guides for mobile on-device AI. That’s what inspired me to write this post - to consolidate my findings and provide a straightforward, actionable resource for anyone interested in running AI models locally on mobile.</p>
-<p>In this post, I’ll explain the importance of mobile on-device AI, its advantages and main challenges (such as model size and device constraints), and the best tools and frameworks available today - including small LLMs, mobile AI frameworks like Google AI Edge, Apple Core ML and other alternatives. I’ll also include code examples and practical advice for implementing these solutions. As always, the best way to learn is by doing, so you will find hands-on examples here.</p>
-<p>Whether you’re a beginner or a seasoned mobile developer, I hope this post helps you get an overview of mobile on-device AI and get started quickly if you wish. If you found this post useful, let me know through Bluesky (TBD add link here) and LinkedIn (TBD add link here), so you can share your thoughts and feedback there. If enough people are interested, I’ll write follow-up posts on how it works under the hood and more specific information on the frameworks for different mobile platforms.</p>
-<p>Let&rsquo;s dive in!</p>
-<h2 id="on-device-ai---an-overview">On-device AI - an Overview</h2>
-<p>On-device AI (also known as Edge AI) is all about tools and technologies that allow you to run AI models directly on the device like your phone, smartwatch, or any IoT gadget - instead of sending data to the cloud. With Edge AI, you download the model to the device, and all the heavy lifting - running the model, crunching the data, and generating responses - happens right there on your hardware. Best of all, your data never leaves your device.</p>
-<p>In contrast, Cloud AI works by running models on powerful servers in the cloud. Your device sends a request to those servers, the server does the computation, and then sends the result back to your device for you to see.</p>
-<p>Let&rsquo;s take an example. Apps that summarize personal chats, emails, notes, and reminders often handle sensitive information, making on-device processing a must for user privacy. Similarly, summarization tasks that involve long conversations or lots of items can demand a fair amount of computing power. By handling these tasks directly on the device, you not only keep user data private but also reduce server load and cut down on serving costs.</p>
-<h3 id="advantages-of-edge-ai">Advantages of Edge AI</h3>
+  <p>AI is reshaping how we live and work with many significant advancements in model capabilities and computational power centered in cloud infrastructure. At the same time, the mobile devices we carry every day - our phones and tablets - are becoming increasingly powerful. As a developer who loves exploring AI and has built mobile apps, I am fascinated by the idea of these two worlds of mobile and AI converging. I believe there is immense potential in using this local device power for AI and building experiences that are more private, faster, and smarter. This conviction is what inspired me to write this post.</p>
+<p>This post dives into <strong>Mobile On-device AI</strong>, which involves running AI computations directly on your smartphone or tablet, rather than relying on remote servers. It&rsquo;s a specialized area within the broader Edge AI landscape - a field focused on leveraging local device capabilities as well as nearby edge servers - which I explore more in the post <a href="https://annjose.com/post/edge-ai">Edge AI</a>. Here, we&rsquo;ll specifically cover the <strong>significance of on-device AI</strong> for mobile, its unique <strong>advantages and challenges</strong> (like optimizing models for device constraints), and the <strong>key tools and frameworks</strong>, including device-optimized models and specific solutions such as <strong>Apple Core ML</strong>, and Google&rsquo;s newer <strong>Google AI Edge</strong> (which uses the former TensorFlow Lite under the hood). I’ll share practical tips and examples to help you understand how it works.</p>
+<p>Whether you&rsquo;re new to mobile or an experienced mobile developer, I hope this gives you a solid overview and helps you experiment with mobile on-device AI. If you find this post useful, please join the discussion on Bluesky (TBD) and LinkedIn (TBD) - your feedback helps me decide on follow-up posts with deeper technical dives into this area.</p>
+<h2 id="first-the-basics">First, the Basics</h2>
+<p><strong>Mobile On-device AI</strong> enables mobile devices like phones and tablets to run AI models locally. This approach eliminates the need to send data to the cloud; once a model is downloaded to the device, all processing happens directly on it, keeping your data private and potentially reducing operational costs. For example, consider how modern smartphone keyboards offer predictive text suggestions. An on-device AI model analyzes your typing patterns locally to offer relevant word completions in real-time, without sending your keystrokes to a server. This ensures your typing remains private and the suggestions appear instantly, even if you&rsquo;re offline.</p>
+<p>Unlike Cloud AI, where your mobile device typically sends requests to remote servers for computation and then awaits the results, on-device AI keeps these processes entirely local. Managing such tasks directly on your phone can meet computing demands efficiently, safeguard sensitive user data, and potentially lower data usage and cloud service costs for both the user and the app provider.</p>
+<h3 id="advantages">Advantages</h3>
 <ul>
-<li><strong>Latency</strong>: with Edge AI, there are no network round trips, so you save the time waiting for the server response over the network</li>
-<li><strong>Offline-ready</strong>: Edge AI does not need network connectivity and thus can work in completely offline mode</li>
-<li><strong>Privacy</strong>: all the data is processed on the device locally. Your personal data never leaves the device. Cloud AI exposes sensitive information to third parties</li>
-<li><strong>Size</strong>: the models are reduced in size so that they can run on less powerful devices with a smaller memory footprint</li>
-<li><strong>Power consumption</strong>: models are optimized to consume less compute and thus less power</li>
-<li><strong>Cost</strong>:  All of the above advantages boil down to an important benefit - reduced cost. Since the inference happens locally, you don’t pay for input/output tokens. Compute, memory, and storage are moved to the local device instead of cloud infrastructure.</li>
+<li><strong>Low Latency:</strong> Eliminates mobile network delays, providing immediate responses</li>
+<li><strong>Offline Capability:</strong> Enables functionality without Wi-Fi or cellular data on phones and tablets</li>
+<li><strong>Enhanced Privacy:</strong> Keeps sensitive user data on the personal device</li>
+<li><strong>Optimized Model Size:</strong> Utilizes smaller models designed for efficient mobile storage</li>
+<li><strong>Reduced Power Consumption:</strong> Features optimized models contributing to lower battery usage on mobile devices</li>
+<li><strong>Potential Cost Savings:</strong> Reduces reliance on mobile data and cloud processing, potentially lowering user and app provider costs.</li>
 </ul>
-<h3 id="challenges-with-edge-ai">Challenges with Edge AI</h3>
+<h3 id="use-cases">Use Cases</h3>
 <ul>
-<li>Edge AI is limited by the device&rsquo;s capabilities such as memory, GPU, processor speed. Cloud AI is more powerful since it has bigger compute and larger storage.</li>
-<li>Speed and compute are limited by the device capabilities and resources. Gemma 3 - xB model was 500MB. Gemma 3n is 2 GB and 4GB. Not practical to run on devices, unless there is a compelling use case. The latest Gemma 3n model can run on devices with 2 GB RAM. Example of such mobile phones -</li>
-<li>Keeping the model up-to-date - integrate the learnings and more public data, download to the local device, update the version and make it available to the next inference instance</li>
+<li>
+<p><strong>Real-time Translation:</strong> Your phone can instantly translate text in messaging apps or signs viewed through your camera, all without needing an internet connection. On-device AI facilitates private and immediate communication across languages</p>
+</li>
+<li>
+<p><strong>Advanced Photo Editing:</strong> Smartphones now perform complex edits, such as removing objects or blurring backgrounds, directly on the device. This offers faster processing, enables offline editing, and keeps your memories private</p>
+</li>
+<li>
+<p><strong>Intelligent Keyboard Features:</strong> On-device AI powers smart keyboard suggestions, grammar checks, and predictive text. This improves typing speed and accuracy while ensuring your keystrokes remain on your phone</p>
+</li>
 </ul>
-<h2 id="edge-ai---use-cases">Edge AI - Use cases</h2>
+<h3 id="challenges">Challenges</h3>
 <ul>
-<li>AI models embedded locally on wearable devices - can calculate metrics like blood pressure, heart rate, glucose levels using data points specific to the user combined with global data embedded in the model</li>
-<li>Computer vision capabilities on security cameras and surveillance devices - real-time processing of object detection, suspicious activity detection</li>
-<li>Smart devices like doorbells, thermostats etc. Facial recognition of the person at the door, adjust the whole house temperature. Can quickly process the data on-site and enhances privacy.</li>
+<li><strong>Limited Resources:</strong> Mobile devices have constrained RAM, storage, and processing power compared to cloud servers</li>
+<li><strong>Battery Consumption:</strong> Balancing AI capabilities with the potential for increased battery drain is a key concern</li>
+<li><strong>Model Size Optimization:</strong> AI models must be small and efficient enough for practical use in mobile applications</li>
+<li><strong>Device Fragmentation:</strong> Ensuring compatibility and consistent performance across diverse mobile devices and OS versions is complex</li>
+<li><strong>Model Management &amp; Updates:</strong> Efficiently managing and delivering model updates to user devices without disrupting user experience or consuming excessive data is challenging</li>
 </ul>
-<h3 id="trade-off">Trade-off</h3>
-<p><strong>Choosing between Edge AI and Cloud AI comes down to balancing privacy and real-time performance against device limitations.</strong> Edge AI keeps your data on-device, which is great for privacy and works offline, but is limited by the device’s memory, processing power, and storage. Cloud AI can handle more complex tasks and larger datasets, but requires sending data to external servers and depends on internet connectivity.</p>
-<p>A classic example is facial recognition in photos: Edge AI ensures your photos never leave your device, while Cloud AI or self-hosted services like <a href="https://immich.app/" target="_blank" rel="noopener">Immich</a> can process and index large photo libraries faster and more efficiently, at the cost of some privacy.</p>
-<h2 id="how-edge-ai-works">How Edge AI works</h2>
-<p>The edge device downloads the model from the server or repository. Then when the application wants to use, it can load this model on-demand and run inference. This inference can happen completely offline.</p>
-<p>You can take this one step further by managing your models centrally, downloading them to local devices on-demand, and running them locally.. Any issues or anomalies detected with the local model are sent to the server to diagnose and improve the quality of the model. The model is refined and the newer version is downloaded to the edge device and updated so that the next time you use it, you will use the newer model. This feedback loop gives the benefit of both - running models locally and keeping them up-to-date.</p>
-<p>There are two main categories of tech available to build applications with on-device AI: the small models that can fit into the resource constraints of the devices, and the libraries and runtimes that run these models on constrained devices. Let&rsquo;s look into them next.</p>
-<h2 id="small-language-models">Small Language Models</h2>
-<p>At the heart of on-device AI are the models that can run on smaller devices - small enough to fit within the memory and processing limits of smartphones, wearables, and IoT gadgets - hence the name Small Language Models (SLMs). The most common SLMs for on-device AI are:</p>
+<h3 id="the-big-question-on-device-ai-or-cloud-ai">The Big Question: On-device AI or Cloud AI?</h3>
+<p>So, when it comes to building AI into your mobile app, should you go with on-device processing or stick with the cloud? Well, like so many things in software development (and life!), there&rsquo;s no single right answer – it&rsquo;s all about trade-offs.</p>
+<p>With mobile on-device AI, you get fantastic benefits like top-notch user privacy (since data stays on the phone), snappy responsiveness (no network lag!), and the ability for features to work even when offline. The catch is that you&rsquo;re working within the limits of the phone itself - its processing power, memory, and battery life.</p>
+<p>On the other hand, cloud-based AI lets you tap into seriously powerful servers. This means you can run much more complex AI models and crunch bigger datasets. But, this approach means user data has to travel over the internet, and the app needs a stable connection to function.</p>
+<p>Think about a photo editing app with an AI feature that removes unwanted objects. Consider a photo editing app with AI-powered object removal. Processing this on-device ensures your photos remain private and the feature works offline. However, a cloud-based service might offer more sophisticated and faster object removal algorithms due to greater computational resources, but at the cost of uploading your images to a remote server.</p>
+<h2 id="a-look-under-the-hood">A Look under the Hood</h2>
+<p>At its heart, mobile on-device AI involves running specially prepared AI models directly on your smartphone or tablet&rsquo;s own hardware. The journey begins with a standard AI model, typically trained on powerful servers. To make it suitable for mobile use, this model undergoes a crucial <strong>optimization</strong> process. Techniques such as quantization (reducing the numerical precision of the model&rsquo;s parameters) and pruning (removing less critical parts of the model) significantly shrink its size and reduce computational demands, making it efficient enough to run on a phone without draining the battery excessively or taking up too much storage. This optimized model is then typically either bundled within an app when you install it or downloaded by the app to your device at a later point.</p>
+<p>Once the optimized model is on your device, an application can load it and use it to perform <strong>inference</strong>. This is the process where the model takes new, local data (eg: an image from your camera or text you&rsquo;re typing) and makes a prediction or decision right on your phone&rsquo;s processor (CPU, GPU, or a specialized Neural Processing Unit - NPU, if available). This is managed by on-device AI <strong>frameworks</strong> like Apple Core ML or Google AI Edge, which act as an efficient engine to execute these models. For example, when a smart keyboard suggests the next word, it&rsquo;s this local inference process at work, analyzing your recent typing to provide instant, private suggestions without needing an internet connection.</p>
+<p>Essentially, the process ensures that the core &ldquo;thinking&rdquo; of the AI happens self-contained on your device. While more advanced scenarios might involve occasional updates to these on-device models from a central server to improve them over time, the primary AI computation for the immediate task happens locally. This local execution is what delivers the key benefits of speed, privacy, and offline functionality inherent to mobile on-device AI.</p>
+<h2 id="models-and-frameworks">Models and Frameworks</h2>
+<p>Building mobile on-device AI applications primarily involves two key technological components: <strong>optimized AI models</strong> designed for device constraints, and the <strong>specialized frameworks or runtimes</strong> that execute these models efficiently. We&rsquo;ll explore these next.</p>
+<h3 id="models-for-on-device-ai">Models for On-device AI</h3>
+<p>At the heart of on-device AI are models optimized for smaller devices – efficient enough to fit within the memory and processing limits of smartphones, wearables, and IoT gadgets. When these are language models, they are often referred to as Small Language Models (SLMs). Some prominent models optimized for on-device AI are:</p>
 <ul>
-<li><strong>Gemini Nano</strong> - Google&rsquo;s flagship model that runs ML tasks on devices. This is proprietary model. <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">Android Developers: Gemini Nano</a></li>
-<li><strong>Gemma 3n</strong>: The latest iteration of the on-device version of Gemma family of models. Announced in Google I/O two weeks ago. This is open-weights model and in early preview mode. - <a href="https://ai.google.dev/gemma/docs/gemma-3n" target="_blank" rel="noopener">Google Gemma 3n documentation</a></li>
-<li><strong>Gemma 3, 2</strong> - Google&rsquo;s stable on-device model with open weights. <a href="https://huggingface.co/google/gemma-3-12b-it" target="_blank" rel="noopener">Gemma 3 on Hugging Face</a></li>
-<li><a href="https://azure.microsoft.com/en-us/products/phi" target="_blank" rel="noopener">Microsoft Phi</a>: A lightweight, open-source language model optimized for edge devices, developed by Microsoft.</li>
-<li><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral</a>: A family of efficient, open-weight models designed for fast inference on resource-constrained hardware.</li>
+<li>
+<p><a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">Gemini Nano</a> - Google&rsquo;s flagship proprietary model that runs ML tasks on devices</p>
+</li>
+<li>
+<p><strong>Gemma 3n</strong>: The latest iteration of the on-device version of the Gemma family of open-weights models, <a href="https://ai.google.dev/gemma/docs/gemma-3n" target="_blank" rel="noopener">announced at Google I/O 2025</a></p>
+</li>
+<li>
+<p><a href="https://huggingface.co/google/gemma-3-12b-it" target="_blank" rel="noopener">Gemma 3 and 2</a> - Google&rsquo;s stable open weights on-device model</p>
+</li>
+<li>
+<p><a href="https://azure.microsoft.com/en-us/products/phi" target="_blank" rel="noopener">Microsoft Phi</a>: A lightweight, open-source language model optimized for edge devices, developed by Microsoft</p>
+</li>
+<li>
+<p><a href="https://mistral.ai/news/" target="_blank" rel="noopener">Mistral</a>: A family of efficient, open-weight models designed for fast inference on resource-constrained hardware</p>
+</li>
 </ul>
 <h3 id="gemini-nano-vs-gemma-3n">Gemini Nano vs. Gemma 3n</h3>
-<p>Prior to this Google I/O 2025, the flagship models for Edge AI are Gemma 3 and Nano. Both are similar models, optimized for on-device AI, but for different use cases.</p>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Gemini Nano</th>
-<th>Gemma 3n</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mobile Optimization</strong></td>
-<td>Highly optimized for resource-constrained devices (e.g., &lt;4GB RAM devices)</td>
-<td>Optimized for medium-tier devices (e.g., phones/tablets with 4-8GB RAM)</td>
-</tr>
-<tr>
-<td><strong>Device Support</strong></td>
-<td>Wearables, IoT, low-end Android phones</td>
-<td>Android, iOS, tablets, laptops</td>
-</tr>
-<tr>
-<td><strong>Model Access</strong></td>
-<td>Proprietary<!-- raw HTML omitted -->Available via Android AICore/ML Kit GenAI APIs (restricted)</td>
-<td>Open weights<!-- raw HTML omitted --><a href="https://www.kaggle.com/models/google/gemma" target="_blank" rel="noopener">Kaggle Model Hub</a> or <a href="https://huggingface.co/collections/google/gemma-3n-preview-682ca41097a31e5ac804d57b" target="_blank" rel="noopener">LiteRT HuggingFace community</a></td>
-</tr>
-<tr>
-<td><strong>Integration Scope</strong></td>
-<td>Google-first apps<!-- raw HTML omitted -->Select third-party apps with Google approval</td>
-<td>Open integration for all third-party developers</td>
-</tr>
-<tr>
-<td><strong>Use Cases</strong></td>
-<td>- On-device AI features in Pixel devices<!-- raw HTML omitted -->- Google Messages Smart Reply</td>
-<td>- Custom LLM apps<!-- raw HTML omitted -->- Cross-platform AI features<!-- raw HTML omitted -->- Local RAG implementations</td>
-</tr>
-<tr>
-<td><strong>Feasibility</strong></td>
-<td>Limited to Google-controlled use cases</td>
-<td>Versatile for general app integration</td>
-</tr>
-</tbody>
+<p>Prior to the announcement of Gemma 3n at Google I/O 2025, prominent models for on-device AI included earlier Gemma versions and Gemini Nano. Both are optimized for on-device AI, though they cater to different use cases and have distinct access models. Here is a comparison of two models side-by-side:</p>
+
+
+
+<table class="pure-table pure-table-striped">
+  <thead><tr>
+    
+      <th>Feature                 </th>
+    
+      <th> Gemini Nano                                                                </th>
+    
+      <th> Gemma 3n</th>
+    
+  </thead></tr>
+  <tbody>
+  
+    <tr>
+      
+      
+        <td>Mobile Optimization </td>
+      
+        <td> Highly optimized for resource-constrained devices (e.g., &lt;4GB RAM devices) </td>
+      
+        <td> Optimized for medium-tier devices (e.g., phones/tablets with 4-8GB RAM)</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Device Support      </td>
+      
+        <td> Wearables, IoT, low-end Android phones                                     </td>
+      
+        <td> Android, iOS, tablets, laptops</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Model Access        </td>
+      
+        <td> Proprietary - Available via Android AICore/ML Kit GenAI APIs (restricted) </td>
+      
+        <td> Open weights - available at Kaggle Model Hub or LiteRT HuggingFace community</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Use Cases           </td>
+      
+        <td> On-device AI features in Pixel devices, Google Messages Smart Reply  </td>
+      
+        <td> Custom LLM apps, Cross-platform AI features, Local RAG implementations</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Feasibility         </td>
+      
+        <td> Limited to Google&#39;s integrated use cases                                     </td>
+      
+        <td> Designed for broader developer access</td>
+      
+    </tr>
+  
+  </tbody>
 </table>
-<p>Despite these differences, both these models are built on the same foundational architecture, so we will likely see more and more convergence with different delivery and business models.</p>
-<h2 id="libraries-and-runtime-to-run-on-device-ai-models">Libraries and Runtime to run on-device AI models</h2>
-<p>The ecosystem for running on-device AI models consists of specialized libraries and runtimes. They make it possible to deploy and run machine learning models efficiently on smartphones, wearables, and other edge devices.</p>
-<p>The main options available are:</p>
+<p>Links:</p>
 <ul>
-<li><strong>Google AI Edge:</strong> Google’s collection of libraries, tools, and frameworks designed to deploy and run ML models directly on edge devices. It includes components like MediaPipe, LiteRT (formerly TensorFlow Lite), and ML Kit.</li>
-<li><strong>TensorFlow Lite (now LiteRT):</strong> Google’s open-source runtime optimized for running machine learning models on mobile and embedded devices. LiteRT is the latest evolution, offering improved performance and flexibility.</li>
-<li><strong>Apple Core ML:</strong> Apple’s framework for running ML models natively on iOS, macOS, tvOS, and watchOS devices, ensuring privacy and efficiency.</li>
+<li><a href="https://www.kaggle.com/models/google/gemma" target="_blank" rel="noopener">Kaggle Model Hub</a></li>
+<li><a href="https://huggingface.co/collections/google/gemma-3n-preview-682ca41097a31e5ac804d57b" target="_blank" rel="noopener">LiteRT HuggingFace community</a></li>
 </ul>
-<p>Let’s take a closer look at each of these.</p>
-<h3 id="google-ai-edge">Google AI Edge</h3>
-<p>Google AI Edge is a comprehensive suite for deploying and running machine learning models on edge devices. It supports a wide range of platforms, including Android, iOS, browsers, and embedded systems. This encompasses various components.</p>
-<p><strong>Gemini Nano</strong> is Google’s flagship model for on-device AI. While it is primarily targeted at Android devices, Google’s broader AI Edge SDK supports cross-platform deployment, including iOS, browsers, and embedded devices. You can learn more about it at  <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">Google Gemini Nano for Android</a>.</p>
-<p><strong>ML Kit</strong> provides prebuilt APIs and ready-to-use models for common features like barcode scanning, text recognition (OCR), face detection, image labeling, object detection and tracking, language identification, and smart reply. See more at <a href="https://developers.google.com/ml-kit" target="_blank" rel="noopener">ML Kit documentation</a></p>
-<h4 id="tensorflow-lite-now-litert">TensorFlow Lite (now LiteRT)</h4>
-<p>TensorFlow Lite is Google’s open-source runtime for running machine learning models on mobile and embedded devices. It has evolved into <strong>LiteRT</strong>, a toolkit optimized for running TensorFlow models efficiently on resource-constrained devices.</p>
-<p>LiteRT allows you to run your own ML models - fine-tuned for specific tasks or data - efficiently on mobile, embedded, and edge devices. It supports hardware acceleration through specialized delegates or integration with platforms like Core ML.</p>
-<p>Choose one of the following AI Edge frameworks:</p>
+<p>Despite these differences, both these models are built on the same foundational architecture, so we will likely see more convergence of these models with differentiation in delivery and business models.</p>
+<h2 id="frameworks-for-on-device-ai">Frameworks for On-device AI</h2>
+<p>Once you have an optimized AI model (like the ones discussed in the Models section above), you need a way to actually run it on a mobile device. This is where on-device AI frameworks and runtimes come into play. They provide the necessary engine and tools to efficiently execute these models, manage resources, and often interact with device hardware for acceleration. The two main players in the mobile ecosystem are:</p>
 <ul>
-<li><strong>LiteRT:</strong> Flexible and customizable runtime that can run a wide range of models. Choose a model for your use case, convert it to the LiteRT format (if necessary), and run it on-device. If you intend to use LiteRT, keep reading.</li>
-<li><strong>MediaPipe Tasks:</strong> Plug-and-play solutions with default models that allow for customization. Choose the task that solves your AI/ML problem, and implement it on multiple platforms. If you intend to use MediaPipe Tasks, refer to the <a href="https://ai.google.dev/edge/mediapipe/solutions/tasks" target="_blank" rel="noopener">MediaPipe Tasks documentation</a>.</li>
+<li>
+<p><strong>Google AI Edge:</strong> Google&rsquo;s comprehensive suite for on-device AI - libraries, tools, and frameworks designed to deploy and run ML models directly on edge devices. Key components include:</p>
+<ul>
+<li><strong>LiteRT (formerly TensorFlow Lite):</strong> A crucial open-source runtime for executing a wide range of optimized models, including Google&rsquo;s Gemma family and custom-trained models, on Android, iOS, and other platforms. You can choose a model for your use case, convert it to the LiteRT format, and run it on-device</li>
+<li><strong>MediaPipe:</strong> Offers pre-built, customizable solutions for tasks like vision and audio processing, often leveraging LiteRT. You can choose the task that solves your AI/ML problem, and implement it on multiple platforms. If you intend to use MediaPipe Tasks, refer to the <a href="https://ai.google.dev/edge/mediapipe/solutions/tasks" target="_blank" rel="noopener">MediaPipe Tasks documentation</a></li>
+<li><strong>ML Kit:</strong> Provides easy-to-integrate APIs for common AI features, sometimes powered by models like Gemini Nano under the hood for specific functionalities within Google&rsquo;s ecosystem or via new GenAI APIs. See more info at <a href="https://developers.google.com/ml-kit" target="_blank" rel="noopener">ML Kit docs</a></li>
 </ul>
-<p>You can learn more about this at <a href="https://developer.android.com/ai/overview" target="_blank" rel="noopener">AI guide for Android</a>.</p>
-<h3 id="apple-core-ml">Apple Core ML</h3>
+</li>
+<li>
+<p><strong>Apple Core ML:</strong> Apple&rsquo;s dedicated framework for running machine learning models efficiently and privately on iOS, macOS, and other Apple platforms. It works with models converted to its specific format and optimizes execution across Apple&rsquo;s CPU, GPU, and Neural Engine.</p>
+</li>
+</ul>
+<h2 id="deep-dive-apple-core-ml">Deep dive: Apple Core ML</h2>
 <p>Core ML is Apple’s framework for running machine learning models on iOS, macOS, tvOS, and watchOS devices. It is designed for on-device inference, minimizing memory footprint and power consumption while keeping data private. It leverages Apple silicon, including the CPU, GPU, and Neural Engine, to maximize speed and minimize memory footprint and power consumption.</p>
 <p>It works with Vision (for image and video analysis), Natural Language (for text processing), and GameplayKit (for game AI). Models trained in TensorFlow, PyTorch, or other frameworks can be converted to Core ML format using Core ML Tools, making it straightforward to deploy existing models on Apple devices.</p>
 <h4 id="how-coreml-works">How CoreML works</h4>
@@ -438,7 +488,7 @@
 </div>
 </div><p>After this, you prepare your input data so it matches the requirements of your model. This might involve resizing images, normalizing values, or encoding text. For example, you may need to resize an image to a specific dimension before passing it to the model. Then, pass the prepared input data to the model’s prediction method. The model will process the input and generate an output. Once you receive the model’s output, interpret and use it as needed in your app. Finally, display the results to the user.</p>
 <p>Read more about it at <a href="https://apple.github.io/coremltools/docs-guides/source/introductory-quickstart.html" target="_blank" rel="noopener">CoreML Quick Start Guide</a>.</p>
-<h2 id="gemma-3n">Gemma 3n</h2>
+<h2 id="deep-dive-gemma-3n">Deep dive: Gemma 3n</h2>
 <p>This is the latest open model optimized to run on mobile devices with at least 2GB RAM. It provides real-time AI on phones, tablets and laptops. It is in early preview and is available on Google AI Studio, Google AI Edge SDK and <a href="https://huggingface.co/collections/google/gemma-3n-preview-682ca41097a31e5ac804d57b" target="_blank" rel="noopener">LiteRT HuggingFace community</a>.</p>
 <p>Gemma 3n can be deployed on mobile devices using the MediaPipe library of Google AI Edge SDK that we saw earlier. It is built on the same advanced architecture that powers <strong>Gemini Nano</strong>, the flagship mobile-optimized model. The development of Gemma 3n is a collaboration between Google DeepMind, Qualcomm, and Samsung, ensuring that it is engineered for high performance and efficiency across a wide range of mobile hardware.</p>
 <blockquote>
@@ -473,7 +523,7 @@
 <li><strong>Selective Parameter Activation:</strong> The model can dynamically load only the parameters needed for the current task (e.g., text, image, or audio), further reducing resource use. The model with 4B active memory footprint embeds a nested state-of-the-art submodel with 2B active memory footprint. This allows the model to dynamically load the relevant submodel to balance performance and quality based on device capabilities, user query etc.</li>
 <li><strong>MatFormer Architecture:</strong> This allows the model to nest smaller submodels within a larger one, so only the relevant submodel is activated per request, minimizing compute and memory requirements</li>
 </ul>
-<h2 id="hands-on-with-gemma-3n">Hands-on with Gemma 3n</h2>
+<h3 id="hands-on-gemma-3n">Hands-on: Gemma 3n</h3>
 <p>Ok, let’s roll up our sleeves and see these models in action. We can do that in a few places:</p>
 <ol>
 <li><strong>Google AI Studio:</strong> This is Google’s playground where you can try all their models in a chat-like interface. It’s the simplest way to see Gemma models, including the latest Gemma 3n.</li>
@@ -481,7 +531,7 @@
 <li><strong>Google AI Edge Gallery app:</strong> This new app from Google AI Edge SDK lets you download and run models like Gemma 3n directly on your Android device, offline.</li>
 </ol>
 <p><strong>Note:</strong> The mobile setup is fairly easy. You don’t need advanced mobile expertise - just a compatible USB cable and the ability to follow instructions.</p>
-<h3 id="1-run-on-google-ai-studio">1. Run on Google AI Studio</h3>
+<h4 id="1-run-gemma-3n-on-google-ai-studio">1. Run Gemma 3n on Google AI Studio</h4>
 <p>This is the fastest way to try out Gemma 3n without any setup hassle.</p>
 <ul>
 <li>Go to <a href="https://aistudio.google.com/prompts/new_chat" target="_blank" rel="noopener">Google AI Studio</a> and login with your Google account</li>
@@ -519,9 +569,9 @@
 
     
 </p>
-<h3 id="2-run-on-android-phones">2. Run on Android phones</h3>
+<h4 id="2-run-gemma-3n-on-android-phone">2. Run Gemma 3n on Android phone</h4>
 <p>We have two options to run Gemma models on Android:</p>
-<h4 id="21-mediapipe-sample-app">2.1 MediaPipe Sample App</h4>
+<h5 id="21-mediapipe-sample-app">2.1 MediaPipe Sample App</h5>
 <p>This app demonstrates all supported Small Language Models (SLMs) like Gemma 2, Gemma 3, Microsoft Phi, and QWEN. It’s available on <a href="https://github.com/google-ai-edge/mediapipe-samples" target="_blank" rel="noopener">GitHub: google-ai-edge/mediapipe-samples</a>.
 - <strong>Drawbacks:</strong> The sample app is minimal, somewhat outdated, and not as polished as newer offerings. Importantly, <strong>you cannot run Gemma 3n models in this app</strong>. Attempts to modify the source code to add Gemma 3n often result in errors like “Access denied. Please try again and grant the necessary permissions,” even after setting up permissions on Hugging Face. In my understanding, this suggests the app is explicitly restricted from running newer models.</p>
 <p>Here are some screenshots of MediaPipe sample app running on my Pixel 8 Pro Android device:
@@ -589,7 +639,7 @@
 
     
 </p>
-<h4 id="22-google-ai-edge-gallery-app">2.2 Google AI Edge Gallery App</h4>
+<h5 id="22-google-ai-edge-gallery-app">2.2 Google AI Edge Gallery App</h5>
 <p>This is a newer, more versatile sample app available as an experimental Alpha release. It’s sleek, easy to use, and demonstrates the full power of on-device AI. You can run Gemma 3n models (E2B and E4B) directly on your device, but not older models. <br>
 - <strong>Download and instructions:</strong> <a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener">GitHub: google-ai-edge/gallery</a>
 - <strong>How it works:</strong> After installing, select a model from the list (such as Gemma 3n E2B or E4B), and you can start using AI features like chat, image analysis, and more - all offline</p>
@@ -697,7 +747,7 @@
 <li><strong>Gallery App:</strong> <a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener">Google AI Edge Gallery GitHub</a>
 In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, and the new Gallery app to run Gemma 3n models. Google may consolidate these apps in the future or deprecate older models.</li>
 </ul>
-<h3 id="3-run-on-ios-phones">3. Run on iOS phones</h3>
+<h4 id="3-run-gemma-3n-on-ios-phone">3. Run Gemma 3n on iOS phone</h4>
 <p><strong>The new Google AI Edge Gallery app is not yet available for iOS - its release is marked as “coming soon.”</strong><br>
 Currently, our only option is to use the old MediaPipe sample app, which supports models prior to Gemma 3n (like Gemma 2 and Gemma 3).</p>
 <p>The LLM Inference API from MediaPipe enables you to run large language models (LLMs) entirely on-device for iOS applications. This allows you to perform advanced AI tasks such as text generation, information retrieval, and document summarization - all while keeping user data private and secure.</p>
@@ -791,7 +841,7 @@ Currently, our only option is to use the old MediaPipe sample app, which support
 </ol>
 <p>The API also supports LoRA (Low-Rank Adaptation) for efficient fine-tuning of models, allowing you to customize model behavior for specific tasks.</p>
 <p>For detailed instructions and advanced setup, see the official documentation: <a href="https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios" target="_blank" rel="noopener">MediaPipe LLM Inference API for iOS</a></p>
-<h3 id="4-run-on-mobile-browsers">4. Run on mobile browsers</h3>
+<h4 id="4-run-gemma-3n-on-mobile-browsers">4. Run Gemma 3n on mobile browsers</h4>
 <p>You can run Gemma and other large language models directly in your browser using the MediaPipe LLM Inference API for JavaScript. This allows you to perform advanced AI tasks - such as text generation, information retrieval, and document summarization - entirely on-device, without sending data to a server.</p>
 <p><strong>Supported Models</strong></p>
 <ul>
@@ -897,55 +947,111 @@ Currently, our only option is to use the old MediaPipe sample app, which support
 <p>See detailed instructions: <a href="https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/web_js" target="_blank" rel="noopener">MediaPipe LLM Inference API for Web</a></p>
 <h3 id="cross-platform-summary">Cross platform summary</h3>
 <p>The following table summarizes how to run the model on various platforms.</p>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Supported Gemma Models</th>
-<th>Recommended App/Interface</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Google AI Studio</td>
-<td>Gemma 3n, others</td>
-<td>Web browser</td>
-<td>Easiest, no setup required</td>
-</tr>
-<tr>
-<td>Android</td>
-<td>Prior to Gemma 3n</td>
-<td>MediaPipe Sample App (GitHub)</td>
-<td>Outdated, not Gemma 3n</td>
-</tr>
-<tr>
-<td>Android</td>
-<td>Gemma 3n</td>
-<td>Google AI Edge Gallery App</td>
-<td>New, sleek, supports Gemma 3n</td>
-</tr>
-<tr>
-<td>iOS</td>
-<td>Prior to Gemma 3n</td>
-<td>MediaPipe Sample App (GitHub)</td>
-<td>No Gemma 3n, Gallery app coming soon</td>
-</tr>
-<tr>
-<td>Web browser</td>
-<td>Prior to Gemma 3n</td>
-<td>MediaPipe LLM Inference API (JS)</td>
-<td>Runs in browser, not Gemma 3n</td>
-</tr>
-</tbody>
+
+
+
+<table class="pure-table pure-table-striped">
+  <thead><tr>
+    
+      <th>Platform</th>
+    
+      <th>Supported Gemma Models</th>
+    
+      <th>Recommended App/Interface</th>
+    
+      <th>Notes</th>
+    
+  </thead></tr>
+  <tbody>
+  
+    <tr>
+      
+      
+        <td>Google AI Studio</td>
+      
+        <td>Gemma 3n, others</td>
+      
+        <td>Web browser</td>
+      
+        <td>Easiest, no setup required</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Android</td>
+      
+        <td>Prior to Gemma 3n</td>
+      
+        <td>MediaPipe Sample App (GitHub)</td>
+      
+        <td>Outdated, not Gemma 3n</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Android</td>
+      
+        <td>Gemma 3n</td>
+      
+        <td>Google AI Edge Gallery App</td>
+      
+        <td>New, sleek, supports Gemma 3n</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>iOS</td>
+      
+        <td>Prior to Gemma 3n</td>
+      
+        <td>MediaPipe Sample App (GitHub)</td>
+      
+        <td>No Gemma 3n, Gallery app coming soon</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Web browser</td>
+      
+        <td>Prior to Gemma 3n</td>
+      
+        <td>MediaPipe LLM Inference API (JS)</td>
+      
+        <td>Runs in browser, not Gemma 3n</td>
+      
+    </tr>
+  
+  </tbody>
 </table>
 <h2 id="references">References</h2>
+<p><strong>Google On-Device AI &amp; Models:</strong></p>
 <ul>
-<li><a href="https://developers.googleblog.com/en/introducing-gemma-3n/" target="_blank" rel="noopener">Announcement of Gemma 3n at Google I/O 2025</a></li>
-<li>Google Gemini Nano - a good starting point for on-device ML for Android - <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">https://developer.android.com/ai/gemini-nano</a></li>
-<li>AI guide for Android - <a href="https://developer.android.com/ai/overview" target="_blank" rel="noopener">https://developer.android.com/ai/overview</a></li>
-<li>Quick start guide of Core ML - <a href="https://apple.github.io/coremltools/docs-guides/source/introductory-quickstart.html" target="_blank" rel="noopener">https://apple.github.io/coremltools/docs-guides/source/introductory-quickstart.html</a></li>
-<li><a href="https://www.ibm.com/think/topics/edge-ai" target="_blank" rel="noopener">Simple intro to Edge AI - by IBM</a></li>
+<li>Announcement of Gemma 3n at Google I/O 2025: <a href="https://developers.googleblog.com/en/introducing-gemma-3n/" target="_blank" rel="noopener">Google Developers Blog: Introducing Gemma 3n</a></li>
+<li>Google AI Guide for Android: <a href="https://developer.android.com/ai/overview" target="_blank" rel="noopener">developer.android.com/ai/overview</a></li>
+<li>Gemini Nano for Android: <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">developer.android.com/ai/gemini-nano</a></li>
+<li>Gemma Models Official Page: <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">ai.google.dev/gemma</a></li>
+<li>TensorFlow Lite Guides: <a href="https://www.tensorflow.org/lite/guide" target="_blank" rel="noopener">tensorflow.org/lite/guide</a></li>
+<li>ML Kit: <a href="https://developers.google.com/ml-kit" target="_blank" rel="noopener">developers.google.com/ml-kit</a></li>
+<li>MediaPipe Solutions: <a href="https://ai.google.dev/edge/mediapipe/solutions" target="_blank" rel="noopener">ai.google.dev/edge/mediapipe/solutions</a></li>
+</ul>
+<p><strong>Apple On-Device AI:</strong></p>
+<ul>
+<li>Core ML Overview: <a href="https://developer.apple.com/documentation/coreml" target="_blank" rel="noopener">developer.apple.com/documentation/coreml</a></li>
+<li>Core ML Tools (for model conversion): <a href="https://apple.github.io/coremltools/docs-guides/source/introductory-quickstart.html" target="_blank" rel="noopener">apple.github.io/coremltools</a> (Your link is good)</li>
+</ul>
+<p><strong>Other Key Models &amp; Platforms:</strong></p>
+<ul>
+<li>Microsoft Phi Models (Example on Hugging Face): <a href="https://huggingface.co/microsoft/phi-2" target="_blank" rel="noopener">huggingface.co/microsoft/phi-2</a></li>
+<li>Mistral AI: <a href="https://mistral.ai/" target="_blank" rel="noopener">mistral.ai</a></li>
+<li>Hugging Face Model Hub: <a href="https://huggingface.co/models" target="_blank" rel="noopener">huggingface.co/models</a></li>
 </ul>
 
 
@@ -953,13 +1059,13 @@ Currently, our only option is to use the old MediaPipe sample app, which support
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://annjose.com/post/cloudflare-autorag-step-by-step/"><i class="fa fa-chevron-left"></i></a>
+    <a href="https://annjose.com/post/edge-ai-essentials/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://annjose.com/post/cloudflare-autorag-step-by-step/">Cloudflare AutoRAG: RAG on auto-pilot</a>
+      <a href="https://annjose.com/post/edge-ai-essentials/">Edge AI: The Essentials</a>
     </nav>
     
   </div>
