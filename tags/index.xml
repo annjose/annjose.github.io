@@ -7,27 +7,48 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 31 May 2025 13:13:12 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 13:13:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>https://annjose.com/tags/AI/</link>
-      <pubDate>Sat, 31 May 2025 13:13:12 -0700</pubDate>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/tags/AI/</guid>
       <description></description>
     </item>
     <item>
-      <title>mobile</title>
-      <link>https://annjose.com/tags/mobile/</link>
-      <pubDate>Sat, 31 May 2025 13:13:12 -0700</pubDate>
-      <guid>https://annjose.com/tags/mobile/</guid>
+      <title>gemma</title>
+      <link>https://annjose.com/tags/gemma/</link>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/gemma/</guid>
       <description></description>
     </item>
     <item>
       <title>hands-on</title>
       <link>https://annjose.com/tags/hands-on/</link>
-      <pubDate>Fri, 30 May 2025 12:32:08 -0700</pubDate>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/tags/hands-on/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>mobile</title>
+      <link>https://annjose.com/tags/mobile/</link>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>mobile-development</title>
+      <link>https://annjose.com/tags/mobile-development/</link>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/mobile-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>privacy</title>
+      <link>https://annjose.com/tags/privacy/</link>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/tags/privacy/</guid>
       <description></description>
     </item>
     <item>
@@ -56,13 +77,6 @@
       <link>https://annjose.com/tags/browsers/</link>
       <pubDate>Sun, 23 Mar 2025 16:14:23 -0700</pubDate>
       <guid>https://annjose.com/tags/browsers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>privacy</title>
-      <link>https://annjose.com/tags/privacy/</link>
-      <pubDate>Sun, 23 Mar 2025 16:14:23 -0700</pubDate>
-      <guid>https://annjose.com/tags/privacy/</guid>
       <description></description>
     </item>
     <item>

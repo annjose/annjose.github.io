@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hands-on on Reflections</title>
-    <link>https://annjose.com/tags/hands-on/</link>
-    <description>Recent content in hands-on on Reflections</description>
+    <title>gemma on Reflections</title>
+    <link>https://annjose.com/tags/gemma/</link>
+    <description>Recent content in gemma on Reflections</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Tue, 03 Jun 2025 13:13:12 -0700</lastBuildDate>
-    <atom:link href="https://annjose.com/tags/hands-on/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://annjose.com/tags/gemma/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
       <link>https://annjose.com/post/mobile-ondevice-ai-hands-on-gemma/</link>

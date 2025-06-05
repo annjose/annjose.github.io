@@ -7,19 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 31 May 2025 13:13:12 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 13:13:12 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mobile On-device AI</title>
-      <link>https://annjose.com/post/mobile-ondevice-ai/</link>
-      <pubDate>Sat, 31 May 2025 13:13:12 -0700</pubDate>
-      <guid>https://annjose.com/post/mobile-ondevice-ai/</guid>
+      <title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
+      <link>https://annjose.com/post/mobile-ondevice-ai-hands-on-gemma/</link>
+      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
+      <guid>https://annjose.com/post/mobile-ondevice-ai-hands-on-gemma/</guid>
+      <description>In our previous post, &amp;ldquo;Mobile On-device AI: Smarter, Faster, and Private Apps&amp;rdquo;, we explored the fundamentals of running AI locally on mobile devices – what it is, its advantages, challenges, and the core concepts. Now, it&amp;rsquo;s time to roll up our sleeves and see this technology in action!&#xA;This practical guide will walk you through getting hands-on with mobile on-device AI, focusing on how to run Google&amp;rsquo;s powerful open-weight Gemma model family, including the latest Gemma 3n where supported, on both iOS and Android devices.</description>
+    </item>
+    <item>
+      <title>Mobile On-device AI: Smarter, Faster, and Private Apps</title>
+      <link>https://annjose.com/post/mobile-on-device-ai/</link>
+      <pubDate>Mon, 02 Jun 2025 09:02:21 -0700</pubDate>
+      <guid>https://annjose.com/post/mobile-on-device-ai/</guid>
       <description>AI is reshaping how we live and work - thanks to significant advancements in model capabilities and computational power centered in cloud infrastructure. At the same time, the mobile devices we carry every day - our phones and tablets - are becoming increasingly powerful. As a developer who loves exploring AI and has built mobile apps, I am fascinated by the idea of these two worlds of mobile and AI converging.</description>
     </item>
     <item>
-      <title>Edge AI: The Essentials</title>
+      <title>Edge AI Essentials</title>
       <link>https://annjose.com/post/edge-ai-essentials/</link>
-      <pubDate>Fri, 30 May 2025 12:32:08 -0700</pubDate>
+      <pubDate>Sun, 01 Jun 2025 12:32:08 -0700</pubDate>
       <guid>https://annjose.com/post/edge-ai-essentials/</guid>
       <description>Every day we&amp;rsquo;re seeing fantastic advancements in AI, thanks to more data and powerful computers. This may make it seem like the future of AI is all about getting even more data and bigger computers. But I believe a critical and rapidly evolving piece of the puzzle is about bringing the Intelligence of Artificial Intelligence onto the devices where the data originates (eg: our phones, cameras, and IoT devices) and doing the &amp;ldquo;smarts&amp;rdquo; using their own computing capabilities.</description>
     </item>
