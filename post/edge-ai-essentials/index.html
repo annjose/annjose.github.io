@@ -288,7 +288,7 @@
 <h2 id="edge-ai">Edge AI</h2>
 <p>In traditional <strong>Cloud AI</strong>, an end device (like a security camera) sends all its collected data to a remote server for processing. The server then sends the result back (e.g., &ldquo;intruder detected&rdquo;). But Edge AI offers a different approach: processing the data locally on the device itself. So, your camera software runs the AI model, crunches the data, and generates the &ldquo;intruder detected&rdquo; response all on its own hardware. This avoids the need to send data to the cloud for this immediate analysis.</p>
 <p><strong>Edge AI</strong> is the implementation of AI algorithms at the <em>edge</em> of the network rather than in a centralized cloud computing facility or a remote data center. This means that the AI computations, particularly the inference step of making predictions or decisions based on new data happen <strong>locally on the end device</strong>, or on a more powerful <strong>server physically located nearby</strong> (an edge server). These two variations of Edge AI are called <strong>on-device AI</strong> and <strong>edge server</strong>.</p>
-<p>If you want to learn more about on-device AI, read my post <a href="https://annjose.com/post/mobile-ondevice-ai">Mobile on-device AI</a>.</p>
+<p>If you want to learn more about on-device AI, read my post <a href="https://annjose.com/post/mobile-on-device-ai">Mobile on-device AI</a>.</p>
 <h3 id="examples">Examples</h3>
 <ul>
 <li>
@@ -324,11 +324,16 @@
 <h2 id="how-edge-ai-works">How Edge AI Works</h2>
 <p>At its core, Edge AI involves running AI models directly on edge devices. This typically begins with an edge device downloading a pre-trained AI model from a central server or model repository. Once downloaded, an application on the device can load this model into memory on demand and perform <strong>inference</strong>, which is the process of making predictions or decisions based on new, local data. A significant advantage of this approach is that inference can often happen entirely offline, without any network connection.</p>
 <p>Going one step further, Edge AI systems can incorporate feedback loops for continuous improvement. Models deployed on edge devices can be managed centrally. If issues or anomalies are detected during local inference, this information can be sent back to a central server for diagnosis and model refinement. The improved model is then pushed back to the edge devices as an update, ensuring that the local AI capabilities remain current and effective. This combination of local processing and centralized management offers the benefits of both efficiency and continuous learning.</p>
+<h2 id="further-reading-in-this-series">Further Reading in this Series</h2>
+<ul>
+<li><a href="https://annjose.com/post/edge-ai-essentials/">Edge AI Essentials</a></li>
+<li><a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-Device AI: Smarter, Faster, and Private Apps</a></li>
+<li><a href="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/">Hands-On: Mobile AI with Gemma - iOS, Android</a></li>
+</ul>
 <h2 id="references">References</h2>
 <ul>
 <li>Nvidia article on Edge AI: <a href="https://blogs.nvidia.com/blog/what-is-edge-ai/" target="_blank" rel="noopener">What is Edge AI</a></li>
 <li>A Simple Intro to Edge AI: <a href="https://www.ibm.com/think/topics/edge-ai" target="_blank" rel="noopener">IBM - What is Edge AI?</a></li>
-<li>My post: <a href="https://annjose.com/post/mobile-ondevice-ai">Mobile On-device AI</a></li>
 </ul>
 
 

@@ -11,10 +11,10 @@
     <atom:link href="https://annjose.com/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
-      <link>https://annjose.com/post/mobile-ondevice-ai-hands-on-gemma/</link>
+      <link>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</link>
       <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
-      <guid>https://annjose.com/post/mobile-ondevice-ai-hands-on-gemma/</guid>
-      <description>In our previous post, &amp;ldquo;Mobile On-device AI: Smarter, Faster, and Private Apps&amp;rdquo;, we explored the fundamentals of running AI locally on mobile devices – what it is, its advantages, challenges, and the core concepts. Now, it&amp;rsquo;s time to roll up our sleeves and see this technology in action!&#xA;This practical guide will walk you through getting hands-on with mobile on-device AI, focusing on how to run Google&amp;rsquo;s powerful open-weight Gemma model family, including the latest Gemma 3n where supported, on both iOS and Android devices.</description>
+      <guid>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</guid>
+      <description>In our previous post, Mobile On-device AI: Smarter, Faster, and Private Apps, we explored the fundamentals of running AI locally on mobile devices – what it is, its advantages, challenges, and the core concepts. Now, it&amp;rsquo;s time to roll up our sleeves and see this technology in action!&#xA;This practical guide will walk you through getting hands-on with mobile on-device AI, focusing on how to run Google&amp;rsquo;s powerful open-weight Gemma model family, including the latest Gemma 3n where supported, on both iOS and Android devices.</description>
     </item>
     <item>
       <title>Which browser cares about privacy the most?</title>
