@@ -294,34 +294,34 @@
 
 </div>
 
-  <p>In our previous post, <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter and Faster Private Apps</a>, we explored the fundamentals of running AI locally on mobile devices. Now, it&rsquo;s time to get hands-on and see this technology in action!</p>
+  <p>In our previous post, <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter Faster Private Apps</a>, we explored the fundamentals of running AI locally on mobile devices. Now, it&rsquo;s time to get hands-on and see this technology in action!</p>
 <p>This practical guide walks you through implementing mobile on-device AI using Google&rsquo;s powerful Gemma model family, including the cutting-edge Gemma 3n. You&rsquo;ll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.</p>
-<h2 id="what-youll-build">What You&rsquo;ll Build</h2>
-<p>By the end of this guide, you&rsquo;ll have:</p>
+<h3 id="what-youll-learn-here">What You&rsquo;ll Learn Here</h3>
 <ul>
-<li>Tested Gemma models in Google AI Studio</li>
-<li>Run on-device AI apps on Android using Google AI Edge</li>
-<li>Implemented LLM inference on iOS with MediaPipe</li>
-<li>Created browser-based AI applications with JavaScript</li>
-<li>Understood the trade-offs between different model variants and platforms</li>
+<li>Test various Gemma models, including Gemma 3n, in Google AI Studio.</li>
+<li>Run sample on-device AI applications on Android using tools like the Google AI Edge Gallery App and MediaPipe.</li>
+<li>Implement on-device Large Language Model (LLM) inference on iOS using MediaPipe.</li>
+<li>Explore how to run LLMs in mobile web browsers with JavaScript and MediaPipe.</li>
+<li>Gain practical experience deploying and interacting with Gemma models across different mobile platforms.</li>
 </ul>
-<p><strong>Prerequisites:</strong> Basic mobile development knowledge helpful but not required
-<strong>Time needed:</strong> 1-2 hours depending on platforms explored</p>
-<h2 id="quick-navigation">Quick Navigation</h2>
+<p><strong>Prerequisites:</strong> Basic mobile development knowledge helpful but not required.</p>
+<p><strong>Time needed:</strong> 1-2 hours depending on platforms explored</p>
+<h3 id="navigating-this-guide">Navigating this guide</h3>
 <ol>
-<li><a href="#understanding-gemma">Understanding Gemma Models</a></li>
-<li><a href="#deep-dive-gemma-3n">Deep Dive: Gemma 3n</a></li>
-<li><a href="#frameworks-in-action">Frameworks in Action</a></li>
-<li><a href="#1-run-gemma-on-google-ai-studio">Google AI Studio (Quick Start)</a></li>
-<li><a href="#2-run-gemma-on-android">Android Implementation</a></li>
-<li><a href="#3-run-gemma-on-ios">iOS Implementation</a></li>
-<li><a href="#4-bonus-run-gemma-on-mobile-browsers">Web Implementation</a></li>
+<li><a href="#understanding-gemma-models">Understanding Gemma Models</a></li>
+<li><a href="#deep-dive-gemma-3n">Deep Dive: Gemma 3n (Features &amp; Architecture)</a></li>
+<li><a href="#frameworks-in-action">Frameworks in Action: Apple Core ML &amp; Google AI Edge</a></li>
+<li><a href="#1-run-gemma-in-google-ai-studio">Running Gemma in Google AI Studio</a></li>
+<li><a href="#2-run-gemma-on-android">Running Gemma on Android</a></li>
+<li><a href="#3-run-gemma-on-ios">Running Gemma on iOS</a></li>
+<li><a href="#4-bonus-run-gemma-on-mobile-browsers">Bonus: Gemma in Mobile Web Browsers</a></li>
 <li><a href="#cross-platform-summary">Cross-Platform Summary</a></li>
+<li><a href="#conclusion">Conclusion &amp; Next Steps</a></li>
+<li><a href="#references">References</a></li>
 </ol>
-<h2 id="understanding-gemma">Understanding Gemma</h2>
-<p>Before we dive into the hands-on sections, let&rsquo;s briefly revisit the Gemma model family and its significance, particularly the newer Gemma 3n.</p>
-<h3 id="gemini-nano-vs-gemma-3n">Gemini Nano vs. Gemma 3n</h3>
-<p>Prior to the announcement of Gemma 3n at Google I/O 2025, prominent models for on-device AI included earlier Gemma versions and Gemini Nano. Both are optimized for on-device AI, though they cater to different use cases and have distinct access models. Here is a comparison of two models side-by-side:</p>
+<h2 id="understanding-gemma-models">Understanding Gemma Models</h2>
+<p>Before we dive into the hands-on tutorials, it’s helpful to understand the Gemma model family – proprietary Gemini Nano and the latest Gemma 3n. While both are highly optimized for on-device tasks, they cater to different use cases and feature distinct access models for our primary example for this guide – and its significance in the on-device AI landscape, especially the newer Gemma 3 developers.</p>
+<p>Let&rsquo;s compare them side-by-side to better understand Gemma 3n&rsquo;s role:</p>
 
 
 
@@ -409,12 +409,10 @@
 </li>
 </ul>
 <p>Despite their differences in access and target use cases, both model families stem from Google&rsquo;s advanced AI research. We will likely see continued evolution in their capabilities, how they are delivered, and the business models surrounding them for on-device applications. For this hands-on guide, we will primarily focus on the openly accessible Gemma models, particularly Gemma 3n, due to their suitability for broader developer experimentation.</p>
-<h2 id="deep-dive-gemma-3n">Deep dive: Gemma 3n</h2>
+<h2 id="deep-dive-gemma-3n">Deep Dive: Gemma 3n</h2>
 <p>This is the latest open model optimized to run on mobile devices with at least 2GB RAM. It provides real-time AI on phones, tablets and laptops. It is in early preview and is available on Google AI Studio, Google AI Edge SDK and <a href="https://huggingface.co/collections/google/gemma-3n-preview-682ca41097a31e5ac804d57b" target="_blank" rel="noopener">LiteRT HuggingFace community</a>.</p>
 <p>Gemma 3n can be deployed on mobile devices using the MediaPipe library of Google AI Edge SDK that we saw earlier. It is built on the same advanced architecture that powers <strong>Gemini Nano</strong>, the flagship mobile-optimized model. The development of Gemma 3n is a collaboration between Google DeepMind, Qualcomm, and Samsung, ensuring that it is engineered for high performance and efficiency across a wide range of mobile hardware.</p>
-<blockquote>
-<p>Gemma 3n is the mobile-optimized, multimodal model that enables developers to build mobile-first AI applications - everything runs locally.</p>
-</blockquote>
+<p>In short, Gemma 3n is the mobile-optimized, multimodal model that enables developers to build mobile-first AI applications - everything runs locally.</p>
 <h3 id="key-features">Key Features</h3>
 <ul>
 <li><strong>Natively Multimodal:</strong> Supports text, image, audio, and video inputs and outputs</li>
@@ -471,7 +469,7 @@
 <p><strong>Apple Core ML:</strong> Apple&rsquo;s dedicated framework for running machine learning models efficiently and privately on iOS, macOS, and other Apple platforms. It works with models converted to its specific format and optimizes execution across Apple&rsquo;s CPU, GPU, and Neural Engine.</p>
 </li>
 </ul>
-<h2 id="deep-dive-apple-core-ml">Deep dive: Apple Core ML</h2>
+<h2 id="deep-dive-apple-core-ml">Deep Dive: Apple Core ML</h2>
 <p>Core ML is Apple’s framework for running machine learning models on iOS, macOS, tvOS, and watchOS devices. It is designed for on-device inference, minimizing memory footprint and power consumption while keeping data private. It leverages Apple silicon, including the CPU, GPU, and Neural Engine, to maximize speed and minimize memory footprint and power consumption.</p>
 <p>It works with Vision (for image and video analysis), Natural Language (for text processing), and GameplayKit (for game AI). Models trained in TensorFlow, PyTorch, or other frameworks can be converted to Core ML format using Core ML Tools, making it straightforward to deploy existing models on Apple devices.</p>
 <h3 id="how-coreml-works">How CoreML works</h3>
@@ -527,7 +525,7 @@
 </li>
 </ol>
 <p><strong>Note:</strong> The mobile setup is fairly easy. You don’t need advanced mobile expertise - just a compatible USB cable and the ability to follow instructions.</p>
-<h3 id="1-run-gemma-on-google-ai-studio">1. Run Gemma on Google AI Studio</h3>
+<h3 id="1-run-gemma-in-google-ai-studio">1. Run Gemma in Google AI Studio</h3>
 <p>This is the fastest way to try out Gemma 3n without any setup hassle.</p>
 <ul>
 <li>Go to <a href="https://aistudio.google.com/prompts/new_chat" target="_blank" rel="noopener">Google AI Studio</a> and login with your Google account</li>
@@ -1061,8 +1059,9 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
 <ul>
 <li>Announcement of Gemma 3n at Google I/O 2025: <a href="https://developers.googleblog.com/en/introducing-gemma-3n/" target="_blank" rel="noopener">Google Developers Blog: Introducing Gemma 3n</a></li>
 <li>Google announcing on-device SLM, RAG and function calling: <a href="https://developers.googleblog.com/en/google-ai-edge-small-language-models-multimodality-rag-function-calling/" target="_blank" rel="noopener">Google AI Edge Blog</a></li>
-<li>Gemini Nano for Android: <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">developer.android.com/ai/gemini-nano</a></li>
 <li>Gemma Models Official Page: <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">ai.google.dev/gemma</a></li>
+<li>Gemma 3n Model overview <a href="https://ai.google.dev/gemma/docs/gemma-3n" target="_blank" rel="noopener">ai.google.dev/gemma/docs/gemma-3n</a></li>
+<li>Gemini Nano for Android: <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">developer.android.com/ai/gemini-nano</a></li>
 </ul>
 <p><strong>Google AI Edge Framework</strong></p>
 <ul>
@@ -1094,7 +1093,7 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter and Faster Private Apps</a>
+      <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter Faster Private Apps</a>
     </nav>
     
   </div>

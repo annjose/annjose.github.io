@@ -8,7 +8,7 @@
     content="Understanding AI on your phone: benefits, challenges, and how it works">
   <meta name="generator" content="Hugo 0.121.1">
 
-  <title>Mobile On-device AI: Smarter and Faster Private Apps &middot; Reflections</title>
+  <title>Mobile On-device AI: Smarter Faster Private Apps &middot; Reflections</title>
 
   
   
@@ -240,7 +240,7 @@
 
 
 <div class="header">
-  <h1>Mobile On-device AI: Smarter and Faster Private Apps</h1>
+  <h1>Mobile On-device AI: Smarter Faster Private Apps</h1>
   <h2>Understanding AI on your phone: benefits, challenges, and how it works</h2>
 </div>
 <div class="content">
@@ -286,12 +286,10 @@
 
 </div>
 
-  <p>AI is reshaping how we live and work - thanks to significant advancements in model capabilities and computational power centered in cloud infrastructure. At the same time, the mobile devices we carry every day - our phones and tablets - are becoming increasingly powerful. As a developer who loves exploring AI and has built mobile apps, I am fascinated by the idea of these two worlds of <strong>mobile and AI converging</strong>. I believe there is immense potential in using this local device power for AI and building experiences that are more private, faster, and smarter. This conviction is what inspired me to write this post.</p>
-<p>This post dives into <strong>Mobile On-device AI</strong>, which involves running AI computations directly on your smartphone or tablet, rather than relying on remote servers. It&rsquo;s a specialized area within the broader Edge AI landscape - a field focused on leveraging local device capabilities as well as nearby edge servers - which I explore more in the post <a href="https://annjose.com/post/edge-ai-essentials">Edge AI Essentials</a>. Here, we&rsquo;ll specifically cover the <strong>significance</strong> of on-device AI for mobile, exploring compelling <strong>use cases</strong>, its unique <strong>advantages and challenges</strong> given device constraints, and the <strong>key tools and frameworks</strong> to build mobile apps with on-device AI. This includes device-optimized models and specific frameworks such as <strong>Apple Core ML</strong>, and <strong>Google AI Edge</strong> (which encompasses the foundational TensorFlow Lite). I’ll try to share practical insights and code samples to help you understand how it works.</p>
-<p>Whether you&rsquo;re new to mobile or an experienced mobile developer, I hope this gives you a good overview, a solid foundation to get started, and inspires you to experiment with mobile on-device AI. If you find it useful, I’d love to hear from you - here in the comments, or on Bluesky (TBD) or LinkedIn (TBD). Your feedback will help shape follow-up posts with deeper technical dives into this exciting area.</p>
+  <p>While cloud computing drives many AI breakthroughs, a parallel revolution is happening right in our hands: <strong>Mobile On-device AI</strong>. As mobile devices become ever more powerful, the ability to run AI locally offers a compelling path to faster, more private, and smarter app experiences. As a developer who loves exploring AI and has built mobile apps, I am fascinated by the idea of these two worlds of <strong>mobile and AI converging</strong>.</p>
+<p>This post unpacks Mobile On-device AI. We&rsquo;ll define what it is (and how it relates to <a href="https://annjose.com/post/edge-ai-essentials">Edge AI Essentials</a>), showcase its real-world applications, analyze its benefits and limitations, and introduce the core tools like Apple Core ML and Google AI Edge (with TensorFlow Lite). Whether you&rsquo;re new to the concept or a seasoned developer, I hope this provides valuable insights and a launchpad for your own explorations. Let me know your thoughts through Bluesky / Linkedin!</p>
 <h2 id="the-basics">The Basics</h2>
-<p><strong>Mobile On-device AI</strong> enables mobile devices like phones and tablets to run AI models locally. This approach eliminates the need to send data to the cloud; once a model is downloaded to the device, all processing happens directly on it, keeping your data private and potentially reducing operational costs. For example, consider how modern smartphone keyboards offer predictive text suggestions. An on-device AI model analyzes your typing patterns locally and offers relevant word completions in real-time, without sending your keystrokes to a server. This ensures your typing remains private and the suggestions appear instantly, even if you&rsquo;re offline.</p>
-<p>Unlike <strong>Cloud AI</strong>, where your mobile device typically sends requests to remote servers for computation and then awaits the results, on-device AI keeps these processes entirely local. Managing such tasks directly on your phone can meet computing demands efficiently, safeguard sensitive user data, and potentially lower data usage and cloud service costs for both the user and the app provider.</p>
+<p>Essentially, <strong>Mobile On-device AI</strong> means AI models run directly on your phone or tablet, processing data locally instead of sending it to the cloud. Once a model is on your device, it works there - keeping your data private, enabling offline use, and potentially cutting costs. Think of your smartphone&rsquo;s predictive keyboard: it learns your typing style and suggests words in real-time, all on the device, without your keystrokes leaving your phone. This is a key difference from <strong>Cloud AI</strong>, where data is sent to remote servers for processing, which requires connectivity and involves data transmission.&quot;</p>
 <h2 id="advantages">Advantages</h2>
 <ul>
 <li><strong>Low latency:</strong> Eliminates mobile network delays, providing immediate responses</li>
@@ -348,10 +346,18 @@
 <h3 id="models-for-on-device-ai">Models for On-device AI</h3>
 <p>At the heart of on-device AI are models optimized for smaller devices – efficient enough to fit within the memory and processing limits of smartphones, wearables, and IoT gadgets. When these are language models, they are often referred to as Small Language Models (SLMs). Some prominent models include:</p>
 <ul>
-<li><strong>Gemini Nano:</strong> Google&rsquo;s flagship proprietary model for specific on-device ML tasks within its ecosystem. (<a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">More Info</a>)</li>
-<li><strong>Gemma Family (Gemma 3n, 3, 2):</strong> Google&rsquo;s family of open-weights models, designed to be lightweight and performant for broader developer access and on-device tasks. (<a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">More Info</a>)</li>
-<li><strong>Microsoft Phi:</strong> A lightweight, open-source language model from Microsoft, optimized for edge devices. (<a href="https://azure.microsoft.com/en-us/products/phi" target="_blank" rel="noopener">More Info</a>)</li>
-<li><strong>Mistral:</strong> A family of efficient, open-weight models designed for fast inference on resource-constrained hardware. (<a href="https://mistral.ai/news/" target="_blank" rel="noopener">More Info</a>)</li>
+<li>
+<p><strong>Gemini Nano:</strong> Google&rsquo;s flagship proprietary model for specific on-device ML tasks within its ecosystem. (<a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">More Info</a>)</p>
+</li>
+<li>
+<p><strong>Gemma Family (Gemma 3n, 3, 2):</strong> Google&rsquo;s family of open-weights models, designed to be lightweight and performant for broader developer access and on-device tasks. More info - <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">Gemma models</a>, <a href="https://ai.google.dev/gemma/docs/gemma-3n" target="_blank" rel="noopener">Gemma 3n Model overview</a></p>
+</li>
+<li>
+<p><strong>Microsoft Phi:</strong> A lightweight, open-source language model from Microsoft, optimized for edge devices. (<a href="https://azure.microsoft.com/en-us/products/phi" target="_blank" rel="noopener">More Info</a>)</p>
+</li>
+<li>
+<p><strong>Mistral:</strong> A family of efficient, open-weight models designed for fast inference on resource-constrained hardware. (<a href="https://mistral.ai/news/" target="_blank" rel="noopener">More Info</a>)</p>
+</li>
 </ul>
 <h2 id="frameworks-for-on-device-ai">Frameworks for On-device AI</h2>
 <p>To run these models, developers rely on powerful frameworks:</p>
