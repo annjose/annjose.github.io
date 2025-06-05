@@ -294,9 +294,31 @@
 
 </div>
 
-  <p>In our previous post, <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter, Faster, and Private Apps</a>, we explored the fundamentals of running AI locally on mobile devices – what it is, its advantages, challenges, and the core concepts. Now, it&rsquo;s time to roll up our sleeves and see this technology in action!</p>
-<p>This practical guide will walk you through getting hands-on with mobile on-device AI, focusing on how to run Google&rsquo;s powerful open-weight Gemma model family, including the latest Gemma 3n where supported, on both iOS and Android devices. We&rsquo;ll explore the tools and techniques to bring these advanced AI capabilities directly into your mobile applications.</p>
-<h2 id="understanding-gemma-our-example-model-family">Understanding Gemma: Our Example Model Family</h2>
+  <p>In our previous post, <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter and Faster Private Apps</a>, we explored the fundamentals of running AI locally on mobile devices. Now, it&rsquo;s time to get hands-on and see this technology in action!</p>
+<p>This practical guide walks you through implementing mobile on-device AI using Google&rsquo;s powerful Gemma model family, including the cutting-edge Gemma 3n. You&rsquo;ll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.</p>
+<h2 id="what-youll-build">What You&rsquo;ll Build</h2>
+<p>By the end of this guide, you&rsquo;ll have:</p>
+<ul>
+<li>Tested Gemma models in Google AI Studio</li>
+<li>Run on-device AI apps on Android using Google AI Edge</li>
+<li>Implemented LLM inference on iOS with MediaPipe</li>
+<li>Created browser-based AI applications with JavaScript</li>
+<li>Understood the trade-offs between different model variants and platforms</li>
+</ul>
+<p><strong>Prerequisites:</strong> Basic mobile development knowledge helpful but not required
+<strong>Time needed:</strong> 1-2 hours depending on platforms explored</p>
+<h2 id="quick-navigation">Quick Navigation</h2>
+<ol>
+<li><a href="#understanding-gemma">Understanding Gemma Models</a></li>
+<li><a href="#deep-dive-gemma-3n">Deep Dive: Gemma 3n</a></li>
+<li><a href="#frameworks-in-action">Frameworks in Action</a></li>
+<li><a href="#1-run-gemma-on-google-ai-studio">Google AI Studio (Quick Start)</a></li>
+<li><a href="#2-run-gemma-on-android">Android Implementation</a></li>
+<li><a href="#3-run-gemma-on-ios">iOS Implementation</a></li>
+<li><a href="#4-bonus-run-gemma-on-mobile-browsers">Web Implementation</a></li>
+<li><a href="#cross-platform-summary">Cross-Platform Summary</a></li>
+</ol>
+<h2 id="understanding-gemma">Understanding Gemma</h2>
 <p>Before we dive into the hands-on sections, let&rsquo;s briefly revisit the Gemma model family and its significance, particularly the newer Gemma 3n.</p>
 <h3 id="gemini-nano-vs-gemma-3n">Gemini Nano vs. Gemma 3n</h3>
 <p>Prior to the announcement of Gemma 3n at Google I/O 2025, prominent models for on-device AI included earlier Gemma versions and Gemini Nano. Both are optimized for on-device AI, though they cater to different use cases and have distinct access models. Here is a comparison of two models side-by-side:</p>
@@ -401,20 +423,31 @@
 <li><strong>Realtime Capabilities:</strong> Enables real-time transcription, translation, and voice interactions directly on device</li>
 <li><strong>Extended Context Length:</strong> Supports a context window of up to 32K tokens, significant input length for complex and lengthy data</li>
 </ul>
-<h3 id="model-variants">Model variants</h3>
-<p>Two main variants are available in the preview:</p>
+<h3 id="gemma-3n-model-variants-preview">Gemma 3n Model Variants (Preview)</h3>
+<p>During the initial preview phase, Google has made two primary variants of Gemma 3n available, differing mainly in their effective parameter size:</p>
 <ol>
-<li><strong>Gemma 3n E2B:</strong> <a href="https://huggingface.co/google/gemma-3n-E2B-it-litert-preview" target="_blank" rel="noopener">HuggingFace Model Hub Link</a></li>
-<li><strong>Gemma 3n E4B:</strong> <a href="https://huggingface.co/google/gemma-3n-E4B-it-litert-preview" target="_blank" rel="noopener">HuggingFace Model Hub Link</a></li>
+<li><strong>Gemma 3n E2B</strong> (Effective 2 Billion Parameters): This variant is optimized for scenarios requiring a very lean model while still delivering strong performance.
+<ul>
+<li>Find it on Hugging Face: <a href="https://huggingface.co/google/gemma-3n-E2B-it-litert-preview" target="_blank" rel="noopener">google/gemma-3n-E2B-it-litert-preview</a></li>
+</ul>
+</li>
+<li><strong>Gemma 3n E4B</strong> (Effective 4 Billion Parameters): Offering a step up in capability, this variant balances enhanced performance with on-device efficiency for more demanding tasks.
+<ul>
+<li>Find it on Hugging Face: <a href="https://huggingface.co/google/gemma-3n-E4B-it-litert-preview" target="_blank" rel="noopener">google/gemma-3n-E4B-it-litert-preview</a></li>
+</ul>
+</li>
 </ol>
-<p>For reference, the previous model <strong>Gemma 3-1B</strong> is available at <a href="https://huggingface.co/litert-community/Gemma3-1B-IT" target="_blank" rel="noopener">https://huggingface.co/litert-community/Gemma3-1B-IT</a></p>
+<p>These models are typically provided in formats optimized with LiteRT for on-device inference.</p>
+<p><strong>For Reference</strong>: It&rsquo;s also useful to be aware of previous Gemma iterations. For example, the <strong>Gemma 3-1B</strong> model, an earlier version, can be found here:</p>
+<ul>
+<li><strong>Gemma 3-1B (LiteRT Community):</strong> <a href="https://huggingface.co/litert-community/Gemma3-1B-IT" target="_blank" rel="noopener">litert-community/Gemma3-1B-IT</a></li>
+</ul>
 <h3 id="naming-is-hard-but-fun-too">Naming is hard, but fun too!</h3>
 <p>There are a few subtle elements in the name of the Gemma models that are interesting to know.</p>
 <ul>
 <li>The <strong>n</strong> suffix in the model name refers to the <em>nano-sized</em> models in the Gemma family, specifically optimized for resource-constrained devices like mobile phones and wearables</li>
 <li>The <strong>E</strong> prefix in the Gemma 3n model names stands for the <em>Effective</em> parameter size, indicating the reduced, or effective, number of parameters the model actually needs to use during inference on a device, rather than the total parameter count stored in the model files. For example, the Gemma 3n E2B model contains 5 billion parameters, but it can operate with an effective memory footprint of 2B parameters because of the techniques like Per-Layer Embedding (PLE) caching and selective activation of parameters. Similarly the E4B model needs only 4B parameters to be active at run time even though it is a 8B parameter model.</li>
 </ul>
-<p>LiteRT is the new name for <em>TensorFlowLite</em> - and it stands for <em>Lite RunTime</em></p>
 <h3 id="architecture-of-gemma-3n">Architecture of Gemma 3n</h3>
 <p>There are a few important aspects of the new architecture that powers Gemma 3n and the Gemini Nano models.</p>
 <ul>
@@ -422,15 +455,15 @@
 <li><strong>Selective Parameter Activation:</strong> The model can dynamically load only the parameters needed for the current task (e.g., text, image, or audio), further reducing resource use. The model with 4B active memory footprint embeds a nested state-of-the-art submodel with 2B active memory footprint. This allows the model to dynamically load the relevant submodel to balance performance and quality based on device capabilities, user query etc.</li>
 <li><strong>MatFormer Architecture:</strong> This allows the model to nest smaller submodels within a larger one, so only the relevant submodel is activated per request, minimizing compute and memory requirements</li>
 </ul>
-<h2 id="frameworks-in-action-google-ai-edge-and-core-ml">Frameworks in action: Google AI Edge and Core ML</h2>
+<h2 id="frameworks-in-action">Frameworks in action</h2>
 <p>Once you have an optimized AI model (like the ones discussed in the Models section above), you need a way to actually run it on a mobile device. This is where on-device AI frameworks and runtimes come into play. They provide the necessary engine and tools to efficiently execute these models, manage resources, and often interact with device hardware for acceleration.</p>
 <p>The two main players in the mobile ecosystem are:</p>
 <ul>
 <li>
 <p><strong>Google AI Edge:</strong> Google&rsquo;s comprehensive suite for on-device AI - libraries, tools, and frameworks designed to deploy and run ML models directly on edge devices. Key components include:</p>
 <ul>
-<li><strong>LiteRT (formerly TensorFlow Lite):</strong> A crucial open-source runtime for executing a wide range of optimized models, including Google&rsquo;s Gemma family and custom-trained models, on Android, iOS, and other platforms. You can choose a model for your use case, convert it to the LiteRT format, and run it on-device</li>
-<li><strong>MediaPipe:</strong> Offers pre-built, customizable solutions for tasks like vision and audio processing, often leveraging LiteRT. You can choose the task that solves your AI/ML problem, and implement it on multiple platforms. If you intend to use MediaPipe Tasks, refer to the <a href="https://ai.google.dev/edge/mediapipe/solutions/tasks" target="_blank" rel="noopener">MediaPipe Tasks documentation</a></li>
+<li><strong>LiteRT (formerly TensorFlow Lite):</strong> A crucial open-source runtime for executing a wide range of optimized models, including Google&rsquo;s Gemma family and custom-trained models, on Android, iOS, and other platforms. You can choose a model for your use case, convert it to the LiteRT format, and run it on-device. <a href="https://ai.google.dev/edge/litert/next/overview" target="_blank" rel="noopener">More info</a></li>
+<li><strong>MediaPipe:</strong> Offers pre-built, customizable solutions for tasks like vision and audio processing, often leveraging LiteRT. You can choose the task that solves your AI/ML problem, and implement it on multiple platforms. If you intend to use MediaPipe Tasks, refer to the <a href="https://ai.google.dev/edge/mediapipe/solutions/tasks" target="_blank" rel="noopener">MediaPipe Tasks documentation</a> and all the <a href="https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples" target="_blank" rel="noopener">MediaPipe samples</a>.</li>
 <li><strong>ML Kit:</strong> Provides easy-to-integrate APIs for common AI features, sometimes powered by models like Gemini Nano under the hood for specific functionalities within Google&rsquo;s ecosystem or via new GenAI APIs. See more info at <a href="https://developers.google.com/ml-kit" target="_blank" rel="noopener">ML Kit docs</a></li>
 </ul>
 </li>
@@ -483,9 +516,15 @@
 <h2 id="hands-on-running-gemma-models-on-mobile-devices">Hands-on: Running Gemma Models on mobile devices</h2>
 <p>Ok, let’s roll up our sleeves and see these models in action. We can do that in a few places:</p>
 <ol>
-<li><strong>Google AI Studio:</strong> This is Google’s playground where you can try all their models in a chat-like interface. It’s the simplest way to see Gemma models, including the latest Gemma 3n.</li>
-<li><strong>Sample apps from MediaPipe:</strong> These are available for Android, iOS, and web browsers. They let you run models directly on your device or in the browser.</li>
-<li><strong>Google AI Edge Gallery app:</strong> This new app from Google AI Edge SDK lets you download and run models like Gemma 3n directly on your Android device, offline.</li>
+<li>
+<p><strong>Google AI Studio:</strong> This is Google’s interactive playground where you can try out their various models, including the latest Gemma 3n, using a chat-like interface. It’s often the simplest way to get a quick feel for a model&rsquo;s capabilities.</p>
+</li>
+<li>
+<p><strong>Sample apps from MediaPipe:</strong> MediaPipe provides a collection of sample applications for Android, iOS, and web browsers that demonstrate how to run various on-device models. These are excellent for seeing practical implementations. You can typically find these within the <strong><a href="https://ai.google.dev/edge/mediapipe/solutions" target="_blank" rel="noopener">MediaPipe solutions documentation</a></strong>.</p>
+</li>
+<li>
+<p><strong>Google AI Edge Gallery app:</strong> This new app from Google AI Edge SDK lets you download and run models like Gemma 3n directly on your Android device, offline. The app is open source and available on <strong><a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener">GitHub: google-ai-edge/gallery</a></strong></p>
+</li>
 </ol>
 <p><strong>Note:</strong> The mobile setup is fairly easy. You don’t need advanced mobile expertise - just a compatible USB cable and the ability to follow instructions.</p>
 <h3 id="1-run-gemma-on-google-ai-studio">1. Run Gemma on Google AI Studio</h3>
@@ -806,7 +845,8 @@ Currently, our only option is to use the old MediaPipe sample app, which support
 <li><strong>Gemma 3n (E2B, E4B)</strong> is not currently listed as supported for the Web API.</li>
 </ul>
 <p>It is fascinating to see the model loaded into the browser on your machine. Of course, tools like Ollama does the same, but it feels different when you see that happen in the context of a browser - which you usually think of as a lightweight window to the world wide web.</p>
-<p><strong>Setup instructions</strong></p>
+<p><strong>Setup instructions</strong>
+See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/web_js" target="_blank" rel="noopener">LLM inference guide for Web</a></p>
 <ul>
 <li><strong>Install the package:</strong></li>
 </ul>
@@ -988,31 +1028,59 @@ Currently, our only option is to use the old MediaPipe sample app, which support
   
   </tbody>
 </table>
+<h3 id="choosing-your-platform">Choosing Your Platform</h3>
+<p><strong>Start with Android if:</strong></p>
+<ul>
+<li>You want to try the latest Gemma 3n models</li>
+<li>You prefer more experimental, cutting-edge features</li>
+<li>You&rsquo;re comfortable with Alpha-quality tooling</li>
+</ul>
+<p><strong>Start with iOS if:</strong></p>
+<ul>
+<li>You need production-ready stability</li>
+<li>You&rsquo;re building for Apple ecosystem</li>
+<li>You prefer mature, well-documented frameworks</li>
+</ul>
+<p><strong>Start with Web if:</strong></p>
+<ul>
+<li>You want quick prototyping without mobile setup</li>
+<li>You&rsquo;re building cross-platform web apps</li>
+<li>You want to demo capabilities easily</li>
+</ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Getting hands-on with on-device AI, especially with powerful open models like the Gemma family, is more accessible than ever for mobile developers. By leveraging tools like Google AI Edge (with MediaPipe and LiteRT) and understanding native frameworks like Apple Core ML, you can build truly innovative, private, and responsive AI features into your iOS and Android applications.</p>
 <p>The landscape is evolving rapidly, particularly with models like Gemma 3n, opening up exciting possibilities for the future of mobile AI. We encourage you to experiment with the sample apps and start thinking about how you can integrate these capabilities into your own projects.</p>
 <h2 id="further-reading-in-this-series">Further Reading in this Series</h2>
 <ul>
 <li><a href="https://annjose.com/post/edge-ai-essentials/">Edge AI Essentials</a></li>
-<li><a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-Device AI: Smarter, Faster, and Private Apps</a></li>
+<li><a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-Device AI: Smarter and Faster Private Apps</a></li>
 <li><a href="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/">Hands-On: Mobile AI with Gemma - iOS, Android</a></li>
 </ul>
 <h2 id="references">References</h2>
-<p><strong>Google On-Device AI &amp; Models:</strong></p>
+<p><strong>Google On-Device AI Models:</strong></p>
 <ul>
 <li>Announcement of Gemma 3n at Google I/O 2025: <a href="https://developers.googleblog.com/en/introducing-gemma-3n/" target="_blank" rel="noopener">Google Developers Blog: Introducing Gemma 3n</a></li>
 <li>Google announcing on-device SLM, RAG and function calling: <a href="https://developers.googleblog.com/en/google-ai-edge-small-language-models-multimodality-rag-function-calling/" target="_blank" rel="noopener">Google AI Edge Blog</a></li>
-<li>Google AI Guide for Android: <a href="https://developer.android.com/ai/overview" target="_blank" rel="noopener">developer.android.com/ai/overview</a></li>
 <li>Gemini Nano for Android: <a href="https://developer.android.com/ai/gemini-nano" target="_blank" rel="noopener">developer.android.com/ai/gemini-nano</a></li>
 <li>Gemma Models Official Page: <a href="https://ai.google.dev/gemma" target="_blank" rel="noopener">ai.google.dev/gemma</a></li>
+</ul>
+<p><strong>Google AI Edge Framework</strong></p>
+<ul>
 <li>TensorFlow Lite Guides: <a href="https://www.tensorflow.org/lite/guide" target="_blank" rel="noopener">tensorflow.org/lite/guide</a></li>
 <li>ML Kit: <a href="https://developers.google.com/ml-kit" target="_blank" rel="noopener">developers.google.com/ml-kit</a></li>
 <li>MediaPipe Solutions: <a href="https://ai.google.dev/edge/mediapipe/solutions" target="_blank" rel="noopener">ai.google.dev/edge/mediapipe/solutions</a></li>
+<li>MediaPipe samples: <a href="https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples" target="_blank" rel="noopener">github.com/google-ai-edge/mediapipe-samples/tree/main/examples</a></li>
 </ul>
-<p><strong>Apple On-Device AI:</strong></p>
+<p><strong>iOS On-Device AI:</strong></p>
 <ul>
 <li>Core ML Overview: <a href="https://developer.apple.com/documentation/coreml" target="_blank" rel="noopener">developer.apple.com/documentation/coreml</a></li>
+<li>LLM inference guide for iOS <a href="https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios" target="_blank" rel="noopener">ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios</a></li>
 <li>Core ML Tools (for model conversion): <a href="https://apple.github.io/coremltools/docs-guides/source/introductory-quickstart.html" target="_blank" rel="noopener">apple.github.io/coremltools</a></li>
+</ul>
+<p><strong>Android On-Device AI:</strong></p>
+<ul>
+<li>Google AI Guide for Android: <a href="https://developer.android.com/ai/overview" target="_blank" rel="noopener">developer.android.com/ai/overview</a></li>
+<li>LLM inference guide for Android: <a href="https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/android" target="_blank" rel="noopener">ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/android</a></li>
 </ul>
 
 
@@ -1026,7 +1094,7 @@ Currently, our only option is to use the old MediaPipe sample app, which support
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter, Faster, and Private Apps</a>
+      <a href="https://annjose.com/post/mobile-on-device-ai/">Mobile On-device AI: Smarter and Faster Private Apps</a>
     </nav>
     
   </div>
