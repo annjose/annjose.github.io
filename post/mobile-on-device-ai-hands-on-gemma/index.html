@@ -566,7 +566,8 @@
 <h3 id="2-run-gemma-on-android">2. Run Gemma on Android</h3>
 <p>We have two options to run Gemma models on Android:</p>
 <h4 id="21-mediapipe-android-sample-app">2.1 MediaPipe Android Sample App</h4>
-<p>This app demonstrates all supported Small Language Models (SLMs) like Gemma 2, Gemma 3, Microsoft Phi, and QWEN. It’s available on <a href="https://github.com/google-ai-edge/mediapipe-samples" target="_blank" rel="noopener">GitHub: google-ai-edge/mediapipe-samples</a>.</p>
+<p>This app demonstrates all supported Small Language Models (SLMs) like Gemma 2, Gemma 3, Microsoft Phi, and QWEN. It’s available on <a href="https://github.com/google-ai-edge/mediapipe-samples" target="_blank" rel="noopener">GitHub: google-ai-edge/mediapipe-samples</a>. There are many examples here, the easiest one to run is the <a href="https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference/android" target="_blank" rel="noopener">LLM inference sample app</a>.</p>
+<p>Just clone the repo, navigate to the folder <code>mediapipe-samples/examples/llm_inference/android</code>, open the project in Android Studio and build. When you run the app, you can choose a model and the app will download the model to the device and run it. If the model you choose needs permissions, the app will show HuggingFace screen to acknowledge the license.</p>
 <p><strong>Drawbacks:</strong> 
 The sample app is minimal, somewhat outdated, and not as polished as newer offerings. More importantly, <strong>you cannot run Gemma 3n models</strong> in this app. I tried to modify the code and add Gemma 3n manually, but it resulted in the error - “Access denied. Please try again and grant the necessary permissions”, even though the right permissions were set up on Hugging Face.</p>
 <p>In my understanding, this suggests the app is explicitly restricted from running newer models like Gemma 3n. But it can run Gemma 3, Gemma 2, smaller Llama 3/2, Microsoft Phi and Qwen.</p>
@@ -756,6 +757,7 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
 <li>Run <code>pod install</code> in the folder <code>examples/llm_inference/ios</code></li>
 <li>Launch Xcode and open the workspace file <code>InferenceExample.xcworkspace</code></li>
 <li>Run the app with the Play button at the top</li>
+<li>If the model you choose needs permissions, the app will show HuggingFace screen to acknowledge the license</li>
 </ul>
 <p>Here are some screenshots of iOS MediaPipe sample app running on iPhone 16 Pro with iOS 18.5:
 
