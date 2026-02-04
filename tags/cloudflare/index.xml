@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cloudflare on Reflections</title>
+    <title>Cloudflare on Reflections</title>
     <link>https://annjose.com/tags/cloudflare/</link>
-    <description>Recent content in cloudflare on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Cloudflare on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Fri, 23 May 2025 17:54:13 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/cloudflare-autorag-step-by-step/</link>
       <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
       <guid>https://annjose.com/post/cloudflare-autorag-step-by-step/</guid>
-      <description>We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.&#xA;However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database.</description>
+      <description>&lt;p&gt;We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.&lt;/p&gt;&#xA;&lt;p&gt;However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database. At inference time, you need to generate an embedding of the user query using an embedding model, retrieve the relevant data from the indexed store and return a meaningful context-aware response to the user. On top of that, any change in the data source means that you need to re-index the data, re-generate embeddings, and update the store. Rinse and repeat.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

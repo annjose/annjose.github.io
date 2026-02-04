@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gpt on Reflections</title>
+    <title>Gpt on Reflections</title>
     <link>https://annjose.com/tags/gpt/</link>
-    <description>Recent content in gpt on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Gpt on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Thu, 09 Nov 2023 09:02:53 -0800</lastBuildDate>
@@ -14,21 +14,21 @@
       <link>https://annjose.com/post/openai-devday-2023-observations-learnings/</link>
       <pubDate>Thu, 09 Nov 2023 09:02:53 -0800</pubDate>
       <guid>https://annjose.com/post/openai-devday-2023-observations-learnings/</guid>
-      <description>This is the fast follow (Part 2) of the previous post OpenAI DevDay 2023 - Highlights (aka Part 1) where I shared the highlights and the announcements made at OpenAI DevDay 2023.&#xA;In this post right here, I will share my observations - about the event and OpenAI tech - and my learnings - from talking to people during the event and by trying out the tech hands-on. So, let&amp;rsquo;s jump in!</description>
+      <description>&lt;p&gt;This is the fast follow (Part 2) of the previous post &lt;a href=&#34;https://annjose.com/post/openai-devday-2023-highlights&#34;&gt;OpenAI DevDay 2023 - Highlights&lt;/a&gt; (aka Part 1) where I shared the highlights and the announcements made at &lt;a href=&#34;https://devday.openai.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OpenAI DevDay 2023&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In this post right here, I will share &lt;strong&gt;my observations&lt;/strong&gt; - about the event and OpenAI tech - and &lt;strong&gt;my learnings&lt;/strong&gt; - from talking to people during the event and by trying out the tech hands-on. So, let&amp;rsquo;s jump in!&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI DevDay 2023 - Highlights</title>
       <link>https://annjose.com/post/openai-devday-2023-highlights/</link>
       <pubDate>Thu, 09 Nov 2023 05:32:13 -0800</pubDate>
       <guid>https://annjose.com/post/openai-devday-2023-highlights/</guid>
-      <description>This week I attended the Open AI Dev Day on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right?</description>
+      <description>&lt;p&gt;This week I attended the &lt;a href=&#34;https://devday.openai.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open AI Dev Day&lt;/a&gt; on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right? Right!&lt;/p&gt;</description>
     </item>
     <item>
       <title>GPT-4 Technical Report Highlights</title>
       <link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>
       <pubDate>Sun, 09 Apr 2023 12:59:18 -0800</pubDate>
       <guid>https://annjose.com/post/gpt-4-tech-report-highlights/</guid>
-      <description>OpenAI published the GPT-4 Technical Report on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&amp;rsquo;s always beneficial to obtain this information directly from the source.</description>
+      <description>&lt;p&gt;OpenAI published the &lt;a href=&#34;https://cdn.openai.com/papers/gpt-4.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPT-4 Technical Report&lt;/a&gt; on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&amp;rsquo;s always beneficial to obtain this information directly from the source.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

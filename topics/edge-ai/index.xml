@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>edge-ai on Reflections</title>
+    <title>Edge-Ai on Reflections</title>
     <link>https://annjose.com/topics/edge-ai/</link>
-    <description>Recent content in edge-ai on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Edge-Ai on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Tue, 03 Jun 2025 13:13:12 -0700</lastBuildDate>
@@ -14,21 +14,21 @@
       <link>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</link>
       <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</guid>
-      <description>In our previous post, Mobile On-device AI: Smarter Faster Private Apps, we explored the fundamentals of running AI locally on mobile devices. Now, it&amp;rsquo;s time to get hands-on and see this technology in action!&#xA;This practical guide walks you through implementing mobile on-device AI using Google&amp;rsquo;s powerful Gemma model family, including the cutting-edge Gemma 3n. You&amp;rsquo;ll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.</description>
+      <description>&lt;p&gt;In our previous post, &lt;a href=&#34;https://annjose.com/post/mobile-on-device-ai/&#34;&gt;Mobile On-device AI: Smarter Faster Private Apps&lt;/a&gt;, we explored the fundamentals of running AI locally on mobile devices. Now, it&amp;rsquo;s time to get hands-on and see this technology in action!&lt;/p&gt;&#xA;&lt;p&gt;This practical guide walks you through implementing mobile on-device AI using Google&amp;rsquo;s powerful Gemma model family, including the cutting-edge Gemma 3n. You&amp;rsquo;ll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-youll-learn-here&#34;&gt;What You&amp;rsquo;ll Learn Here&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Test various Gemma models, including Gemma 3n, in Google AI Studio.&lt;/li&gt;&#xA;&lt;li&gt;Run sample on-device AI applications on Android using tools like the Google AI Edge Gallery App and MediaPipe.&lt;/li&gt;&#xA;&lt;li&gt;Implement on-device Large Language Model (LLM) inference on iOS using MediaPipe.&lt;/li&gt;&#xA;&lt;li&gt;Explore how to run LLMs in mobile web browsers with JavaScript and MediaPipe.&lt;/li&gt;&#xA;&lt;li&gt;Gain practical experience deploying and interacting with Gemma models across different mobile platforms.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Prerequisites:&lt;/strong&gt; Basic mobile development knowledge helpful but not required.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mobile On-device AI: Smarter Faster Private Apps</title>
       <link>https://annjose.com/post/mobile-on-device-ai/</link>
       <pubDate>Mon, 02 Jun 2025 09:02:21 -0700</pubDate>
       <guid>https://annjose.com/post/mobile-on-device-ai/</guid>
-      <description>While cloud computing drives many AI breakthroughs, a parallel revolution is happening right in our hands - running LLMs locally on mobile devices. This emerging field, known as Mobile On-device AI, enables us to build more private, faster and smarter app experiences - especially as mobile devices become increasingly powerful. As a developer passionate about AI and mobile, I am fascinated by the convergence these two worlds and the possibilities it brings.</description>
+      <description>&lt;p&gt;While cloud computing drives many AI breakthroughs, a parallel revolution is happening right in our hands - running LLMs locally on mobile devices. This emerging field, known as &lt;strong&gt;Mobile On-device AI&lt;/strong&gt;, enables us to build more private, faster and smarter app experiences - especially as mobile devices become increasingly powerful. As a developer passionate about &lt;strong&gt;AI and mobile&lt;/strong&gt;, I am fascinated by the convergence these two worlds and the possibilities it brings.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Edge AI Essentials</title>
       <link>https://annjose.com/post/edge-ai-essentials/</link>
       <pubDate>Sun, 01 Jun 2025 12:32:08 -0700</pubDate>
       <guid>https://annjose.com/post/edge-ai-essentials/</guid>
-      <description>Every day we&amp;rsquo;re seeing fantastic advancements in AI, thanks to more data and powerful computers. This may make it seem like the future of AI is all about getting even more data and bigger computers. But I believe a critical and rapidly evolving piece of the puzzle is about bringing the Intelligence of Artificial Intelligence onto the devices where the data originates (eg: our phones, cameras, and IoT devices) and doing the &amp;ldquo;smarts&amp;rdquo; using their own computing capabilities.</description>
+      <description>&lt;p&gt;Every day we&amp;rsquo;re seeing fantastic advancements in AI, thanks to more data and powerful computers. This may make it seem like the future of AI is all about getting even more data and bigger computers. But I believe a critical and rapidly evolving piece of the puzzle is about bringing the &lt;em&gt;Intelligence&lt;/em&gt; of Artificial Intelligence onto the devices where the data originates (eg: our phones, cameras, and IoT devices) and doing the &amp;ldquo;smarts&amp;rdquo; using their own computing capabilities. This is the essence of &lt;strong&gt;Edge AI&lt;/strong&gt;, the topic we’ll explore in this post.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

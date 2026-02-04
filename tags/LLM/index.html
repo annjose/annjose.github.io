@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
-  <title>LLM &middot; Reflections</title>
+  <title>Llm &middot; Reflections</title>
 
   
   
@@ -48,7 +48,7 @@
   
   
   <link rel="alternate" type="application/rss+xml" title="Reflections"
-    href='https://annjose.com/tags/LLM/index.xml' />
+    href='https://annjose.com/tags/llm/index.xml' />
   
 
   
@@ -133,7 +133,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href='https://annjose.com/tags/LLM/index.xml'><i
+      <a class="pure-menu-link" href='https://annjose.com/tags/llm/index.xml'><i
           class="fa fa-rss fa-fw"></i>RSS</a>
     </li>
     
@@ -141,10 +141,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -179,10 +175,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -191,17 +183,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -248,10 +232,69 @@
 
 
 <div class="header">
-  <h1>LLM</h1>
+  <h1>Llm</h1>
 </div>
 
 <div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="https://annjose.com/post/agentic-coding-basics/">Agentic Coding: The Basic Concepts</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Feb 2026</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/AI">AI</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/llm">llm</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/coding-assistants">coding-assistants</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  <p>I used to think that I love coding, but in the last year, I came to realize that I love building apps as much as I love coding. Creating something useful and beautiful is what I love. Last year this time, my coding workflow was to fire up VS Code with  Claude in the browser or GitHub Copilot in &lsquo;Ask&rsquo; mode and brainstorm problems, review solutions suggested by the LLM, copy code into the editor, test and deploy. This was fun in the beginning, but soon the context-switching became tedious and it broke the flow of building.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://annjose.com/post/agentic-coding-basics/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
   
     <article>
   <header>
@@ -301,8 +344,8 @@
   </header>
 
   <p>
-  We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.
-However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database.
+  <p>We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.</p>
+<p>However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database. At inference time, you need to generate an embedding of the user query using an embedding model, retrieve the relevant data from the indexed store and return a meaningful context-aware response to the user. On top of that, any change in the data source means that you need to re-index the data, re-generate embeddings, and update the store. Rinse and repeat.</p>
   </p>
 
   
@@ -359,8 +402,8 @@ However, building a RAG pipeline on your own from scratch can be complex and hig
   </header>
 
   <p>
-  Today I tried something fun - built a Pomodoro timer app mostly by talking to AI instead of typing code myself. And guess what - there is a term for it - vibe coding, coined by Andrej Karpathy 😎.
-I have done it a few times before, but this is the first time I am using it to build a full app. I wanted to create something that was useful and worked well, so I chose the Pomodoro timer.
+  <p>Today I tried something fun - built a Pomodoro timer app mostly by talking to AI instead of typing code myself. And guess what - there is a term for it - <a href="https://en.wikipedia.org/wiki/Vibe_coding" target="_blank" rel="noopener">vibe coding</a>, coined by Andrej Karpathy 😎.</p>
+<p>I have done it a few times before, but this is the first time I am using it to build a full app. I wanted to create something that was useful and worked well, so I chose the Pomodoro timer. Here&rsquo;s how it went and my key takeaways from this way of building products.</p>
   </p>
 
   
@@ -419,9 +462,9 @@ I have done it a few times before, but this is the first time I am using it to b
   </header>
 
   <p>
-  Today I tried Claude Code, the new agentic coding tool announced by Anthropic this morning. Unlike other agentic tools, Claude Code is a CLI tool.
-Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.
-In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&rsquo;t, and how it compares to other similar tools.
+  <p>Today I tried <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code" target="_blank" rel="noopener">Claude Code</a>, the new agentic coding tool <a href="https://www.anthropic.com/news/claude-3-7-sonnet" target="_blank" rel="noopener">announced by Anthropic</a> this morning. Unlike other agentic tools, Claude Code is a CLI tool.</p>
+<p>Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.</p>
+<p>In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&rsquo;t, and how it compares to other similar tools.</p>
   </p>
 
   
@@ -478,9 +521,14 @@ In this post, I share my first impressions of using Claude Code - how I set it u
   </header>
 
   <p>
-  In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.
-In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:
-Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that are powered by one or more of the above models.
+  <p>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.</p>
+<p>In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:</p>
+<ol>
+<li><strong>Language models</strong> - the most popular text-based models that are used for text-to-text content generation.</li>
+<li><strong>AI assistants</strong> - the chatbots that are powered by one or more of the above models.</li>
+<li><strong>Other models</strong> - other models that are used for text-to-image, text-to-voice or text-to-video use cases.</li>
+</ol>
+<p>At the end, we will also see the common set of tasks that we try to accomplish using these tools and recommendations on which tool is best for each task.</p>
   </p>
 
   
@@ -530,8 +578,8 @@ Language models - the most popular text-based models that are used for text-to-t
   </header>
 
   <p>
-  Last week, I watched an interview of Aravind Srinivas, the CEO of Perplexity AI (https://www.perplexity.ai). It is a three-hour interview done by Lex Fridman where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.
-Fascinating interview - highly recommended for everyone to watch.
+  <p>Last week, I watched an interview of <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a>, the CEO of <strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>). It is a three-hour interview done by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a> where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.</p>
+<p><a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">Fascinating interview</a> - highly recommended for everyone to watch. Personally, it opened my eyes to the fact that Perplexity is very different from other chatbots - not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
   </p>
 
   
@@ -585,8 +633,8 @@ Fascinating interview - highly recommended for everyone to watch.
   </header>
 
   <p>
-  Perplexity AI (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.
-All that changed last week when I watched this recent interview of Perplexity CEO Aravind Srinivas by Lex Fridman.
+  <p><strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.</p>
+<p>All that changed last week when I watched <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">this recent interview</a> of Perplexity CEO <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a> by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a>. It is a <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">fascinating interview</a> - highly recommended for everyone to watch, but personally, it opened my eyes to the fact that Perplexity is very different from other chatbots, not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
   </p>
 
   
@@ -638,9 +686,10 @@ All that changed last week when I watched this recent interview of Perplexity CE
   </header>
 
   <p>
-  The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was Apple Intelligence, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.
-What is Apple Intelligence? Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.
-The foundation models are trained on Apple&rsquo;s open-source AXLearn library for deep learning, built on top of JAX (Python library for accelerated computing and transformation) and XLA (Accelerated Linear Algebra, an open-source ML compiler).
+  <p>The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was <a href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/" target="_blank" rel="noopener">Apple Intelligence</a>, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.</p>
+<h2 id="what-is-apple-intelligence">What is Apple Intelligence?</h2>
+<p>Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.</p>
+<p>The foundation models are trained on <a href="https://github.com/apple/axlearn" target="_blank" rel="noopener">Apple&rsquo;s open-source AXLearn library</a> for deep learning, built on top of <a href="https://jax.readthedocs.io/en/latest/" target="_blank" rel="noopener">JAX</a> (Python library for accelerated computing and transformation) and <a href="https://www.tensorflow.org/xla" target="_blank" rel="noopener">XLA</a> (Accelerated Linear Algebra, an open-source ML compiler). The branding of Apple Intelligence is intriguing, positioning it as Apple&rsquo;s take on &ldquo;AI&rdquo;.</p>
   </p>
 
   
@@ -692,8 +741,8 @@ The foundation models are trained on Apple&rsquo;s open-source AXLearn library f
   </header>
 
   <p>
-  It&rsquo;s been a few months since OpenAI announced GPT-4 Turbo with Vision a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.
-We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application.
+  <p>It&rsquo;s been a few months since OpenAI announced <a href="https://openai.com/index/new-models-and-developer-products-announced-at-devday" target="_blank" rel="noopener">GPT-4 Turbo with Vision</a> a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.</p>
+<p>We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application. I&rsquo;ll wrap up with my observations from using this model in practice.</p>
   </p>
 
   
@@ -745,9 +794,9 @@ We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so 
   </header>
 
   <p>
-  Today, Meta AI announced they are releasing a new model Code Llama 70B, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.
-In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.
-As usual, the best way to run the inference on any model locally is to run Ollama.
+  <p>Today, <a href="https://twitter.com/AIatMeta/status/1752013879532782075" target="_blank" rel="noopener">Meta AI announced</a> they are releasing a new model <strong>Code Llama 70B</strong>, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.</p>
+<p>In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.</p>
+<p>As usual, the best way to run the inference on any model locally is to run <a href="https://ollama.ai/" target="_blank" rel="noopener">Ollama</a>. So let&rsquo;s set up Ollama first.</p>
   </p>
 
   
@@ -799,8 +848,8 @@ As usual, the best way to run the inference on any model locally is to run Ollam
   </header>
 
   <p>
-  This is the fast follow (Part 2) of the previous post OpenAI DevDay 2023 - Highlights (aka Part 1) where I shared the highlights and the announcements made at OpenAI DevDay 2023.
-In this post right here, I will share my observations - about the event and OpenAI tech - and my learnings - from talking to people during the event and by trying out the tech hands-on. So, let&rsquo;s jump in!
+  <p>This is the fast follow (Part 2) of the previous post <a href="https://annjose.com/post/openai-devday-2023-highlights">OpenAI DevDay 2023 - Highlights</a> (aka Part 1) where I shared the highlights and the announcements made at <a href="https://devday.openai.com/" target="_blank" rel="noopener">OpenAI DevDay 2023</a>.</p>
+<p>In this post right here, I will share <strong>my observations</strong> - about the event and OpenAI tech - and <strong>my learnings</strong> - from talking to people during the event and by trying out the tech hands-on. So, let&rsquo;s jump in!</p>
   </p>
 
   
@@ -852,7 +901,7 @@ In this post right here, I will share my observations - about the event and Open
   </header>
 
   <p>
-  This week I attended the Open AI Dev Day on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right?
+  <p>This week I attended the <a href="https://devday.openai.com/" target="_blank" rel="noopener">Open AI Dev Day</a> on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right? Right!</p>
   </p>
 
   
@@ -904,7 +953,7 @@ In this post right here, I will share my observations - about the event and Open
   </header>
 
   <p>
-  OpenAI published the GPT-4 Technical Report on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&rsquo;s always beneficial to obtain this information directly from the source.
+  <p>OpenAI published the <a href="https://cdn.openai.com/papers/gpt-4.pdf" target="_blank" rel="noopener">GPT-4 Technical Report</a> on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&rsquo;s always beneficial to obtain this information directly from the source.</p>
   </p>
 
   
@@ -956,8 +1005,8 @@ In this post right here, I will share my observations - about the event and Open
   </header>
 
   <p>
-  Note - This post is written by ChatGPT expanding on the outline of my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.
-Have you ever heard of ChatGPT? It&rsquo;s a large language model that has taken the AI world by storm.
+  <p><em>Note - This post is written by ChatGPT expanding on the outline of my original post <a href="https://annjose.com/post/chatgpt-intro">An Introduction to ChatGPT</a> - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at <a href="https://annjose.com/post/chatgpt-intro-3-ways">Blog about ChatGPT in three different ways</a>.</em></p>
+<p>Have you ever heard of ChatGPT? It&rsquo;s a large language model that has taken the AI world by storm. But what exactly is ChatGPT and how does it work? This post will break down the basics and give you a good understanding of what it is, how it&rsquo;s built and how it can be used in the real world.</p>
   </p>
 
   

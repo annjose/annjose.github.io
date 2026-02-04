@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>highlights on Reflections</title>
+    <title>Highlights on Reflections</title>
     <link>https://annjose.com/tags/highlights/</link>
-    <description>Recent content in highlights on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Highlights on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Sat, 30 Dec 2023 12:28:13 -0700</lastBuildDate>
@@ -14,14 +14,14 @@
       <link>https://annjose.com/post/goodbye-thankyou-2023/</link>
       <pubDate>Sat, 30 Dec 2023 12:28:13 -0700</pubDate>
       <guid>https://annjose.com/post/goodbye-thankyou-2023/</guid>
-      <description>Today is a beautiful day, just two more days to end the beautiful year of 2023 - a pivotal year of my career and life.&#xA;Reflecting back on the year, I am grateful and happy that I was able to experience the year in good health in the midst of wonderful people - my family, friends, and my team/colleagues at Intuit. Now is the perfect time to say goodbye to the year and share the invaluable lessons I have learned along the way.</description>
+      <description>&lt;p&gt;Today is a beautiful day, just two more days to end the beautiful year of 2023 - a pivotal year of my career and life.&lt;/p&gt;&#xA;&lt;p&gt;Reflecting back on the year, I am grateful and happy that I was able to experience the year in good health in the midst of wonderful people - my family, friends, and my team/colleagues at Intuit. Now is the perfect time to say goodbye to the year and share the invaluable lessons I have learned along the way.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GraceHopper 2018 Highlights</title>
       <link>https://annjose.com/post/ghc-2018-hightlights/</link>
       <pubDate>Sun, 30 Sep 2018 21:17:46 -0700</pubDate>
       <guid>https://annjose.com/post/ghc-2018-hightlights/</guid>
-      <description>I am at the Houston IAH airport waiting to board the flight to go home after 3 days of inspiration, motivation, technology, friendship and pure awesomeness. Yes, I was at Grace Hopper Celebration 2018 (aka GHC 2018), the world&amp;rsquo;s biggest gathering of women technologists. This year, GHC has 20,000 attendees representing 90 countries. It was such an inspiring experience for me that I thought I should share my experiences and learnings with you my friends.</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;https://ghc.anitab.org/wp-content/themes/ghc-gracehopper/library/images/footer-ghc.png&#34;&#xA;    alt=&#34;Grace Hopper Celebration 2018&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I am at the Houston IAH airport waiting to board the flight to go home after 3 days of inspiration, motivation, technology, friendship and pure awesomeness. Yes, I was at &lt;a href=&#34;https://ghc.anitab.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grace Hopper Celebration 2018 (aka GHC 2018)&lt;/a&gt;, the world&amp;rsquo;s biggest gathering of women technologists. This year, GHC has 20,000 attendees representing 90 countries. It was such an inspiring experience for me that I thought I should share my experiences and learnings with you my friends. Hope you enjoy reading this and be inspired yourself. Also, if you  attended GHC this year, please share your experience as well - either in the comment below or even better, write a blog and share the link!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

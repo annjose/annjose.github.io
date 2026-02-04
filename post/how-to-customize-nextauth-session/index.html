@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Discover how to build and customize authentication in your app">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
   <title>How to customize session data in NextAuth &middot; Reflections</title>
 
@@ -133,10 +133,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -171,10 +167,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -183,17 +175,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -299,9 +283,9 @@
 </li>
 <li>
 <p>Incorporate the <code>userId</code> property to the <code>session</code> schema. Create a file <code>@types/next-auth.d.ts</code> with this content:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -310,7 +294,7 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> NextAuth <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;next-auth&#39;</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> NextAuth <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;next-auth&#39;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">declare</span> module <span style="color:#f1fa8c">&#39;next-auth&#39;</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">interface</span> Session {
@@ -322,9 +306,9 @@
 </div></li>
 <li>
 <p>Implement a callback to inject the additional property <code>userId</code> into the session. In your authentication configuration file <code>**auth.config.ts**</code>, add a callback for session where you assign the userId to the session object. Here, <code>fetchUser</code> retrieves the <code>userId</code> from the database based on the user&rsquo;s <code>email</code>. The extended session with the <code>userId</code> property is then returned.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -352,7 +336,7 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> authConfig <span style="color:#ff79c6">=</span> {
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> authConfig <span style="color:#ff79c6">=</span> {
 </span></span><span style="display:flex;"><span>    pages<span style="color:#ff79c6">:</span> {
 </span></span><span style="display:flex;"><span>        signIn<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;/login&#39;</span>,
 </span></span><span style="display:flex;"><span>    },
@@ -363,30 +347,30 @@
 </span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> (isOnDashboard) {
 </span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> (isLoggedIn) <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
 </span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">false</span>; <span style="color:#6272a4">// Redirect unauthenticated users to login page
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            } <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (isLoggedIn) {
+</span></span></span><span style="display:flex;"><span>            } <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (isLoggedIn) {
 </span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">return</span> Response.redirect(<span style="color:#ff79c6">new</span> URL(<span style="color:#f1fa8c">&#39;/dashboard&#39;</span>, nextUrl));
 </span></span><span style="display:flex;"><span>            }
 </span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
 </span></span><span style="display:flex;"><span>        },
 </span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Add the userId to the session so that we can fetch data for the current user. 
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#6272a4">//  The extended shape of session is defined in @types/next-auth.d.ts
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">async</span> session({ session }) {
+</span></span></span><span style="display:flex;"><span>        <span style="color:#6272a4">//  The extended shape of session is defined in @types/next-auth.d.ts
+</span></span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">async</span> session({ session }) {
 </span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">const</span> user: <span style="color:#8be9fd">User</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> fetchUser(session<span style="color:#ff79c6">?</span>.user<span style="color:#ff79c6">?</span>.email);
 </span></span><span style="display:flex;"><span>            session.userId <span style="color:#ff79c6">=</span> user.id;
 </span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> session
 </span></span><span style="display:flex;"><span>        },
 </span></span><span style="display:flex;"><span>    },
 </span></span><span style="display:flex;"><span>    providers<span style="color:#ff79c6">:</span> [], <span style="color:#6272a4">// Add providers with an empty array for now
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>} satisfies NextAuthConfig;
+</span></span></span><span style="display:flex;"><span>} satisfies NextAuthConfig;
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ol>
 <h2 id="results">Results</h2>
 <p>With these pieces in place, any component, page, or route in your app can access the <code>userId</code> as follows:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -394,8 +378,8 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span>  <span style="color:#6272a4">// items-page.tsx
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">import</span> { auth } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;@/auth&#39;</span>;
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span>  <span style="color:#6272a4">// items-page.tsx
+</span></span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">import</span> { auth } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;@/auth&#39;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> session <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> auth();
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> userId <span style="color:#ff79c6">=</span> session <span style="color:#ff79c6">?</span> session.userId <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>;

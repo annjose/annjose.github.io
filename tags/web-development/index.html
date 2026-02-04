@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
-  <title>web-development &middot; Reflections</title>
+  <title>Web-Development &middot; Reflections</title>
 
   
   
@@ -141,10 +141,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -179,10 +175,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -191,17 +183,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -248,7 +232,7 @@
 
 
 <div class="header">
-  <h1>web-development</h1>
+  <h1>Web-Development</h1>
 </div>
 
 <div class="content">
@@ -303,8 +287,9 @@
   </header>
 
   <p>
-  Of late, I have been building and learning about browser extensions for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.
-The Chrome side panel It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens.
+  <p>Of late, I have been building and <a href="https://annjose.com/post/browser-extn-intro/">learning about browser extensions</a> for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.</p>
+<h2 id="the-chrome-side-panel">The Chrome side panel</h2>
+<p>It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens. It has a consistent layout and behavior across all websites. It was first introduced in Chrome in May 2023.</p>
   </p>
 
   
@@ -352,8 +337,8 @@ The Chrome side panel It is a vertical panel that opens on either side of the br
   </header>
 
   <p>
-  I have been using many Vercel products in my web projects - for example, their Next.js app framework, deployment infrastructure and Vercel AI SDK. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.
-Their latest innovation is v0.dev, an AI-powered tool that helps you build frontend applications using a conversational chat interface.
+  <p>I have been using many <a href="https://vercel.com/home" target="_blank" rel="noopener">Vercel</a> products in my web projects - for example, their <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js app framework</a>, <a href="https://vercel.com/docs/deployments/overview" target="_blank" rel="noopener">deployment infrastructure</a> and <a href="https://sdk.vercel.ai/" target="_blank" rel="noopener">Vercel AI SDK</a>. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.</p>
+<p>Their latest innovation is <a href="https://vercel.com/ai" target="_blank" rel="noopener">v0.dev</a>, an AI-powered tool that helps you build frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code. However, <a href="https://x.com/v0/status/1826020673908535325" target="_blank" rel="noopener">v0.dev recently announced a major update</a> that includes integration with the popular <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components and the ability to pull in external npm packages. So I decided to try it out yesterday.</p>
   </p>
 
   
@@ -414,8 +399,9 @@ Their latest innovation is v0.dev, an AI-powered tool that helps you build front
   </header>
 
   <p>
-  This is the second part of my blog series on browser extensions. Here, we&rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading Browser Extensions: Part 1 - Introduction before tackling these more complex topics.
-How to use TypeScript in browser extensions By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic.
+  <p>This is the second part of my blog series on browser extensions. Here, we&rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading <a href="https://annjose.com/post/browser-extn-intro/">Browser Extensions: Part 1 - Introduction</a> before tackling these more complex topics.</p>
+<h2 id="how-to-use-typescript-in-browser-extensions">How to use TypeScript in browser extensions</h2>
+<p>By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic. You can add TypeScript support to the extension project, but how do you do it? Chrome docs mention this as a one-liner as follows:</p>
   </p>
 
   
@@ -476,8 +462,8 @@ How to use TypeScript in browser extensions By default, browser extensions use J
   </header>
 
   <p>
-  Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.
-In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.
+  <p>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to <strong>Browser extensions</strong>.</p>
+<p>In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a>.</p>
   </p>
 
   
@@ -529,7 +515,7 @@ In this post, we will learn about browser extensions - what they are, why you sh
   </header>
 
   <p>
-  A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.
+  <p>A few months ago, Next.js introduced <strong>App Router</strong>, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the <strong>Pages Router</strong> eventually. I have been using the App Router for all my <a href="https://annjose.com/post/learning-to-building/">builder projects</a> for a while now. In fact, I usually kicked off projects with the standard <code>create-next-app</code> script that starts a new app from scratch.</p>
   </p>
 
   

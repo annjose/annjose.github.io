@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="A practical guide to using GPT-4 Turbo Vision">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
   <title>GPT-4 Turbo Vision: In Action &middot; Reflections</title>
 
@@ -133,10 +133,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -171,10 +167,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -183,17 +175,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -324,10 +308,10 @@
         
         <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
             <a href="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response.png" target="_blank">
-                <img srcset="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_320x0_resize_box_3.png 320w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_480x0_resize_box_3.png 480w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_768x0_resize_box_3.png 768w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_1024x0_resize_box_3.png 1024w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu1edf4dacedd2ab5148c1005d6d6d9a1e_3153892_1500x0_resize_box_3.png 1500w"
+                <img srcset="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu_10e1cef87aa47553.png 320w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu_1508ae448d30d1d7.png 480w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu_aee8b0148c29bec7.png 768w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu_6fc26a075a5c73b8.png 1024w, https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response_hu_51d901db4e9baec5.png 1500w"
                      sizes="(max-width: 320px) 90vw, (max-width: 480px) 85vw, (max-width: 768px) 80vw, (max-width: 1200px) 60vw, 50vw"
                      src="https://annjose.com/post/gpt-4-vision-in-action/chatgpt-image-response.png"
-                     alt="GPT-4 Vision&amp;rsquo;s interpretation of the image"  
+                     alt="GPT-4 Vision&rsquo;s interpretation of the image"  
                      style="max-width: 100%; height: auto;" loading="lazy">
             </a>
             
@@ -338,9 +322,9 @@
 <h2 id="using-the-vision-model-through-openai-api">Using the Vision Model through OpenAI API</h2>
 <p>You can use this model through the <a href="https://platform.openai.com/docs/api-reference" target="_blank" rel="noopener">OpenAI API</a> if you have API access to GPT-4. Simply use the Chat Completions API and pass in <strong>gpt-4-vision</strong> as the model name in the API.</p>
 <p>Here is a quick code snippet:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -374,12 +358,12 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6272a4">// imageFile is a File object. Convert it to base64-encoded string
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> arrayBuffer <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> imageFile.arrayBuffer();
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#6272a4">// imageFile is a File object. Convert it to base64-encoded string
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> arrayBuffer <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> imageFile.arrayBuffer();
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> base64ImageBuffer <span style="color:#ff79c6">=</span> Buffer.<span style="color:#ff79c6">from</span>(arrayBuffer).toString(<span style="color:#f1fa8c">&#39;base64&#39;</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// construct the data url from the base64 encoded string and file extension 
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> fileExtension <span style="color:#ff79c6">=</span> imageFile.name.split(<span style="color:#f1fa8c">&#39;.&#39;</span>).pop();
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> fileExtension <span style="color:#ff79c6">=</span> imageFile.name.split(<span style="color:#f1fa8c">&#39;.&#39;</span>).pop();
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> base64ImageDataUrl <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`data:image/</span><span style="color:#f1fa8c">${</span>fileExtension<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">;base64,</span><span style="color:#f1fa8c">${</span>base64ImageBuffer<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> openai <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> OpenAI();

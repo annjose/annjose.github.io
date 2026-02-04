@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/post/agentic-coding-basics/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/tags/AI/</loc>
-    <lastmod>2025-06-03T13:13:12-07:00</lastmod>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/AI/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/coding-assistants/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/llm/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/post/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/tech-explorations/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/</loc>
+    <lastmod>2026-02-04T10:11:08-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/topics/edge-ai/</loc>
     <lastmod>2025-06-03T13:13:12-07:00</lastmod>
@@ -26,22 +53,7 @@
     <loc>https://annjose.com/topics/on-device-ai/</loc>
     <lastmod>2025-06-03T13:13:12-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/post/</loc>
-    <lastmod>2025-06-03T13:13:12-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/tags/privacy/</loc>
-    <lastmod>2025-06-03T13:13:12-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2025-06-03T13:13:12-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
-    <lastmod>2025-06-03T13:13:12-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/topics/tech-explorations/</loc>
-    <lastmod>2025-06-03T13:13:12-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/topics/</loc>
     <lastmod>2025-06-03T13:13:12-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/mobile-on-device-ai/</loc>
@@ -59,9 +71,6 @@
     <loc>https://annjose.com/tags/how-to/</loc>
     <lastmod>2025-05-23T17:54:13-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/LLM/</loc>
-    <lastmod>2025-05-23T17:54:13-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/topics/RAG/</loc>
     <lastmod>2025-05-23T17:54:13-07:00</lastmod>
   </url><url>
@@ -73,9 +82,6 @@
   </url><url>
     <loc>https://annjose.com/post/browsers-privacy-compare/</loc>
     <lastmod>2025-03-23T16:14:23-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/coding-assistants/</loc>
-    <lastmod>2025-03-15T15:18:12-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/vibe-coding-pomodoro-app/</loc>
     <lastmod>2025-03-15T15:18:12-07:00</lastmod>
@@ -121,9 +127,6 @@
   </url><url>
     <loc>https://annjose.com/epsilla/</loc>
     <lastmod>2024-10-31T10:11:46-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/topics/AI/</loc>
-    <lastmod>2024-10-25T17:22:33-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/compare-ai-tools-llms/</loc>
     <lastmod>2024-10-25T17:22:33-07:00</lastmod>
@@ -281,10 +284,10 @@
     <loc>https://annjose.com/post/graphql-intro/</loc>
     <lastmod>2019-01-28T14:30:28-08:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/topics/swift/</loc>
+    <loc>https://annjose.com/tags/swift/</loc>
     <lastmod>2018-10-12T20:09:12-08:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/swift/</loc>
+    <loc>https://annjose.com/topics/swift/</loc>
     <lastmod>2018-10-12T20:09:12-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/swift42-whats-new/</loc>
@@ -296,10 +299,10 @@
     <loc>https://annjose.com/post/ghc-2018-hightlights/</loc>
     <lastmod>2018-09-30T21:17:46-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/topics/fastlane/</loc>
+    <loc>https://annjose.com/post/fastlane/</loc>
     <lastmod>2017-12-23T12:02:23-08:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/post/fastlane/</loc>
+    <loc>https://annjose.com/topics/fastlane/</loc>
     <lastmod>2017-12-23T12:02:23-08:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/android/</loc>
@@ -337,7 +340,5 @@
   </url><url>
     <loc>https://annjose.com/post/first-post-from-hugo/</loc>
     <lastmod>2015-04-27T00:49:45-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/categories/</loc>
   </url>
 </urlset>

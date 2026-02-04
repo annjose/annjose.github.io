@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>react-native on Reflections</title>
+    <title>React-Native on Reflections</title>
     <link>https://annjose.com/topics/react-native/</link>
-    <description>Recent content in react-native on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in React-Native on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Wed, 13 Apr 2016 21:22:02 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/react-native-visual-studio-code/</link>
       <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
       <guid>https://annjose.com/post/react-native-visual-studio-code/</guid>
-      <description>I have been thoroughly enjoying working on ReactNative projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like Nuclide (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&amp;hellip;</description>
+      <description>&lt;p&gt;I have been thoroughly enjoying working on &lt;a href=&#34;https://facebook.github.io/react-native/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ReactNative&lt;/a&gt; projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like &lt;a href=&#34;http://nuclide.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nuclide&lt;/a&gt; (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

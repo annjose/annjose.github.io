@@ -4,30 +4,37 @@
     <title>Topics on Reflections</title>
     <link>https://annjose.com/topics/</link>
     <description>Recent content in Topics on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 03 Jun 2025 13:13:12 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 04 Feb 2026 10:11:08 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/topics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>edge-ai</title>
+      <title>AI</title>
+      <link>https://annjose.com/topics/AI/</link>
+      <pubDate>Wed, 04 Feb 2026 10:11:08 -0700</pubDate>
+      <guid>https://annjose.com/topics/AI/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech-Explorations</title>
+      <link>https://annjose.com/topics/tech-explorations/</link>
+      <pubDate>Wed, 04 Feb 2026 10:11:08 -0700</pubDate>
+      <guid>https://annjose.com/topics/tech-explorations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edge-Ai</title>
       <link>https://annjose.com/topics/edge-ai/</link>
       <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/topics/edge-ai/</guid>
       <description></description>
     </item>
     <item>
-      <title>on-device-ai</title>
+      <title>On-Device-Ai</title>
       <link>https://annjose.com/topics/on-device-ai/</link>
       <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/topics/on-device-ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>tech-explorations</title>
-      <link>https://annjose.com/topics/tech-explorations/</link>
-      <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
-      <guid>https://annjose.com/topics/tech-explorations/</guid>
       <description></description>
     </item>
     <item>
@@ -38,91 +45,84 @@
       <description></description>
     </item>
     <item>
-      <title>browser-extensions</title>
+      <title>Browser-Extensions</title>
       <link>https://annjose.com/topics/browser-extensions/</link>
       <pubDate>Sun, 15 Dec 2024 12:15:21 -0700</pubDate>
       <guid>https://annjose.com/topics/browser-extensions/</guid>
       <description></description>
     </item>
     <item>
-      <title>AI</title>
-      <link>https://annjose.com/topics/AI/</link>
-      <pubDate>Fri, 25 Oct 2024 17:22:33 -0700</pubDate>
-      <guid>https://annjose.com/topics/AI/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>thinking-loud</title>
+      <title>Thinking-Loud</title>
       <link>https://annjose.com/topics/thinking-loud/</link>
       <pubDate>Mon, 06 Jul 2020 20:55:36 -0700</pubDate>
       <guid>https://annjose.com/topics/thinking-loud/</guid>
       <description></description>
     </item>
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>https://annjose.com/topics/hugo/</link>
       <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
       <guid>https://annjose.com/topics/hugo/</guid>
       <description></description>
     </item>
     <item>
-      <title>c&#43;&#43;</title>
+      <title>C&#43;&#43;</title>
       <link>https://annjose.com/topics/c&#43;&#43;/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       <guid>https://annjose.com/topics/c&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
-      <title>visual-studio-code</title>
+      <title>Visual-Studio-Code</title>
       <link>https://annjose.com/topics/visual-studio-code/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       <guid>https://annjose.com/topics/visual-studio-code/</guid>
       <description></description>
     </item>
     <item>
-      <title>unit-testing</title>
+      <title>Unit-Testing</title>
       <link>https://annjose.com/topics/unit-testing/</link>
       <pubDate>Mon, 11 Mar 2019 20:00:52 -0800</pubDate>
       <guid>https://annjose.com/topics/unit-testing/</guid>
       <description></description>
     </item>
     <item>
-      <title>graphql</title>
+      <title>Graphql</title>
       <link>https://annjose.com/topics/graphql/</link>
       <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
       <guid>https://annjose.com/topics/graphql/</guid>
       <description></description>
     </item>
     <item>
-      <title>swift</title>
+      <title>Swift</title>
       <link>https://annjose.com/topics/swift/</link>
       <pubDate>Fri, 12 Oct 2018 20:09:12 -0800</pubDate>
       <guid>https://annjose.com/topics/swift/</guid>
       <description></description>
     </item>
     <item>
-      <title>fastlane</title>
+      <title>Fastlane</title>
       <link>https://annjose.com/topics/fastlane/</link>
       <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
       <guid>https://annjose.com/topics/fastlane/</guid>
       <description></description>
     </item>
     <item>
-      <title>realm</title>
+      <title>Realm</title>
       <link>https://annjose.com/topics/realm/</link>
       <pubDate>Tue, 27 Sep 2016 08:22:02 -0700</pubDate>
       <guid>https://annjose.com/topics/realm/</guid>
       <description></description>
     </item>
     <item>
-      <title>machine-learning</title>
+      <title>Machine-Learning</title>
       <link>https://annjose.com/topics/machine-learning/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       <guid>https://annjose.com/topics/machine-learning/</guid>
       <description></description>
     </item>
     <item>
-      <title>react-native</title>
+      <title>React-Native</title>
       <link>https://annjose.com/topics/react-native/</link>
       <pubDate>Wed, 13 Apr 2016 21:22:02 -0700</pubDate>
       <guid>https://annjose.com/topics/react-native/</guid>

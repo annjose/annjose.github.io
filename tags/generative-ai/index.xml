@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>generative-ai on Reflections</title>
+    <title>Generative-Ai on Reflections</title>
     <link>https://annjose.com/tags/generative-ai/</link>
-    <description>Recent content in generative-ai on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Generative-Ai on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Fri, 25 Oct 2024 17:22:33 -0700</lastBuildDate>
@@ -14,63 +14,63 @@
       <link>https://annjose.com/post/compare-ai-tools-llms/</link>
       <pubDate>Fri, 25 Oct 2024 17:22:33 -0700</pubDate>
       <guid>https://annjose.com/post/compare-ai-tools-llms/</guid>
-      <description>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.&#xA;In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:&#xA;Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that are powered by one or more of the above models.</description>
+      <description>&lt;p&gt;In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.&lt;/p&gt;&#xA;&lt;p&gt;In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Language models&lt;/strong&gt; - the most popular text-based models that are used for text-to-text content generation.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AI assistants&lt;/strong&gt; - the chatbots that are powered by one or more of the above models.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Other models&lt;/strong&gt; - other models that are used for text-to-image, text-to-voice or text-to-video use cases.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;At the end, we will also see the common set of tasks that we try to accomplish using these tools and recommendations on which tool is best for each task.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Perplexity AI: A Deep Dive</title>
       <link>https://annjose.com/post/perplexity-ai/</link>
       <pubDate>Thu, 27 Jun 2024 16:19:12 -0700</pubDate>
       <guid>https://annjose.com/post/perplexity-ai/</guid>
-      <description>Perplexity AI (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&amp;rsquo;t take it much seriously.&#xA;All that changed last week when I watched this recent interview of Perplexity CEO Aravind Srinivas by Lex Fridman.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Perplexity AI&lt;/strong&gt; (&lt;a href=&#34;https://www.perplexity.ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.perplexity.ai&lt;/a&gt;) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&amp;rsquo;t take it much seriously.&lt;/p&gt;&#xA;&lt;p&gt;All that changed last week when I watched &lt;a href=&#34;https://www.youtube.com/watch?v=e-gwvmhyU7A&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this recent interview&lt;/a&gt; of Perplexity CEO &lt;a href=&#34;https://www.linkedin.com/in/aravind-srinivas-16051987/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aravind Srinivas&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/lexfridman/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lex Fridman&lt;/a&gt;. It is a &lt;a href=&#34;https://www.youtube.com/watch?v=e-gwvmhyU7A&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fascinating interview&lt;/a&gt; - highly recommended for everyone to watch, but personally, it opened my eyes to the fact that Perplexity is very different from other chatbots, not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Apple of AI</title>
       <link>https://annjose.com/post/apple-intelligence/</link>
       <pubDate>Tue, 11 Jun 2024 20:14:23 -0700</pubDate>
       <guid>https://annjose.com/post/apple-intelligence/</guid>
-      <description>The standout feature unveiled at this week&amp;rsquo;s Apple WWDC 2024 event was Apple Intelligence, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.&#xA;What is Apple Intelligence? Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.&#xA;The foundation models are trained on Apple&amp;rsquo;s open-source AXLearn library for deep learning, built on top of JAX (Python library for accelerated computing and transformation) and XLA (Accelerated Linear Algebra, an open-source ML compiler).</description>
+      <description>&lt;p&gt;The standout feature unveiled at this week&amp;rsquo;s Apple WWDC 2024 event was &lt;a href=&#34;https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Apple Intelligence&lt;/a&gt;, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-apple-intelligence&#34;&gt;What is Apple Intelligence?&lt;/h2&gt;&#xA;&lt;p&gt;Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.&lt;/p&gt;&#xA;&lt;p&gt;The foundation models are trained on &lt;a href=&#34;https://github.com/apple/axlearn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Apple&amp;rsquo;s open-source AXLearn library&lt;/a&gt; for deep learning, built on top of &lt;a href=&#34;https://jax.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JAX&lt;/a&gt; (Python library for accelerated computing and transformation) and &lt;a href=&#34;https://www.tensorflow.org/xla&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XLA&lt;/a&gt; (Accelerated Linear Algebra, an open-source ML compiler). The branding of Apple Intelligence is intriguing, positioning it as Apple&amp;rsquo;s take on &amp;ldquo;AI&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GPT-4 Turbo Vision: In Action</title>
       <link>https://annjose.com/post/gpt-4-vision-in-action/</link>
       <pubDate>Thu, 04 Apr 2024 21:12:23 -0700</pubDate>
       <guid>https://annjose.com/post/gpt-4-vision-in-action/</guid>
-      <description>It&amp;rsquo;s been a few months since OpenAI announced GPT-4 Turbo with Vision a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.&#xA;We&amp;rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application.</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been a few months since OpenAI announced &lt;a href=&#34;https://openai.com/index/new-models-and-developer-products-announced-at-devday&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPT-4 Turbo with Vision&lt;/a&gt; a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application. I&amp;rsquo;ll wrap up with my observations from using this model in practice.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Run Code Llama 70B locally</title>
       <link>https://annjose.com/post/run-code-llama-70B-locally/</link>
       <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
       <guid>https://annjose.com/post/run-code-llama-70B-locally/</guid>
-      <description>Today, Meta AI announced they are releasing a new model Code Llama 70B, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.&#xA;In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.&#xA;As usual, the best way to run the inference on any model locally is to run Ollama.</description>
+      <description>&lt;p&gt;Today, &lt;a href=&#34;https://twitter.com/AIatMeta/status/1752013879532782075&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Meta AI announced&lt;/a&gt; they are releasing a new model &lt;strong&gt;Code Llama 70B&lt;/strong&gt;, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.&lt;/p&gt;&#xA;&lt;p&gt;In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.&lt;/p&gt;&#xA;&lt;p&gt;As usual, the best way to run the inference on any model locally is to run &lt;a href=&#34;https://ollama.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ollama&lt;/a&gt;. So let&amp;rsquo;s set up Ollama first.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI DevDay 2023 - Observations &amp; Learnings</title>
       <link>https://annjose.com/post/openai-devday-2023-observations-learnings/</link>
       <pubDate>Thu, 09 Nov 2023 09:02:53 -0800</pubDate>
       <guid>https://annjose.com/post/openai-devday-2023-observations-learnings/</guid>
-      <description>This is the fast follow (Part 2) of the previous post OpenAI DevDay 2023 - Highlights (aka Part 1) where I shared the highlights and the announcements made at OpenAI DevDay 2023.&#xA;In this post right here, I will share my observations - about the event and OpenAI tech - and my learnings - from talking to people during the event and by trying out the tech hands-on. So, let&amp;rsquo;s jump in!</description>
+      <description>&lt;p&gt;This is the fast follow (Part 2) of the previous post &lt;a href=&#34;https://annjose.com/post/openai-devday-2023-highlights&#34;&gt;OpenAI DevDay 2023 - Highlights&lt;/a&gt; (aka Part 1) where I shared the highlights and the announcements made at &lt;a href=&#34;https://devday.openai.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OpenAI DevDay 2023&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In this post right here, I will share &lt;strong&gt;my observations&lt;/strong&gt; - about the event and OpenAI tech - and &lt;strong&gt;my learnings&lt;/strong&gt; - from talking to people during the event and by trying out the tech hands-on. So, let&amp;rsquo;s jump in!&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI DevDay 2023 - Highlights</title>
       <link>https://annjose.com/post/openai-devday-2023-highlights/</link>
       <pubDate>Thu, 09 Nov 2023 05:32:13 -0800</pubDate>
       <guid>https://annjose.com/post/openai-devday-2023-highlights/</guid>
-      <description>This week I attended the Open AI Dev Day on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right?</description>
+      <description>&lt;p&gt;This week I attended the &lt;a href=&#34;https://devday.openai.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open AI Dev Day&lt;/a&gt; on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right? Right!&lt;/p&gt;</description>
     </item>
     <item>
       <title>GPT-4 Technical Report Highlights</title>
       <link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>
       <pubDate>Sun, 09 Apr 2023 12:59:18 -0800</pubDate>
       <guid>https://annjose.com/post/gpt-4-tech-report-highlights/</guid>
-      <description>OpenAI published the GPT-4 Technical Report on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&amp;rsquo;s always beneficial to obtain this information directly from the source.</description>
+      <description>&lt;p&gt;OpenAI published the &lt;a href=&#34;https://cdn.openai.com/papers/gpt-4.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPT-4 Technical Report&lt;/a&gt; on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&amp;rsquo;s always beneficial to obtain this information directly from the source.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ChatGPT Introduction - written by ChatGPT using Ann&#39;s outline</title>
       <link>https://annjose.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/</link>
       <pubDate>Sun, 12 Feb 2023 20:54:11 -0800</pubDate>
       <guid>https://annjose.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/</guid>
-      <description>Note - This post is written by ChatGPT expanding on the outline of my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.&#xA;Have you ever heard of ChatGPT? It&amp;rsquo;s a large language model that has taken the AI world by storm.</description>
+      <description>&lt;p&gt;&lt;em&gt;Note - This post is written by ChatGPT expanding on the outline of my original post &lt;a href=&#34;https://annjose.com/post/chatgpt-intro&#34;&gt;An Introduction to ChatGPT&lt;/a&gt; - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at &lt;a href=&#34;https://annjose.com/post/chatgpt-intro-3-ways&#34;&gt;Blog about ChatGPT in three different ways&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Have you ever heard of ChatGPT? It&amp;rsquo;s a large language model that has taken the AI world by storm. But what exactly is ChatGPT and how does it work? This post will break down the basics and give you a good understanding of what it is, how it&amp;rsquo;s built and how it can be used in the real world.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

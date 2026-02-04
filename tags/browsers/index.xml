@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>browsers on Reflections</title>
+    <title>Browsers on Reflections</title>
     <link>https://annjose.com/tags/browsers/</link>
-    <description>Recent content in browsers on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Browsers on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Sun, 23 Mar 2025 16:14:23 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/browsers-privacy-compare/</link>
       <pubDate>Sun, 23 Mar 2025 16:14:23 -0700</pubDate>
       <guid>https://annjose.com/post/browsers-privacy-compare/</guid>
-      <description>I stopped using Chrome a long time ago due to privacy concerns, and I&amp;rsquo;ve been switching between Firefox, Edge, and occasionally Brave. But I never spent the time to fully compare these browsers and analyze which one best suits my needs. Today, I decided to look deeply into these browsers and ended up going down a rabbit hole of researching their privacy features.&#xA;Why is this important? Every time we browse a website, we are sharing bits of our digital life with companies we don&amp;rsquo;t know.</description>
+      <description>&lt;p&gt;I stopped using Chrome a long time ago due to privacy concerns, and I&amp;rsquo;ve been switching between Firefox, Edge, and occasionally Brave. But I never spent the time to fully compare these browsers and analyze which one best suits my needs. Today, I decided to look deeply into these browsers and ended up going down a rabbit hole of researching their privacy features.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Why is this important?&lt;/strong&gt; Every time we browse a website, we are sharing bits of our digital life with companies we don&amp;rsquo;t know. These companies collect vast amounts of data about our browsing habits, preferences, and personal information.  It is so cringy and annoying to see YouTube showing a &amp;lsquo;suggested video&amp;rsquo; of the dental procedure that you searched about and are planning to get done. The browser you choose plays a significant role in how much of your data is collected and shared.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

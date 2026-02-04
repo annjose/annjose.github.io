@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>agentic-systems on Reflections</title>
+    <title>Agentic-Systems on Reflections</title>
     <link>https://annjose.com/tags/agentic-systems/</link>
-    <description>Recent content in agentic-systems on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Agentic-Systems on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Mon, 24 Feb 2025 04:32:12 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/claude-code-first-impressions/</link>
       <pubDate>Mon, 24 Feb 2025 04:32:12 -0700</pubDate>
       <guid>https://annjose.com/post/claude-code-first-impressions/</guid>
-      <description>Today I tried Claude Code, the new agentic coding tool announced by Anthropic this morning. Unlike other agentic tools, Claude Code is a CLI tool.&#xA;Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.&#xA;In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&amp;rsquo;t, and how it compares to other similar tools.</description>
+      <description>&lt;p&gt;Today I tried &lt;a href=&#34;https://docs.anthropic.com/en/docs/agents-and-tools/claude-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Claude Code&lt;/a&gt;, the new agentic coding tool &lt;a href=&#34;https://www.anthropic.com/news/claude-3-7-sonnet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;announced by Anthropic&lt;/a&gt; this morning. Unlike other agentic tools, Claude Code is a CLI tool.&lt;/p&gt;&#xA;&lt;p&gt;Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.&lt;/p&gt;&#xA;&lt;p&gt;In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&amp;rsquo;t, and how it compares to other similar tools.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

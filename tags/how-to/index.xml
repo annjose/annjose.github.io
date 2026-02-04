@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>how-to on Reflections</title>
+    <title>How-To on Reflections</title>
     <link>https://annjose.com/tags/how-to/</link>
-    <description>Recent content in how-to on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in How-To on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Fri, 23 May 2025 17:54:13 -0700</lastBuildDate>
@@ -14,91 +14,91 @@
       <link>https://annjose.com/post/cloudflare-autorag-step-by-step/</link>
       <pubDate>Fri, 23 May 2025 17:54:13 -0700</pubDate>
       <guid>https://annjose.com/post/cloudflare-autorag-step-by-step/</guid>
-      <description>We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.&#xA;However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database.</description>
+      <description>&lt;p&gt;We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively.&lt;/p&gt;&#xA;&lt;p&gt;However, building a RAG pipeline on your own from scratch can be complex and high maintenance. You need to assemble your data sources, chunk the data, index it, generate embeddings, and store them in a vector database. At inference time, you need to generate an embedding of the user query using an embedding model, retrieve the relevant data from the indexed store and return a meaningful context-aware response to the user. On top of that, any change in the data source means that you need to re-index the data, re-generate embeddings, and update the store. Rinse and repeat.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chrome Side Panel</title>
       <link>https://annjose.com/post/chrome-side-panel/</link>
       <pubDate>Sun, 15 Dec 2024 12:15:21 -0700</pubDate>
       <guid>https://annjose.com/post/chrome-side-panel/</guid>
-      <description>Of late, I have been building and learning about browser extensions for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.&#xA;The Chrome side panel It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens.</description>
+      <description>&lt;p&gt;Of late, I have been building and &lt;a href=&#34;https://annjose.com/post/browser-extn-intro/&#34;&gt;learning about browser extensions&lt;/a&gt; for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-chrome-side-panel&#34;&gt;The Chrome side panel&lt;/h2&gt;&#xA;&lt;p&gt;It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens. It has a consistent layout and behavior across all websites. It was first introduced in Chrome in May 2023.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vercel v0.dev: A hands-on review</title>
       <link>https://annjose.com/post/v0-dev-firsthand/</link>
       <pubDate>Mon, 04 Nov 2024 15:54:13 -0700</pubDate>
       <guid>https://annjose.com/post/v0-dev-firsthand/</guid>
-      <description>I have been using many Vercel products in my web projects - for example, their Next.js app framework, deployment infrastructure and Vercel AI SDK. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.&#xA;Their latest innovation is v0.dev, an AI-powered tool that helps you build frontend applications using a conversational chat interface.</description>
+      <description>&lt;p&gt;I have been using many &lt;a href=&#34;https://vercel.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vercel&lt;/a&gt; products in my web projects - for example, their &lt;a href=&#34;https://nextjs.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Next.js app framework&lt;/a&gt;, &lt;a href=&#34;https://vercel.com/docs/deployments/overview&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;deployment infrastructure&lt;/a&gt; and &lt;a href=&#34;https://sdk.vercel.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vercel AI SDK&lt;/a&gt;. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.&lt;/p&gt;&#xA;&lt;p&gt;Their latest innovation is &lt;a href=&#34;https://vercel.com/ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;v0.dev&lt;/a&gt;, an AI-powered tool that helps you build frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code. However, &lt;a href=&#34;https://x.com/v0/status/1826020673908535325&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;v0.dev recently announced a major update&lt;/a&gt; that includes integration with the popular &lt;a href=&#34;https://ui.shadcn.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shadcn&lt;/a&gt; UI components and the ability to pull in external npm packages. So I decided to try it out yesterday.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Browser Extensions: Part 2 - Advanced Concepts</title>
       <link>https://annjose.com/post/browser-extn-adv/</link>
       <pubDate>Thu, 05 Sep 2024 14:24:13 -0700</pubDate>
       <guid>https://annjose.com/post/browser-extn-adv/</guid>
-      <description>This is the second part of my blog series on browser extensions. Here, we&amp;rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading Browser Extensions: Part 1 - Introduction before tackling these more complex topics.&#xA;How to use TypeScript in browser extensions By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic.</description>
+      <description>&lt;p&gt;This is the second part of my blog series on browser extensions. Here, we&amp;rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading &lt;a href=&#34;https://annjose.com/post/browser-extn-intro/&#34;&gt;Browser Extensions: Part 1 - Introduction&lt;/a&gt; before tackling these more complex topics.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-use-typescript-in-browser-extensions&#34;&gt;How to use TypeScript in browser extensions&lt;/h2&gt;&#xA;&lt;p&gt;By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic. You can add TypeScript support to the extension project, but how do you do it? Chrome docs mention this as a one-liner as follows:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Browser Extensions: Part 1 - Introduction</title>
       <link>https://annjose.com/post/browser-extn-intro/</link>
       <pubDate>Wed, 04 Sep 2024 10:12:32 -0700</pubDate>
       <guid>https://annjose.com/post/browser-extn-intro/</guid>
-      <description>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.&#xA;In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.</description>
+      <description>&lt;p&gt;Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to &lt;strong&gt;Browser extensions&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - &lt;a href=&#34;https://annjose.com/post/browser-extn-adv/&#34;&gt;Browser Extensions: Part 2 - Advanced Concepts&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Next.js - Migrate from Pages to App Router</title>
       <link>https://annjose.com/post/nextjs-migrate-pages-app-router/</link>
       <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
       <guid>https://annjose.com/post/nextjs-migrate-pages-app-router/</guid>
-      <description>A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.</description>
+      <description>&lt;p&gt;A few months ago, Next.js introduced &lt;strong&gt;App Router&lt;/strong&gt;, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the &lt;strong&gt;Pages Router&lt;/strong&gt; eventually. I have been using the App Router for all my &lt;a href=&#34;https://annjose.com/post/learning-to-building/&#34;&gt;builder projects&lt;/a&gt; for a while now. In fact, I usually kicked off projects with the standard &lt;code&gt;create-next-app&lt;/code&gt; script that starts a new app from scratch.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GPT-4 Turbo Vision: In Action</title>
       <link>https://annjose.com/post/gpt-4-vision-in-action/</link>
       <pubDate>Thu, 04 Apr 2024 21:12:23 -0700</pubDate>
       <guid>https://annjose.com/post/gpt-4-vision-in-action/</guid>
-      <description>It&amp;rsquo;s been a few months since OpenAI announced GPT-4 Turbo with Vision a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.&#xA;We&amp;rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application.</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been a few months since OpenAI announced &lt;a href=&#34;https://openai.com/index/new-models-and-developer-products-announced-at-devday&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPT-4 Turbo with Vision&lt;/a&gt; a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application. I&amp;rsquo;ll wrap up with my observations from using this model in practice.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to customize session data in NextAuth</title>
       <link>https://annjose.com/post/how-to-customize-nextauth-session/</link>
       <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
       <guid>https://annjose.com/post/how-to-customize-nextauth-session/</guid>
-      <description>Of late, I have been diving into Next.js and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use NextAuth, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well.</description>
+      <description>&lt;p&gt;Of late, I have been diving into &lt;a href=&#34;https://nextjs.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Next.js&lt;/a&gt; and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use &lt;a href=&#34;https://next-auth.js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NextAuth&lt;/a&gt;, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well. In this post, I&amp;rsquo;ll be sharing those experiences and learnings.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Run Code Llama 70B locally</title>
       <link>https://annjose.com/post/run-code-llama-70B-locally/</link>
       <pubDate>Mon, 29 Jan 2024 16:42:25 -0700</pubDate>
       <guid>https://annjose.com/post/run-code-llama-70B-locally/</guid>
-      <description>Today, Meta AI announced they are releasing a new model Code Llama 70B, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.&#xA;In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.&#xA;As usual, the best way to run the inference on any model locally is to run Ollama.</description>
+      <description>&lt;p&gt;Today, &lt;a href=&#34;https://twitter.com/AIatMeta/status/1752013879532782075&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Meta AI announced&lt;/a&gt; they are releasing a new model &lt;strong&gt;Code Llama 70B&lt;/strong&gt;, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.&lt;/p&gt;&#xA;&lt;p&gt;In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.&lt;/p&gt;&#xA;&lt;p&gt;As usual, the best way to run the inference on any model locally is to run &lt;a href=&#34;https://ollama.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ollama&lt;/a&gt;. So let&amp;rsquo;s set up Ollama first.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Upgrading my blog engine Hugo and content</title>
       <link>https://annjose.com/post/upgrade-hugo/</link>
       <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
       <guid>https://annjose.com/post/upgrade-hugo/</guid>
-      <description>Today I upgraded my blog engine Hugo from version 0.30.0 to 0.73.0. It&amp;rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it.</description>
+      <description>&lt;p&gt;Today I upgraded my &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog engine Hugo&lt;/a&gt; from version 0.30.0 to 0.73.0. It&amp;rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it. This post is to share my learnings from the experience hoping that it may be useful to somebody else. &lt;em&gt;Learn Teach Learn&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tinkering with VS Code, MacOS and C&#43;&#43;</title>
       <link>https://annjose.com/post/vscode-macos-cpp/</link>
       <pubDate>Mon, 29 Jun 2020 22:32:55 -0700</pubDate>
       <guid>https://annjose.com/post/vscode-macos-cpp/</guid>
-      <description>After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book Data Structures and Algorithms in C++ by Adam Drozdek.</description>
+      <description>&lt;p&gt;After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book &lt;a href=&#34;https://www.amazon.com/Data-Structures-Algorithms-Adam-Drozdek-dp-1133608426/dp/1133608426&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Structures and Algorithms in C++&lt;/a&gt; by Adam Drozdek. I decided to read this book and learn from it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fastlane</title>
       <link>https://annjose.com/post/fastlane/</link>
       <pubDate>Sat, 23 Dec 2017 12:02:23 -0800</pubDate>
       <guid>https://annjose.com/post/fastlane/</guid>
-      <description>Fastlane is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.&#xA;The Toolchain fastlane comes out-of-the-box with a set of very good tools (better known as actions) such as:</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://fastlane.tools/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fastlane&lt;/a&gt; is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-toolchain&#34;&gt;The Toolchain&lt;/h2&gt;&#xA;&lt;p&gt;fastlane comes out-of-the-box with a set of very good tools (better known as &lt;em&gt;actions&lt;/em&gt;) such as:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Display mathematical expressions in blog</title>
       <link>https://annjose.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       <guid>https://annjose.com/post/display-math-expressions-in-hugo/</guid>
-      <description>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using OneNote Equation tool earlier, but I wanted to do the same in my blog posts.</description>
+      <description>&lt;p&gt;As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using &lt;a href=&#34;https://support.office.com/en-us/article/Insert-a-mathematical-equation-in-OneNote-2016-for-Mac-08969f84-ed02-4baf-8a77-7ab3c1e26afe&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OneNote Equation tool&lt;/a&gt; earlier, but I wanted to do the same in my blog posts. After trying many options, here is what worked for me.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

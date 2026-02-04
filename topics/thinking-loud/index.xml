@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>thinking-loud on Reflections</title>
+    <title>Thinking-Loud on Reflections</title>
     <link>https://annjose.com/topics/thinking-loud/</link>
-    <description>Recent content in thinking-loud on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Thinking-Loud on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Mon, 06 Jul 2020 20:55:36 -0700</lastBuildDate>
@@ -14,14 +14,14 @@
       <link>https://annjose.com/post/grit-passion-perseverance/</link>
       <pubDate>Mon, 06 Jul 2020 20:55:36 -0700</pubDate>
       <guid>https://annjose.com/post/grit-passion-perseverance/</guid>
-      <description>Recently, I started watching the YouTube series Talks at Google and today I came across this video Grit: The Power of Passion and Perseverance by Angela Duckworth, the researcher, author and professor of Psychology at UPenn. I had seen her TED talk earlier and this talk was even better where whe unpacked a lot of details on the concept of grit. This post is to share the key takeaways I got from the talk.</description>
+      <description>&lt;p&gt;Recently, I started watching the YouTube series Talks at Google and today I came across this video &lt;a href=&#34;https://www.youtube.com/watch?v=W-ONEAcBeTk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grit: The Power of Passion and Perseverance&lt;/a&gt; by Angela Duckworth, the researcher, author and professor of Psychology at UPenn. I had seen her TED talk earlier and this talk was even better where whe unpacked a lot of details on the concept of grit. This post is to share the key takeaways I got from the talk.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What do I really want</title>
       <link>https://annjose.com/post/what-do-i-really-want/</link>
       <pubDate>Sun, 28 Jun 2020 11:26:39 -0700</pubDate>
       <guid>https://annjose.com/post/what-do-i-really-want/</guid>
-      <description>The other day I watched a TED video where the presenter urged the audience to ask the question What do you really want? That got me thinking what do I really want. It is an interesting question to ask myself, since I have tried different roles and responsibilites - broad and deep - in the last couple of years.&#xA;So I was pleasantly surprised when I found the book Data Structures and Algorithms in C++ by Adam Drozdek on my bookshelf.</description>
+      <description>&lt;p&gt;The other day I watched a TED video where the presenter urged the audience to ask the question &lt;strong&gt;What do you really want?&lt;/strong&gt; That got me thinking what do &lt;strong&gt;I&lt;/strong&gt; really want. It is an interesting question to ask myself, since I have tried different roles and responsibilites - broad and deep - in the last couple of years.&lt;/p&gt;&#xA;&lt;p&gt;So I was pleasantly surprised when I found the book &lt;a href=&#34;https://www.amazon.com/Data-Structures-Algorithms-Adam-Drozdek-dp-1133608426/dp/1133608426&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Structures and Algorithms in C++&lt;/a&gt; by Adam Drozdek on my bookshelf. The book is full of code and exercises in C++, a language which I haven&amp;rsquo;t used in a while.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

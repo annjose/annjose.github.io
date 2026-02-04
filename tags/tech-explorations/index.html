@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
-  <title>tech-explorations &middot; Reflections</title>
+  <title>Tech-Explorations &middot; Reflections</title>
 
   
   
@@ -141,10 +141,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -179,10 +175,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -191,17 +183,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -248,7 +232,7 @@
 
 
 <div class="header">
-  <h1>tech-explorations</h1>
+  <h1>Tech-Explorations</h1>
 </div>
 
 <div class="content">
@@ -303,8 +287,9 @@
   </header>
 
   <p>
-  Of late, I have been building and learning about browser extensions for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.
-The Chrome side panel It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens.
+  <p>Of late, I have been building and <a href="https://annjose.com/post/browser-extn-intro/">learning about browser extensions</a> for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.</p>
+<h2 id="the-chrome-side-panel">The Chrome side panel</h2>
+<p>It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens. It has a consistent layout and behavior across all websites. It was first introduced in Chrome in May 2023.</p>
   </p>
 
   
@@ -361,9 +346,14 @@ The Chrome side panel It is a vertical panel that opens on either side of the br
   </header>
 
   <p>
-  In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.
-In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:
-Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that are powered by one or more of the above models.
+  <p>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.</p>
+<p>In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:</p>
+<ol>
+<li><strong>Language models</strong> - the most popular text-based models that are used for text-to-text content generation.</li>
+<li><strong>AI assistants</strong> - the chatbots that are powered by one or more of the above models.</li>
+<li><strong>Other models</strong> - other models that are used for text-to-image, text-to-voice or text-to-video use cases.</li>
+</ol>
+<p>At the end, we will also see the common set of tasks that we try to accomplish using these tools and recommendations on which tool is best for each task.</p>
   </p>
 
   
@@ -424,8 +414,9 @@ Language models - the most popular text-based models that are used for text-to-t
   </header>
 
   <p>
-  This is the second part of my blog series on browser extensions. Here, we&rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading Browser Extensions: Part 1 - Introduction before tackling these more complex topics.
-How to use TypeScript in browser extensions By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic.
+  <p>This is the second part of my blog series on browser extensions. Here, we&rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading <a href="https://annjose.com/post/browser-extn-intro/">Browser Extensions: Part 1 - Introduction</a> before tackling these more complex topics.</p>
+<h2 id="how-to-use-typescript-in-browser-extensions">How to use TypeScript in browser extensions</h2>
+<p>By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic. You can add TypeScript support to the extension project, but how do you do it? Chrome docs mention this as a one-liner as follows:</p>
   </p>
 
   
@@ -486,8 +477,8 @@ How to use TypeScript in browser extensions By default, browser extensions use J
   </header>
 
   <p>
-  Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.
-In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.
+  <p>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to <strong>Browser extensions</strong>.</p>
+<p>In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a>.</p>
   </p>
 
   
@@ -537,8 +528,8 @@ In this post, we will learn about browser extensions - what they are, why you sh
   </header>
 
   <p>
-  Last week, I watched an interview of Aravind Srinivas, the CEO of Perplexity AI (https://www.perplexity.ai). It is a three-hour interview done by Lex Fridman where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.
-Fascinating interview - highly recommended for everyone to watch.
+  <p>Last week, I watched an interview of <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a>, the CEO of <strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>). It is a three-hour interview done by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a> where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.</p>
+<p><a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">Fascinating interview</a> - highly recommended for everyone to watch. Personally, it opened my eyes to the fact that Perplexity is very different from other chatbots - not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
   </p>
 
   
@@ -592,8 +583,8 @@ Fascinating interview - highly recommended for everyone to watch.
   </header>
 
   <p>
-  Perplexity AI (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.
-All that changed last week when I watched this recent interview of Perplexity CEO Aravind Srinivas by Lex Fridman.
+  <p><strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.</p>
+<p>All that changed last week when I watched <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">this recent interview</a> of Perplexity CEO <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a> by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a>. It is a <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">fascinating interview</a> - highly recommended for everyone to watch, but personally, it opened my eyes to the fact that Perplexity is very different from other chatbots, not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
   </p>
 
   
@@ -645,9 +636,10 @@ All that changed last week when I watched this recent interview of Perplexity CE
   </header>
 
   <p>
-  The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was Apple Intelligence, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.
-What is Apple Intelligence? Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.
-The foundation models are trained on Apple&rsquo;s open-source AXLearn library for deep learning, built on top of JAX (Python library for accelerated computing and transformation) and XLA (Accelerated Linear Algebra, an open-source ML compiler).
+  <p>The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was <a href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/" target="_blank" rel="noopener">Apple Intelligence</a>, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.</p>
+<h2 id="what-is-apple-intelligence">What is Apple Intelligence?</h2>
+<p>Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.</p>
+<p>The foundation models are trained on <a href="https://github.com/apple/axlearn" target="_blank" rel="noopener">Apple&rsquo;s open-source AXLearn library</a> for deep learning, built on top of <a href="https://jax.readthedocs.io/en/latest/" target="_blank" rel="noopener">JAX</a> (Python library for accelerated computing and transformation) and <a href="https://www.tensorflow.org/xla" target="_blank" rel="noopener">XLA</a> (Accelerated Linear Algebra, an open-source ML compiler). The branding of Apple Intelligence is intriguing, positioning it as Apple&rsquo;s take on &ldquo;AI&rdquo;.</p>
   </p>
 
   
@@ -699,7 +691,7 @@ The foundation models are trained on Apple&rsquo;s open-source AXLearn library f
   </header>
 
   <p>
-  A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.
+  <p>A few months ago, Next.js introduced <strong>App Router</strong>, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the <strong>Pages Router</strong> eventually. I have been using the App Router for all my <a href="https://annjose.com/post/learning-to-building/">builder projects</a> for a while now. In fact, I usually kicked off projects with the standard <code>create-next-app</code> script that starts a new app from scratch.</p>
   </p>
 
   
@@ -751,8 +743,8 @@ The foundation models are trained on Apple&rsquo;s open-source AXLearn library f
   </header>
 
   <p>
-  It&rsquo;s been a few months since OpenAI announced GPT-4 Turbo with Vision a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.
-We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application.
+  <p>It&rsquo;s been a few months since OpenAI announced <a href="https://openai.com/index/new-models-and-developer-products-announced-at-devday" target="_blank" rel="noopener">GPT-4 Turbo with Vision</a> a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.</p>
+<p>We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application. I&rsquo;ll wrap up with my observations from using this model in practice.</p>
   </p>
 
   
@@ -804,9 +796,9 @@ We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so 
   </header>
 
   <p>
-  Today, Meta AI announced they are releasing a new model Code Llama 70B, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.
-In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.
-As usual, the best way to run the inference on any model locally is to run Ollama.
+  <p>Today, <a href="https://twitter.com/AIatMeta/status/1752013879532782075" target="_blank" rel="noopener">Meta AI announced</a> they are releasing a new model <strong>Code Llama 70B</strong>, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.</p>
+<p>In this post, I will do a walk-through of how to download and use the new model and how it compares to other code generating models like GPT-4.</p>
+<p>As usual, the best way to run the inference on any model locally is to run <a href="https://ollama.ai/" target="_blank" rel="noopener">Ollama</a>. So let&rsquo;s set up Ollama first.</p>
   </p>
 
   
@@ -858,7 +850,7 @@ As usual, the best way to run the inference on any model locally is to run Ollam
   </header>
 
   <p>
-  OpenAI published the GPT-4 Technical Report on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&rsquo;s always beneficial to obtain this information directly from the source.
+  <p>OpenAI published the <a href="https://cdn.openai.com/papers/gpt-4.pdf" target="_blank" rel="noopener">GPT-4 Technical Report</a> on 27 Mar 2023. I wanted to read it immediately but was intimidated by the fact that it is a 100-page document. It turns out that it was not as difficult as I anticipated, it can be easily read over a weekend. The best part is that this report describes the key terminologies and methodologies used in the development of GPT-4. It&rsquo;s always beneficial to obtain this information directly from the source.</p>
   </p>
 
   
@@ -908,8 +900,8 @@ As usual, the best way to run the inference on any model locally is to run Ollam
   </header>
 
   <p>
-  Ever since ChatGPT was released to the public last November, I&rsquo;ve been eager to write a blog about it. However, the daunting prospect of facing a blank screen kept me from starting the task, and I found myself procrastinating. Today, I finally summoned the courage to begin writing, but with a few tweaks from my usual approach.
-Allow me to describe the meta experiment to understand how I can utilize ChatGPT to help me write the blog.
+  <p>Ever since ChatGPT was released to the public last November, I&rsquo;ve been eager to write a blog about it. However, the daunting prospect of facing a blank screen kept me from starting the task, and I found myself procrastinating. Today, I finally summoned the courage to begin writing, but with a few tweaks from my usual approach.</p>
+<p>Allow me to describe the meta experiment to understand how I can utilize ChatGPT to help me write the blog.</p>
   </p>
 
   
@@ -959,8 +951,8 @@ Allow me to describe the meta experiment to understand how I can utilize ChatGPT
   </header>
 
   <p>
-  Over the past few months, ChatGPT has captured my attention through numerous forums, articles and AI experts. I am fascinated by this technology and learning more about it everyday. With this introductory post, I hope to share my knowledge and insights on ChatGPT - how it works, its capabilities and limitations, potential pitfalls, and future prospects.
-Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post.
+  <p>Over the past few months, ChatGPT has captured my attention through numerous forums, articles and AI experts. I am fascinated by this technology and learning more about it everyday. With this introductory post, I hope to share my knowledge and insights on ChatGPT - how it works, its capabilities and limitations, potential pitfalls, and future prospects.</p>
+<p><em>Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post. Curious to see the results of the experiment? Head over to the meta post <a href="https://annjose.com/post/chatgpt-intro-3-ways">Blog about ChatGPT in three different ways</a>.</em></p>
   </p>
 
   
@@ -1012,8 +1004,8 @@ Note - Just for fun, I did an experiment to write two more versions of this post
   </header>
 
   <p>
-  Note - This post is written by ChatGPT expanding on the outline of my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.
-Have you ever heard of ChatGPT? It&rsquo;s a large language model that has taken the AI world by storm.
+  <p><em>Note - This post is written by ChatGPT expanding on the outline of my original post <a href="https://annjose.com/post/chatgpt-intro">An Introduction to ChatGPT</a> - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at <a href="https://annjose.com/post/chatgpt-intro-3-ways">Blog about ChatGPT in three different ways</a>.</em></p>
+<p>Have you ever heard of ChatGPT? It&rsquo;s a large language model that has taken the AI world by storm. But what exactly is ChatGPT and how does it work? This post will break down the basics and give you a good understanding of what it is, how it&rsquo;s built and how it can be used in the real world.</p>
   </p>
 
   
@@ -1063,8 +1055,8 @@ Have you ever heard of ChatGPT? It&rsquo;s a large language model that has taken
   </header>
 
   <p>
-  Note - This post is written by ChatGPT by rewriting my original post An Introduction to ChatGPT - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at Blog about ChatGPT in three different ways.
-As an avid learner and technology enthusiast, I have been following the advancements and discussions surrounding ChatGPT in various forums and sources.
+  <p><em>Note - This post is written by ChatGPT by rewriting my original post <a href="https://annjose.com/post/chatgpt-intro">An Introduction to ChatGPT</a> - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at <a href="https://annjose.com/post/chatgpt-intro-3-ways">Blog about ChatGPT in three different ways</a>.</em></p>
+<p>As an avid learner and technology enthusiast, I have been following the advancements and discussions surrounding ChatGPT in various forums and sources. With this blog post, I aim to share my understanding of ChatGPT - what it is, its key benefits, potential limitations, and my vision of its future trajectory. Through my research and analysis of expert opinions, I hope to provide a comprehensive overview of this cutting-edge technology and its potential impact on our daily lives.</p>
   </p>
 
   
@@ -1121,7 +1113,7 @@ As an avid learner and technology enthusiast, I have been following the advancem
   </header>
 
   <p>
-  After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book Data Structures and Algorithms in C++ by Adam Drozdek.
+  <p>After a long time, I got the time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - for the past few months, I have been craving to learn something different and I was hooked when I saw the book <a href="https://www.amazon.com/Data-Structures-Algorithms-Adam-Drozdek-dp-1133608426/dp/1133608426" target="_blank" rel="noopener">Data Structures and Algorithms in C++</a> by Adam Drozdek. I decided to read this book and learn from it.</p>
   </p>
 
   
@@ -1180,8 +1172,25 @@ As an avid learner and technology enthusiast, I have been following the advancem
   </header>
 
   <p>
-  In this post, I would like to share what&rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo my-learnings/Swift4.2.
-Random Number Generation Swift 4.2 added random number generator API to standard library. You can use it on Int, Double, Float, CGFloat and Bool. It also provides a convenient API randomElement which returns a random element from a sequence It also provides the APIs shuffle and shuffled to shuffle a sequence 1 2 let randomInt = Int.
+  <p>In this post, I would like to share what&rsquo;s new in Swift 4.2. All the code displayed in this post is available at my GitHub repo <a href="https://github.com/annjose/my-learnings/tree/master/Swift4.2" target="_blank" rel="noopener">my-learnings/Swift4.2</a>.</p>
+<h2 id="random-number-generation">Random Number Generation</h2>
+<ul>
+<li>Swift 4.2 added random number generator API to standard library. You can use it on <code>Int</code>, <code>Double</code>, <code>Float</code>, <code>CGFloat</code> and <code>Bool</code>.</li>
+<li>It also provides a convenient API <code>randomElement</code> which returns a random element from a sequence</li>
+<li>It also provides the APIs <code>shuffle</code> and <code>shuffled</code> to shuffle a sequence</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">randomInt</span> = <span style="color:#8be9fd;font-style:italic">Int</span>.random(<span style="color:#ff79c6">in</span>: <span style="color:#bd93f9">0.</span>.&lt;<span style="color:#bd93f9">10</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">randomElement</span> = [<span style="color:#f1fa8c">&#34;one&#34;</span>, <span style="color:#f1fa8c">&#34;two&#34;</span>, <span style="color:#f1fa8c">&#34;three&#34;</span>, <span style="color:#f1fa8c">&#34;four&#34;</span>].randomElement()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="dynamic-member-lookup">Dynamic Member Lookup</h2>
+<p>Swift 4.2 introduces a dot syntax to access custom subscripts; this is much cleaner than the earlier square bracket calls. The compiler evaluates the subscript call dynamically at runtime, but provides a cleaner syntax.</p>
   </p>
 
   
@@ -1230,7 +1239,7 @@ Random Number Generation Swift 4.2 added random number generator API to standard
   </header>
 
   <p>
-  I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground.
+  <p>I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground. This was really cumbersome and error-prone and I was hoping that there would be a better solution for this.</p>
   </p>
 
   
@@ -1285,7 +1294,8 @@ Random Number Generation Swift 4.2 added random number generator API to standard
   </header>
 
   <p>
-  Realm is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast Mobile database software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. That is why I am happy to see that today they announced Realm Mobile Platform that combines Realm client side database with server-side technology (Object Server as they call it).
+  <p><a href="https://realm.io" target="_blank" rel="noopener">Realm</a> is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast <a href="https://realm.io/products/realm-mobile-database/" target="_blank" rel="noopener">Mobile database</a> software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#.
+That is why I am happy to see that today they announced <a href="https://realm.io/blog/introducing-realm-mobile-platform/" target="_blank" rel="noopener">Realm Mobile Platform</a> that combines Realm client side database with server-side technology (Object Server as they call it). This platform provides the base infrastructure for mobile apps to support offline sync, that enables end users to interact with the app even when there is no network connection.</p>
   </p>
 
   
@@ -1338,8 +1348,8 @@ Random Number Generation Swift 4.2 added random number generator API to standard
   </header>
 
   <p>
-  Few weeks ago, I started the Machine Learning course on Coursera by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.
-The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college).
+  <p>Few weeks ago, I started the <a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener">Machine Learning course on Coursera</a> by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.</p>
+<p>The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college). At the end of each module, there is a quiz and programming assignments, which are interesting.</p>
   </p>
 
   
@@ -1396,7 +1406,7 @@ The course starts with the basics, including a primer on Linear Algebra (it is o
   </header>
 
   <p>
-  I have been thoroughly enjoying working on ReactNative projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like Nuclide (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&hellip;
+  <p>I have been thoroughly enjoying working on <a href="https://facebook.github.io/react-native/" target="_blank" rel="noopener">ReactNative</a> projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like <a href="http://nuclide.io/" target="_blank" rel="noopener">Nuclide</a> (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope&hellip;</p>
   </p>
 
   
@@ -1441,8 +1451,8 @@ The course starts with the basics, including a primer on Linear Algebra (it is o
   </header>
 
   <p>
-  The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. Conversation As Interface. It is a more natural form of communication, especially for question-answer / interview experiences.
-Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running many experiments in their Messenger app allowing a few developers like Uber, Assist etc.
+  <p>The User Interface is going beyond UI and voice recognition to the new trend of using conversation as a new way to engage with customers, i.e. <strong>Conversation As Interface</strong>. It is a more natural form of communication, especially for question-answer / interview experiences.</p>
+<p>Now there is an emerging trend of companies opening their chat bot API to third party developers. Facebook has been running <a href="http://techcrunch.com/2016/01/05/facebook-messenger-bots/" target="_blank" rel="noopener">many experiments</a> in their Messenger app allowing a few developers like Uber, Assist etc. to create chat bots. They are <a href="http://techcrunch.com/2016/04/07/facebook-chatbots/" target="_blank" rel="noopener">expected to announce</a> opening up the SDK to all in next week’s F8 conference. Microsoft <a href="http://techcrunch.com/2016/03/30/microsoft-is-bringing-bots-to-skype-and-everywhere-else/" target="_blank" rel="noopener">released a Bot Framework</a> in Build last week and this supports multiple channels – Slack, SMS, Skype etc. Similarly, <a href="http://techcrunch.com/2016/03/24/line-builds-out-its-chat-app-for-businesses-as-facebook-messenger-threat-looms-large/" target="_blank" rel="noopener">Line</a> announced its SDK.</p>
   </p>
 
   
@@ -1495,8 +1505,8 @@ Now there is an emerging trend of companies opening their chat bot API to third 
   </header>
 
   <p>
-  This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.
-I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.
+  <p>This is my first blog post created by <a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.</p>
+<p>I have set this up such that I publish the content to <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub pages</a>, so the publish workflow is as simple as writing some Markdown and a git push. <a href="http://gohugo.io/tutorials/github-pages-blog/" target="_blank" rel="noopener">This is a good tutorial</a> on how to do this.</p>
   </p>
 
   

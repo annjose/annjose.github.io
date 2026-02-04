@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>graphql on Reflections</title>
+    <title>Graphql on Reflections</title>
     <link>https://annjose.com/topics/graphql/</link>
-    <description>Recent content in graphql on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Graphql on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Mon, 28 Jan 2019 14:30:28 -0800</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/graphql-intro/</link>
       <pubDate>Mon, 28 Jan 2019 14:30:28 -0800</pubDate>
       <guid>https://annjose.com/post/graphql-intro/</guid>
-      <description>I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.</description>
+      <description>&lt;p&gt;I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

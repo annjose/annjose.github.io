@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
   <title>Reflections</title>
 
@@ -141,10 +141,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -179,10 +175,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -191,17 +183,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -256,6 +240,55 @@
   
     <article>
   <header>
+    <h2><a href="https://annjose.com/post/v0-dev-firsthand/">Vercel v0.dev: A hands-on review</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Nov 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/web-development">web-development</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  <p>I have been using many <a href="https://vercel.com/home" target="_blank" rel="noopener">Vercel</a> products in my web projects - for example, their <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js app framework</a>, <a href="https://vercel.com/docs/deployments/overview" target="_blank" rel="noopener">deployment infrastructure</a> and <a href="https://sdk.vercel.ai/" target="_blank" rel="noopener">Vercel AI SDK</a>. I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️.</p>
+<p>Their latest innovation is <a href="https://vercel.com/ai" target="_blank" rel="noopener">v0.dev</a>, an AI-powered tool that helps you build frontend applications using a conversational chat interface. When I first heard about it, I thought it would be just another AI coding tool with a chat interface, similar to asking ChatGPT or Claude to generate code. However, <a href="https://x.com/v0/status/1826020673908535325" target="_blank" rel="noopener">v0.dev recently announced a major update</a> that includes integration with the popular <a href="https://ui.shadcn.com/" target="_blank" rel="noopener">shadcn</a> UI components and the ability to pull in external npm packages. So I decided to try it out yesterday.</p>
+  </p>
+
+  
+  <footer>
+    <a href="https://annjose.com/post/v0-dev-firsthand/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://annjose.com/post/compare-ai-tools-llms/">Compare AI Tools: LLMs and AI Assistants</a></h2>
 
     <div class="post-meta">
@@ -300,9 +333,14 @@
   </header>
 
   <p>
-  In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.
-In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:
-Language models - the most popular text-based models that are used for text-to-text content generation. AI assistants - the chatbots that are powered by one or more of the above models.
+  <p>In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day.</p>
+<p>In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:</p>
+<ol>
+<li><strong>Language models</strong> - the most popular text-based models that are used for text-to-text content generation.</li>
+<li><strong>AI assistants</strong> - the chatbots that are powered by one or more of the above models.</li>
+<li><strong>Other models</strong> - other models that are used for text-to-image, text-to-voice or text-to-video use cases.</li>
+</ol>
+<p>At the end, we will also see the common set of tasks that we try to accomplish using these tools and recommendations on which tool is best for each task.</p>
   </p>
 
   
@@ -363,8 +401,9 @@ Language models - the most popular text-based models that are used for text-to-t
   </header>
 
   <p>
-  This is the second part of my blog series on browser extensions. Here, we&rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading Browser Extensions: Part 1 - Introduction before tackling these more complex topics.
-How to use TypeScript in browser extensions By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic.
+  <p>This is the second part of my blog series on browser extensions. Here, we&rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading <a href="https://annjose.com/post/browser-extn-intro/">Browser Extensions: Part 1 - Introduction</a> before tackling these more complex topics.</p>
+<h2 id="how-to-use-typescript-in-browser-extensions">How to use TypeScript in browser extensions</h2>
+<p>By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic. You can add TypeScript support to the extension project, but how do you do it? Chrome docs mention this as a one-liner as follows:</p>
   </p>
 
   
@@ -425,8 +464,8 @@ How to use TypeScript in browser extensions By default, browser extensions use J
   </header>
 
   <p>
-  Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.
-In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.
+  <p>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to <strong>Browser extensions</strong>.</p>
+<p>In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - <a href="https://annjose.com/post/browser-extn-adv/">Browser Extensions: Part 2 - Advanced Concepts</a>.</p>
   </p>
 
   
@@ -476,7 +515,7 @@ In this post, we will learn about browser extensions - what they are, why you sh
   </header>
 
   <p>
-  Nine months ago, I started the Reimagine Journey to shift my career from engineering leadership to hands-on technology, specifically focusing on my health, personal growth and advanced tech skills. The long extended leave gave me the time and space to reflect on what I truly love and shape the next chapter of my career. It gave me the opportunity to determine how I want to live the rest of my life.
+  <p>Nine months ago, I started the <a href="https://annjose.com/post/new-beginning/">Reimagine Journey</a> to shift my career from engineering leadership to hands-on technology, specifically focusing on my health, personal growth and advanced tech skills. The long extended leave gave me the time and space to reflect on what I truly love and shape the next chapter of my career. It gave me the opportunity to determine how I want to live the rest of my life.</p>
   </p>
 
   
@@ -526,8 +565,8 @@ In this post, we will learn about browser extensions - what they are, why you sh
   </header>
 
   <p>
-  Last week, I watched an interview of Aravind Srinivas, the CEO of Perplexity AI (https://www.perplexity.ai). It is a three-hour interview done by Lex Fridman where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.
-Fascinating interview - highly recommended for everyone to watch.
+  <p>Last week, I watched an interview of <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a>, the CEO of <strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>). It is a three-hour interview done by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a> where Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people.</p>
+<p><a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">Fascinating interview</a> - highly recommended for everyone to watch. Personally, it opened my eyes to the fact that Perplexity is very different from other chatbots - not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
   </p>
 
   
@@ -581,8 +620,8 @@ Fascinating interview - highly recommended for everyone to watch.
   </header>
 
   <p>
-  Perplexity AI (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.
-All that changed last week when I watched this recent interview of Perplexity CEO Aravind Srinivas by Lex Fridman.
+  <p><strong>Perplexity AI</strong> (<a href="https://www.perplexity.ai" target="_blank" rel="noopener">https://www.perplexity.ai</a>) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn&rsquo;t take it much seriously.</p>
+<p>All that changed last week when I watched <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">this recent interview</a> of Perplexity CEO <a href="https://www.linkedin.com/in/aravind-srinivas-16051987/" target="_blank" rel="noopener">Aravind Srinivas</a> by <a href="https://www.linkedin.com/in/lexfridman/" target="_blank" rel="noopener">Lex Fridman</a>. It is a <a href="https://www.youtube.com/watch?v=e-gwvmhyU7A" target="_blank" rel="noopener">fascinating interview</a> - highly recommended for everyone to watch, but personally, it opened my eyes to the fact that Perplexity is very different from other chatbots, not only in how it works, but what it is trying to solve. So I started using it for a few days and was blown away by the results 💯. I realized that this is one of the tools that gives you so much value that you cannot imagine going back to the way of doing it.</p>
   </p>
 
   
@@ -634,9 +673,10 @@ All that changed last week when I watched this recent interview of Perplexity CE
   </header>
 
   <p>
-  The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was Apple Intelligence, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.
-What is Apple Intelligence? Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.
-The foundation models are trained on Apple&rsquo;s open-source AXLearn library for deep learning, built on top of JAX (Python library for accelerated computing and transformation) and XLA (Accelerated Linear Algebra, an open-source ML compiler).
+  <p>The standout feature unveiled at this week&rsquo;s Apple WWDC 2024 event was <a href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/" target="_blank" rel="noopener">Apple Intelligence</a>, a personal intelligence system that will be integrated into multiple platforms - iOS 18, iPadOS 18 and macOS Sequoia.</p>
+<h2 id="what-is-apple-intelligence">What is Apple Intelligence?</h2>
+<p>Apple Intelligence comprises of multiple highly-capable and efficient generative models - large language models and diffusion models. These models include on-device models as well as server-based foundation models.</p>
+<p>The foundation models are trained on <a href="https://github.com/apple/axlearn" target="_blank" rel="noopener">Apple&rsquo;s open-source AXLearn library</a> for deep learning, built on top of <a href="https://jax.readthedocs.io/en/latest/" target="_blank" rel="noopener">JAX</a> (Python library for accelerated computing and transformation) and <a href="https://www.tensorflow.org/xla" target="_blank" rel="noopener">XLA</a> (Accelerated Linear Algebra, an open-source ML compiler). The branding of Apple Intelligence is intriguing, positioning it as Apple&rsquo;s take on &ldquo;AI&rdquo;.</p>
   </p>
 
   
@@ -688,7 +728,7 @@ The foundation models are trained on Apple&rsquo;s open-source AXLearn library f
   </header>
 
   <p>
-  A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.
+  <p>A few months ago, Next.js introduced <strong>App Router</strong>, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the <strong>Pages Router</strong> eventually. I have been using the App Router for all my <a href="https://annjose.com/post/learning-to-building/">builder projects</a> for a while now. In fact, I usually kicked off projects with the standard <code>create-next-app</code> script that starts a new app from scratch.</p>
   </p>
 
   
@@ -740,67 +780,13 @@ The foundation models are trained on Apple&rsquo;s open-source AXLearn library f
   </header>
 
   <p>
-  It&rsquo;s been a few months since OpenAI announced GPT-4 Turbo with Vision a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.
-We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application.
+  <p>It&rsquo;s been a few months since OpenAI announced <a href="https://openai.com/index/new-models-and-developer-products-announced-at-devday" target="_blank" rel="noopener">GPT-4 Turbo with Vision</a> a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience.</p>
+<p>We&rsquo;ll explore how to use the model through ChatGPT and the Open AI API so that you can can integrate it into any application. I&rsquo;ll wrap up with my observations from using this model in practice.</p>
   </p>
 
   
   <footer>
     <a href="https://annjose.com/post/gpt-4-vision-in-action/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://annjose.com/post/how-to-customize-nextauth-session/">How to customize session data in NextAuth</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 Mar 2024</time>
-  </div>
-
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/how-to">how-to</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/building">building</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/technology">technology</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/next-js">next-js</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="https://annjose.com/tags/modern-web-dev">modern-web-dev</a>
-    
-  </div>
-  
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Of late, I have been diving into Next.js and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use NextAuth, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well.
-  </p>
-
-  
-  <footer>
-    <a href="https://annjose.com/post/how-to-customize-nextauth-session/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

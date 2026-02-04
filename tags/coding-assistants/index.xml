@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>coding-assistants on Reflections</title>
+    <title>Coding-Assistants on Reflections</title>
     <link>https://annjose.com/tags/coding-assistants/</link>
-    <description>Recent content in coding-assistants on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Coding-Assistants on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 15 Mar 2025 15:18:12 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 04 Feb 2026 10:11:08 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/coding-assistants/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic Coding: The Basic Concepts</title>
+      <link>https://annjose.com/post/agentic-coding-basics/</link>
+      <pubDate>Wed, 04 Feb 2026 10:11:08 -0700</pubDate>
+      <guid>https://annjose.com/post/agentic-coding-basics/</guid>
+      <description>&lt;p&gt;I used to think that I love coding, but in the last year, I came to realize that I love building apps as much as I love coding. Creating something useful and beautiful is what I love. Last year this time, my coding workflow was to fire up VS Code with  Claude in the browser or GitHub Copilot in &amp;lsquo;Ask&amp;rsquo; mode and brainstorm problems, review solutions suggested by the LLM, copy code into the editor, test and deploy. This was fun in the beginning, but soon the context-switching became tedious and it broke the flow of building.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Vibe coding a Pomodoro app with AI</title>
       <link>https://annjose.com/post/vibe-coding-pomodoro-app/</link>
       <pubDate>Sat, 15 Mar 2025 15:18:12 -0700</pubDate>
       <guid>https://annjose.com/post/vibe-coding-pomodoro-app/</guid>
-      <description>Today I tried something fun - built a Pomodoro timer app mostly by talking to AI instead of typing code myself. And guess what - there is a term for it - vibe coding, coined by Andrej Karpathy 😎.&#xA;I have done it a few times before, but this is the first time I am using it to build a full app. I wanted to create something that was useful and worked well, so I chose the Pomodoro timer.</description>
+      <description>&lt;p&gt;Today I tried something fun - built a Pomodoro timer app mostly by talking to AI instead of typing code myself. And guess what - there is a term for it - &lt;a href=&#34;https://en.wikipedia.org/wiki/Vibe_coding&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vibe coding&lt;/a&gt;, coined by Andrej Karpathy 😎.&lt;/p&gt;&#xA;&lt;p&gt;I have done it a few times before, but this is the first time I am using it to build a full app. I wanted to create something that was useful and worked well, so I chose the Pomodoro timer. Here&amp;rsquo;s how it went and my key takeaways from this way of building products.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Claude Code: First Impressions</title>
       <link>https://annjose.com/post/claude-code-first-impressions/</link>
       <pubDate>Mon, 24 Feb 2025 04:32:12 -0700</pubDate>
       <guid>https://annjose.com/post/claude-code-first-impressions/</guid>
-      <description>Today I tried Claude Code, the new agentic coding tool announced by Anthropic this morning. Unlike other agentic tools, Claude Code is a CLI tool.&#xA;Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.&#xA;In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&amp;rsquo;t, and how it compares to other similar tools.</description>
+      <description>&lt;p&gt;Today I tried &lt;a href=&#34;https://docs.anthropic.com/en/docs/agents-and-tools/claude-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Claude Code&lt;/a&gt;, the new agentic coding tool &lt;a href=&#34;https://www.anthropic.com/news/claude-3-7-sonnet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;announced by Anthropic&lt;/a&gt; this morning. Unlike other agentic tools, Claude Code is a CLI tool.&lt;/p&gt;&#xA;&lt;p&gt;Claude has been my favorite AI coding partner so far. I use it via GitHub Copilot and as standalone through its web interface. I was curious to see how it works in CLI and decided to give it a try.&lt;/p&gt;&#xA;&lt;p&gt;In this post, I share my first impressions of using Claude Code - how I set it up, what I loved about it, what I didn&amp;rsquo;t, and how it compares to other similar tools.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

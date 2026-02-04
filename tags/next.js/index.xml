@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>next.js on Reflections</title>
+    <title>Next.js on Reflections</title>
     <link>https://annjose.com/tags/next.js/</link>
-    <description>Recent content in next.js on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Next.js on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Wed, 05 Jun 2024 12:42:25 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/nextjs-migrate-pages-app-router/</link>
       <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
       <guid>https://annjose.com/post/nextjs-migrate-pages-app-router/</guid>
-      <description>A few months ago, Next.js introduced App Router, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the Pages Router eventually. I have been using the App Router for all my builder projects for a while now. In fact, I usually kicked off projects with the standard create-next-app script that starts a new app from scratch.</description>
+      <description>&lt;p&gt;A few months ago, Next.js introduced &lt;strong&gt;App Router&lt;/strong&gt;, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the &lt;strong&gt;Pages Router&lt;/strong&gt; eventually. I have been using the App Router for all my &lt;a href=&#34;https://annjose.com/post/learning-to-building/&#34;&gt;builder projects&lt;/a&gt; for a while now. In fact, I usually kicked off projects with the standard &lt;code&gt;create-next-app&lt;/code&gt; script that starts a new app from scratch.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

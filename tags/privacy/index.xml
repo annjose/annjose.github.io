@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>privacy on Reflections</title>
+    <title>Privacy on Reflections</title>
     <link>https://annjose.com/tags/privacy/</link>
-    <description>Recent content in privacy on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Privacy on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Tue, 03 Jun 2025 13:13:12 -0700</lastBuildDate>
@@ -14,14 +14,14 @@
       <link>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</link>
       <pubDate>Tue, 03 Jun 2025 13:13:12 -0700</pubDate>
       <guid>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</guid>
-      <description>In our previous post, Mobile On-device AI: Smarter Faster Private Apps, we explored the fundamentals of running AI locally on mobile devices. Now, it&amp;rsquo;s time to get hands-on and see this technology in action!&#xA;This practical guide walks you through implementing mobile on-device AI using Google&amp;rsquo;s powerful Gemma model family, including the cutting-edge Gemma 3n. You&amp;rsquo;ll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.</description>
+      <description>&lt;p&gt;In our previous post, &lt;a href=&#34;https://annjose.com/post/mobile-on-device-ai/&#34;&gt;Mobile On-device AI: Smarter Faster Private Apps&lt;/a&gt;, we explored the fundamentals of running AI locally on mobile devices. Now, it&amp;rsquo;s time to get hands-on and see this technology in action!&lt;/p&gt;&#xA;&lt;p&gt;This practical guide walks you through implementing mobile on-device AI using Google&amp;rsquo;s powerful Gemma model family, including the cutting-edge Gemma 3n. You&amp;rsquo;ll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-youll-learn-here&#34;&gt;What You&amp;rsquo;ll Learn Here&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Test various Gemma models, including Gemma 3n, in Google AI Studio.&lt;/li&gt;&#xA;&lt;li&gt;Run sample on-device AI applications on Android using tools like the Google AI Edge Gallery App and MediaPipe.&lt;/li&gt;&#xA;&lt;li&gt;Implement on-device Large Language Model (LLM) inference on iOS using MediaPipe.&lt;/li&gt;&#xA;&lt;li&gt;Explore how to run LLMs in mobile web browsers with JavaScript and MediaPipe.&lt;/li&gt;&#xA;&lt;li&gt;Gain practical experience deploying and interacting with Gemma models across different mobile platforms.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Prerequisites:&lt;/strong&gt; Basic mobile development knowledge helpful but not required.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Which browser cares about privacy the most?</title>
       <link>https://annjose.com/post/browsers-privacy-compare/</link>
       <pubDate>Sun, 23 Mar 2025 16:14:23 -0700</pubDate>
       <guid>https://annjose.com/post/browsers-privacy-compare/</guid>
-      <description>I stopped using Chrome a long time ago due to privacy concerns, and I&amp;rsquo;ve been switching between Firefox, Edge, and occasionally Brave. But I never spent the time to fully compare these browsers and analyze which one best suits my needs. Today, I decided to look deeply into these browsers and ended up going down a rabbit hole of researching their privacy features.&#xA;Why is this important? Every time we browse a website, we are sharing bits of our digital life with companies we don&amp;rsquo;t know.</description>
+      <description>&lt;p&gt;I stopped using Chrome a long time ago due to privacy concerns, and I&amp;rsquo;ve been switching between Firefox, Edge, and occasionally Brave. But I never spent the time to fully compare these browsers and analyze which one best suits my needs. Today, I decided to look deeply into these browsers and ended up going down a rabbit hole of researching their privacy features.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Why is this important?&lt;/strong&gt; Every time we browse a website, we are sharing bits of our digital life with companies we don&amp;rsquo;t know. These companies collect vast amounts of data about our browsing habits, preferences, and personal information.  It is so cringy and annoying to see YouTube showing a &amp;lsquo;suggested video&amp;rsquo; of the dental procedure that you searched about and are planning to get done. The browser you choose plays a significant role in how much of your data is collected and shared.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

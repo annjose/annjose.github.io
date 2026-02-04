@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Practical guide to run mobile-optimized models like Gemma across mobile platforms">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
   <title>Hands-On: Mobile AI with Gemma - iOS, Android &middot; Reflections</title>
 
@@ -133,10 +133,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -171,10 +167,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -183,17 +175,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -481,9 +465,9 @@
 <li><strong>Performance Profiling:</strong> You can can profile model performance, identify bottlenecks, and optimize models for specific hardware using tools in Xcode and Core ML Tools</li>
 </ul>
 <p>Here is how you can use a model using Core ML in your app. Note - <code>.mlmodelc</code> is the compiled version of the model you imported into XCode.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -496,16 +480,16 @@
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>	<span style="color:#ff79c6">guard</span> <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">modelURL</span> = Bundle.main.url(
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>	<span style="color:#ff79c6">guard</span> <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">modelURL</span> = Bundle.main.url(
 </span></span><span style="display:flex;"><span>                            forResource: <span style="color:#f1fa8c">&#34;CoreMLTrainedModel&#34;</span>, 
 </span></span><span style="display:flex;"><span>                            withExtension: <span style="color:#f1fa8c">&#34;mlmodelc&#34;</span>) <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>	    fatalError(<span style="color:#f1fa8c">&#34;Failed to locate the Core ML model file.&#34;</span>)
+</span></span><span style="display:flex;"><span>	    <span style="font-style:italic">fatalError</span>(<span style="color:#f1fa8c">&#34;Failed to locate the Core ML model file.&#34;</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">do</span> {
 </span></span><span style="display:flex;"><span>	    <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">model</span> = <span style="color:#ff79c6">try</span> MLModel(contentsOf: modelURL)
 </span></span><span style="display:flex;"><span>	    <span style="color:#6272a4">// Now you have Core ML model object ready to make predictions</span>
 </span></span><span style="display:flex;"><span>	} <span style="color:#ff79c6">catch</span> {
-</span></span><span style="display:flex;"><span>	    fatalError(<span style="color:#f1fa8c">&#34;Failed to create Core ML model object: </span><span style="color:#f1fa8c">\(</span>error<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>	    <span style="font-style:italic">fatalError</span>(<span style="color:#f1fa8c">&#34;Failed to create Core ML model object: </span><span style="color:#f1fa8c">\(</span>error<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
 </span></span><span style="display:flex;"><span>	}
 </span></span></code></pre></td></tr></table>
 </div>
@@ -552,7 +536,7 @@
         
         <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
             <a href="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio.png" target="_blank">
-                <img srcset="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hueedcda6fc31da7c3452e64fcc76304a7_1699561_320x0_resize_box_3.png 320w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hueedcda6fc31da7c3452e64fcc76304a7_1699561_480x0_resize_box_3.png 480w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hueedcda6fc31da7c3452e64fcc76304a7_1699561_768x0_resize_box_3.png 768w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hueedcda6fc31da7c3452e64fcc76304a7_1699561_1024x0_resize_box_3.png 1024w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hueedcda6fc31da7c3452e64fcc76304a7_1699561_1500x0_resize_box_3.png 1500w"
+                <img srcset="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hu_23f357a3704f30da.png 320w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hu_120153a25bfff2d6.png 480w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hu_b1b69d9fad365aa6.png 768w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hu_a7a25a4a002a9355.png 1024w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio_hu_c1ea03b734828254.png 1500w"
                      sizes="(max-width: 320px) 90vw, (max-width: 480px) 85vw, (max-width: 768px) 80vw, (max-width: 1200px) 60vw, 50vw"
                      src="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/gemma-3n-ai-studio.png"
                      alt=""  
@@ -625,7 +609,7 @@ The sample app is minimal, somewhat outdated, and not as polished as newer offer
         
         <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
             <a href="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio.png" target="_blank">
-                <img srcset="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hucb095717916dc5310ad011c7e75222bd_1263277_320x0_resize_box_3.png 320w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hucb095717916dc5310ad011c7e75222bd_1263277_480x0_resize_box_3.png 480w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hucb095717916dc5310ad011c7e75222bd_1263277_768x0_resize_box_3.png 768w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hucb095717916dc5310ad011c7e75222bd_1263277_1024x0_resize_box_3.png 1024w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hucb095717916dc5310ad011c7e75222bd_1263277_1500x0_resize_box_3.png 1500w"
+                <img srcset="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hu_46222350b74791fc.png 320w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hu_bd4950d87e3edb55.png 480w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hu_e8ffce3e394bcf7f.png 768w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hu_f4e28ef8bdbfd073.png 1024w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio_hu_540ec7482748296f.png 1500w"
                      sizes="(max-width: 320px) 90vw, (max-width: 480px) 85vw, (max-width: 768px) 80vw, (max-width: 1200px) 60vw, 50vw"
                      src="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-android-app-AndroidStudio.png"
                      alt=""  
@@ -798,16 +782,16 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
 <ol>
 <li><strong>Install the MediaPipeTasksGenai library</strong>  - Add the necessary dependencies to your project using CocoaPods. Add the following to your <code>Podfile</code>:</li>
 </ol>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>target <span style="color:#f1fa8c">&#39;MyLlmInferenceApp&#39;</span> <span style="color:#ff79c6">do</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>target <span style="color:#f1fa8c">&#39;MyLlmInferenceApp&#39;</span> <span style="color:#ff79c6">do</span>
 </span></span><span style="display:flex;"><span>  use_frameworks!
 </span></span><span style="display:flex;"><span>  pod <span style="color:#f1fa8c">&#39;MediaPipeTasksGenAI&#39;</span>
 </span></span><span style="display:flex;"><span>  pod <span style="color:#f1fa8c">&#39;MediaPipeTasksGenAIC&#39;</span>
@@ -823,9 +807,9 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
 <p><strong>Initialize the LLM Inference task</strong>  - Configure the task with your model path and desired options. You can adjust the model parameters like <strong>maxTokens</strong>, <strong>topk</strong>, <strong>temperature</strong>, <strong>randomSeed</strong> and path to the model file as <strong>modelPath</strong>.</p>
 </li>
 </ol>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -839,7 +823,7 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">MediaPipeTasksGenai</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">MediaPipeTasksGenai</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">modelPath</span> = Bundle.main.path(forResource: <span style="color:#f1fa8c">&#34;small-model&#34;</span>, ofType: <span style="color:#f1fa8c">&#34;bin&#34;</span>)
 </span></span><span style="display:flex;"><span>
@@ -856,9 +840,9 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
 </div><ol start="4">
 <li><strong>Run the task and generate responses</strong>  - Use the <code>generateResponse(inputText:)</code> method for single responses, or <code>generateResponseAsync(inputText:)</code> for streaming:</li>
 </ol>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -872,17 +856,17 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#6272a4">// For single response</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#6272a4">// For single response</span>
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">result</span> = <span style="color:#ff79c6">try</span> LlmInference.generateResponse(inputText: inputPrompt)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// For streaming:</span>
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">resultStream</span> = LlmInference.generateResponseAsync(inputText: inputPrompt)
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">do</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">for</span> <span style="color:#ff79c6">try</span> await partialResult <span style="color:#ff79c6">in</span> resultStream {
-</span></span><span style="display:flex;"><span>    print(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\(</span>partialResult<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\(</span>partialResult<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>} <span style="color:#ff79c6">catch</span> {
-</span></span><span style="display:flex;"><span>  print(<span style="color:#f1fa8c">&#34;Response error: </span><span style="color:#f1fa8c">\(</span>error<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Response error: </span><span style="color:#f1fa8c">\(</span>error<span style="color:#f1fa8c">)</span><span style="color:#f1fa8c">&#34;</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
 </div>
@@ -905,7 +889,7 @@ In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, an
         
         <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
             <a href="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode.png" target="_blank">
-                <img srcset="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hucb095717916dc5310ad011c7e75222bd_1780945_320x0_resize_box_3.png 320w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hucb095717916dc5310ad011c7e75222bd_1780945_480x0_resize_box_3.png 480w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hucb095717916dc5310ad011c7e75222bd_1780945_768x0_resize_box_3.png 768w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hucb095717916dc5310ad011c7e75222bd_1780945_1024x0_resize_box_3.png 1024w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hucb095717916dc5310ad011c7e75222bd_1780945_1500x0_resize_box_3.png 1500w"
+                <img srcset="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hu_6799c6d10db31d02.png 320w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hu_b7f17802dbc3c887.png 480w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hu_af921e3960dc2013.png 768w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hu_9664b0fed522cda0.png 1024w, https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode_hu_1e929b1a07f82f0d.png 1500w"
                      sizes="(max-width: 320px) 90vw, (max-width: 480px) 85vw, (max-width: 768px) 80vw, (max-width: 1200px) 60vw, 50vw"
                      src="https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/mediapipe-ios-app-xcode.png"
                      alt=""  
@@ -930,24 +914,24 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
 <ul>
 <li><strong>Install the package:</strong></li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    npm install @mediapipe/tasks-genai
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    npm install @mediapipe/tasks-genai
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Or use the CDN:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>	<span style="color:#ff79c6">&lt;script</span> 
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>	<span style="color:#ff79c6">&lt;script</span> 
 </span></span><span style="display:flex;"><span>        <span style="color:#50fa7b">src=</span><span style="color:#f1fa8c">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/tasks-genai/genai_bundle.cjs&#34;</span> 
 </span></span><span style="display:flex;"><span>        <span style="color:#50fa7b">crossorigin=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span><span style="color:#ff79c6">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&lt;/script&gt;</span>
@@ -961,9 +945,9 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
 <p><strong>Initialize the task:</strong> Load the task (eg: LLM inference) with its corresponding options.</p>
 </li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -975,7 +959,7 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> genai <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> FilesetResolver.forGenAiTasks(
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> genai <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> FilesetResolver.forGenAiTasks(
 </span></span><span style="display:flex;"><span>	  <span style="color:#f1fa8c">&#34;https://cdn.jsdelivr.net/npm/@mediapipe/tasks-genai@latest/wasm&#34;</span>
 </span></span><span style="display:flex;"><span>	);
 </span></span><span style="display:flex;"><span>	llmInference <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> LlmInference.createFromOptions(genai, {
@@ -990,9 +974,9 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
 </div><ul>
 <li><strong>Run inference:</strong> Use the <code>generateResponse</code> function on the <code>llmInfernce</code> object as single response or streaming.</li>
 </ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -1004,11 +988,11 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#6272a4">// single responce
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>	<span style="color:#ff79c6">const</span> response <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> llmInference.generateResponse(inputPrompt);
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#6272a4">// single responce
+</span></span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">const</span> response <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> llmInference.generateResponse(inputPrompt);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// or stream the output
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>	llmInference.generateResponse(
+</span></span></span><span style="display:flex;"><span>	llmInference.generateResponse(
 </span></span><span style="display:flex;"><span>        inputPrompt,
 </span></span><span style="display:flex;"><span>        (partialResult, done) =&gt; {
 </span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;output&#39;</span>).textContent <span style="color:#ff79c6">+=</span> partialResult;
@@ -1183,8 +1167,14 @@ See the full details at <a href="https://ai.google.dev/edge/mediapipe/solutions/
   </div>
   <div class="pure-u-10-24">
     
+    <nav class="next">
+      <a href="https://annjose.com/post/agentic-coding-basics/">Agentic Coding: The Basic Concepts</a>
+    </nav>
+    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://annjose.com/post/agentic-coding-basics/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>next-js on Reflections</title>
+    <title>Next-Js on Reflections</title>
     <link>https://annjose.com/tags/next-js/</link>
-    <description>Recent content in next-js on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Next-Js on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Fri, 22 Mar 2024 10:25:12 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/how-to-customize-nextauth-session/</link>
       <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
       <guid>https://annjose.com/post/how-to-customize-nextauth-session/</guid>
-      <description>Of late, I have been diving into Next.js and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use NextAuth, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well.</description>
+      <description>&lt;p&gt;Of late, I have been diving into &lt;a href=&#34;https://nextjs.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Next.js&lt;/a&gt; and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use &lt;a href=&#34;https://next-auth.js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NextAuth&lt;/a&gt;, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well. In this post, I&amp;rsquo;ll be sharing those experiences and learnings.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

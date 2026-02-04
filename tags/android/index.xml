@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on Reflections</title>
+    <title>Android on Reflections</title>
     <link>https://annjose.com/tags/android/</link>
-    <description>Recent content in android on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Android on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 May 2017 03:37:57 -0700</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://annjose.com/post/GoogleIO-2017/</link>
       <pubDate>Tue, 23 May 2017 03:37:57 -0700</pubDate>
       <guid>https://annjose.com/post/GoogleIO-2017/</guid>
-      <description>I had the wonderful opportunity to attend Google I/O last week and absolutely loved it. I learned a lot of things during the three days. Btw, it was tiring too with the continuous sessions and the sunny Sun.&#xA;This post is an attempt to share the main highlights and the announcements that I found interesting. If you attended the event or watched the sessions online, let me know if there were more things that you found interesting.</description>
+      <description>&lt;p&gt;I had the wonderful opportunity to attend Google I/O last week and absolutely loved it. I learned a lot of things during the three days. Btw, it was tiring too with the continuous sessions and the sunny Sun.&lt;/p&gt;&#xA;&lt;p&gt;This post is an attempt to share the main highlights and the announcements that I found interesting. If you attended the event or watched the sessions online, let me know if there were more things that you found interesting.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

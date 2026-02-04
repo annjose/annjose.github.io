@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on Reflections</title>
+    <title>Hugo on Reflections</title>
     <link>https://annjose.com/topics/hugo/</link>
-    <description>Recent content in hugo on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Hugo on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Tue, 30 Jun 2020 14:09:57 -0700</lastBuildDate>
@@ -14,21 +14,21 @@
       <link>https://annjose.com/post/upgrade-hugo/</link>
       <pubDate>Tue, 30 Jun 2020 14:09:57 -0700</pubDate>
       <guid>https://annjose.com/post/upgrade-hugo/</guid>
-      <description>Today I upgraded my blog engine Hugo from version 0.30.0 to 0.73.0. It&amp;rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it.</description>
+      <description>&lt;p&gt;Today I upgraded my &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog engine Hugo&lt;/a&gt; from version 0.30.0 to 0.73.0. It&amp;rsquo;s been a while since I upgraded, so I was not sure how easy or difficult it will be. The upgrade completed quickly, but my entire home page (running locally) went blank right after the upgrade. With a good amount of googling, reading through the documentation and a few tweaks in my folder structure, I was able to bring it back up and running and published it. This post is to share my learnings from the experience hoping that it may be useful to somebody else. &lt;em&gt;Learn Teach Learn&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Display mathematical expressions in blog</title>
       <link>https://annjose.com/post/display-math-expressions-in-hugo/</link>
       <pubDate>Sat, 24 Sep 2016 07:49:00 -0700</pubDate>
       <guid>https://annjose.com/post/display-math-expressions-in-hugo/</guid>
-      <description>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using OneNote Equation tool earlier, but I wanted to do the same in my blog posts.</description>
+      <description>&lt;p&gt;As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using &lt;a href=&#34;https://support.office.com/en-us/article/Insert-a-mathematical-equation-in-OneNote-2016-for-Mac-08969f84-ed02-4baf-8a77-7ab3c1e26afe&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OneNote Equation tool&lt;/a&gt; earlier, but I wanted to do the same in my blog posts. After trying many options, here is what worked for me.&lt;/p&gt;</description>
     </item>
     <item>
       <title>First post from Hugo</title>
       <link>https://annjose.com/post/first-post-from-hugo/</link>
       <pubDate>Mon, 27 Apr 2015 00:49:45 -0700</pubDate>
       <guid>https://annjose.com/post/first-post-from-hugo/</guid>
-      <description>This is my first blog post created by Hugo, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.&#xA;I have set this up such that I publish the content to GitHub pages, so the publish workflow is as simple as writing some Markdown and a git push. This is a good tutorial on how to do this.</description>
+      <description>&lt;p&gt;This is my first blog post created by &lt;a href=&#34;http://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;, a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.&lt;/p&gt;&#xA;&lt;p&gt;I have set this up such that I publish the content to &lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub pages&lt;/a&gt;, so the publish workflow is as simple as writing some Markdown and a git push. &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;This is a good tutorial&lt;/a&gt; on how to do this.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

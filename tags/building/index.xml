@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>building on Reflections</title>
+    <title>Building on Reflections</title>
     <link>https://annjose.com/tags/building/</link>
-    <description>Recent content in building on Reflections</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Building on Reflections</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2025. All rights reserved.</copyright>
     <lastBuildDate>Sun, 15 Dec 2024 12:15:21 -0700</lastBuildDate>
@@ -14,35 +14,35 @@
       <link>https://annjose.com/post/chrome-side-panel/</link>
       <pubDate>Sun, 15 Dec 2024 12:15:21 -0700</pubDate>
       <guid>https://annjose.com/post/chrome-side-panel/</guid>
-      <description>Of late, I have been building and learning about browser extensions for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.&#xA;The Chrome side panel It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens.</description>
+      <description>&lt;p&gt;Of late, I have been building and &lt;a href=&#34;https://annjose.com/post/browser-extn-intro/&#34;&gt;learning about browser extensions&lt;/a&gt; for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-chrome-side-panel&#34;&gt;The Chrome side panel&lt;/h2&gt;&#xA;&lt;p&gt;It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens. It has a consistent layout and behavior across all websites. It was first introduced in Chrome in May 2023.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Browser Extensions: Part 2 - Advanced Concepts</title>
       <link>https://annjose.com/post/browser-extn-adv/</link>
       <pubDate>Thu, 05 Sep 2024 14:24:13 -0700</pubDate>
       <guid>https://annjose.com/post/browser-extn-adv/</guid>
-      <description>This is the second part of my blog series on browser extensions. Here, we&amp;rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading Browser Extensions: Part 1 - Introduction before tackling these more complex topics.&#xA;How to use TypeScript in browser extensions By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic.</description>
+      <description>&lt;p&gt;This is the second part of my blog series on browser extensions. Here, we&amp;rsquo;ll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading &lt;a href=&#34;https://annjose.com/post/browser-extn-intro/&#34;&gt;Browser Extensions: Part 1 - Introduction&lt;/a&gt; before tackling these more complex topics.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-use-typescript-in-browser-extensions&#34;&gt;How to use TypeScript in browser extensions&lt;/h2&gt;&#xA;&lt;p&gt;By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic. You can add TypeScript support to the extension project, but how do you do it? Chrome docs mention this as a one-liner as follows:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Browser Extensions: Part 1 - Introduction</title>
       <link>https://annjose.com/post/browser-extn-intro/</link>
       <pubDate>Wed, 04 Sep 2024 10:12:32 -0700</pubDate>
       <guid>https://annjose.com/post/browser-extn-intro/</guid>
-      <description>Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to Browser extensions.&#xA;In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.</description>
+      <description>&lt;p&gt;Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to &lt;strong&gt;Browser extensions&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - &lt;a href=&#34;https://annjose.com/post/browser-extn-adv/&#34;&gt;Browser Extensions: Part 2 - Advanced Concepts&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to customize session data in NextAuth</title>
       <link>https://annjose.com/post/how-to-customize-nextauth-session/</link>
       <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
       <guid>https://annjose.com/post/how-to-customize-nextauth-session/</guid>
-      <description>Of late, I have been diving into Next.js and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use NextAuth, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well.</description>
+      <description>&lt;p&gt;Of late, I have been diving into &lt;a href=&#34;https://nextjs.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Next.js&lt;/a&gt; and absolutely loving it. I wanted to put my learnings to practice, so I started building an app to solve a personal pain point. Along the way, I wanted to add authentication for my app and decided to use &lt;a href=&#34;https://next-auth.js.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NextAuth&lt;/a&gt;, the go-to auth library for Next.js. Overall, it was a great experience, with a few humps along the way, but in the end, it all worked out well. In this post, I&amp;rsquo;ll be sharing those experiences and learnings.&lt;/p&gt;</description>
     </item>
     <item>
       <title>From Learning to Building</title>
       <link>https://annjose.com/post/learning-to-building/</link>
       <pubDate>Sat, 27 Jan 2024 20:13:13 -0700</pubDate>
       <guid>https://annjose.com/post/learning-to-building/</guid>
-      <description>It&amp;rsquo;s been a while since I last shared an update on my Reimagine journey that started three months ago. Initially, I used to share my progress every week and it helped me build momentum during the early stages. But after some time, this weekly ritual became tedious - sometimes taking up an entire day for a single post. So I decided to share updates based on significant milestones rather than tying them to specific points in time.</description>
+      <description>&lt;p&gt;It&amp;rsquo;s been a while since I last shared an update on my &lt;a href=&#34;https://annjose.com/tags/new-beginning/&#34;&gt;Reimagine journey&lt;/a&gt; that started three months ago. Initially, I used to share my progress every week and it helped me build momentum during the early stages. But after some time, this weekly ritual became tedious - sometimes taking up an entire day for a single post. So I decided to share updates based on significant &lt;strong&gt;milestones&lt;/strong&gt; rather than tying them to specific &lt;strong&gt;points in time&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

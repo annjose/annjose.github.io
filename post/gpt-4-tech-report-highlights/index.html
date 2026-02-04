@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="My key insights and takeaways from the GPT-4 Technical Report">
-  <meta name="generator" content="Hugo 0.121.1">
+  <meta name="generator" content="Hugo 0.155.0">
 
   <title>GPT-4 Technical Report Highlights &middot; Reflections</title>
 
@@ -133,10 +133,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://bsky.app/profile/annjose.com" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
-    </li>
-    
 
     
 
@@ -171,10 +167,6 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/annjose" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
-    </li>
-    
 
     
 
@@ -183,17 +175,9 @@
     
 
     
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=annjose" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
-    </li>
-    
 
     
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/annjose" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
-    </li>
     
 
     
@@ -289,50 +273,50 @@
 <h2 id="capabilities">Capabilities</h2>
 <p>GPT-4 was tested on a diverse set of benchmarks - simulating exams that were designed for humans. Exam questions included multiple-choice and free-response questions. Some questions included images as well. The model was not given specific training for these exams. The model saw a small set of these exams during training. But they tested with <strong>two variants</strong> - one with these questions included and the other with these questions removed, and they took the lowest of the two scores. This prevents data contamination issues where the test data appears in the training set.</p>
 <table>
-<thead>
-<tr>
-<th>Exam Type</th>
-<th>GPT-4</th>
-<th>GPT-3.5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Uniform Bar Exam</td>
-<td>90th (198/400)</td>
-<td>10th (213/400)</td>
-</tr>
-<tr>
-<td>SAT</td>
-<td>93rd</td>
-<td>87th</td>
-</tr>
-<tr>
-<td>GRE (Quantitative)</td>
-<td>80th</td>
-<td>25th</td>
-</tr>
-<tr>
-<td>AP Calc BC</td>
-<td>4/5</td>
-<td>1/5</td>
-</tr>
-<tr>
-<td>AP Physics 2</td>
-<td>4/5</td>
-<td>3/5</td>
-</tr>
-<tr>
-<td>Leetcode Easy</td>
-<td>31/41</td>
-<td>12/41</td>
-</tr>
-<tr>
-<td>Leetcode Hard</td>
-<td>3/45</td>
-<td>0/</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Exam Type</th>
+          <th>GPT-4</th>
+          <th>GPT-3.5</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Uniform Bar Exam</td>
+          <td>90th (198/400)</td>
+          <td>10th (213/400)</td>
+      </tr>
+      <tr>
+          <td>SAT</td>
+          <td>93rd</td>
+          <td>87th</td>
+      </tr>
+      <tr>
+          <td>GRE (Quantitative)</td>
+          <td>80th</td>
+          <td>25th</td>
+      </tr>
+      <tr>
+          <td>AP Calc BC</td>
+          <td>4/5</td>
+          <td>1/5</td>
+      </tr>
+      <tr>
+          <td>AP Physics 2</td>
+          <td>4/5</td>
+          <td>3/5</td>
+      </tr>
+      <tr>
+          <td>Leetcode Easy</td>
+          <td>31/41</td>
+          <td>12/41</td>
+      </tr>
+      <tr>
+          <td>Leetcode Hard</td>
+          <td>3/45</td>
+          <td>0/</td>
+      </tr>
+  </tbody>
 </table>
 <p>These capabilities on exams seem to be because of the pre-training process and not from RLHF.</p>
 <h3 id="visual-inputs">Visual Inputs</h3>
