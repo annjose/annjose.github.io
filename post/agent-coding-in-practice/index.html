@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="How I build features with AI agents after two years of agentic coding">
+  <meta name="generator" content="Hugo 0.155.0">
+
+  <title>Agentic Coding In Practice &middot; Reflections</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  
+  <script src="https://kit.fontawesome.com/3e898cf239.js" crossorigin="anonymous"></script>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fas fa-pen-to-square fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/LLM"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fas fa-magnifying-glass fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fas fa-arrow-up-right-dots fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/web-development"><i class='fas fa-globe fa-fw'></i>Web Development</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fas fa-mobile-screen fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fas fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2025. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Agentic Coding In Practice</h1>
+  <h2>How I build features with AI agents after two years of agentic coding</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Feb 2026</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://annjose.com/topics/AI">AI</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/AI">AI</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/llm">llm</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://annjose.com/tags/coding-assistants">coding-assistants</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>In the <a href="https://annjose.com/post/agentic-coding-basics/">last post</a>, I explained the basic concepts of agentic coding - the terminology, the constructs, when to use what. It was mostly theoretical. This post is the practical follow-up that describes how I actually build features with AI agents day to day.</p>
+<p>I hesitate to call these &lsquo;best practices&rsquo; because in this fast moving space, it just means &lsquo;what someone discovered last week&rsquo;. So, think of this as a field report: here&rsquo;s what works for me today, and why.</p>
+<h3 id="how-i-got-here">How I got here</h3>
+<p>My coding workflow has evolved over the last two years - from chatting with Claude in a browser window to running agents that write, test and deploy code with minimal hand-holding.</p>
+<p>It happened across a series of projects, each one pushing me a little further:</p>
+<ul>
+<li><strong><a href="https://keep-seek.vercel.app/login" target="_blank" rel="noopener">KeepSeek</a></strong> - I wrote most of the code
+myself. Used Claude in the browser to troubleshoot issues and tweak UI. Mostly
+manual.</li>
+<li><strong><a href="https://ann-dailybits.netlify.app/" target="_blank" rel="noopener">Daily Bits</a></strong> - Built with Astro using
+a template. Started doing chat-style coding for some features.</li>
+<li><strong>BeastMode</strong> - A fitness tracker I built for myself through Copilot AI in VS Code - mostly &lsquo;ask&rsquo; mode, some features in agent mode, but always in the IDE.</li>
+<li><strong><a href="https://my-pomodoro-flow.netlify.app/" target="_blank" rel="noopener">Pomodoro Flow</a></strong> - First fully
+vibe-coded app that gives a pomodoro timer app. Prompt, accept, iterate.</li>
+<li><strong>Travelogue</strong> - A private app for 15 friends from a trek in the Himalayas.
+Low stakes, so I let AI take the driver&rsquo;s seat. I was the coach, not the coder. This was a turning point for me.</li>
+<li><strong><a href="https://app.hncompanion.com/" target="_blank" rel="noopener">HN Companion</a></strong> - Steady-state agentic coding. We learned and applied most of the best practices shared here - planned every big feature, tracked tasks in <a href="https://linear.app/" target="_blank" rel="noopener">Linear</a>, steered the AI efficiently, and reviewed the code along the way.</li>
+</ul>
+<h3 id="lessons-along-the-way">Lessons along the way</h3>
+<p>Across these projects, I&rsquo;ve made mistakes, over-trusted the AI, under-trusted it, and slowly found a rhythm that balances shipping speed with code quality. Here&rsquo;s how my thinking changed:</p>
+
+
+
+<table class="pure-table pure-table-striped">
+  <thead><tr>
+    
+      <th>I used to... </th>
+    
+      <th> Now I...</th>
+    
+  </thead></tr>
+  <tbody>
+  
+    <tr>
+      
+      
+        <td>Read every line of AI-generated code </td>
+      
+        <td> Do targeted review of the parts that matter</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Use the biggest model for everything </td>
+      
+        <td> Match the model to the task - Opus for features, Sonnet for fixes, I do the trivial stuff myself</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Give vague instructions like &#39;build this feature&#39; </td>
+      
+        <td> State the goal, constraints and what &#39;done&#39; looks like</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Let the agent hold the plan in its head </td>
+      
+        <td> Make it write the plan to a file I can review and resume from</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Start coding immediately </td>
+      
+        <td> Start with a spec and plan mode</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Paste screenshots for UI issues </td>
+      
+        <td> Give it the HTML instead (cheaper, faster)</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Work with one agent at a time </td>
+      
+        <td> Run multiple agents on the same feature and have them review each other</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>End sessions abruptly </td>
+      
+        <td> Ask the agent to update AGENTS.md before closing</td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+<h3 id="context-context-context">Context, context, context</h3>
+<p>One thing ties all of these shifts together: in agentic mode, the LLM&rsquo;s context
+window fills up fast. Bigger context means higher cost, slower responses and worse
+output. Most of the workflow below comes back to this - keep the context small,
+the instructions clear, and the tools simple. Here&rsquo;s how I do it.</p>
+<p>One more thing: AI agents are a huge productivity boost, but if you give
+them free rein and turn off your brain, they become massive slop machines.
+As Armin Ronacher <a href="https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/" target="_blank" rel="noopener">puts it</a>,</p>
+<blockquote>
+<p>it encourages mental disengagement - when you stop thinking like an engineer,
+quality drops, time gets wasted and you don&rsquo;t understand and learn.</p>
+</blockquote>
+<h3 id="step-1-start-with-a-solid-agentsmd">Step 1: Start with a solid AGENTS.md</h3>
+<p>This is the document that tells the agent everything it needs to know about
+your project - tech stack, coding conventions, how to run tests, what to
+avoid. Think of it as the onboarding doc you&rsquo;d give a new engineer joining
+your team.</p>
+<p>Most tools have their own version - CLAUDE.md, CODEX.md. I keep a single
+AGENTS.md and have the tool-specific files reference it. One source of truth.</p>
+<p>What goes in mine: project overview and architecture, build/test/run commands,
+coding conventions, pointers to other docs (eg: &ldquo;For Summary panel UI spec, see docs/summary-panel-spec.md&rdquo;), and common mistakes the agent has made before.</p>
+<p>That last one is key. Every time the agent makes a mistake that&rsquo;s likely to
+recur - say, the rendering of unicode characters in iOS browsers - I ask it to add
+a note to AGENTS.md before closing the session. The file gets smarter over
+time.</p>
+<p>A good test: start a fresh session and say &ldquo;read @AGENTS.md and tell me what
+you understand about this project.&rdquo; If the summary is wrong, your file needs work.</p>
+<h3 id="step-2-decide-your-approach">Step 2: Decide your approach</h3>
+<p>Not every task needs the same model or the same level of agent involvement.
+Before I open an agent, I think about the task for a minute.</p>
+<ul>
+<li>
+<p><strong>New feature with real complexity</strong> - Opus, Codex or a comparable frontier model,
+in plan mode.</p>
+</li>
+<li>
+<p><strong>Smaller feature or well-defined change</strong> - Sonnet, Gemini, or GPT-4.1 in Copilot. I also tried the open weights model <a href="https://ollama.com/library/qwen3-coder-next" target="_blank" rel="noopener">qwen3-coder-next model</a> through <a href="https://opencode.ai/" target="_blank" rel="noopener">OpenCode</a>. It worked well for the first try.</p>
+</li>
+<li>
+<p><strong>Bug fix or trivial edit</strong> - GitHub Copilot in VS Code and autocomplete, or just type it myself. Joy of Coding!</p>
+</li>
+</ul>
+<p>I used to use Opus for everything, including things a lighter model handles
+fine. That burns credits fast without better results. Matching model to task
+is the easiest way to manage cost and context.</p>
+<p>For big features or refactors, I sometimes run two agents on the same task
+using git worktrees and have them review each other&rsquo;s output. We used this
+when redesigning the summary panel in HN Companion - it caught things a
+single pass would have missed. But it&rsquo;s tedious, so I save it for work that
+justifies the effort.</p>
+<h3 id="step-3-plan-with-the-agent">Step 3: Plan with the agent</h3>
+<p>For anything non-trivial - a big feature, an unfamiliar part of the codebase - I start in plan mode. I tell the agent what I want
+to build and ask it to come up with a plan - not code. This is the most
+important step and the one I skipped for too long.</p>
+<p>Agents are bad at keeping track of a multi-step plan in their context. So I
+run the agent in &lsquo;plan mode&rsquo; and at the end of it,
+ask it to write the plan to a file <strong>PLAN.md</strong> in the repo.
+Now I can review it, edit it manually, or ask the agent to revise it. As
+implementation progresses, the agent updates the plan. If I hit my credit
+limit mid-session, I can come back later and say &ldquo;read plan.md and resume
+from the next step.&rdquo; No context lost.</p>
+<p>One thing that surprised me: talking to the agent through voice mode produces
+better plans than typing. You naturally share more context about what you
+want when you&rsquo;re speaking - the constraints, the edge cases, the &ldquo;oh and
+also&rdquo; details that you&rsquo;d skip when typing because it feels like too much
+effort.</p>
+<p>This is also where context management matters most. Early on, for any UI
+issue, I&rsquo;d take a screenshot and give it to the agent. That burns through
+tokens fast. I learned from Armin Ronacher&rsquo;s
+<a href="https://lucumr.pocoo.org/2025/6/12/agentic-coding/" target="_blank" rel="noopener">agentic coding recommendations</a>
+that we should optimize for smaller context and avoid screenshots if possible. So I started giving the agent the HTML instead, which is cheaper and maybe more useful in some contexts.</p>
+<p>Be specific about what &ldquo;done&rdquo; looks like. Instead of &ldquo;build a settings page,&rdquo;
+say &ldquo;current state: no user preferences. Desired state: a settings page
+where users can toggle dark mode and set notification frequency. Mobile
+responsive. Use the existing design system components.&rdquo; The clearer the
+success criteria, the better the agent can verify its own work.</p>
+<h3 id="step-4-implement">Step 4: Implement</h3>
+<p>Once the plan looks right, I ask the agent to execute it. Nothing fancy - just &ldquo;implement step 1 from the plan.&rdquo;</p>
+<p>The main discipline is committing code between steps. If step 3 of 5 goes
+sideways, I want to roll back to the end of step 2, not start over. Git is
+your safety net, use it often.</p>
+<p>For bigger features, I sometimes run multiple agents in parallel. Two agents
+implement the same feature on separate git worktrees, then I ask each to
+review the other&rsquo;s work. This sounds excessive, but it catches architectural
+differences and edge cases that a single agent misses. We used this approach
+for the HN Companion redesign and it was worth the extra effort. For everyday
+features, a single agent is fine.</p>
+<h3 id="step-5-test">Step 5: Test</h3>
+<p>This is my weakest area - I&rsquo;ll be honest. I haven&rsquo;t built a full test harness
+into my agentic workflow yet. But here&rsquo;s what I want to try:</p>
+<p><strong>Unit tests</strong> - Ask the agent to write tests for the code it just produced.
+It&rsquo;s decent at this, especially when the success criteria from the plan are
+clear. The thing to watch for: agents will sometimes write tests that pass
+by definition - asserting what the code does rather than what it should do.
+Review the tests, not just whether they pass.</p>
+<p><strong>Visual testing</strong> - For UI work, use the Claude Chrome extension to ask
+questions directly in the browser&rsquo;s developer tools. Take a screenshot,
+paste it in, ask &ldquo;does this match the design I described?&rdquo;</p>
+<p><strong>Security review</strong> - Use a subagent with a focused
+role for sensitive code. Something like: &ldquo;You are a senior security engineer. Review this code
+for injection vulnerabilities, auth flaws, secrets in code, and insecure
+data handling. Give specific line references.&rdquo; Isolating this into a
+subagent keeps it out of the main session&rsquo;s context.</p>
+<p>I want to try <a href="https://github.com/microsoft/playwright-mcp" target="_blank" rel="noopener">Playwright MCP</a>
+for browser automation but haven&rsquo;t got there yet. If you&rsquo;ve set this up,
+I&rsquo;d love to hear how it went.</p>
+<h3 id="step-6-close-the-session-properly">Step 6: Close the session properly</h3>
+<p>This is a small habit that pays off over time. Before I end a session, I ask
+the agent to do two things:</p>
+<ol>
+<li><strong>Update the plan</strong> - mark what&rsquo;s done, note what&rsquo;s remaining, flag
+anything that came up during implementation.</li>
+<li><strong>Update AGENTS.md</strong> - if we hit a recurring issue or discovered a
+pattern, add it. For example, when we figured out the fix for unicode
+rendering on iOS, I had the agent add that to AGENTS.md so neither of
+us would have to debug it again.</li>
+</ol>
+<p>This turns every session into a small investment in the next one. The
+project docs get better with each cycle, and the agent starts with more
+context next time instead of starting from zero.</p>
+<h3 id="whats-next">What&rsquo;s next</h3>
+<p>This workflow is a snapshot - it&rsquo;ll probably look different in six months.
+The tools are getting better fast, and I&rsquo;m still figuring out pieces of it,
+especially around testing and multi-agent orchestration.</p>
+<p>The biggest shift for me hasn&rsquo;t been about speed, though that&rsquo;s real. It&rsquo;s
+that I now attempt things I wouldn&rsquo;t have started before because they seemed
+not worth the time. Build it in a couple of hours, see if it resonates,
+move on. That changes what you&rsquo;re willing to try.</p>
+<p>While my workflow still centers on steering agents through code, some teams
+are pushing much further. <a href="https://factory.strongdm.ai/" target="_blank" rel="noopener">StrongDM</a>&rsquo;s AI team built what they call a
+&ldquo;Software Factory&rdquo; - non-interactive development where specs and scenarios
+drive agents that write code, run test harnesses, and converge without
+human review.</p>
+<p>For a glimpse of where this is heading, look at their
+<a href="https://github.com/strongdm/attractor" target="_blank" rel="noopener">Attractor repo</a> - 2000 lines of
+pure spec, no code, that generates a unified LLM API. Spec is the product,
+code is the byproduct. I&rsquo;m not there yet, but it&rsquo;s a clear signal of a potential future.</p>
+<p>If you&rsquo;re doing agentic coding, I&rsquo;d love to compare notes - what&rsquo;s working
+for you, what isn&rsquo;t. This space moves fast enough that we all have something
+to teach each other.</p>
+<h3 id="references-and-further-reading">References and further reading</h3>
+<p>These are the articles that shaped my thinking. All from practitioners,
+all worth your time.</p>
+<ul>
+<li><a href="https://lucumr.pocoo.org/2025/6/12/agentic-coding/" target="_blank" rel="noopener">Agentic Coding Recommendations</a>
+<ul>
+<li>Armin Ronacher. The most practical piece I&rsquo;ve read. Covers tool design,
+language choice, and why stable ecosystems matter for agents.</li>
+</ul>
+</li>
+<li><a href="https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/" target="_blank" rel="noopener">Agentic Coding Things That Didn&rsquo;t Work</a>
+<ul>
+<li>Armin Ronacher again. Equally valuable for what to avoid.</li>
+</ul>
+</li>
+<li><a href="https://addyosmani.com/blog/ai-coding-workflow/" target="_blank" rel="noopener">My LLM Coding Workflow Going Into 2026</a>
+<ul>
+<li>Addy Osmani. Detailed workflow covering iterative development, context
+management and testing.</li>
+</ul>
+</li>
+<li><a href="https://addyo.substack.com/p/the-80-problem-in-agentic-coding" target="_blank" rel="noopener">The 80% Problem in Agentic Coding</a>
+<ul>
+<li>Addy Osmani. Honest look at the tradeoffs - more output, but more
+review overhead too.</li>
+</ul>
+</li>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" rel="noopener">Claude Code: Best Practices for Agentic Coding</a>
+<ul>
+<li>Anthropic&rsquo;s official guide. The CLAUDE.md as a living document idea
+came from here.</li>
+</ul>
+</li>
+<li><a href="https://www.thoughtworks.com/en-us/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices" target="_blank" rel="noopener">Spec-Driven Development</a>
+<ul>
+<li>Thoughtworks. Good framing of where specs fit in the agentic workflow.</li>
+</ul>
+</li>
+<li><a href="https://simonwillison.net/2026/Feb/7/software-factory/" target="_blank" rel="noopener">How StrongDM&rsquo;s AI Team Builds Software Without Looking at the Code</a>
+<ul>
+<li>Simon Willison&rsquo;s write-up on the spec-only approach. The extreme end
+of where this is heading.</li>
+</ul>
+</li>
+<li><a href="https://matsen.fhcrc.org/general/2025/10/30/agentic-coding-principles.html" target="_blank" rel="noopener">Agentic Coding from First Principles</a>
+<ul>
+<li>Practical advice on CLAUDE.md, subagents, and context management.</li>
+</ul>
+</li>
+<li><a href="https://addyosmani.com/blog/agentic-engineering/" target="_blank" rel="noopener">Agentic Engineering</a>
+<ul>
+<li>Addy Osmani on why the distinction between vibe coding and disciplined
+agentic work matters.</li>
+</ul>
+</li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://annjose.com/post/agentic-coding-basics/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://annjose.com/post/agentic-coding-basics/">Agentic Coding: The Basic Concepts</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+
+<script 
+    id="counterscale-script" 
+    data-site-id="annjose-blog"
+    src="https://counterscale.annjose.workers.dev/tracker.js" 
+    defer>
+</script>
+
+</body>
+</html>
+
