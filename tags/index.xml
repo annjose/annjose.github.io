@@ -10,10 +10,10 @@
     <lastBuildDate>Sat, 07 Feb 2026 16:23:08 -0700</lastBuildDate>
     <atom:link href="https://annjose.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI</title>
-      <link>https://annjose.com/tags/AI/</link>
+      <title>Ai</title>
+      <link>https://annjose.com/tags/ai/</link>
       <pubDate>Sat, 07 Feb 2026 16:23:08 -0700</pubDate>
-      <guid>https://annjose.com/tags/AI/</guid>
+      <guid>https://annjose.com/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -164,16 +164,9 @@
       <description></description>
     </item>
     <item>
-      <title>Next.js</title>
-      <link>https://annjose.com/tags/next.js/</link>
-      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
-      <guid>https://annjose.com/tags/next.js/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Next-Js</title>
       <link>https://annjose.com/tags/next-js/</link>
-      <pubDate>Fri, 22 Mar 2024 10:25:12 -0700</pubDate>
+      <pubDate>Wed, 05 Jun 2024 12:42:25 -0700</pubDate>
       <guid>https://annjose.com/tags/next-js/</guid>
       <description></description>
     </item>

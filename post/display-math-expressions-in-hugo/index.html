@@ -88,7 +88,7 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://annjose.com/tags/LLM"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+          <a class="pure-menu-link" href="https://annjose.com/tags/llm"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
       
         </li>
       
@@ -265,6 +265,7 @@
   
 
 </div>
+
 
   <p>As part of my Machine Learning course, I learned a useful trick which I will share hoping that it may help someone or I myself can refer to it later. The problem at hand was how to display the mathematical expressions that calculate cost function, gradient descent etc. in a blog or web page. In OneNote, you can do it using <a href="https://support.office.com/en-us/article/Insert-a-mathematical-equation-in-OneNote-2016-for-Mac-08969f84-ed02-4baf-8a77-7ab3c1e26afe" target="_blank" rel="noopener">OneNote Equation tool</a> earlier, but I wanted to do the same in my blog posts. After trying many options, here is what worked for me.</p>
 <p>First of all, I had to find a good JavaScript library that can display mathematical expressions described in a LaTeX-style syntax in the HTML (or Markdown) source of a web page. It turns out that the best such library is <a href="http://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>. It produces high quality typesetting that scales to full resolution which renders beautifully on the web page. More importantly, it uses web-based fonts, so the person who views the HTML page does not have to install any plugin to view those equations. MathJax is very easy to use, you just include a script tag in the HTML to load the JavaScript from a CDN, configure your preferences and start writing mathematical expressions in your content. Here are the detailed steps on <a href="https://docs.mathjax.org/en/latest/" target="_blank" rel="noopener">how to get started with MathJax</a>.</p>
