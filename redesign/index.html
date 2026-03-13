@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="The end-to-end process of migrating this site from Hugo to Astro with AI coding agents.">
+  <meta name="generator" content="Hugo 0.155.0">
+
+  <title>Site Redesign Log &middot; Reflections</title>
+
+  <meta property="og:url" content="https://annjose.com/redesign/">
+  <meta property="og:site_name" content="Reflections">
+  <meta property="og:title" content="Site Redesign Log">
+  <meta property="og:description" content="The end-to-end process of migrating this site from Hugo to Astro with AI coding agents.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-03-11T12:13:21-07:00">
+    <meta property="article:modified_time" content="2026-03-11T12:13:21-07:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Coding-Assistants">
+    <meta property="article:tag" content="Agentic-Systems">
+    <meta property="article:tag" content="Web-Development">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Site Redesign Log">
+  <meta name="twitter:description" content="The end-to-end process of migrating this site from Hugo to Astro with AI coding agents.">
+
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://annjose.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://annjose.com/css/blackburn.css">
+
+  
+  
+  <script src="https://kit.fontawesome.com/3e898cf239.js" crossorigin="anonymous"></script>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://annjose.com/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://annjose.com/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/post/"><i class='fas fa-pen-to-square fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/llm"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/tech-explorations"><i class='fas fa-magnifying-glass fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/personal-growth"><i class='fas fa-arrow-up-right-dots fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/web-development"><i class='fas fa-globe fa-fw'></i>Web Development</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/tags/mobile-tech"><i class='fas fa-mobile-screen fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/redesign/"><i class='fas fa-wand-magic-sparkles fa-fw'></i>Redesign Log</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://annjose.com/about/"><i class='fas fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2025. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Site Redesign Log</h1>
+  <h2>The end-to-end process of migrating this site from Hugo to Astro with AI coding agents.</h2>
+</div>
+<div class="content">
+  <p><strong>Started:</strong> March 11, 2026 | <strong>Status:</strong> In progress</p>
+<p>I&rsquo;m redesigning this blog from Hugo to Astro, using AI coding agents (Claude Code, Claude Desktop, Codex) as my primary collaborators. This page documents the real process — the prompts I write, the questions agents ask, the plans they produce, and the decisions I make. If you&rsquo;re curious about what agentic coding looks like in practice, follow along.</p>
+<p><strong>The migration:</strong> Hugo + Blackburn → Astro 5, Tailwind CSS, AstroPaper theme, Cloudflare Pages</p>
+<p><strong>How to read this:</strong> Each part below is a chapter of the redesign. Newest entries are at the top.</p>
+<hr>
+<h2 id="part-1-write-the-spec--mar-11-12-2026">Part 1: Write the Spec — Mar 11-12, 2026</h2>
+<p><strong>Goal:</strong> Go from &ldquo;I want to redesign my blog&rdquo; to a spec that an AI agent can execute against.</p>
+<p><strong>Output Artifacts</strong></p>
+<ul>
+<li><a href="https://github.com/annjose/myblog/blob/main/docs/redesign/spec.md" target="_blank" rel="noopener">The Spec</a></li>
+<li><a href="https://github.com/annjose/myblog/blob/main/docs/redesign/sessions/session-01-spec-creation.md" target="_blank" rel="noopener">Agent Session Transcript #1 — Spec Creation</a></li>
+</ul>
+<h3 id="day-1--picking-a-template-mar-11">Day 1 — Picking a template (Mar 11)</h3>
+<p>I started by browsing Astro themes on <a href="https://astro.build/themes/" target="_blank" rel="noopener">astro.build/themes</a> and <a href="https://vercel.com/templates?framework=astro" target="_blank" rel="noopener">Vercel&rsquo;s Astro templates</a>. I looked at a bunch of them, evaluating for clean design, readability, and that hard-to-name quality of <em>feeling right</em>.</p>
+<p>The one I kept coming back to was <a href="https://astro-paper.pages.dev/" target="_blank" rel="noopener">AstroPaper</a> — clean layout, good typography, nice page transition animations, and not over-designed. It felt like a solid foundation I could build on rather than fight against.</p>
+<p>Then I did something deliberately low-tech: <strong>I wrote the spec by hand, in a notebook.</strong> No AI, no editor. Just thinking through what I actually want from the new site. Here&rsquo;s the digitized version of those notes:</p>
+<details>
+<summary><strong>The handwritten spec (digitized)</strong></summary>
+<p>Redesign my blog and personal website annjose.com. It is currently built with Hugo and an old theme called <code>blackburn</code>. Content lives in a GitHub repo; static pages are hosted on GitHub Pages. Here&rsquo;s what I want:</p>
+<ul>
+<li><strong>Tech stack:</strong> Astro, Tailwind CSS, with a good theme (leaning toward AstroPaper)</li>
+<li><strong>Design:</strong> Clean UI with enough whitespace but not wasted space. Beautiful colors and fonts. Mobile responsive. Light and dark mode.</li>
+<li><strong>Custom routes</strong> for pages I want to host on the domain — e.g. /books, /notes, /photos</li>
+<li><strong>About Me</strong> page</li>
+<li><strong>Projects page</strong> to showcase what I&rsquo;ve worked on (liked the layout at adamfortuna.com/projects as inspiration, but don&rsquo;t want to copy it)</li>
+<li><strong>Blog features:</strong>
+<ul>
+<li>Good syntax highlighting (lots of technical content)</li>
+<li>Floating table of contents on the right that follows scroll and highlights current section</li>
+<li>Tags, tag management, possibly a tag cloud</li>
+<li>Next/previous post links with titles</li>
+<li>OG images for every post</li>
+<li>A comment system that blocks spam but isn&rsquo;t ad-heavy like Disqus — could I build my own with something like InstantDB and email-based auth?</li>
+</ul>
+</li>
+<li><strong>Future (post-launch):</strong> Some authenticated routes accessible only to family. URL-based access with generated GUIDs for sharing private pages.</li>
+</ul>
+</details>
+<h3 id="day-2--the-spec-meets-claude-mar-12">Day 2 — The spec meets Claude (Mar 12)</h3>
+<p>I opened Claude Desktop and gave it the handwritten spec with one instruction: <em>&ldquo;Review these requirements and tell me what you make of it. Ask clarifying questions.&rdquo;</em></p>
+<p>Claude did something I didn&rsquo;t expect — before asking anything, it <strong>explored the entire codebase and live site on its own</strong>. It spawned two agents in parallel: one crawled the repo structure, the other fetched annjose.com and the AstroPaper demo. Only after building its own understanding did it come back with questions.</p>
+<p>It asked two rounds of clarifying questions — here are the key decisions that came out of that exchange:</p>
+
+
+
+<table class="pure-table pure-table-striped">
+  <thead><tr>
+    
+      <th>Decision</th>
+    
+      <th>What I chose</th>
+    
+  </thead></tr>
+  <tbody>
+  
+    <tr>
+      
+      
+        <td>Fork Astro Paper or build from scratch?</td>
+      
+        <td>Fork and customize</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Hosting platform</td>
+      
+        <td>Cloudflare Pages</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Existing Disqus comments</td>
+      
+        <td>Static HTML embed (export old, Giscus for new)</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Migrate all 58 posts?</td>
+      
+        <td>Yes, all of them</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Private routes / auth</td>
+      
+        <td>Defer to Phase 2</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Projects page format</td>
+      
+        <td>Side projects &amp; open source, card grid layout</td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+<p>The result: an <strong>8-phase migration plan spanning ~14 days</strong>. The critical path is a content migration script that converts all 58 posts from Hugo format (TOML front matter, Hugo shortcodes) to Astro format (YAML front matter, MDX). Everything else builds on that.</p>
+<p><strong>What I learned:</strong> Don&rsquo;t start with the AI. Start with your own thinking — even on paper. The handwritten spec forced me to decide what I <em>actually</em> want before an agent started suggesting things. The AI&rsquo;s job was to pressure-test it and add structure, not to dream it up from scratch. Also: the agent&rsquo;s first move was to <em>explore</em>, not ask. It built context before engaging. That&rsquo;s a good pattern for humans too.</p>
+<hr>
+<p><em>Next up: reviewing the 8-phase plan, adjusting it, and kicking off the migration script.</em></p>
+
+</div>
+
+</div>
+</div>
+<script src="https://annjose.com/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+
+<script 
+    id="counterscale-script" 
+    data-site-id="annjose-blog"
+    src="https://counterscale.annjose.workers.dev/tracker.js" 
+    defer>
+</script>
+
+</body>
+</html>
+

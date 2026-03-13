@@ -2,34 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://annjose.com/tags/agentic-systems/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/ai/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/coding-assistants/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/redesign/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/tech-explorations/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/topics/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
+    <loc>https://annjose.com/tags/web-development/</loc>
+    <lastmod>2026-03-11T12:13:21-07:00</lastmod>
+  </url><url>
     <loc>https://annjose.com/post/agent-coding-in-practice/</loc>
     <lastmod>2026-02-07T16:23:08-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/ai/</loc>
-    <lastmod>2026-02-07T16:23:08-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/topics/ai/</loc>
-    <lastmod>2026-02-07T16:23:08-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/coding-assistants/</loc>
     <lastmod>2026-02-07T16:23:08-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/llm/</loc>
     <lastmod>2026-02-07T16:23:08-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/</loc>
-    <lastmod>2026-02-07T16:23:08-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/</loc>
-    <lastmod>2026-02-07T16:23:08-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/</loc>
-    <lastmod>2026-02-07T16:23:08-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/topics/tech-explorations/</loc>
-    <lastmod>2026-02-07T16:23:08-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/topics/</loc>
     <lastmod>2026-02-07T16:23:08-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/post/agentic-coding-basics/</loc>
@@ -98,9 +107,6 @@
     <loc>https://annjose.com/post/reimagine-fitness-milestone/</loc>
     <lastmod>2025-03-13T14:24:23-07:00</lastmod>
   </url><url>
-    <loc>https://annjose.com/tags/agentic-systems/</loc>
-    <lastmod>2025-02-24T04:32:12-07:00</lastmod>
-  </url><url>
     <loc>https://annjose.com/post/claude-code-first-impressions/</loc>
     <lastmod>2025-02-24T04:32:12-07:00</lastmod>
   </url><url>
@@ -117,9 +123,6 @@
     <lastmod>2024-12-15T12:15:21-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/tags/tech-explorations/</loc>
-    <lastmod>2024-12-15T12:15:21-07:00</lastmod>
-  </url><url>
-    <loc>https://annjose.com/tags/web-development/</loc>
     <lastmod>2024-12-15T12:15:21-07:00</lastmod>
   </url><url>
     <loc>https://annjose.com/about/</loc>

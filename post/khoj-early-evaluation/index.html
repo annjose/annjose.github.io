@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Evaluating Khoj, the open source AI assistant">
+  <meta name="generator" content="Hugo 0.155.0">
+
+  <title>Khoj - an early hands-on evaluation  &middot; Reflections</title>
+
+  <meta property="og:url" content="http://localhost:1313/post/khoj-early-evaluation/">
+  <meta property="og:site_name" content="Reflections">
+  <meta property="og:title" content="Khoj - an early hands-on evaluation ">
+  <meta property="og:description" content="Evaluating Khoj, the open source AI assistant">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-01T21:12:23-07:00">
+    <meta property="article:modified_time" content="2024-05-01T21:12:23-07:00">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="How-To">
+    <meta property="article:tag" content="Tech-Explorations">
+    <meta property="article:tag" content="Generative-Ai">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Khoj - an early hands-on evaluation ">
+  <meta name="twitter:description" content="Evaluating Khoj, the open source AI assistant">
+
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://localhost:1313/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://localhost:1313/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://localhost:1313/css/blackburn.css">
+
+  
+  
+  <script src="https://kit.fontawesome.com/3e898cf239.js" crossorigin="anonymous"></script>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="http://localhost:1313/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://localhost:1313/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/post/"><i class='fas fa-pen-to-square fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/llm"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/tech-explorations"><i class='fas fa-magnifying-glass fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/personal-growth"><i class='fas fa-arrow-up-right-dots fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/web-development"><i class='fas fa-globe fa-fw'></i>Web Development</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/mobile-tech"><i class='fas fa-mobile-screen fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/redesign/"><i class='fas fa-wand-magic-sparkles fa-fw'></i>Redesign Log</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/about/"><i class='fas fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2025. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Khoj - an early hands-on evaluation </h1>
+  <h2>Evaluating Khoj, the open source AI assistant</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 May 2024</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://localhost:1313/tags/llm">LLM</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://localhost:1313/tags/how-to">how-to</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://localhost:1313/tags/tech-explorations">tech-explorations</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://localhost:1313/tags/generative-ai">generative-ai</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  <p>(This is a <strong>DRAFT</strong> post. It is not complete and is not worth completing it. So I want to retain this as Draft itself).</p>
+<h3 id="what-is-khoj">What is Khoj</h3>
+<p><a href="https://khoj.dev/" target="_blank" rel="noopener">Khoj</a> is an open-source, personal AI application that helps you get answers to your questions, whether they be in your own notes or online. You can use it to get answers that are grounded in reality, references included.</p>
+<h3 id="my-observations">My observations</h3>
+<p><strong>UI is very limited</strong> - When I just hit the enter button (up arrow), it went through the steps of udnerstanding the query, default mode etc. and then said &rsquo;looks like your query is cut off&rsquo;. But acutally, the input was empty, so there was no need to try to infer it at all.</p>
+<p><strong>Images</strong> - I clicked the attachment icon and selected a jpg image, it said sorry the file is not supported. Tried it with many jpg and png files - none of it worked. All of these had worked with ChatGPT or GPT-4 directly.</p>
+<p><strong>However, it worked with PDF</strong> - I uploaded the treasury iBond PDF - it said indexed successfully. Then I asked how much did I take iBond this year?
+Answer: I don&rsquo;t have any current notes or information about your purchase of Treasury I Bonds this year. If you&rsquo;ve made such a purchase and would like me to remember this for future reference, please provide the details, including the amount and the date of purchase. If you&rsquo;re asking for general information on how to check your Treasury I Bond purchases, you can typically do this by logging into your account on the TreasuryDirect website or reviewing your bank statements if the purchase was made through a financial institution.</p>
+<p><strong>My next prompt</strong> - &ldquo;I had smoothie on three days this week - Sunday, Tuesday and today.&rdquo;
+It show the same steps &lsquo;understanding query&rsquo;, &lsquo;default response&quot;, &rsquo;looking for information&rsquo;. This makes me wonder how much does it really understand. Also, it said it can remember stuff, but can it really?</p>
+<p>It converts parts of the query to a date filter, for example when I asked &lsquo;did I have smoothie yesterday&rsquo;, it tooks some time, showed the usual sterps as follows:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>👀 Understanding Query: Did I have smoothie yesterday
+</span></span><span style="display:flex;"><span>Chose Data Sources to Search: notes
+</span></span><span style="display:flex;"><span>🧑🏾‍💻 Decided Response Mode: default
+</span></span><span style="display:flex;"><span>🔍 Searching Documents <span style="color:#ff79c6">for</span>:
+</span></span><span style="display:flex;"><span>Did I have a smoothie on 2024-05-01 dt&gt;<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;2024-05-01&#39;</span> dt&lt;<span style="color:#f1fa8c">&#39;2024-05-02&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then it gave the response - which is pretty good - the answer was correct. I love that it gave the reasoning also.
+Based on the information you provided earlier, you had a smoothie on Sunday, Tuesday, and today (Thursday, May 2, 2024). Since yesterday was Wednesday, May 1, 2024, you did not have a smoothie yesterday.</p>
+<p><strong>Automating a task</strong> - I was able to schedule an email to be sent to me. It didn&rsquo;t ask for my email address (perhaps it will take it from the Google account I connected, let&rsquo;s see)</p>
+<p><strong>Real time data retrieval</strong>. I gave the prompt - who is the president of US now?</p>
+<p>Response:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>As of now, in 2024, Joe Biden is the current President of the United States. 
+</span></span><span style="display:flex;"><span>He is running <span style="color:#ff79c6">for</span> re-election in the <span style="color:#bd93f9">2024</span> United States presidential election.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>👀 Understanding Query: when does his term end and when is the next election? 
+</span></span><span style="display:flex;"><span>Who are the contenders <span style="color:#ff79c6">for</span> the post
+</span></span><span style="display:flex;"><span>🗃️ Chose Data Sources to Search: online
+</span></span><span style="display:flex;"><span>🧑🏾‍💻 Decided Response Mode: default
+</span></span><span style="display:flex;"><span>🔍 Searching Documents <span style="color:#ff79c6">for</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Joe Biden term end date
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">2024</span> United States presidential election date
+</span></span><span style="display:flex;"><span>Contenders <span style="color:#ff79c6">for</span> <span style="color:#bd93f9">2024</span> United States presidential election
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>🌐 Searching the Internet <span style="color:#ff79c6">for</span>: Joe Biden term end date
+</span></span><span style="display:flex;"><span>🌐 Searching the Internet <span style="color:#ff79c6">for</span>: <span style="color:#bd93f9">2024</span> United States presidential election date
+</span></span><span style="display:flex;"><span>🌐 Searching the Internet <span style="color:#ff79c6">for</span>: <span style="color:#bd93f9">2024</span> United States presidential election contenders
+</span></span><span style="display:flex;"><span>📖 Reading web pages:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://ballotpedia.org/Joe_Biden
+</span></span><span style="display:flex;"><span>https://en.wikipedia.org/wiki/2024_United_States_presidential_election
+</span></span><span style="display:flex;"><span>https://www.nytimes.com/interactive/2023/us/politics/presidential-candidates-2024.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Content retrieval seems to be working well, but it took some while. And then suddenly, it showed red icon on the left panel &lsquo;Reconnect to server&rsquo;. After a few minutes, it came back, but the query seemed to just hung - it kept showing progress bar and didn&rsquo;t give a response.</p>
+<p>It also showed 13 references:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#bd93f9">2024</span> United States presidential election - Wikipedia
+</span></span><span style="display:flex;"><span>Who Is Running <span style="color:#ff79c6">for</span> President in 2024? - USNews.com
+</span></span><span style="display:flex;"><span>US election 2024: Who are the presidential candidates? - Reuters
+</span></span><span style="display:flex;"><span>National : President: general election : <span style="color:#bd93f9">2024</span> Polls | FiveThirtyEight
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When I refreshed the page, the chat history remained intact, but this last question was not there.
+I gave the same query again and hit the Enter button.</p>
+<p>Interesting that it showed current agent as &ldquo;khoj&rsquo;. You can select another agent (Teacher, Professor, Marvin) when you start a new chat.
+I chose &lsquo;Technical Lead&rsquo; and asked &lsquo;who is the us president&rsquo;</p>
+<p><strong>Does it save the chat history?</strong> - No. After chatting for some time, I opened a new chat window and it was empty. There were no messages shown in the left panel.</p>
+<p><strong>What all data can you feed into Khoj</strong></p>
+<ul>
+<li>documents - in pdf form. You can chat or Search</li>
+<li>your github repositories</li>
+<li>Notion - chat/search in your notion workspace.</li>
+<li>they have an <a href="https://docs.khoj.dev/clients/obsidian/" target="_blank" rel="noopener">Obsidian pugin Khoj</a> - so you use it from within Obsidian, not from within Khoj - #setup</li>
+</ul>
+<p>They have a blog - but very limited content and images are generated - <a href="https://blog.khoj.dev/posts/ai-risks-safety-and-mitigation/" target="_blank" rel="noopener">https://blog.khoj.dev/posts/ai-risks-safety-and-mitigation/</a></p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://localhost:1313/post/gpt-4-vision-in-action/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://localhost:1313/post/gpt-4-vision-in-action/">GPT-4 Turbo Vision: In Action</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="http://localhost:1313/post/nextjs-migrate-pages-app-router/">Next.js - Migrate from Pages to App Router</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://localhost:1313/post/nextjs-migrate-pages-app-router/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'anncjose';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://localhost:1313/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+
+<script 
+    id="counterscale-script" 
+    data-site-id="annjose-blog"
+    src="https://counterscale.annjose.workers.dev/tracker.js" 
+    defer>
+</script>
+
+</body>
+</html>
+

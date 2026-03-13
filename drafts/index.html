@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="">
+  <meta name="generator" content="Hugo 0.155.0">
+
+  <title>Draft Posts &middot; Reflections</title>
+
+  <meta property="og:url" content="http://localhost:1313/drafts/">
+  <meta property="og:site_name" content="Reflections">
+  <meta property="og:title" content="Draft Posts">
+  <meta property="og:description" content="How to finetune an LLM with unsloth Khoj - an early hands-on evaluation Math symbols test (Draft)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-11-07T09:54:13-07:00">
+    <meta property="article:modified_time" content="2024-11-07T09:54:13-07:00">
+    <meta property="article:tag" content="How-To">
+    <meta property="article:tag" content="Web-Development">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Draft Posts">
+  <meta name="twitter:description" content="How to finetune an LLM with unsloth Khoj - an early hands-on evaluation Math symbols test (Draft)">
+
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://localhost:1313/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://localhost:1313/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://localhost:1313/css/blackburn.css">
+
+  
+  
+  <script src="https://kit.fontawesome.com/3e898cf239.js" crossorigin="anonymous"></script>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="http://localhost:1313/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://localhost:1313/">Reflections</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/"><i class='fas fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/post/"><i class='fas fa-pen-to-square fa-fw'></i>My Blog</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/llm"><i class='fas fa-hexagon-nodes fa-fw'></i>AI &amp; LLMs</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/tech-explorations"><i class='fas fa-magnifying-glass fa-fw'></i>Tech Explorations</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/personal-growth"><i class='fas fa-arrow-up-right-dots fa-fw'></i>Personal Growth</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/web-development"><i class='fas fa-globe fa-fw'></i>Web Development</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/tags/mobile-tech"><i class='fas fa-mobile-screen fa-fw'></i>Mobile Tech</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/redesign/"><i class='fas fa-wand-magic-sparkles fa-fw'></i>Redesign Log</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://localhost:1313/about/"><i class='fas fa-user fa-fw'></i>About Me</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2025. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Draft Posts</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <div class="nav-list-headingless">
+    <ul>
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <li><a href="http://localhost:1313/post/finetune-unsloth/">How to finetune an LLM with unsloth</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <li><a href="http://localhost:1313/post/khoj-early-evaluation/">Khoj - an early hands-on evaluation </a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <li><a href="http://localhost:1313/post/math-symbols-test/">Math symbols test (Draft)</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    </ul>
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="http://localhost:1313/js/ui.js"></script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PEL4BVYJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PEL4BVYJE');
+</script>
+
+
+
+
+<script 
+    id="counterscale-script" 
+    data-site-id="annjose-blog"
+    src="https://counterscale.annjose.workers.dev/tracker.js" 
+    defer>
+</script>
+
+</body>
+</html>
+
