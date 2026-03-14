@@ -274,19 +274,20 @@
 <hr>
 <h2 id="part-2-refine-the-spec--mar-13-2026">Part 2: Refine the Spec — Mar 13, 2026</h2>
 <p><strong>Goal:</strong> Reconcile two competing specs into one unified spec ready for implementation.</p>
-<p><strong>Output Artifact:</strong></p>
+<p><strong>Output Artifacts:</strong></p>
 <ul>
-<li>Unified spec and Wave 1 plan (in progress)</li>
-<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-02-spec-refinement.md" target="_blank" rel="noopener">Agent Session Transcript #2 — Spec Refinement (WIP)</a></li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md" target="_blank" rel="noopener">Unified Spec</a> — consolidated what/why document</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Wave 1 Implementation Plan</a> — 10 phases, 43 tasks, checkbox format</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-02-spec-refinement.md" target="_blank" rel="noopener">Agent Session Transcript #2 — Spec Refinement</a></li>
 </ul>
 <h3 id="two-specs-one-project">Two specs, one project</h3>
 <p>I now had two specs for the same migration - both generated from the same handwritten prompt.
 The first one I created from Part 1 - I call it the <strong>Collaborative Spec</strong> because it was built through multiple rounds of conversation with Claude Desktop, where I could push back, ask &ldquo;what am I missing?&rdquo;, and refine as we went.
 The second one is <strong>Superpowers Spec</strong> which came from <a href="https://claude.com/plugins/superpowers" target="_blank" rel="noopener">Superpowers</a>, a Claude Code plugin that provides a structured workflow for writing specs, plans, and implementation. Superpowers took the same handwritten prompt I started with and generated both a spec and plan in a single pass using Sonnet 4.6.</p>
 <ul>
-<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md" target="_blank" rel="noopener">Collaborative Spec</a> (from Part 1)</li>
-<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-spec.md" target="_blank" rel="noopener">Superpowers Spec</a></li>
-<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-plan-phase1.md" target="_blank" rel="noopener">Superpowers Plan</a></li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/archive/collaborative-spec.md" target="_blank" rel="noopener">Collaborative Spec</a> (from Part 1, now archived)</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/archive/superpowers-spec.md" target="_blank" rel="noopener">Superpowers Spec</a> (now archived)</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/archive/superpowers-plan-phase1.md" target="_blank" rel="noopener">Superpowers Plan</a> (now archived)</li>
 </ul>
 <h3 id="comparing-the-two-specs">Comparing the two specs</h3>
 <p>I read through both in detail. They&rsquo;re mostly aligned on the big picture, but diverge in interesting ways:</p>
@@ -408,14 +409,49 @@ The second one is <strong>Superpowers Spec</strong> which came from <a href="htt
 </table>
 <p>The pattern is clear: Superpowers is better at <em>detail and structure</em>, the Collaborative Spec is better at <em>coverage and risk management</em>. The one-shot approach produces a more actionable plan, but misses things you&rsquo;d only catch through discussion — like MathJax in two posts, RSS feed continuity, or the fact that the site uses Counterscale instead of Google Analytics.</p>
 <p>I think there&rsquo;s real value in keeping things open-ended early on so there&rsquo;s room for exploration and discovery, instead of narrowing to a specific path before you&rsquo;ve asked enough questions.</p>
-<h3 id="next-cross-evaluation-with-multiple-agents">Next: cross-evaluation with multiple agents</h3>
-<p>I&rsquo;m going to give both specs to two more agents — Codex CLI and Claude Code — and ask each to evaluate both specs for pros, cons, and what&rsquo;s missing. Even though both specs were in essence made by Claude, the prompts and workflows were different. Will they find differences I didn&rsquo;t? This should help me reconcile the two into a single unified spec.</p>
+<h3 id="cross-evaluation-by-claude-code">Cross-evaluation by Claude Code</h3>
+<p>Instead of routing the specs through multiple agents, I gave both to Claude Code and asked it to evaluate them: overall assessment, pros and cons, what&rsquo;s missing, and what could go wrong. I also asked it to flag any clarifying questions.</p>
+<p>The analysis was thorough. Key findings:</p>
+<ul>
+<li><strong>Collaborative Spec strengths</strong>: decisions with rationale, full lifecycle coverage, edge cases (Disqus export, RSS continuity, KaTeX, shortcode conversion), coexistence strategy, comprehensive testing plan</li>
+<li><strong>Superpowers Spec strengths</strong>: clean spec/plan separation, TDD workflow, checkbox-style task tracking, specific color hex values, About page frontmatter schema</li>
+<li><strong>What both were missing</strong>: rollback plan, performance baseline, SEO validation, content freeze protocol, explicit build time / CI budget</li>
+</ul>
+<p>The biggest risks Claude flagged: the URL change from <code>/post/</code> to <code>/blog/</code> (redirect risk, ranking impact), Disqus thread URL → slug mapping (non-trivial), and the in-place migration in the Superpowers plan (no branch safety net).</p>
+<p>Claude&rsquo;s recommendation: <strong>use the Collaborative Spec as source of truth, borrow TDD and checkbox-style tasks from Superpowers</strong>.</p>
+<p>Claude also asked four clarifying questions. My answers:</p>
+<ul>
+<li>URLs: change to <code>/blog/&lt;slug&gt;/</code> (cleaner, redirects acceptable)</li>
+<li>Analytics: Counterscale (not Google Analytics — Superpowers got this wrong)</li>
+<li>Disqus comments: migrate in Wave 1 as static HTML</li>
+<li>Output: analysis is enough, no need for a combined spec yet</li>
+</ul>
+<h3 id="refining-the-spec">Refining the spec</h3>
+<p>Before the comparison, I had run a separate pass with Claude Code asking 6 clarifying questions about the Collaborative Spec itself. Those answers shaped the spec further:</p>
+<ul>
+<li><strong>Continuous deployment</strong>: deploy to Cloudflare Pages at end of Phase 1, then at every milestone — not one big deploy at the end</li>
+<li><strong>Page format</strong>: all standalone pages (<code>/ammachi</code>, <code>/epsilla</code>, <code>/redesign</code>) should be <code>.md</code> files in <code>src/pages/</code>, not <code>.astro</code> — simpler and consistent</li>
+<li><strong>Content Collections scope</strong>: blog only. Standalone pages are one-off, different-structure pages — making them a collection is over-engineering</li>
+<li><strong>Directory</strong>: use <code>src/content/</code> (conventional, matches AstroPaper and Astro docs) not <code>src/data/</code></li>
+<li><strong>Migration lists</strong>: explicit &ldquo;Pages to migrate&rdquo; and &ldquo;Pages NOT migrated&rdquo; lists, including <code>/image-test</code> which wasn&rsquo;t mentioned anywhere</li>
+</ul>
+<h3 id="consolidating-into-one-unified-spec--plan">Consolidating into one unified spec + plan</h3>
+<p>With the comparison done and my answers in hand, I asked Claude Code to create a consolidated spec — using the Collaborative Spec as the base, pulling the best elements from Superpowers, and separating spec from plan into two distinct documents:</p>
+<ul>
+<li><strong><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md" target="_blank" rel="noopener">spec.md</a></strong> — the what/why document: decisions, visual design, content migration rules, URL routing, feature descriptions, testing strategy, Wave 2 roadmap. No step-by-step commands.</li>
+<li><strong><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">wave-1-plan.md</a></strong> — the how/when document: 10 phases, 43 tasks, checkbox format, with TDD workflow and explicit &ldquo;Expected:&rdquo; outcomes per task.</li>
+</ul>
+<p>The spec pulls the color palette (hex values for both modes), About page sectioned layout, and layout dimensions from Superpowers. Everything else comes from the Collaborative Spec — including Counterscale analytics, Disqus export, KaTeX, custom routes, Pagefind, and the full testing checklist.</p>
+<p>Finally, I archived the now-superseded files (<code>collaborative-spec.md</code>, <code>superpowers-spec.md</code>, <code>superpowers-plan-phase1.md</code>) into <code>docs/redesign/archive/</code> with a README that tells any future agent not to use them.</p>
+<h3 id="what-i-learned">What I learned</h3>
+<p>The cross-evaluation surfaced something worth naming: <strong>one-shot generation is optimized for structure, not coverage</strong>. The Superpowers spec was more actionable and better formatted — but it missed Counterscale, shortcode conversion, Disqus comments, RSS continuity, custom routes, and search. These aren&rsquo;t obscure edge cases; they&rsquo;re load-bearing parts of the current site. A single-pass agent doesn&rsquo;t know what it doesn&rsquo;t know.</p>
+<p>The comparison also clarified what &ldquo;spec&rdquo; and &ldquo;plan&rdquo; should each do. A spec is a record of decisions and rationale — useful six months later when you&rsquo;re asking <em>why did we do it this way?</em> A plan is a checklist you execute against. Mixing them, as the Collaborative Spec did, makes both harder to use.</p>
 <hr>
 <h2 id="part-1-write-the-spec--mar-11-12-2026">Part 1: Write the Spec — Mar 11-12, 2026</h2>
 <p><strong>Goal:</strong> Go from &ldquo;I want to redesign my blog&rdquo; to a spec that an AI agent can execute against.</p>
 <p><strong>Output Artifacts</strong></p>
 <ul>
-<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md" target="_blank" rel="noopener">The Spec</a></li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/archive/collaborative-spec.md" target="_blank" rel="noopener">The Spec</a> (original collaborative spec, now archived — see Part 2 for the consolidated version)</li>
 <li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-01-spec-creation.md" target="_blank" rel="noopener">Agent Session Transcript #1 — Spec Creation</a></li>
 </ul>
 <h3 id="day-1--picking-a-template-mar-11">Day 1 — Picking a template (Mar 11)</h3>
@@ -580,7 +616,7 @@ The second one is <strong>Superpowers Spec</strong> which came from <a href="htt
 </figure>
 
 <p>The final spec has 10 decisions, 8 implementation phases across ~14 days, a full folder structure reference, and a verification checklist. See the <a href="https://github.com/annjose/myblog/commit/7bbc49a57258708accd8022136e5116786e1972b" target="_blank" rel="noopener">full diff of the spec refinements</a> and the <a href="https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md" target="_blank" rel="noopener">final version of the spec</a>.</p>
-<h4 id="what-i-learned">What I learned</h4>
+<h4 id="what-i-learned-1">What I learned</h4>
 <p>Don&rsquo;t start with the AI. Start with your own thinking — even on paper. The handwritten spec forced me to decide what I <em>actually</em> want before an agent started suggesting things. The AI&rsquo;s job was to pressure-test it and add structure, not to dream it up from scratch. Also: the agent&rsquo;s first move was to <em>explore</em>, not ask. It built context before engaging. That&rsquo;s a good pattern for humans too.</p>
 <p>The review rounds taught me something else: <strong>read the spec like a skeptic, not an approver.</strong> The agent produced a thorough plan, but it had a &ldquo;new repo&rdquo; default that would have lost git history, wrong analytics (GA instead of Counterscale), and naming collisions I only caught by reading carefully. The AI is good at structure and completeness; the human is good at catching things that <em>feel wrong</em>.</p>
 <hr>
