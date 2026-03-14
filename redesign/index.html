@@ -259,6 +259,146 @@
 <p><strong>The migration:</strong> Hugo + Blackburn → Astro 5, Tailwind CSS, AstroPaper theme, Cloudflare Pages</p>
 <p><strong>How to read this:</strong> Each part below is a chapter of the redesign. Newest entries are at the top.</p>
 <hr>
+<h2 id="lessons-learned-along-the-way-wip">Lessons learned along the way (WIP)</h2>
+<ol>
+<li>Ask what am I missing when reviewing any spec or plan? This puts the agent in exploratory mode and it can go broad and surface important insights</li>
+<li>Ask what could go wrong and incorporate a plan to mitigate or handle such errors</li>
+<li>If you are working with newer frameworks or critical components, give the link to specific pages in the the framework&rsquo;s documentation to the agent and ask it to read the page and confirm that the plan takes it into account and follows the recommendations from the framework. Example, when I use InstantDB, I give the instand db&rsquo;s auth documenations. Or Astro collections <a href="https://docs.astro.build/en/guides/content-collections/" target="_blank" rel="noopener">https://docs.astro.build/en/guides/content-collections/</a></li>
+</ol>
+<hr>
+<h2 id="part-2-refine-the-spec--mar-13-2026">Part 2: Refine the Spec — Mar 13, 2026</h2>
+<p><strong>Goal:</strong> Reconcile two competing specs into one unified spec ready for implementation.</p>
+<p><strong>Output Artifact:</strong> A unified spec and Wave 1 plan.</p>
+<h3 id="two-specs-one-project">Two specs, one project</h3>
+<p>I now had two specs for the same migration - both generated from the same handwritten prompt. The first one I created from Part 1 - I call it the <strong>Collaborative Spec</strong> because it was built through multiple rounds of conversation with Claude Desktop, where I could push back, ask &ldquo;what am I missing?&rdquo;, and refine as we went. The second one is <strong>Superpowers Spec</strong> which came from <a href="https://claude.com/plugins/superpowers" target="_blank" rel="noopener">Superpowers</a>, a Claude Code plugin that provides a structured workflow for writing specs, plans, and implementation. Superpowers took the same handwritten prompt I started with and generated both a spec and plan in a single pass using Sonnet 4.6.</p>
+<ul>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md" target="_blank" rel="noopener">Collaborative Spec</a> (from Part 1)</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-spec.md" target="_blank" rel="noopener">Superpowers Spec</a></li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-plan-phase1.md" target="_blank" rel="noopener">Superpowers Plan</a></li>
+</ul>
+<h3 id="comparing-the-two-specs">Comparing the two specs</h3>
+<p>I read through both in detail. They&rsquo;re mostly aligned on the big picture, but diverge in interesting ways:</p>
+
+
+
+<table class="pure-table pure-table-striped">
+  <thead><tr>
+    
+      <th>Aspect</th>
+    
+      <th>Collaborative Spec</th>
+    
+      <th>Superpowers Spec</th>
+    
+  </thead></tr>
+  <tbody>
+  
+    <tr>
+      
+      
+        <td>Document structure</td>
+      
+        <td>Spec &#43; plan in one document</td>
+      
+        <td>Separate spec and plan documents</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Design specifics (fonts, colors, syntax themes)</td>
+      
+        <td>Deferred — decide during implementation</td>
+      
+        <td>✅ Specified upfront (less ambiguity)</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Plan detail level</td>
+      
+        <td>High-level steps</td>
+      
+        <td>✅ Code snippets, commit messages, bash scripts (more actionable)</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Astro version</td>
+      
+        <td>✅ Start on Astro 5, upgrade to 6 before launch (safe since v6 is brand new)</td>
+      
+        <td>Astro 6 directly</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Repo strategy</td>
+      
+        <td>✅ Branch-based coexistence (old site stays live) (lower risk)</td>
+      
+        <td>In-place migration</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Testing approach</td>
+      
+        <td>Added tests during review rounds</td>
+      
+        <td>✅ Test-first (write failing test, then implement) (more disciplined)</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Gap coverage (MathJax, RSS, Counterscale, etc.)</td>
+      
+        <td>✅ Discovered through conversation (conversation surfaces gaps)</td>
+      
+        <td>Missing</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Process</td>
+      
+        <td>✅ Multi-round back-and-forth (room for exploration)</td>
+      
+        <td>One-shot generation</td>
+      
+    </tr>
+  
+    <tr>
+      
+      
+        <td>Code generation</td>
+      
+        <td>Requires a bigger model to fill in the details</td>
+      
+        <td>✅ Can be implemented using a smaller model like Haiku (faster, cheaper)</td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+<p>The pattern is clear: Superpowers is better at <em>detail and structure</em>, the Collaborative Spec is better at <em>coverage and risk management</em>. The one-shot approach produces a more actionable plan, but misses things you&rsquo;d only catch through discussion — like MathJax in two posts, RSS feed continuity, or the fact that the site uses Counterscale instead of Google Analytics.</p>
+<p>I think there&rsquo;s real value in keeping things open-ended early on so there&rsquo;s room for exploration and discovery, instead of narrowing to a specific path before you&rsquo;ve asked enough questions.</p>
+<h3 id="next-cross-evaluation-with-multiple-agents">Next: cross-evaluation with multiple agents</h3>
+<p>I&rsquo;m going to give both specs to two more agents — Codex CLI and Claude Code — and ask each to evaluate both specs for pros, cons, and what&rsquo;s missing. Even though both specs were in essence made by Claude, the prompts and workflows were different. Will they find differences I didn&rsquo;t? This should help me reconcile the two into a single unified spec.</p>
+<hr>
 <h2 id="part-1-write-the-spec--mar-11-12-2026">Part 1: Write the Spec — Mar 11-12, 2026</h2>
 <p><strong>Goal:</strong> Go from &ldquo;I want to redesign my blog&rdquo; to a spec that an AI agent can execute against.</p>
 <p><strong>Output Artifacts</strong></p>
