@@ -265,11 +265,14 @@
 
 <p><strong>How to read this:</strong> Each part below is a chapter of the redesign. Newest entries are at the top.</p>
 <hr>
-<h2 id="running-notes---lessons-learned-wip">Running Notes - Lessons learned (WIP)</h2>
+<h2 id="running-notes--prompt-patterns-and-reusable-techniques">Running Notes — Prompt patterns and reusable techniques</h2>
+<p>These are transferable techniques I&rsquo;d use again on any project with an AI agent.</p>
 <ol>
-<li>Ask what am I missing when reviewing any spec or plan? This puts the agent in exploratory mode and it can go broad and surface important insights</li>
-<li>Ask what could go wrong and incorporate a plan to mitigate or handle such errors</li>
-<li>If you are working with newer frameworks or critical components, give the link to specific pages in the the framework&rsquo;s documentation to the agent and ask it to read the page and confirm that the plan takes it into account and follows the recommendations from the framework. Example, when I use InstantDB, I give the instand db&rsquo;s auth documenations. Or Astro collections <a href="https://docs.astro.build/en/guides/content-collections/" target="_blank" rel="noopener">https://docs.astro.build/en/guides/content-collections/</a></li>
+<li>Ask <em>&ldquo;what am I missing?&rdquo;</em> when reviewing any spec or plan — puts the agent in exploratory mode and surfaces gaps you&rsquo;d never think to ask about</li>
+<li>Ask <em>&ldquo;what could go wrong?&rdquo;</em> and incorporate a mitigation plan before implementation starts</li>
+<li>For newer frameworks or critical integrations, paste in the relevant documentation URL and ask the agent to confirm the plan follows the framework&rsquo;s recommendations (e.g. <a href="https://docs.astro.build/en/guides/content-collections/" target="_blank" rel="noopener">Astro Content Collections</a>)</li>
+<li>Cross-evaluate competing specs by asking an agent to compare them — it surfaces risks and tradeoffs you&rsquo;d miss reading them yourself</li>
+<li>Keep spec and plan as separate documents — spec = decisions + rationale (the &ldquo;why&rdquo;), plan = ordered checklist (the &ldquo;how&rdquo;). Mixing them makes both harder to use</li>
 </ol>
 <hr>
 <h2 id="part-2-refine-the-spec--mar-13-2026">Part 2: Refine the Spec — Mar 13, 2026</h2>
