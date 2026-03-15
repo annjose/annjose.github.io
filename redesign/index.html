@@ -275,6 +275,77 @@
 <li>Keep spec and plan as separate documents — spec = decisions + rationale (the &ldquo;why&rdquo;), plan = ordered checklist (the &ldquo;how&rdquo;). Mixing them makes both harder to use</li>
 </ol>
 <hr>
+<h3 id="part-4-implementation-phase-2--content-migration--mar-14-2026">Part 4: Implementation Phase 2 — Content Migration — Mar 14, 2026</h3>
+<p><strong>Goal:</strong> Migrate all 58 blog posts from Hugo to Astro, validate everything, and export Disqus comments.</p>
+<p><strong>Output Artifacts:</strong></p>
+<ul>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-04-impl-phase2.md" target="_blank" rel="noopener">Agent Session Transcript #4 — Implementation Phase 2</a></li>
+</ul>
+<p>Phase 2 was the heaviest part of the migration — converting 58 blog posts from Hugo&rsquo;s TOML frontmatter and shortcodes to Astro&rsquo;s YAML frontmatter and standard markdown. This is where the migration script did the heavy lifting, and where most of the bugs surfaced.</p>
+<h4 id="the-migration-script-task-8">The migration script (Task 8)</h4>
+<p>Claude wrote the migration script using TDD — 23 tests first, then the implementation. The script handles TOML→YAML frontmatter conversion, five types of Hugo shortcodes (<code>pure_table</code>, <code>fluid_imgs</code>, <code>video</code>, <code>figure</code>, <code>highlight</code>), and copies page bundles with their colocated images. I was impressed by the test coverage — it caught edge cases I wouldn&rsquo;t have thought to test, like posts with no tags, dates with timezone offsets, and nested directories inside page bundles.</p>
+<h4 id="running-the-migration-and-fixing-what-broke-task-9">Running the migration and fixing what broke (Task 9)</h4>
+<p>Running the migration script was the moment of truth — and predictably, several things broke. This is where the iterative debugging with Claude was most valuable. Each fix led to a new discovery:</p>
+<ol>
+<li>
+<p><strong>Page bundle subdirectories</strong> — one post (<code>cloudflare-autorag-step-by-step</code>) had a <code>raw-images/</code> subdirectory inside its page bundle. The copy function tried to <code>copyFileSync</code> a directory. Claude added a recursive copy helper.</p>
+</li>
+<li>
+<p><strong>Missing shortcode types</strong> — four posts had <code>figure</code> and <code>highlight</code> shortcodes that weren&rsquo;t handled. Claude added converters for both.</p>
+</li>
+<li>
+<p><strong>Images inside HTML blocks</strong> — this was the most interesting bug. Hugo&rsquo;s <code>fluid_imgs</code> shortcode was being converted to markdown images wrapped in <code>&lt;div class=&quot;image-grid&quot;&gt;</code>. But markdown inside HTML block elements is not parsed — it&rsquo;s treated as raw text. The images simply didn&rsquo;t render. The fix was to drop the <code>&lt;div&gt;</code> wrapper entirely and output plain markdown images. The trade-off: we lose the multi-column grid layout for now (added to Wave 2 backlog).</p>
+</li>
+<li>
+<p><strong>Images in two locations</strong> — I had to correct Claude that images weren&rsquo;t only in <code>static/img/</code> — some were in <code>content/img/</code> too. A good reminder that the human&rsquo;s knowledge of the codebase matters.</p>
+</li>
+<li>
+<p><strong>Double-slug URLs</strong> — page bundle posts were generating URLs like <code>/blog/slug/slug</code> because AstroPaper&rsquo;s <code>getPath</code> utility was duplicating the directory name as a path segment. Claude traced through the path generation logic and added a filter for duplicate segments.</p>
+</li>
+<li>
+<p><strong>YAML date quoting</strong> — Astro&rsquo;s <code>z.date()</code> schema expects unquoted YAML dates, but <code>js-yaml</code>&rsquo;s <code>forceQuotes: true</code> was quoting them as strings. Fixed by passing <code>new Date()</code> objects instead of strings to the YAML serializer.</p>
+</li>
+</ol>
+<h4 id="pulling-task-27-forward-posts--blog">Pulling Task 27 forward: /posts/ → /blog/</h4>
+<p>I had originally planned the URL rename for later, but realized it made no sense to deploy with <code>/posts/</code> URLs and then rename later — that would create unnecessary redirects. So we pulled Task 27 into this session. Claude renamed the page directories, updated <code>getPath.ts</code>, and changed the nav/breadcrumb labels. I chose &ldquo;Blog&rdquo; for the nav link and &ldquo;Reflections&rdquo; for the page title — a nod to the original blog name.</p>
+<h4 id="disqus-comment-export-task-10">Disqus comment export (Task 10)</h4>
+<p>The final task was converting the Disqus XML export to static HTML fragments. The XML had 193 threads (many duplicates from old domain changes and Google Translate proxies) and 34 comments. Claude wrote the conversion script with 15 tests, filtered out 2 deleted and 8 spam comments, and generated 9 HTML files with 24 valid comments. Threaded replies are preserved with recursive rendering.</p>
+<p>The comments aren&rsquo;t displayed on the site yet — that requires the <code>DisqusComments</code> component in Phase 5. For now they sit as static HTML ready to be plugged in.</p>
+<h4 id="the-site-at-the-end-of-implementation-phase-2">The site at the end of Implementation Phase 2</h4>
+<p>Here&rsquo;s the new Astro site with all 58 posts migrated, avatar ring, and the &ldquo;Reflections&rdquo; page title — in both light and dark mode:</p>
+<figure><img src="https://annjose.com/redesign/blog-redesign-v3-home.png"
+    alt="The new Astro site — light mode" width="600"><figcaption>
+      <p>The new Astro site — light mode</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://annjose.com/redesign/blog-redesign-v3-home-dark.png"
+    alt="The new Astro site — dark mode" width="600"><figcaption>
+      <p>The new Astro site — dark mode</p>
+    </figcaption>
+</figure>
+
+<p>And here&rsquo;s Claude Code&rsquo;s wave-1-plan showing the task progress — Phase 2 fully checked off:</p>
+<figure><img src="https://annjose.com/redesign/blog-redesign-plan-tasks-progress.png"
+    alt="Wave 1 plan — Phase 2 content migration complete" width="700"><figcaption>
+      <p>Wave 1 plan — Phase 2 content migration complete</p>
+    </figcaption>
+</figure>
+
+<h4 id="lessons-and-observations">Lessons and observations</h4>
+<p><strong>One bug leads to five.</strong> The migration script worked on the first run, but validation exposed a chain of issues that each required understanding a different part of the system — Astro&rsquo;s markdown processing, AstroPaper&rsquo;s URL generation, Hugo&rsquo;s image storage, YAML serialization quirks. Each fix was small, but finding the root cause required reading code carefully.</p>
+<p><strong>The agent is good at fixing what it can see, but needs the human for what it can&rsquo;t.</strong> Claude found and fixed the HTML-block image rendering issue, the double-slug bug, and the date quoting problem entirely on its own. But it needed me to point out that images lived in <code>content/img/</code> (not just <code>static/img/</code>), and that the URL rename should happen now rather than later. The human provides context that isn&rsquo;t in the code.</p>
+<p><strong>TDD paid off.</strong> The 23 migration tests and 15 Disqus tests made it safe to iterate quickly. When I asked for changes (drop the <code>&lt;div&gt;</code> wrapper, change the URL base path), Claude could make the change and immediately verify nothing else broke.</p>
+<p>Many a times, I would commit the code changes, push, but forget to check the build status on Cloudflare. And I would keep pushing new commits while the build may have failed 3 commits ago. I wish there was a better way to know if the Cloudflare build failed or not.</p>
+<p><strong>Phase 2 complete.</strong> All 58 posts migrated, validated, and live at <code>/blog/&lt;slug&gt;</code>. Disqus comments exported. On to visual design.</p>
+<hr>
+<h2 id="part-3-implementation-phase-1">Part 3: Implementation Phase 1</h2>
+<p>First, I installed Astrow ith the AstroPaper template
+Learning</p>
+<ol>
+<li>for quite some time, Claude and I were confused about the usage of the term &lsquo;plan&rsquo; - it was talking about its internal plan when i was talking about the file wave1-plan.md. this is was bount content collections</li>
+</ol>
+<hr>
 <h2 id="part-2-refine-the-spec--mar-13-2026">Part 2: Refine the Spec — Mar 13, 2026</h2>
 <p><strong>Goal:</strong> Reconcile two competing specs into one unified spec ready for implementation.</p>
 <p><strong>Output Artifacts:</strong></p>
