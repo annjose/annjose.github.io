@@ -279,6 +279,8 @@
 <p><strong>Goal:</strong> Migrate all 58 blog posts from Hugo to Astro, validate everything, and export Disqus comments.</p>
 <p><strong>Output Artifacts:</strong></p>
 <ul>
+<li><a href="https://annjose.pages.dev" target="_blank" rel="noopener">Live site on Astro</a> — deployed on Cloudflare Pages</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Updated Wave 1 Plan</a> — Phase 2 tasks checked off</li>
 <li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-04-impl-phase2.md" target="_blank" rel="noopener">Agent Session Transcript #4 — Implementation Phase 2</a></li>
 </ul>
 <p>Phase 2 was the heaviest part of the migration — converting 58 blog posts from Hugo&rsquo;s TOML frontmatter and shortcodes to Astro&rsquo;s YAML frontmatter and standard markdown. This is where the migration script did the heavy lifting, and where most of the bugs surfaced.</p>
@@ -311,7 +313,7 @@
 <h4 id="disqus-comment-export-task-10">Disqus comment export (Task 10)</h4>
 <p>The final task was converting the Disqus XML export to static HTML fragments. The XML had 193 threads (many duplicates from old domain changes and Google Translate proxies) and 34 comments. Claude wrote the conversion script with 15 tests, filtered out 2 deleted and 8 spam comments, and generated 9 HTML files with 24 valid comments. Threaded replies are preserved with recursive rendering.</p>
 <p>The comments aren&rsquo;t displayed on the site yet — that requires the <code>DisqusComments</code> component in Phase 5. For now they sit as static HTML ready to be plugged in.</p>
-<h4 id="the-site-at-the-end-of-implementation-phase-2">The site at the end of Implementation Phase 2</h4>
+<h4 id="the-site-at-the-end-of-phase-2">The site at the end of Phase 2</h4>
 <p>Here&rsquo;s the new Astro site with all 58 posts migrated, avatar ring, and the &ldquo;Reflections&rdquo; page title — in both light and dark mode:</p>
 <figure><img src="https://annjose.com/redesign/blog-redesign-v3-home.png"
     alt="The new Astro site — light mode" width="600"><figcaption>
@@ -339,12 +341,58 @@
 <p>Many a times, I would commit the code changes, push, but forget to check the build status on Cloudflare. And I would keep pushing new commits while the build may have failed 3 commits ago. I wish there was a better way to know if the Cloudflare build failed or not.</p>
 <p><strong>Phase 2 complete.</strong> All 58 posts migrated, validated, and live at <code>/blog/&lt;slug&gt;</code>. Disqus comments exported. On to visual design.</p>
 <hr>
-<h2 id="part-3-implementation-phase-1">Part 3: Implementation Phase 1</h2>
-<p>First, I installed Astrow ith the AstroPaper template
-Learning</p>
+<h2 id="part-3-implementation-phase-1-project-bootstrap--mar-13-2026">Part 3: Implementation Phase 1: Project Bootstrap — Mar 13, 2026</h2>
+<p><strong>Goal:</strong> Go from empty branch to a fully deployed Astro site on Cloudflare Pages, with custom branding and favicon.</p>
+<p><strong>Output Artifacts:</strong></p>
+<ul>
+<li><a href="https://annjose.pages.dev" target="_blank" rel="noopener">Live site on Astro</a> — vanilla AstroPaper deployed on Cloudflare Pages</li>
+<li><a href="https://github.com/annjose/annjose.com/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Updated Wave 1 Plan</a> — Phase 1 tasks checked off</li>
+<li><a href="https://github.com/annjose/annjose.com/blob/master/docs/redesign/sessions/session-03-impl-phase1.md" target="_blank" rel="noopener">Agent Session Transcript #3 — Implementation Phase 1</a></li>
+</ul>
+<p>Phase 1 was about getting the foundation in place — scaffolding the Astro project, configuring it with my branding, and deploying to Cloudflare Pages so I could see real results from day one. Six tasks, spread across two days.</p>
+<h4 id="repo-rename-and-branch-setup-tasks-1-2">Repo rename and branch setup (Tasks 1-2)</h4>
+<p>The first decision was timing: rename the GitHub repo from <code>myblog</code> to <code>annjose.com</code> <em>before</em> connecting Cloudflare Pages, not after. Getting this out of the way early avoided renaming headaches later. GitHub&rsquo;s auto-redirect meant the old URL kept working — no broken links.</p>
+<p>Claude cleaned up the Hugo files (themes, config, submodules) while preserving content and docs, then scaffolded AstroPaper into the repo. One early question: <strong>npm or pnpm?</strong> AstroPaper ships with a <code>pnpm-lock.yaml</code>, and pnpm is stricter about dependency resolution. I decided to switch — Claude swapped the lock file and updated the spec with a decision entry explaining the rationale.</p>
+<p>Here&rsquo;s what the site looked like right after scaffolding — vanilla AstroPaper with its default content:</p>
+<figure><img src="https://annjose.com/redesign/blog-redesign-v0-astro-light.png"
+    alt="Freshly scaffolded AstroPaper — light mode" width="600"><figcaption>
+      <p>Freshly scaffolded AstroPaper — light mode</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://annjose.com/redesign/blog-redesign-v0-astro-dark.png"
+    alt="Freshly scaffolded AstroPaper — dark mode" width="600"><figcaption>
+      <p>Freshly scaffolded AstroPaper — dark mode</p>
+    </figcaption>
+</figure>
+
+<h4 id="site-metadata-and-syntax-highlighting-task-3">Site metadata and syntax highlighting (Task 3)</h4>
+<p>Configuring <code>src/config.ts</code> with site title, author info, and social links was straightforward. The more interesting part was syntax highlighting — Claude set up dual themes (<code>night-owl</code> for dark mode, <code>github-light</code> for light) with line numbers enabled. This is one of those things that&rsquo;s easy to configure but tedious to figure out from scratch.</p>
+<p>There was a moment of confusion here: when I said &ldquo;the plan,&rdquo; I meant the <code>wave-1-plan.md</code> file, but Claude interpreted it as its own internal execution plan. A small communication mismatch, but a reminder that shared vocabulary matters when working with an agent.</p>
+<figure><img src="https://annjose.com/redesign/blog-redesign-v1.png"
+    alt="After configuring site metadata — my name, bio, and avatar, with AstroPaper&rsquo;s default blog content still in place" width="600"><figcaption>
+      <p>After configuring site metadata — my name, bio, and avatar, with AstroPaper&rsquo;s default blog content still in place</p>
+    </figcaption>
+</figure>
+
+<h4 id="the-favicon-saga-task-5">The favicon saga (Task 5)</h4>
+<p>This was the most iterative part of the session. I started with my existing Hugo favicon (a simple <code>.ico</code>), but then decided to use a pencil sketch avatar instead. The first attempt used <code>sips</code> (macOS built-in) to resize a non-square image into a 32×32 favicon — which stretched it horizontally. After a couple of rounds:</p>
 <ol>
-<li>for quite some time, Claude and I were confused about the usage of the term &lsquo;plan&rsquo; - it was talking about its internal plan when i was talking about the file wave1-plan.md. this is was bount content collections</li>
+<li>First attempt — black-and-white sketch, rectangular (1408×1718). Forced to square → stretched.</li>
+<li>Second attempt — I provided a square crop. Cropped the head at the top.</li>
+<li>Third attempt — I created a proper 1600×1600 square version. Worked, but I wanted color.</li>
+<li>Final version — colorized sketch, 1800×1800 square. Generated clean 32px and 180px favicons.</li>
 </ol>
+<p>The lesson: <strong>image processing is one of those things where it&rsquo;s faster to give the agent the right input than to ask it to fix the wrong input.</strong> Once I provided a square, correctly-sized source image, everything worked on the first try.</p>
+<p>We also decided to skip SVG favicons — you can&rsquo;t meaningfully convert a raster sketch to vector — and removed AstroPaper&rsquo;s default <code>favicon.svg</code>. Modern browsers handle PNG favicons perfectly well.</p>
+<h4 id="cloudflare-pages-deployment-tasks-4-6">Cloudflare Pages deployment (Tasks 4, 6)</h4>
+<p>Task 4 was a one-liner: create <code>wrangler.jsonc</code> with the build output directory. Task 6 was done outside the agent session — I connected the GitHub repo to Cloudflare Pages through the dashboard, configured the build settings, and watched the first deployment succeed. The site was live at <code>annjose.pages.dev</code> within minutes.</p>
+<p>I verified that the old Hugo site at <code>annjose.com</code> was still running on GitHub Pages — the two sites coexist cleanly.</p>
+<h4 id="lessons-and-observations-1">Lessons and observations</h4>
+<p><strong>Rename early.</strong> Renaming the repo before setting up Cloudflare Pages, CI, or any external integrations saved headaches. The cost of renaming goes up with every integration you add.</p>
+<p><strong>Small decisions compound.</strong> npm vs pnpm, PNG vs SVG favicons, where to store source images (<code>src/assets/</code> vs <code>public/</code> vs <code>static/</code>) — none of these are individually important, but getting them right early means less cleanup later. The agent is good at explaining trade-offs; the human just needs to make the call.</p>
+<p><strong>Image work is human work.</strong> The agent can resize, convert, and configure favicons. But choosing the right source image, adjusting proportions, and deciding &ldquo;this looks wrong&rdquo; is still a visual judgment call. This part of the workflow was back-and-forth in a good way — the agent handled the mechanics while I handled the aesthetics.</p>
+<p><strong>Verify the deploy, not just the build.</strong> <code>pnpm run build</code> passing locally doesn&rsquo;t mean Cloudflare will build successfully. I caught myself pushing commits without checking Cloudflare&rsquo;s build status. Worth setting up build notifications early.</p>
 <hr>
 <h2 id="part-2-refine-the-spec--mar-13-2026">Part 2: Refine the Spec — Mar 13, 2026</h2>
 <p><strong>Goal:</strong> Reconcile two competing specs into one unified spec ready for implementation.</p>
