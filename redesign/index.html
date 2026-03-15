@@ -275,6 +275,54 @@
 <li>Keep spec and plan as separate documents — spec = decisions + rationale (the &ldquo;why&rdquo;), plan = ordered checklist (the &ldquo;how&rdquo;). Mixing them makes both harder to use</li>
 </ol>
 <hr>
+<h3 id="part-5-implementation-phase-3-visual-design--mar-15-2026">Part 5: Implementation Phase 3: Visual Design — Mar 15, 2026</h3>
+<p><strong>Goal:</strong> Apply the Warm &amp; Earthy color palette and typography from the spec, then refine code block styling for readability.</p>
+<p><strong>Output Artifacts:</strong></p>
+<ul>
+<li><a href="https://annjose.pages.dev" target="_blank" rel="noopener">Live site on Astro</a> — warm palette and new fonts live</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Updated Wave 1 Plan</a> — Phase 3 tasks checked off</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-05-impl-phase3.md" target="_blank" rel="noopener">Agent Session Transcript #5 — Implementation Phase 3</a></li>
+</ul>
+<p>Phase 3 was about making the site <em>feel</em> right — replacing AstroPaper&rsquo;s default blue/orange scheme with a warm, earthy palette and swapping fonts to Inter + JetBrains Mono. Two tasks, but they touched almost every visual surface on the site.</p>
+<h4 id="color-palette-and-fonts-task-11">Color palette and fonts (Task 11)</h4>
+<p>The spec called for a &ldquo;Warm &amp; Earthy&rdquo; palette — warm whites (<code>#faf7f5</code>), warm blacks (<code>#1c1917</code>), burnt orange accent (<code>#c2410c</code>), and muted stone tones. Claude updated the CSS custom properties in <code>global.css</code> for both light and dark modes, added new <code>--tag-bg</code> and <code>--tag-border</code> variables for tag pills and table styling, and mapped everything through Tailwind&rsquo;s <code>@theme inline</code> block.</p>
+<p>For fonts, Astro&rsquo;s experimental fonts API made the swap clean — replace the single Google Sans Code entry in <code>astro.config.ts</code> with Inter (body text) and JetBrains Mono (code), add <code>&lt;Font&gt;</code> components in <code>Layout.astro</code>, and wire the CSS variables. No Google Fonts link tags or Tailwind font config needed.</p>
+<p>The bulk of this task was iterative visual refinement. I browsed the site in the preview and flagged issues one by one:</p>
+<ol>
+<li><strong>Inline code looked muddy</strong> — the <code>bg-muted/75</code> background was a gray-brown (<code>#78716c</code> at 75% opacity) that clashed with the warm palette. Switched to <code>bg-tag-bg</code> with a subtle border for a clean pill-like appearance.</li>
+<li><strong>Copy button too dark</strong> — the code block copy button used <code>bg-muted</code> which was almost the same darkness as the code block itself. Changed to <code>bg-background/80</code> with <code>backdrop-blur-sm</code> for a translucent floating effect.</li>
+<li><strong>Code block borders too warm</strong> — the warm orange <code>--border</code> (<code>#fed7aa</code>) on code blocks looked off next to syntax highlighting colors. Switched to neutral grays (<code>border-neutral-200</code> light, <code>border-neutral-700</code> dark).</li>
+<li><strong>Inline code had double borders</strong> — after fixing code blocks, inline code pills still had the orange <code>border-tag-border</code>. Switched to <code>border-neutral-300</code> / <code>dark:border-neutral-600</code> to match.</li>
+</ol>
+<p>Each fix was small, but finding the right combination required looking at the site in context — screenshots of real posts with real code and tables.</p>
+<h4 id="code-block-enhancements-task-12">Code block enhancements (Task 12)</h4>
+<p>Two changes: enable line wrapping instead of horizontal scrollbars (<code>wrap: true</code> in Shiki config), and add line numbers on longer code blocks. The line numbers use a CSS counter with a <code>:has(.line:nth-child(4))</code> selector — blocks with fewer than 4 lines stay clean, longer blocks get subtle gray numbers that are <code>user-select: none</code> so they don&rsquo;t interfere with copy-paste.</p>
+<p>Tables also got a refresh with <code>bg-tag-bg</code> header rows and alternating <code>bg-tag-bg/50</code> even rows — small touches that improve readability.</p>
+<h4 id="lessons-and-observations">Lessons and observations</h4>
+<p><strong>Visual design is inherently iterative.</strong> Unlike content migration (which is either correct or broken), visual styling is a matter of judgment. The palette looked right in isolation, but real posts with code blocks, tables, and inline code exposed mismatches that only became visible in context. Five rounds of adjustments to get the code styling right — and each round required browsing the actual site, not just reading CSS.</p>
+<p><strong>The agent can apply a palette, but the human spots what&rsquo;s &ldquo;off.&rdquo;</strong> Claude implemented every color change correctly on the first try. But I was the one who noticed the muddy inline code background, the too-dark copy button, and the warm-orange borders clashing with syntax highlighting. The feedback loop was: I browse, I flag, Claude fixes. Neither of us could have done this well alone.</p>
+<p><strong>CSS custom properties + Tailwind <code>@theme inline</code> is a good architecture.</strong> Having all colors defined as CSS variables in one place (<code>global.css</code>), with Tailwind consuming them through <code>@theme inline</code>, meant every change propagated everywhere instantly. No hunting for hardcoded color values across components.</p>
+<h4 id="the-site-at-the-end-of-phase-3">The site at the end of Phase 3</h4>
+<figure><img src="https://annjose.com/redesign/blog-v4-home.png"
+    alt="Warm &amp; Earthy palette — light mode" width="600"><figcaption>
+      <p>Warm &amp; Earthy palette — light mode</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://annjose.com/redesign/blog-v4-home-dark.png"
+    alt="Warm &amp; Earthy palette — dark mode" width="600"><figcaption>
+      <p>Warm &amp; Earthy palette — dark mode</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://annjose.com/redesign/blog-v4-mobile-all.png"
+    alt="Mobile views — homepage, blog listing, and archives" width="700"><figcaption>
+      <p>Mobile views — homepage, blog listing, and archives</p>
+    </figcaption>
+</figure>
+
+<p><strong>Phase 3 complete.</strong> Warm &amp; Earthy palette applied, Inter + JetBrains Mono fonts loaded, code blocks styled with line wrapping and conditional line numbers. On to Phase 4.</p>
+<hr>
 <h3 id="part-4-implementation-phase-2--content-migration--mar-14-2026">Part 4: Implementation Phase 2 — Content Migration — Mar 14, 2026</h3>
 <p><strong>Goal:</strong> Migrate all 58 blog posts from Hugo to Astro, validate everything, and export Disqus comments.</p>
 <p><strong>Output Artifacts:</strong></p>
@@ -313,7 +361,7 @@
 <h4 id="disqus-comment-export-task-10">Disqus comment export (Task 10)</h4>
 <p>The final task was converting the Disqus XML export to static HTML fragments. The XML had 193 threads (many duplicates from old domain changes and Google Translate proxies) and 34 comments. Claude wrote the conversion script with 15 tests, filtered out 2 deleted and 8 spam comments, and generated 9 HTML files with 24 valid comments. Threaded replies are preserved with recursive rendering.</p>
 <p>The comments aren&rsquo;t displayed on the site yet — that requires the <code>DisqusComments</code> component in Phase 5. For now they sit as static HTML ready to be plugged in.</p>
-<h4 id="the-site-at-the-end-of-phase-2">The site at the end of Phase 2</h4>
+<h4 id="the-site-at-the-end-of-implementation-phase-2">The site at the end of Implementation Phase 2</h4>
 <p>Here&rsquo;s the new Astro site with all 58 posts migrated, avatar ring, and the &ldquo;Reflections&rdquo; page title — in both light and dark mode:</p>
 <figure><img src="https://annjose.com/redesign/blog-redesign-v3-home.png"
     alt="The new Astro site — light mode" width="600"><figcaption>
@@ -334,7 +382,7 @@
     </figcaption>
 </figure>
 
-<h4 id="lessons-and-observations">Lessons and observations</h4>
+<h4 id="lessons-and-observations-1">Lessons and observations</h4>
 <p><strong>One bug leads to five.</strong> The migration script worked on the first run, but validation exposed a chain of issues that each required understanding a different part of the system — Astro&rsquo;s markdown processing, AstroPaper&rsquo;s URL generation, Hugo&rsquo;s image storage, YAML serialization quirks. Each fix was small, but finding the root cause required reading code carefully.</p>
 <p><strong>The agent is good at fixing what it can see, but needs the human for what it can&rsquo;t.</strong> Claude found and fixed the HTML-block image rendering issue, the double-slug bug, and the date quoting problem entirely on its own. But it needed me to point out that images lived in <code>content/img/</code> (not just <code>static/img/</code>), and that the URL rename should happen now rather than later. The human provides context that isn&rsquo;t in the code.</p>
 <p><strong>TDD paid off.</strong> The 23 migration tests and 15 Disqus tests made it safe to iterate quickly. When I asked for changes (drop the <code>&lt;div&gt;</code> wrapper, change the URL base path), Claude could make the change and immediately verify nothing else broke.</p>
@@ -388,7 +436,7 @@
 <h4 id="cloudflare-pages-deployment-tasks-4-6">Cloudflare Pages deployment (Tasks 4, 6)</h4>
 <p>Task 4 was a one-liner: create <code>wrangler.jsonc</code> with the build output directory. Task 6 was done outside the agent session — I connected the GitHub repo to Cloudflare Pages through the dashboard, configured the build settings, and watched the first deployment succeed. The site was live at <code>annjose.pages.dev</code> within minutes.</p>
 <p>I verified that the old Hugo site at <code>annjose.com</code> was still running on GitHub Pages — the two sites coexist cleanly.</p>
-<h4 id="lessons-and-observations-1">Lessons and observations</h4>
+<h4 id="lessons-and-observations-2">Lessons and observations</h4>
 <p><strong>Rename early.</strong> Renaming the repo before setting up Cloudflare Pages, CI, or any external integrations saved headaches. The cost of renaming goes up with every integration you add.</p>
 <p><strong>Small decisions compound.</strong> npm vs pnpm, PNG vs SVG favicons, where to store source images (<code>src/assets/</code> vs <code>public/</code> vs <code>static/</code>) — none of these are individually important, but getting them right early means less cleanup later. The agent is good at explaining trade-offs; the human just needs to make the call.</p>
 <p><strong>Image work is human work.</strong> The agent can resize, convert, and configure favicons. But choosing the right source image, adjusting proportions, and deciding &ldquo;this looks wrong&rdquo; is still a visual judgment call. This part of the workflow was back-and-forth in a good way — the agent handled the mechanics while I handled the aesthetics.</p>
@@ -741,8 +789,6 @@ The second one is <strong>Superpowers Spec</strong> which came from <a href="htt
 <h4 id="what-i-learned-1">What I learned</h4>
 <p>Don&rsquo;t start with the AI. Start with your own thinking — even on paper. The handwritten spec forced me to decide what I <em>actually</em> want before an agent started suggesting things. The AI&rsquo;s job was to pressure-test it and add structure, not to dream it up from scratch. Also: the agent&rsquo;s first move was to <em>explore</em>, not ask. It built context before engaging. That&rsquo;s a good pattern for humans too.</p>
 <p>The review rounds taught me something else: <strong>read the spec like a skeptic, not an approver.</strong> The agent produced a thorough plan, but it had a &ldquo;new repo&rdquo; default that would have lost git history, wrong analytics (GA instead of Counterscale), and naming collisions I only caught by reading carefully. The AI is good at structure and completeness; the human is good at catching things that <em>feel wrong</em>.</p>
-<hr>
-<p><em>Next up: kicking off the migration script and scaffolding the Astro project.</em></p>
 
 </div>
 
