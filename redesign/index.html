@@ -265,7 +265,7 @@
 
 <p><strong>How to read this:</strong> Each part below is a chapter of the redesign. Newest entries are at the top.</p>
 <hr>
-<h2 id="running-notes--prompt-patterns-and-reusable-techniques">Running Notes — Prompt patterns and reusable techniques</h2>
+<h2 id="running-notes--learnings">Running Notes — Learnings</h2>
 <p>These are transferable techniques I&rsquo;d use again on any project with an AI agent.</p>
 <ol>
 <li>Ask <em>&ldquo;what am I missing?&rdquo;</em> when reviewing any spec or plan — puts the agent in exploratory mode and surfaces gaps you&rsquo;d never think to ask about</li>
@@ -273,7 +273,35 @@
 <li>For newer frameworks or critical integrations, paste in the relevant documentation URL and ask the agent to confirm the plan follows the framework&rsquo;s recommendations (e.g. <a href="https://docs.astro.build/en/guides/content-collections/" target="_blank" rel="noopener">Astro Content Collections</a>)</li>
 <li>Cross-evaluate competing specs by asking an agent to compare them — it surfaces risks and tradeoffs you&rsquo;d miss reading them yourself</li>
 <li>Keep spec and plan as separate documents — spec = decisions + rationale (the &ldquo;why&rdquo;), plan = ordered checklist (the &ldquo;how&rdquo;). Mixing them makes both harder to use</li>
+<li><strong>Context-switching back into an agentic project takes real time.</strong> After a 4-day gap, getting back into the flow required re-reading the spec, plan, and recent commits. It&rsquo;s faster than pure manual coding (the plan and transcripts serve as breadcrumbs), but the idea that you can pop in and out of agentic sessions at will is a myth — you still need to rebuild mental context, and the agent needs to be caught up too.</li>
+<li><strong>Always run the production build, not just the dev server.</strong> Vite&rsquo;s dev server resolves imports lazily — a deleted file that&rsquo;s still referenced will work in dev but fail in the production Rollup build. <code>pnpm run build</code> catches what <code>pnpm run dev</code> doesn&rsquo;t.</li>
 </ol>
+<hr>
+<h3 id="part-6-implementation-phase-4-base-layout-floating-toc--mar-20-2026">Part 6: Implementation Phase 4: Base Layout, Floating TOC — Mar 20, 2026</h3>
+<p><strong>Goal:</strong> Replace all AstroPaper template defaults with real site identity and verify social media link previews work.</p>
+<p><strong>Output Artifacts:</strong></p>
+<ul>
+<li><a href="https://annjose.pages.dev" target="_blank" rel="noopener">Live site on Astro</a> — updated title, description, and OG image</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Updated Wave 1 Plan</a> — Task 13 checked off</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-06-impl-phase4-part1.md" target="_blank" rel="noopener">Agent Session Transcript #6 — Implementation Phase 4 Part 1</a></li>
+</ul>
+<p>This session started after a 4-day break from the migration. Phase 4 is about Core Layouts, and Task 13 was the entry point — cleaning up all the template defaults that were still in the <code>&lt;head&gt;</code> tag: the title &ldquo;Reflections,&rdquo; AstroPaper&rsquo;s default OG image, a stale description, and an empty <code>theme-color</code> meta tag.</p>
+<h4 id="site-identity-cleanup-task-13">Site identity cleanup (Task 13)</h4>
+<p>The first step was a comprehensive audit. I had the agent inspect the live dev server through Chrome — extracting every meta tag, JSON-LD block, and link element from the <code>&lt;head&gt;</code>. This surfaced everything that needed changing in one pass rather than discovering issues one by one.</p>
+<p>The fixes: title changed from &ldquo;Reflections&rdquo; to &ldquo;Ann Catherine Jose&rdquo; everywhere (config, OG tags, Twitter cards, JSON-LD), description updated, OG image replaced with a custom 1200×634 branded card, <code>theme-color</code> set to the warm palette&rsquo;s background color, and a missing <code>og:type</code> tag added.</p>
+<h4 id="the-build-failure-the-agent-should-have-caught">The build failure the agent should have caught</h4>
+<p>After replacing the OG image, the Cloudflare deploy failed — <code>about.md</code> still referenced the deleted <code>astropaper-og.jpg</code>. The dev server didn&rsquo;t catch it because Vite resolves imports lazily. The production Rollup build does a strict resolve and fails on missing files.</p>
+<p>The agent should have run <code>pnpm run build</code> before declaring the commit ready. It didn&rsquo;t. I caught it from the Cloudflare deploy logs. A good reminder that <strong>the dev server and the production build are different beasts</strong> — always verify with the build.</p>
+<h4 id="og-image-why-bluesky-wasnt-showing-it">OG image: why Bluesky wasn&rsquo;t showing it</h4>
+<p>After deploying the fix, I tried pasting the site URL into a Bluesky post. Title and description appeared, but no image. The issue: <code>SITE.website</code> was set to <code>https://annjose.com/</code>, so the <code>og:image</code> URL resolved to <code>annjose.com/og-default.jpg</code> — but the Hugo site at that domain doesn&rsquo;t have that file. Bluesky&rsquo;s crawler fetched it, got a 404, and showed no preview.</p>
+<p>The fix was temporary: point <code>SITE.website</code> to <code>annjose.pages.dev</code> for testing, confirm the image renders, and plan to revert during the pre-cutover phase (Task 40) when the domain points to the Astro site.</p>
+<p>I also researched OG image best practices — a 1200×630 branded card (photo + name + tagline) is the standard for personal sites. A bare profile photo would look awkward in the rectangular preview space. And <code>og:logo</code>, which one validator flagged as missing, isn&rsquo;t in the official Open Graph spec — safe to ignore.</p>
+<h4 id="deferring-counterscale-analytics">Deferring Counterscale analytics</h4>
+<p>The original plan had Counterscale analytics in Task 13, but I decided to defer it to Task 40 (pre-cutover). Adding the tracking script now would log dev and preview traffic against the production <code>data-site-id</code>, polluting real analytics data. Better to add it right before the DNS cutover.</p>
+<h4 id="lessons-and-observations">Lessons and observations</h4>
+<p><strong>Resuming after a break is harder than expected.</strong> Four days away from the project meant re-reading the spec, plan, last session&rsquo;s transcript, and recent git history before I could start. The plan and transcripts made this faster than it would be without them — they&rsquo;re like breadcrumbs back into the project. But it still took real time. The popular notion that you can seamlessly pop in and out of agentic coding sessions overstates how easy it is.</p>
+<p><strong>Audit before you edit.</strong> Having the agent inspect the live <code>&lt;head&gt;</code> through Chrome before making any changes was the right move. It surfaced the missing <code>og:type</code>, the empty <code>theme-color</code>, and the stale title all at once — rather than fixing one thing, deploying, finding another, and iterating.</p>
+<p><strong>Social media previews need the right domain.</strong> OG tags are only useful if the URL in <code>og:image</code> actually resolves. During development, when your domain points elsewhere, previews will silently fail. This is expected — but it&rsquo;s worth testing once with the correct URL to confirm the image works, then reverting.</p>
 <hr>
 <h3 id="part-5-implementation-phase-3-visual-design--mar-15-2026">Part 5: Implementation Phase 3: Visual Design — Mar 15, 2026</h3>
 <p><strong>Goal:</strong> Apply the Warm &amp; Earthy color palette and typography from the spec, then refine code block styling for readability.</p>
@@ -298,7 +326,7 @@
 <h4 id="code-block-enhancements-task-12">Code block enhancements (Task 12)</h4>
 <p>Two changes: enable line wrapping instead of horizontal scrollbars (<code>wrap: true</code> in Shiki config), and add line numbers on longer code blocks. The line numbers use a CSS counter with a <code>:has(.line:nth-child(4))</code> selector — blocks with fewer than 4 lines stay clean, longer blocks get subtle gray numbers that are <code>user-select: none</code> so they don&rsquo;t interfere with copy-paste.</p>
 <p>Tables also got a refresh with <code>bg-tag-bg</code> header rows and alternating <code>bg-tag-bg/50</code> even rows — small touches that improve readability.</p>
-<h4 id="lessons-and-observations">Lessons and observations</h4>
+<h4 id="lessons-and-observations-1">Lessons and observations</h4>
 <p><strong>Visual design is inherently iterative.</strong> Unlike content migration (which is either correct or broken), visual styling is a matter of judgment. The palette looked right in isolation, but real posts with code blocks, tables, and inline code exposed mismatches that only became visible in context. Five rounds of adjustments to get the code styling right — and each round required browsing the actual site, not just reading CSS.</p>
 <p><strong>The agent can apply a palette, but the human spots what&rsquo;s &ldquo;off.&rdquo;</strong> Claude implemented every color change correctly on the first try. But I was the one who noticed the muddy inline code background, the too-dark copy button, and the warm-orange borders clashing with syntax highlighting. The feedback loop was: I browse, I flag, Claude fixes. Neither of us could have done this well alone.</p>
 <p><strong>CSS custom properties + Tailwind <code>@theme inline</code> is a good architecture.</strong> Having all colors defined as CSS variables in one place (<code>global.css</code>), with Tailwind consuming them through <code>@theme inline</code>, meant every change propagated everywhere instantly. No hunting for hardcoded color values across components.</p>
@@ -382,7 +410,7 @@
     </figcaption>
 </figure>
 
-<h4 id="lessons-and-observations-1">Lessons and observations</h4>
+<h4 id="lessons-and-observations-2">Lessons and observations</h4>
 <p><strong>One bug leads to five.</strong> The migration script worked on the first run, but validation exposed a chain of issues that each required understanding a different part of the system — Astro&rsquo;s markdown processing, AstroPaper&rsquo;s URL generation, Hugo&rsquo;s image storage, YAML serialization quirks. Each fix was small, but finding the root cause required reading code carefully.</p>
 <p><strong>The agent is good at fixing what it can see, but needs the human for what it can&rsquo;t.</strong> Claude found and fixed the HTML-block image rendering issue, the double-slug bug, and the date quoting problem entirely on its own. But it needed me to point out that images lived in <code>content/img/</code> (not just <code>static/img/</code>), and that the URL rename should happen now rather than later. The human provides context that isn&rsquo;t in the code.</p>
 <p><strong>TDD paid off.</strong> The 23 migration tests and 15 Disqus tests made it safe to iterate quickly. When I asked for changes (drop the <code>&lt;div&gt;</code> wrapper, change the URL base path), Claude could make the change and immediately verify nothing else broke.</p>
@@ -436,7 +464,7 @@
 <h4 id="cloudflare-pages-deployment-tasks-4-6">Cloudflare Pages deployment (Tasks 4, 6)</h4>
 <p>Task 4 was a one-liner: create <code>wrangler.jsonc</code> with the build output directory. Task 6 was done outside the agent session — I connected the GitHub repo to Cloudflare Pages through the dashboard, configured the build settings, and watched the first deployment succeed. The site was live at <code>annjose.pages.dev</code> within minutes.</p>
 <p>I verified that the old Hugo site at <code>annjose.com</code> was still running on GitHub Pages — the two sites coexist cleanly.</p>
-<h4 id="lessons-and-observations-2">Lessons and observations</h4>
+<h4 id="lessons-and-observations-3">Lessons and observations</h4>
 <p><strong>Rename early.</strong> Renaming the repo before setting up Cloudflare Pages, CI, or any external integrations saved headaches. The cost of renaming goes up with every integration you add.</p>
 <p><strong>Small decisions compound.</strong> npm vs pnpm, PNG vs SVG favicons, where to store source images (<code>src/assets/</code> vs <code>public/</code> vs <code>static/</code>) — none of these are individually important, but getting them right early means less cleanup later. The agent is good at explaining trade-offs; the human just needs to make the call.</p>
 <p><strong>Image work is human work.</strong> The agent can resize, convert, and configure favicons. But choosing the right source image, adjusting proportions, and deciding &ldquo;this looks wrong&rdquo; is still a visual judgment call. This part of the workflow was back-and-forth in a good way — the agent handled the mechanics while I handled the aesthetics.</p>
