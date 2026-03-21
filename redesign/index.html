@@ -276,7 +276,65 @@
 <li><strong>Context-switching back into an agentic project takes real time.</strong> After a 4-day gap, getting back into the flow required re-reading the spec, plan, and recent commits. It&rsquo;s faster than pure manual coding (the plan and transcripts serve as breadcrumbs), but the idea that you can pop in and out of agentic sessions at will is a myth — you still need to rebuild mental context, and the agent needs to be caught up too.</li>
 <li><strong>Always run the production build, not just the dev server.</strong> Vite&rsquo;s dev server resolves imports lazily — a deleted file that&rsquo;s still referenced will work in dev but fail in the production Rollup build. <code>pnpm run build</code> catches what <code>pnpm run dev</code> doesn&rsquo;t.</li>
 <li><strong>Ask the agent to explain the <em>expected behavior</em> before fixing a visual bug.</strong> When something looks off, don&rsquo;t just say &ldquo;fix it.&rdquo; Ask the agent what the correct behavior should be and why. This forces it to reason about the design principle (e.g., &ldquo;all content in a column should share one left edge&rdquo;) rather than trial-and-error patching. Three rounds of misalignment fixes could have been one if the principle was established first.</li>
+<li><strong>Question transitive dependencies.</strong> When a library requires importing CSS from a dependency&rsquo;s <code>dist/</code> folder (like <code>katex/dist/katex.min.css</code>), ask if there&rsquo;s an alternative that avoids the coupling. In this case, <code>rehype-mathjax/svg</code> renders math as inline SVG — no CSS import needed, one fewer thing to break.</li>
+<li><strong>Check what&rsquo;s already built before building.</strong> Five of the nine Phase 5 tasks turned out to be already implemented by AstroPaper. Spending 5 minutes verifying existing functionality saves hours of redundant work.</li>
 </ol>
+<hr>
+<h3 id="part-7-implementation-phase-5-blog-components--mar-20-2026">Part 7: Implementation Phase 5: Blog Components — Mar 20, 2026</h3>
+<p><strong>Goal:</strong> Complete Phase 5 — tag cloud, comments, math rendering, and verify that code blocks, search, and images are already working.</p>
+<p><strong>Output Artifacts:</strong></p>
+<ul>
+<li><a href="https://annjose.pages.dev" target="_blank" rel="noopener">Live site on Astro</a> — tag cloud, archived comments, math rendering live</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Updated Wave 1 Plan</a> — Tasks 16-24 checked off</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-08-impl-phase5.md" target="_blank" rel="noopener">Agent Session Transcript #8 — Implementation Phase 5</a></li>
+</ul>
+<p>Phase 5 covered nine tasks, but five of them turned out to be already implemented by AstroPaper — prev/next navigation, code block enhancements, search, and image optimization were all working out of the box. The real work was in three areas: tag cloud with display labels, a unified comments section, and math rendering.</p>
+<h4 id="tag-cloud-with-display-labels-task-17">Tag cloud with display labels (Task 17)</h4>
+<p>The tag cloud needed to solve two problems: visual weight (popular tags should look bigger) and display labels (the slug <code>ai</code> should display as &ldquo;AI&rdquo;, not &ldquo;Ai&rdquo;). The implementation uses TDD — 41 tests for <code>getTagLabel()</code> covering acronyms, compound tags, and auto-title-case fallback.</p>
+<p>The tag cloud component sorts alphabetically, uses 5 font-size tiers based on post count, prefixes each tag with <code>#</code> in accent color, and shows post count as a superscript.</p>
+<figure><img src="https://annjose.com/redesign/blog-tags.png"
+    alt="Tag cloud with weighted font sizes and display labels" width="600"><figcaption>
+      <p>Tag cloud with weighted font sizes and display labels</p>
+    </figcaption>
+</figure>
+
+<h4 id="unified-comments-section-task-18">Unified comments section (Task 18)</h4>
+<p>The comments section combines two components: <code>ArchivedComments.astro</code> (static HTML exported from Disqus, rendered only for the 9 posts that had comments) and <code>GiscusComments.astro</code> (placeholder for new GitHub Discussions-based comments, configured in Task 30).</p>
+<p>The structure went through two user corrections. First, comments were placed after the prev/next navigation — moved them before, since comments are part of the post content while nav is for leaving. Second, clicking the <code>#comments</code> anchor was skipping past the archived comments because they were in a separate section — restructured into a unified section with archived comments as an h3 subsection.</p>
+<p>A comment icon (speech bubble) in the post header links to <code>#comments</code>, so readers don&rsquo;t have to scroll to the bottom to find the comments section.</p>
+<figure><img src="https://annjose.com/redesign/blog-comments.png"
+    alt="Unified comments section — archived Disqus comments above Giscus placeholder" width="600"><figcaption>
+      <p>Unified comments section — archived Disqus comments above Giscus placeholder</p>
+    </figcaption>
+</figure>
+
+<h4 id="math-rendering-from-katex-to-mathjax-svg-task-21">Math rendering: from KaTeX to MathJax SVG (Task 21)</h4>
+<p>This task had the most interesting debugging journey. The initial implementation used <code>rehype-katex</code>, which required importing CSS from a transitive dependency (<code>katex/dist/katex.min.css</code>). When I asked about alternatives, the agent swapped to <code>rehype-mathjax/svg</code> — which renders math as inline SVG with no CSS dependency at all.</p>
+<p>But after the swap, inline math expressions like $a \ne 0$ were breaking onto their own lines instead of flowing with the surrounding text. The root cause was subtle: browsers default <code>&lt;svg&gt;</code> elements to <code>display: block</code>, so even though the parent <code>mjx-container</code> had <code>display: inline</code>, the SVG inside it forced a line break. A one-line CSS fix resolved it:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">mjx-container</span>:not<span style="color:#ff79c6">([</span><span style="color:#ff79c6">display</span><span style="color:#ff79c6">])</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">svg</span> { <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">inline</span> }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><figure><img src="https://annjose.com/redesign/blog-math-expressions.png"
+    alt="Math rendering with rehype-mathjax/svg — inline and display equations" width="600"><figcaption>
+      <p>Math rendering with rehype-mathjax/svg — inline and display equations</p>
+    </figcaption>
+</figure>
+
+<h4 id="tasks-deferred">Tasks deferred</h4>
+<ul>
+<li><strong>Task 23 (image grid)</strong>: No posts currently use multi-column image grids — deferred to Wave 2.</li>
+<li><strong>Task 24 (reading time)</strong>: Moved to Phase 8 as Task 30b, after Giscus setup.</li>
+</ul>
+<h4 id="lessons-and-observations">Lessons and observations</h4>
+<p><strong>Check what&rsquo;s already built.</strong> Five of nine Phase 5 tasks were already implemented by AstroPaper. The agent verified each one by inspecting the codebase and dev server, marked them complete, and moved on. No wasted effort building something that already exists.</p>
+<p><strong>Question transitive dependencies.</strong> The KaTeX approach required importing CSS from <code>katex/dist/katex.min.css</code> — a file inside a transitive dependency. When Tailwind&rsquo;s reset conflicted with KaTeX&rsquo;s styles, it needed a <code>!important</code> override. Swapping to <code>rehype-mathjax/svg</code> eliminated both the CSS import and the override. Fewer dependencies = fewer things that can break.</p>
+<p><strong>Browser defaults matter.</strong> The inline math bug wasn&rsquo;t caused by any CSS we wrote — it was the browser&rsquo;s default <code>display: block</code> on <code>&lt;svg&gt;</code> elements. This is the kind of issue that&rsquo;s invisible in DevTools (the parent shows <code>display: inline</code> correctly) but obvious visually. Understanding what the browser does by default, not just what your CSS does, is essential for debugging layout issues.</p>
+<p><strong>Phase 5 complete.</strong> Tag cloud, comments, math rendering all working. On to Phase 6: About Page.</p>
 <hr>
 <h3 id="part-6-implementation-phase-4-base-layout-floating-toc--mar-20-2026">Part 6: Implementation Phase 4: Base Layout, Floating TOC — Mar 20, 2026</h3>
 <p><strong>Goal:</strong> Complete Phase 4 (Core Layouts) — site identity, OG image, and floating Table of Contents sidebar on blog posts.</p>
@@ -336,7 +394,7 @@
 <p>Three rounds of fixes that could have been one, if the design principle had been established first. This is now my default approach: when something visual looks off, ask the agent to articulate the expected behavior before touching the code.</p>
 <h4 id="skipping-task-15-wider-content-area">Skipping Task 15 (wider content area)</h4>
 <p>The plan called for widening the content area from <code>max-w-3xl</code> to <code>max-w-4xl</code>. I asked the agent whether this was worth doing. The recommendation was to skip it — 768px is near optimal line length for readability, posts with a TOC sidebar already use the wider container, and widening content would require widening every other page for consistency. I agreed and removed Task 15 from the plan.</p>
-<h4 id="lessons-and-observations">Lessons and observations</h4>
+<h4 id="lessons-and-observations-1">Lessons and observations</h4>
 <p><strong>Resuming after a break is harder than expected.</strong> Four days away from the project meant re-reading the spec, plan, last session&rsquo;s transcript, and recent git history before I could start. The plan and transcripts made this faster than it would be without them — they&rsquo;re like breadcrumbs back into the project. But it still took real time. The popular notion that you can seamlessly pop in and out of agentic coding sessions overstates how easy it is.</p>
 <p><strong>Audit before you edit.</strong> Having the agent inspect the live <code>&lt;head&gt;</code> through Chrome before making any changes was the right move. It surfaced the missing <code>og:type</code>, the empty <code>theme-color</code>, and the stale title all at once — rather than fixing one thing, deploying, finding another, and iterating.</p>
 <p><strong>Social media previews need the right domain.</strong> OG tags are only useful if the URL in <code>og:image</code> actually resolves. During development, when your domain points elsewhere, previews will silently fail. This is expected — but it&rsquo;s worth testing once with the correct URL to confirm the image works, then reverting.</p>
@@ -366,7 +424,7 @@
 <h4 id="code-block-enhancements-task-12">Code block enhancements (Task 12)</h4>
 <p>Two changes: enable line wrapping instead of horizontal scrollbars (<code>wrap: true</code> in Shiki config), and add line numbers on longer code blocks. The line numbers use a CSS counter with a <code>:has(.line:nth-child(4))</code> selector — blocks with fewer than 4 lines stay clean, longer blocks get subtle gray numbers that are <code>user-select: none</code> so they don&rsquo;t interfere with copy-paste.</p>
 <p>Tables also got a refresh with <code>bg-tag-bg</code> header rows and alternating <code>bg-tag-bg/50</code> even rows — small touches that improve readability.</p>
-<h4 id="lessons-and-observations-1">Lessons and observations</h4>
+<h4 id="lessons-and-observations-2">Lessons and observations</h4>
 <p><strong>Visual design is inherently iterative.</strong> Unlike content migration (which is either correct or broken), visual styling is a matter of judgment. The palette looked right in isolation, but real posts with code blocks, tables, and inline code exposed mismatches that only became visible in context. Five rounds of adjustments to get the code styling right — and each round required browsing the actual site, not just reading CSS.</p>
 <p><strong>The agent can apply a palette, but the human spots what&rsquo;s &ldquo;off.&rdquo;</strong> Claude implemented every color change correctly on the first try. But I was the one who noticed the muddy inline code background, the too-dark copy button, and the warm-orange borders clashing with syntax highlighting. The feedback loop was: I browse, I flag, Claude fixes. Neither of us could have done this well alone.</p>
 <p><strong>CSS custom properties + Tailwind <code>@theme inline</code> is a good architecture.</strong> Having all colors defined as CSS variables in one place (<code>global.css</code>), with Tailwind consuming them through <code>@theme inline</code>, meant every change propagated everywhere instantly. No hunting for hardcoded color values across components.</p>
@@ -450,7 +508,7 @@
     </figcaption>
 </figure>
 
-<h4 id="lessons-and-observations-2">Lessons and observations</h4>
+<h4 id="lessons-and-observations-3">Lessons and observations</h4>
 <p><strong>One bug leads to five.</strong> The migration script worked on the first run, but validation exposed a chain of issues that each required understanding a different part of the system — Astro&rsquo;s markdown processing, AstroPaper&rsquo;s URL generation, Hugo&rsquo;s image storage, YAML serialization quirks. Each fix was small, but finding the root cause required reading code carefully.</p>
 <p><strong>The agent is good at fixing what it can see, but needs the human for what it can&rsquo;t.</strong> Claude found and fixed the HTML-block image rendering issue, the double-slug bug, and the date quoting problem entirely on its own. But it needed me to point out that images lived in <code>content/img/</code> (not just <code>static/img/</code>), and that the URL rename should happen now rather than later. The human provides context that isn&rsquo;t in the code.</p>
 <p><strong>TDD paid off.</strong> The 23 migration tests and 15 Disqus tests made it safe to iterate quickly. When I asked for changes (drop the <code>&lt;div&gt;</code> wrapper, change the URL base path), Claude could make the change and immediately verify nothing else broke.</p>
@@ -504,7 +562,7 @@
 <h4 id="cloudflare-pages-deployment-tasks-4-6">Cloudflare Pages deployment (Tasks 4, 6)</h4>
 <p>Task 4 was a one-liner: create <code>wrangler.jsonc</code> with the build output directory. Task 6 was done outside the agent session — I connected the GitHub repo to Cloudflare Pages through the dashboard, configured the build settings, and watched the first deployment succeed. The site was live at <code>annjose.pages.dev</code> within minutes.</p>
 <p>I verified that the old Hugo site at <code>annjose.com</code> was still running on GitHub Pages — the two sites coexist cleanly.</p>
-<h4 id="lessons-and-observations-3">Lessons and observations</h4>
+<h4 id="lessons-and-observations-4">Lessons and observations</h4>
 <p><strong>Rename early.</strong> Renaming the repo before setting up Cloudflare Pages, CI, or any external integrations saved headaches. The cost of renaming goes up with every integration you add.</p>
 <p><strong>Small decisions compound.</strong> npm vs pnpm, PNG vs SVG favicons, where to store source images (<code>src/assets/</code> vs <code>public/</code> vs <code>static/</code>) — none of these are individually important, but getting them right early means less cleanup later. The agent is good at explaining trade-offs; the human just needs to make the call.</p>
 <p><strong>Image work is human work.</strong> The agent can resize, convert, and configure favicons. But choosing the right source image, adjusting proportions, and deciding &ldquo;this looks wrong&rdquo; is still a visual judgment call. This part of the workflow was back-and-forth in a good way — the agent handled the mechanics while I handled the aesthetics.</p>
