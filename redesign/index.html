@@ -279,7 +279,83 @@
 <li><strong>Question transitive dependencies.</strong> When a library requires importing CSS from a dependency&rsquo;s <code>dist/</code> folder (like <code>katex/dist/katex.min.css</code>), ask if there&rsquo;s an alternative that avoids the coupling. In this case, <code>rehype-mathjax/svg</code> renders math as inline SVG — no CSS import needed, one fewer thing to break.</li>
 <li><strong>Check what&rsquo;s already built before building.</strong> Five of the nine Phase 5 tasks turned out to be already implemented by AstroPaper. Spending 5 minutes verifying existing functionality saves hours of redundant work.</li>
 <li><strong>Question the spec when it doesn&rsquo;t fit the tool.</strong> The spec called for a content collection for standalone pages, but Astro&rsquo;s own docs warn against it for small numbers of independent pages. Checking the framework&rsquo;s recommendations against the spec caught unnecessary complexity before it was built.</li>
+<li><strong>Tell the agent explicitly not to write code when you&rsquo;re still planning.</strong> The model can be eager to start coding. Even if you start in plan mode and ask it to detail the steps, it may jump out of plan mode and start implementing. If you switch it back to plan mode in the same session, it sometimes doesn&rsquo;t stick. The fix: explicitly say &ldquo;answer the question without changing any code or content&rdquo; before asking.</li>
+<li><strong>Off-the-shelf templates are surprisingly extensible with agents.</strong> AstroPaper&rsquo;s Shiki-based code blocks were extended into a callout system (accent-bordered content blocks for song lyrics, quotes, etc.) by adding a single transformer and CSS — the agent figured out the approach and the meta string workaround for Shiki&rsquo;s language normalization.</li>
+<li><strong>Reuse components across different page types.</strong> The <code>TableOfContents</code> component built for blog posts was reused on the redesign page with zero changes. The agent created a new layout (<code>RedesignLayout.astro</code>) that imports the same component, just with a different container width. Shared components compound in value.</li>
+<li><strong>Third-party integrations are easier than you think.</strong> Giscus (GitHub Discussions-based comments) was the feature I was most worried about when planning the migration. Turns out: enable Discussions, configure at giscus.app, paste the credentials into the component, fix the View Transitions issue — done in 20 minutes. The agent handled the View Transitions bug (dynamic script creation on <code>astro:page-load</code>) without any hints.</li>
 </ol>
+<hr>
+<h3 id="part-9-implementation-phase-7-custom-routes-redirects--comments--mar-21-2026">Part 9: Implementation Phase 7: Custom Routes, Redirects &amp; Comments — Mar 21, 2026</h3>
+<p><strong>Goal:</strong> Complete Phase 7 — migrate standalone pages (<code>/ammachi</code>, <code>/redesign</code>), create Cloudflare redirect rules, verify RSS feed, and configure Giscus comments.</p>
+<p><strong>Output Artifacts:</strong></p>
+<ul>
+<li><a href="https://annjose.pages.dev" target="_blank" rel="noopener">Live site on Astro</a> — ammachi page, redesign page with TOC, Giscus comments, redirects</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md" target="_blank" rel="noopener">Updated Wave 1 Plan</a> — Tasks 26-30 checked off</li>
+<li><a href="https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-10-impl-phase7.md" target="_blank" rel="noopener">Agent Session Transcript #10 — Implementation Phase 7</a></li>
+</ul>
+<p>This was the longest session so far — four tasks, each with its own challenges. The ammachi page led to building a reusable callout system. The redesign page required multiple rounds of TOC layout tuning. And Giscus, the feature I was most worried about, turned out to be the easiest.</p>
+<h4 id="custom-route-pages-task-26">Custom route pages (Task 26)</h4>
+<p>The ammachi page is a standalone page with a song that&rsquo;s special to me. I wanted the lyrics displayed in a visually distinct way — not as a code block, but as content with an accent border. The agent proposed extending Shiki&rsquo;s code block system: use <code>```text callout</code> as a meta string, detect it in a custom transformer, and style it with CSS.</p>
+<p>This turned into a reusable callout system with two variants:</p>
+<ul>
+<li><code>```text callout</code> — accent left border, no box, body font (for inline quotes and lyrics)</li>
+<li><code>```text callout boxed</code> — adds a subtle border and background (for boxed callouts)</li>
+</ul>
+<p>The implementation required working around a Shiki quirk: unknown language names get normalized to &ldquo;plaintext&rdquo; before transformers run, so you can&rsquo;t use <code>options.lang</code> to detect custom blocks. The meta string approach (<code>this.options.meta?.__raw</code>) works because it survives normalization.</p>
+<h4 id="the-redesign-page--toc-sidebar-and-layout-tuning-task-26b">The redesign page — TOC sidebar and layout tuning (Task 26b)</h4>
+<p>The redesign page is the longest page on the site (600+ lines, 30+ headings), so it needed a Table of Contents. Rather than building a new component, the agent reused <code>TableOfContents.astro</code> from the blog post layout, wrapping it in a new <code>RedesignLayout.astro</code> with a two-column flex layout.</p>
+<p>The layout went through several rounds of tuning based on screenshots:</p>
+<ul>
+<li>Content felt squished → adjusted flex constraints</li>
+<li>TOC too narrow → tweaked max-width and font size</li>
+<li>Large gap between content and TOC → reduced container from <code>max-w-6xl</code> to <code>max-w-5xl</code></li>
+<li>Mobile TOC missing → moved mobile rendering above <code>&lt;main&gt;</code> so it appears at top</li>
+<li>h2 headings indistinguishable from h3 → added <code>font-medium</code> to h2 TOC entries</li>
+</ul>
+<p>One subtle bug: the scroll highlight script was toggling <code>font-medium</code> as part of the active state, which removed the bold from h2 entries when they became inactive. Fixed by only toggling color and border classes.</p>
+<p>The Astro <code>Read</code> tool has a default limit of 2000 lines, but the redesign page exceeded this. The agent handled it by using <code>offset</code> and <code>limit</code> parameters to read in chunks — no need to split the file.</p>
+<figure><img src="https://annjose.com/redesign/blog-redesign-top.png"
+    alt="The redesign page on Astro — TOC sidebar with bold h2 headings" width="600"><figcaption>
+      <p>The redesign page on Astro — TOC sidebar with bold h2 headings</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://annjose.com/redesign/blog-redesign-part2.png"
+    alt="The redesign page scrolled down — TOC highlights the active section" width="600"><figcaption>
+      <p>The redesign page scrolled down — TOC highlights the active section</p>
+    </figcaption>
+</figure>
+
+<h4 id="redirect-rules-and-rss-tasks-28-29">Redirect rules and RSS (Tasks 28-29)</h4>
+<p>Three Cloudflare Pages redirect rules in <code>public/_redirects</code>:</p>
+<ul>
+<li><code>/post/*</code> → <code>/blog/:splat</code> (Hugo used &ldquo;post&rdquo;, Astro uses &ldquo;blog&rdquo;)</li>
+<li><code>/topics/*</code> → <code>/tags/:splat</code> (Hugo taxonomy name)</li>
+<li><code>/index.xml</code> → <code>/rss.xml</code> (Hugo&rsquo;s RSS path)</li>
+</ul>
+<p>RSS feed at <code>/rss.xml</code> was already generated by AstroPaper — just verified it builds correctly.</p>
+<h4 id="giscus-comments-task-30">Giscus comments (Task 30)</h4>
+<p>This was the task I was most worried about when I first planned the migration. Moving from Disqus to a new comment system felt like it would be complicated. It wasn&rsquo;t.</p>
+<p>The setup: enable GitHub Discussions on the repo, configure at giscus.app (pathname mapping, Announcements category), paste the credentials into <code>GiscusComments.astro</code>. The whole thing took about 20 minutes.</p>
+<p>The one real issue was a View Transitions bug — Giscus loaded on the first page but disappeared when navigating to the next post via prev/next links. The root cause: Astro&rsquo;s <code>ClientRouter</code> does client-side navigation, so the static <code>&lt;script&gt;</code> tag never re-executes. The fix: dynamically create the script element on every <code>astro:page-load</code> event. The agent identified the issue and implemented the fix without any hints.</p>
+<figure><img src="https://annjose.com/redesign/blog-giscus-comments.png"
+    alt="Giscus comments on a blog post — reactions and comment box" width="600"><figcaption>
+      <p>Giscus comments on a blog post — reactions and comment box</p>
+    </figcaption>
+</figure>
+
+<figure><img src="https://annjose.com/redesign/blog-search.png"
+    alt="Pagefind search — instant results as you type" width="600"><figcaption>
+      <p>Pagefind search — instant results as you type</p>
+    </figcaption>
+</figure>
+
+<h4 id="lessons-and-observations">Lessons and observations</h4>
+<p><strong>Tell the agent not to code when you&rsquo;re still planning.</strong> The model can be eager to start writing code. Even in plan mode, it sometimes jumps to implementation. The fix is explicit: &ldquo;answer the question without changing any code or content.&rdquo; This keeps the conversation in design mode until you&rsquo;re ready to build.</p>
+<p><strong>Off-the-shelf templates are surprisingly extensible.</strong> The callout system extended AstroPaper&rsquo;s Shiki code blocks into styled content blocks for lyrics and quotes — just one transformer file and some CSS. The agent figured out the meta string workaround for Shiki&rsquo;s language normalization. You don&rsquo;t need to fork the template to customize it.</p>
+<p><strong>Reuse components across page types.</strong> The <code>TableOfContents</code> component built for blog posts worked on the redesign page with zero changes. The agent created a new layout that imports the same component with a different container width. Shared components compound.</p>
+<p><strong>Third-party integrations are easier than expected.</strong> Giscus was my biggest migration worry. Reality: 20 minutes from zero to working comments with reactions, lazy loading, and dark mode support. The View Transitions fix was the only non-trivial part, and the agent handled it autonomously.</p>
+<p><strong>Phase 7 complete.</strong> Custom routes, redirects, RSS, and comments all working. On to Phase 8: Testing &amp; Polish.</p>
 <hr>
 <h3 id="part-8-implementation-phase-6-about-page--mar-21-2026">Part 8: Implementation Phase 6: About Page — Mar 21, 2026</h3>
 <p><strong>Goal:</strong> Build the About page — replace the AstroPaper placeholder with a real bio in a sectioned profile layout.</p>
@@ -323,7 +399,7 @@
     </figcaption>
 </figure>
 
-<h4 id="lessons-and-observations">Lessons and observations</h4>
+<h4 id="lessons-and-observations-1">Lessons and observations</h4>
 <p><strong>Question the spec when it doesn&rsquo;t fit the tool.</strong> The spec called for a content collection, which is a reasonable default for frameworks that provide them. But Astro&rsquo;s own docs warn against using collections for a small number of independent pages. Asking &ldquo;why do we need this?&rdquo; saved unnecessary infrastructure and kept the implementation simple.</p>
 <p><strong>Content is the hard part.</strong> The layout took 15 minutes to build and worked on the first try. The bio content took the rest of the session — iterating on tagline, rewriting the &ldquo;currently&rdquo; section, adding a projects list, removing the philosophy section. The agent can build the frame, but filling it with authentic content requires the human.</p>
 <p><strong>Phase 6 complete.</strong> About page live with sectioned profile layout. On to Phase 7.</p>
@@ -378,7 +454,7 @@
 <li><strong>Task 23 (image grid)</strong>: No posts currently use multi-column image grids — deferred to Wave 2.</li>
 <li><strong>Task 24 (reading time)</strong>: Moved to Phase 8 as Task 30b, after Giscus setup.</li>
 </ul>
-<h4 id="lessons-and-observations-1">Lessons and observations</h4>
+<h4 id="lessons-and-observations-2">Lessons and observations</h4>
 <p><strong>Check what&rsquo;s already built.</strong> Five of nine Phase 5 tasks were already implemented by AstroPaper. The agent verified each one by inspecting the codebase and dev server, marked them complete, and moved on. No wasted effort building something that already exists.</p>
 <p><strong>Question transitive dependencies.</strong> The KaTeX approach required importing CSS from <code>katex/dist/katex.min.css</code> — a file inside a transitive dependency. When Tailwind&rsquo;s reset conflicted with KaTeX&rsquo;s styles, it needed a <code>!important</code> override. Swapping to <code>rehype-mathjax/svg</code> eliminated both the CSS import and the override. Fewer dependencies = fewer things that can break.</p>
 <p><strong>Browser defaults matter.</strong> The inline math bug wasn&rsquo;t caused by any CSS we wrote — it was the browser&rsquo;s default <code>display: block</code> on <code>&lt;svg&gt;</code> elements. This is the kind of issue that&rsquo;s invisible in DevTools (the parent shows <code>display: inline</code> correctly) but obvious visually. Understanding what the browser does by default, not just what your CSS does, is essential for debugging layout issues.</p>
@@ -442,7 +518,7 @@
 <p>Three rounds of fixes that could have been one, if the design principle had been established first. This is now my default approach: when something visual looks off, ask the agent to articulate the expected behavior before touching the code.</p>
 <h4 id="skipping-task-15-wider-content-area">Skipping Task 15 (wider content area)</h4>
 <p>The plan called for widening the content area from <code>max-w-3xl</code> to <code>max-w-4xl</code>. I asked the agent whether this was worth doing. The recommendation was to skip it — 768px is near optimal line length for readability, posts with a TOC sidebar already use the wider container, and widening content would require widening every other page for consistency. I agreed and removed Task 15 from the plan.</p>
-<h4 id="lessons-and-observations-2">Lessons and observations</h4>
+<h4 id="lessons-and-observations-3">Lessons and observations</h4>
 <p><strong>Resuming after a break is harder than expected.</strong> Four days away from the project meant re-reading the spec, plan, last session&rsquo;s transcript, and recent git history before I could start. The plan and transcripts made this faster than it would be without them — they&rsquo;re like breadcrumbs back into the project. But it still took real time. The popular notion that you can seamlessly pop in and out of agentic coding sessions overstates how easy it is.</p>
 <p><strong>Audit before you edit.</strong> Having the agent inspect the live <code>&lt;head&gt;</code> through Chrome before making any changes was the right move. It surfaced the missing <code>og:type</code>, the empty <code>theme-color</code>, and the stale title all at once — rather than fixing one thing, deploying, finding another, and iterating.</p>
 <p><strong>Social media previews need the right domain.</strong> OG tags are only useful if the URL in <code>og:image</code> actually resolves. During development, when your domain points elsewhere, previews will silently fail. This is expected — but it&rsquo;s worth testing once with the correct URL to confirm the image works, then reverting.</p>
@@ -472,7 +548,7 @@
 <h4 id="code-block-enhancements-task-12">Code block enhancements (Task 12)</h4>
 <p>Two changes: enable line wrapping instead of horizontal scrollbars (<code>wrap: true</code> in Shiki config), and add line numbers on longer code blocks. The line numbers use a CSS counter with a <code>:has(.line:nth-child(4))</code> selector — blocks with fewer than 4 lines stay clean, longer blocks get subtle gray numbers that are <code>user-select: none</code> so they don&rsquo;t interfere with copy-paste.</p>
 <p>Tables also got a refresh with <code>bg-tag-bg</code> header rows and alternating <code>bg-tag-bg/50</code> even rows — small touches that improve readability.</p>
-<h4 id="lessons-and-observations-3">Lessons and observations</h4>
+<h4 id="lessons-and-observations-4">Lessons and observations</h4>
 <p><strong>Visual design is inherently iterative.</strong> Unlike content migration (which is either correct or broken), visual styling is a matter of judgment. The palette looked right in isolation, but real posts with code blocks, tables, and inline code exposed mismatches that only became visible in context. Five rounds of adjustments to get the code styling right — and each round required browsing the actual site, not just reading CSS.</p>
 <p><strong>The agent can apply a palette, but the human spots what&rsquo;s &ldquo;off.&rdquo;</strong> Claude implemented every color change correctly on the first try. But I was the one who noticed the muddy inline code background, the too-dark copy button, and the warm-orange borders clashing with syntax highlighting. The feedback loop was: I browse, I flag, Claude fixes. Neither of us could have done this well alone.</p>
 <p><strong>CSS custom properties + Tailwind <code>@theme inline</code> is a good architecture.</strong> Having all colors defined as CSS variables in one place (<code>global.css</code>), with Tailwind consuming them through <code>@theme inline</code>, meant every change propagated everywhere instantly. No hunting for hardcoded color values across components.</p>
@@ -556,7 +632,7 @@
     </figcaption>
 </figure>
 
-<h4 id="lessons-and-observations-4">Lessons and observations</h4>
+<h4 id="lessons-and-observations-5">Lessons and observations</h4>
 <p><strong>One bug leads to five.</strong> The migration script worked on the first run, but validation exposed a chain of issues that each required understanding a different part of the system — Astro&rsquo;s markdown processing, AstroPaper&rsquo;s URL generation, Hugo&rsquo;s image storage, YAML serialization quirks. Each fix was small, but finding the root cause required reading code carefully.</p>
 <p><strong>The agent is good at fixing what it can see, but needs the human for what it can&rsquo;t.</strong> Claude found and fixed the HTML-block image rendering issue, the double-slug bug, and the date quoting problem entirely on its own. But it needed me to point out that images lived in <code>content/img/</code> (not just <code>static/img/</code>), and that the URL rename should happen now rather than later. The human provides context that isn&rsquo;t in the code.</p>
 <p><strong>TDD paid off.</strong> The 23 migration tests and 15 Disqus tests made it safe to iterate quickly. When I asked for changes (drop the <code>&lt;div&gt;</code> wrapper, change the URL base path), Claude could make the change and immediately verify nothing else broke.</p>
@@ -610,7 +686,7 @@
 <h4 id="cloudflare-pages-deployment-tasks-4-6">Cloudflare Pages deployment (Tasks 4, 6)</h4>
 <p>Task 4 was a one-liner: create <code>wrangler.jsonc</code> with the build output directory. Task 6 was done outside the agent session — I connected the GitHub repo to Cloudflare Pages through the dashboard, configured the build settings, and watched the first deployment succeed. The site was live at <code>annjose.pages.dev</code> within minutes.</p>
 <p>I verified that the old Hugo site at <code>annjose.com</code> was still running on GitHub Pages — the two sites coexist cleanly.</p>
-<h4 id="lessons-and-observations-5">Lessons and observations</h4>
+<h4 id="lessons-and-observations-6">Lessons and observations</h4>
 <p><strong>Rename early.</strong> Renaming the repo before setting up Cloudflare Pages, CI, or any external integrations saved headaches. The cost of renaming goes up with every integration you add.</p>
 <p><strong>Small decisions compound.</strong> npm vs pnpm, PNG vs SVG favicons, where to store source images (<code>src/assets/</code> vs <code>public/</code> vs <code>static/</code>) — none of these are individually important, but getting them right early means less cleanup later. The agent is good at explaining trade-offs; the human just needs to make the call.</p>
 <p><strong>Image work is human work.</strong> The agent can resize, convert, and configure favicons. But choosing the right source image, adjusting proportions, and deciding &ldquo;this looks wrong&rdquo; is still a visual judgment call. This part of the workflow was back-and-forth in a good way — the agent handled the mechanics while I handled the aesthetics.</p>
